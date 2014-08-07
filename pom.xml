@@ -9,6 +9,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
+    <package.features>true</package.features>
     <karaf.version>2.3.5</karaf.version>
     <pentaho.resolve.repo>http://nexus.pentaho.org/content/groups/omni/</pentaho.resolve.repo>
     <pentaho.artifactory.resolve.repo>http://repository.pentaho.org/artifactory/repo</pentaho.artifactory.resolve.repo>
@@ -38,6 +39,47 @@
     </dependency>
   </dependencies>
 
+  <profiles>
+    <profile>
+      <id>features</id>
+      <!--<activation>-->
+        <!--<property><name>package.features</name></property>-->
+      <!--</activation>-->
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.karaf.tooling</groupId>
+            <artifactId>features-maven-plugin</artifactId>
+            <version>${karaf.version}</version>
+            <executions>
+              <execution>
+                <id>compile</id>
+
+              </execution>
+              <execution>
+                <id>add-features-to-repo</id>
+                <phase>generate-resources</phase>
+                <goals>
+                  <goal>add-features-to-repo</goal>
+                </goals>
+                <configuration>
+                  <descriptors>
+                    <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
+                    <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
+                    <descriptor>file:///${project.basedir}/target/classes/features.xml</descriptor>
+                  </descriptors>
+                  <features>
+                    <feature>mongolap</feature>
+                  </features>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
   <build>
     <resources>
       <resource>
@@ -59,34 +101,6 @@
             <goals>
               <goal>resources</goal>
             </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.karaf.tooling</groupId>
-        <artifactId>features-maven-plugin</artifactId>
-        <version>${karaf.version}</version>
-        <executions>
-          <execution>
-            <id>compile</id>
-
-          </execution>
-          <execution>
-            <id>add-features-to-repo</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>add-features-to-repo</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
-                <descriptor>file:///${project.basedir}/target/classes/features.xml</descriptor>
-              </descriptors>
-              <features>
-                <feature>mongolap</feature>
-              </features>
-            </configuration>
           </execution>
         </executions>
       </plugin>
