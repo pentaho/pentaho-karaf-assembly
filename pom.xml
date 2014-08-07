@@ -148,6 +148,7 @@
               </descriptors>
               <finalName>${project.artifactId}</finalName>
               <appendAssemblyId>false</appendAssemblyId>
+              <classifier></classifier>
             </configuration>
           </execution>
         </executions>
