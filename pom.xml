@@ -18,8 +18,9 @@
     <pentaho.resolve.repo>http://nexus.pentaho.org/content/groups/omni/</pentaho.resolve.repo>
     <pentaho.public.release.repo>http://nexus.pentaho.org/content/repositories/public-release/</pentaho.public.release.repo>
 
-    <!--<pentaho.public.snapshot.repo>http://nexus.pentaho.org/content/repositories/public-snapshot/</pentaho.public.snapshot.repo>-->
-    <pentaho.public.snapshot.repo>http://repository.pentaho.org:8082/artifactory/pentaho</pentaho.public.snapshot.repo>
+    <pentaho.public.snapshot.repo>http://nexus.pentaho.org/content/repositories/public-snapshot/</pentaho.public.snapshot.repo>
+    <!--<pentaho.public.snapshot.repo>http://repository.pentaho.org:8082/artifactory/pentaho</pentaho.public.snapshot.repo>-->
+    <!--<pentaho.public.snapshot.repo>file:///Users/nbaker/.m2/repository</pentaho.public.snapshot.repo>-->
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -93,6 +94,7 @@
       </resource>
     </resources>
     <plugins>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
@@ -117,8 +119,8 @@
               <!--<goal>copy</goal>-->
             <!--</goals>-->
             <!--<configuration>-->
-              <!--&lt;!&ndash; Define here the artifacts which should be considered in the assembly &ndash;&gt;-->
-              <!--&lt;!&ndash; For instance, the branding jar &ndash;&gt;-->
+              <!--<!-- Define here the artifacts which should be considered in the assembly -->-->
+              <!--<!-- For instance, the branding jar -->-->
               <!--<artifactItems>-->
                 <!--<artifactItem>-->
                   <!--<groupId>my.groupId</groupId>-->
@@ -166,7 +168,6 @@
               </descriptors>
               <finalName>${project.artifactId}</finalName>
               <appendAssemblyId>false</appendAssemblyId>
-              <tarLongFileMode>gnu</tarLongFileMode>
             </configuration>
           </execution>
         </executions>
