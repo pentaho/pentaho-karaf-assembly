@@ -13,6 +13,11 @@
     <pentaho.resolve.repo>http://nexus.pentaho.org/content/groups/omni/</pentaho.resolve.repo>
     <pentaho.artifactory.resolve.repo>http://repository.pentaho.org/artifactory/repo</pentaho.artifactory.resolve.repo>
     <pentaho.artifactory.resolve.repo.2>http://repo.pentaho.org/artifactory/repo</pentaho.artifactory.resolve.repo.2>
+
+    <pentaho.resolve.repo>http://nexus.pentaho.org/content/groups/omni/</pentaho.resolve.repo>
+    <pentaho.public.release.repo>http://nexus.pentaho.org/content/repositories/public-release/</pentaho.public.release.repo>
+    <pentaho.public.snapshot.repo>http://nexus.pentaho.org/content/repositories/public-snapshot/</pentaho.public.snapshot.repo>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
@@ -152,6 +157,27 @@
       </plugin>
     </plugins>
   </build>
+
+
+  <distributionManagement>
+    <!-- if you plan on releasing anything that inherits this parent pom
+      you will need your Maven settings.xml to have the appropriate entries ...
+      we recommend something like this: <servers> <server> <id>pentaho.public.release.repo</id>
+      <username>YOUR_REPO_USERNAME</username> <password>YOUR_REPO_PASSWORD</password>
+      </server> <server> <id>pentaho.public.snapshot.repo</id> <username>YOUR_REPO_USERNAME</username>
+      <password>YOUR_REPO_PASSWORD</password> </server> </servers> requests for
+      repo credentials should be made to buildteam@pentaho.com -->
+    <repository>
+      <id>pentaho.public.release.repo</id>
+      <name>Pentaho Public Release Repository</name>
+      <url>${pentaho.public.release.repo}</url>
+    </repository>
+    <snapshotRepository>
+      <id>pentaho.public.snapshot.repo</id>
+      <name>Pentaho Public Snapshot Repository</name>
+      <url>${pentaho.public.snapshot.repo}</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <repositories>
     <repository>
