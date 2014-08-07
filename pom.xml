@@ -112,26 +112,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
-          <!--<execution>-->
-            <!--<id>copy</id>-->
-            <!--<phase>generate-resources</phase>-->
-            <!--<goals>-->
-              <!--<goal>copy</goal>-->
-            <!--</goals>-->
-            <!--<configuration>-->
-              <!--<!-- Define here the artifacts which should be considered in the assembly -->-->
-              <!--<!-- For instance, the branding jar -->-->
-              <!--<artifactItems>-->
-                <!--<artifactItem>-->
-                  <!--<groupId>my.groupId</groupId>-->
-                  <!--<artifactId>my.branding.id</artifactId>-->
-                  <!--<version>1.0</version>-->
-                  <!--<outputDirectory>target/dependencies</outputDirectory>-->
-                  <!--<destFileName>mybranding.jar</destFileName>-->
-                <!--</artifactItem>-->
-              <!--</artifactItems>-->
-            <!--</configuration>-->
-          <!--</execution>-->
           <execution>
             <!-- Uncompress the standard Karaf distribution -->
             <id>unpack</id>
