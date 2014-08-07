@@ -147,8 +147,7 @@
                 <descriptor>src/main/descriptors/assembly.xml</descriptor>
               </descriptors>
               <finalName>${project.artifactId}</finalName>
-              <appendAssemblyId>false</appendAssemblyId>
-              <classifier></classifier>
+              <appendAssemblyId>true</appendAssemblyId>
             </configuration>
           </execution>
         </executions>
