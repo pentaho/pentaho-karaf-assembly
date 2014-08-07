@@ -63,8 +63,8 @@
   <files>
     <file>
       <source>${project.basedir}/target/classes/pentaho-server-core-features.xml</source>
-      <outputDirectory>/system/pentaho/platform-server-core-features/1.0-SNAPSHOT</outputDirectory>
-      <destName>platform-server-core-features.xml</destName>
+      <outputDirectory>/system/pentaho/pentaho-server-core-features/1.0-SNAPSHOT</outputDirectory>
+      <destName>pentaho-server-core-features.xml</destName>
       <fileMode>0644</fileMode>
       <lineEnding>unix</lineEnding>
     </file>
