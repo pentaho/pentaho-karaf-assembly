@@ -30,6 +30,9 @@
       <directory>target/dependencies/apache-karaf-${karaf.version}</directory>
       <outputDirectory>/</outputDirectory>
       <excludes>
+        <exclude>etc/custom.properties</exclude>
+        <exclude>etc/org.apache.karaf.features.cfg</exclude>
+        <exclude>etc/org.ops4j.pax.url.mvn.cfg</exclude>
         <exclude>**/demos/**</exclude>
         <exclude>bin/**</exclude>
         <exclude>LICENSE</exclude>
@@ -51,6 +54,9 @@
       <outputDirectory>/etc/</outputDirectory>
       <lineEnding>unix</lineEnding>
       <fileMode>0644</fileMode>
+      <excludes>
+        <exclude>**/*.formatted</exclude>
+      </excludes>
     </fileSet>
 
     <fileSet>
