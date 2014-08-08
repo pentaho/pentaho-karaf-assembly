@@ -60,6 +60,16 @@
     </fileSet>
 
     <fileSet>
+      <directory>target/classes/deploy</directory>
+      <outputDirectory>/deploy/</outputDirectory>
+      <lineEnding>unix</lineEnding>
+      <fileMode>0644</fileMode>
+      <excludes>
+        <exclude>**/*.formatted</exclude>
+      </excludes>
+    </fileSet>
+
+    <fileSet>
       <directory>target/features-repo</directory>
       <outputDirectory>/system</outputDirectory>
     </fileSet>
@@ -69,7 +79,7 @@
   <files>
     <file>
       <source>${project.basedir}/target/classes/pentaho-server-core-features.xml</source>
-      <outputDirectory>/system/pentaho/pentaho-server-core-features/1.0-SNAPSHOT</outputDirectory>
+      <outputDirectory>/system/pentaho/pentaho-server-core/1.0-SNAPSHOT</outputDirectory>
       <destName>pentaho-server-core-features.xml</destName>
       <fileMode>0644</fileMode>
       <lineEnding>unix</lineEnding>
