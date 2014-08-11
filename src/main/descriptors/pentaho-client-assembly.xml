@@ -17,7 +17,7 @@
 
 <assembly>
 
-  <id>bin</id>
+  <id>client</id>
 
   <formats>
     <format>zip</format>
@@ -31,6 +31,7 @@
       <outputDirectory>/</outputDirectory>
       <excludes>
         <exclude>etc/custom.properties</exclude>
+        <exclude>etc/startup.properties</exclude>
         <exclude>etc/org.apache.karaf.features.cfg</exclude>
         <exclude>etc/org.ops4j.pax.url.mvn.cfg</exclude>
         <exclude>**/demos/**</exclude>
@@ -58,6 +59,15 @@
         <exclude>**/*.formatted</exclude>
       </excludes>
     </fileSet>
+    <fileSet>
+      <directory>target/classes/etc-client</directory>
+      <outputDirectory>/etc/</outputDirectory>
+      <lineEnding>unix</lineEnding>
+      <fileMode>0644</fileMode>
+      <excludes>
+        <exclude>**/*.formatted</exclude>
+      </excludes>
+    </fileSet>
 
     <fileSet>
       <directory>target/classes/deploy</directory>
@@ -70,7 +80,17 @@
     </fileSet>
 
     <fileSet>
-      <directory>target/features-repo</directory>
+      <directory>target/classes/deploy-client</directory>
+      <outputDirectory>/deploy/</outputDirectory>
+      <lineEnding>unix</lineEnding>
+      <fileMode>0644</fileMode>
+      <excludes>
+        <exclude>**/*.formatted</exclude>
+      </excludes>
+    </fileSet>
+
+    <fileSet>
+      <directory>target/pentaho-client-features-repo</directory>
       <outputDirectory>/system</outputDirectory>
     </fileSet>
 
@@ -78,9 +98,9 @@
 
   <files>
     <file>
-      <source>${project.basedir}/target/classes/deploy/pentaho-server-core-features.xml</source>
-      <outputDirectory>/system/pentaho/pentaho-server-core/1.0-SNAPSHOT</outputDirectory>
-      <destName>pentaho-server-core-features.xml</destName>
+      <source>${project.basedir}/target/classes/deploy-client/pentaho-client-core-features.xml</source>
+      <outputDirectory>/system/pentaho/pentaho-client-core/1.0-SNAPSHOT</outputDirectory>
+      <destName>pentaho-client-core-features.xml</destName>
       <fileMode>0644</fileMode>
       <lineEnding>unix</lineEnding>
     </file>

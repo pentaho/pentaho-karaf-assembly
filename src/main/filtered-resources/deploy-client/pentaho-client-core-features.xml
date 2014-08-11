@@ -15,7 +15,10 @@
   ~ Copyright 2014 Pentaho Corporation. All rights reserved.
   -->
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-  <feature name="pentaho-server" version="1.0">
-    <bundle>mvn:org.apache.felix/org.apache.felix.http.bundle/2.2.2</bundle>
+  <feature name="pentaho-client" version="1.0">
+    <bundle>mvn:pentaho/pentaho-mongo-utils/DATA-PROFILING-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-mongodb-plugin/DATA-PROFILING-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-osgi-utils-impl/DATA-PROFILING-SNAPSHOT</bundle>
+    <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
   </feature>
 </features>
