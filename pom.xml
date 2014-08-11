@@ -41,48 +41,7 @@
       <classifier>features</classifier>
     </dependency>
   </dependencies>
-
-  <profiles>
-    <profile>
-      <id>features</id>
-      <!--<activation>-->
-        <!--<property><name>package.features</name></property>-->
-      <!--</activation>-->
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.karaf.tooling</groupId>
-            <artifactId>features-maven-plugin</artifactId>
-            <version>${karaf.version}</version>
-            <executions>
-              <execution>
-                <id>compile</id>
-
-              </execution>
-              <execution>
-                <id>add-features-to-repo</id>
-                <phase>generate-resources</phase>
-                <goals>
-                  <goal>add-features-to-repo</goal>
-                </goals>
-                <configuration>
-                  <descriptors>
-                    <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
-                    <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
-                    <descriptor>file:///${project.basedir}/target/classes/deploy/pentaho-server-core-features.xml</descriptor>
-                  </descriptors>
-                  <features>
-                    <feature>pentaho-server</feature>
-                  </features>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
-
+  
   <build>
     <resources>
       <resource>
@@ -133,21 +92,99 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
+        <groupId>org.apache.karaf.tooling</groupId>
+        <artifactId>features-maven-plugin</artifactId>
+        <version>${karaf.version}</version>
         <executions>
           <execution>
-            <id>bin</id>
+            <id>compile</id>
+          </execution>
+          <execution>
+            <id>add-features-to-repo</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>add-features-to-repo</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
+                <descriptor>file:///${project.basedir}/target/classes/deploy-server/pentaho-server-core-features.xml</descriptor>
+              </descriptors>
+              <features>
+                <feature>pentaho-server</feature>
+              </features>
+              <repository>target/pentaho-server-features-repo</repository>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.karaf.tooling</groupId>
+        <artifactId>features-maven-plugin</artifactId>
+        <version>${karaf.version}</version>
+        <executions>
+          <execution>
+            <id>compile</id>
+          </execution>
+          <execution>
+            <id>add-features-to-repo</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>add-features-to-repo</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
+                <descriptor>file:///${project.basedir}/target/classes/deploy-client/pentaho-client-core-features.xml</descriptor>
+              </descriptors>
+              <features>
+                <feature>pentaho-client</feature>
+              </features>
+              <repository>target/pentaho-client-features-repo</repository>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <id>server</id>
             <phase>package</phase>
             <goals>
               <goal>single</goal>
             </goals>
             <configuration>
               <descriptors>
-                <descriptor>src/main/descriptors/assembly.xml</descriptor>
+                <descriptor>src/main/descriptors/pentaho-server-assembly.xml</descriptor>
               </descriptors>
               <finalName>${project.artifactId}</finalName>
-              <appendAssemblyId>false</appendAssemblyId>
+              <appendAssemblyId>true</appendAssemblyId>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <id>client</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>src/main/descriptors/pentaho-client-assembly.xml</descriptor>
+              </descriptors>
+              <finalName>${project.artifactId}</finalName>
+              <appendAssemblyId>true</appendAssemblyId>
             </configuration>
           </execution>
         </executions>
