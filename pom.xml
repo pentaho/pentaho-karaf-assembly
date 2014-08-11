@@ -69,7 +69,7 @@
                   <descriptors>
                     <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
                     <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
-                    <descriptor>file:///${project.basedir}/target/classes/pentaho-server-core-features.xml</descriptor>
+                    <descriptor>file:///${project.basedir}/target/classes/deploy/pentaho-server-core-features.xml</descriptor>
                   </descriptors>
                   <features>
                     <feature>pentaho-server</feature>
