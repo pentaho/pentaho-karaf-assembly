@@ -98,9 +98,9 @@
 
   <files>
     <file>
-      <source>${project.basedir}/target/classes/deploy-client/pentaho-client-core-features.xml</source>
+      <source>${project.basedir}/target/classes/pentaho-client-core-features.xml</source>
       <outputDirectory>/system/pentaho/pentaho-client-core/1.0-SNAPSHOT</outputDirectory>
-      <destName>pentaho-client-core-features.xml</destName>
+      <destName>pentaho-client-core-1.0-SNAPSHOT-features.xml</destName>
       <fileMode>0644</fileMode>
       <lineEnding>unix</lineEnding>
     </file>
