@@ -16,6 +16,6 @@
   -->
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
   <feature name="pentaho-server" version="1.0">
-    <bundle>mvn:org.apache.felix/org.apache.felix.http.bundle/2.3.5</bundle>
+    <bundle>mvn:org.apache.felix/org.apache.felix.http.bundle/2.2.2</bundle>
   </feature>
 </features>
