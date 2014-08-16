@@ -1,0 +1,62 @@
+<!--
+  ~ This program is free software; you can redistribute it and/or modify it under the
+  ~ terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
+  ~ Foundation.
+  ~
+  ~ You should have received a copy of the GNU Lesser General Public License along with this
+  ~ program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+  ~ or from the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU Lesser General Public License for more details.
+  ~
+  ~ Copyright 2014 Pentaho Corporation. All rights reserved.
+  -->
+
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+  <feature name="pentaho-client-ee" version="1.0">
+    <feature>pentaho-client</feature>
+    <feature>http</feature>
+    <feature>cxf</feature>
+    <feature>war</feature>
+    <bundle>mvn:com.google.guava/guava/17.0</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-api-ee/DATA-PROFILING-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-model-ee/DATA-PROFILING-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-service-ee/DATA-PROFILING-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-api-ee/DATA-PROFILING-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-ee/DATA-PROFILING-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-service-ee/DATA-PROFILING-SNAPSHOT</bundle>
+  </feature>
+
+  <feature name="mongolap" version="1.0">
+    <feature>pentaho-server</feature>
+    <bundle>mvn:pentaho/mondrian/4.0.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-mongo-utils/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-mongolap-plain/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/mongo-security-ext/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:eigenbase/eigenbase-xom/1.3.5-SNAPSHOT</bundle>
+    <bundle>mvn:eigenbase/eigenbase-resgen/1.3.7-SNAPSHOT</bundle>
+    <bundle>mvn:eigenbase/eigenbase-properties/1.1.5-SNAPSHOT</bundle>
+    <bundle>mvn:org.olap4j/olap4j-xmlaserver/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
+    <bundle>mvn:commons-lang/commons-lang/2.4</bundle>
+    <bundle>mvn:log4j/log4j/1.2.17</bundle>
+    <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
+    <bundle>mvn:org.slf4j/osgi-over-slf4j/1.7.5</bundle>
+    <bundle>mvn:org.slf4j/slf4j-api/1.7.5</bundle>
+    <bundle>mvn:commons-io/commons-io/1.4</bundle>
+    <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
+  </feature>
+
+  <feature name="pentaho-monitoring" version="1.0">
+    <feature>pentaho-server</feature>
+    <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
+    <bundle>mvn:org.apache.camel/camel-guava-eventbus/2.13.2</bundle>
+    <bundle>mvn:commons-beanutils/commons-beanutils/1.9.2</bundle>
+    <bundle>mvn:pentaho/pentaho-camel-core/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-camel-snmp/1.0-SNAPSHOT</bundle>
+    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/1.0-SNAPSHOT/xml/snmp</bundle>
+  </feature>
+</features>

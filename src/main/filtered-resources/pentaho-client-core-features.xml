@@ -21,4 +21,5 @@
     <bundle>mvn:pentaho/pentaho-osgi-utils-impl/DATA-PROFILING-SNAPSHOT</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
   </feature>
+
 </features>

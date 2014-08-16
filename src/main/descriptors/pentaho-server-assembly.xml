@@ -95,14 +95,5 @@
 
   </fileSets>
 
-  <files>
-    <file>
-      <source>${project.basedir}/target/classes/pentaho-server-core-features.xml</source>
-      <outputDirectory>/system/pentaho/pentaho-server-core/1.0-SNAPSHOT</outputDirectory>
-      <destName>pentaho-server-core-1.0-SNAPSHOT-features.xml</destName>
-      <fileMode>0644</fileMode>
-      <lineEnding>unix</lineEnding>
-    </file>
-  </files>
 
 </assembly>
