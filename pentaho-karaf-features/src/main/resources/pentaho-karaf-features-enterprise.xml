@@ -22,12 +22,15 @@
     <feature>cxf</feature>
     <feature>war</feature>
     <bundle>mvn:com.google.guava/guava/17.0</bundle>
+    <bundle>mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-service-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-mongo-api-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-mongo-service-ee/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-angular-bundle/TRUNK-SNAPSHOT</bundle>
   </feature>
 
   <feature name="mongolap" version="1.0">
