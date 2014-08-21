@@ -33,12 +33,16 @@
 
   <camelContext xmlns="http://camel.apache.org/schema/blueprint">
     <route>
+
       <from uri="guava-eventbus:eventBus?eventClass=org.pentaho.platform.api.monitoring.IMonitoringEvent"/>
-      <to uri="pentaho:snmp-transformer"/>
+
+      <to uri="pentaho:snmp:transformer"/>
+
       <to uri="pentaho:snmp:send-trap"/>
 
     </route>
   </camelContext>
+
 </blueprint>
 
 
