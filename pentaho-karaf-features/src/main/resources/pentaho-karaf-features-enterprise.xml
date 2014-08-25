@@ -29,6 +29,7 @@
     <bundle>mvn:pentaho/pentaho-data-profiling-mongo-api-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-mongo-service-ee/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-notification-service-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-angular-bundle/TRUNK-SNAPSHOT</bundle>
   </feature>
