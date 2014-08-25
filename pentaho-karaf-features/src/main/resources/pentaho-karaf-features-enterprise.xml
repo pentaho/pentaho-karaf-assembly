@@ -47,8 +47,6 @@
     <bundle>mvn:commons-lang/commons-lang/2.4</bundle>
     <bundle>mvn:log4j/log4j/1.2.17</bundle>
     <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
-    <bundle>mvn:org.slf4j/osgi-over-slf4j/1.7.5</bundle>
-    <bundle>mvn:org.slf4j/slf4j-api/1.7.5</bundle>
     <bundle>mvn:commons-io/commons-io/1.4</bundle>
     <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
   </feature>
