@@ -133,6 +133,8 @@
               <goal>add-features-to-repo</goal>
             </goals>
             <configuration>
+              <includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
+              <addTransitiveFeatures>true</addTransitiveFeatures>
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
