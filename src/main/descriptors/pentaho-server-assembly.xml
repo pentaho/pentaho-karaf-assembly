@@ -34,6 +34,7 @@
         <exclude>etc/org.apache.karaf.features.cfg</exclude>
         <exclude>etc/org.ops4j.pax.url.mvn.cfg</exclude>
         <exclude>etc/startup.properties</exclude>
+        <exclude>etc/system.properties</exclude>
         <exclude>**/demos/**</exclude>
         <exclude>bin/**</exclude>
         <exclude>LICENSE</exclude>

@@ -24,9 +24,6 @@
   <feature name="pentaho-server" version="1.0">
     <feature>pentaho-base</feature>
     <bundle>mvn:org.apache.felix/org.apache.felix.http.bundle/2.2.2</bundle>
-    <!-- uncomment this once features are published to maven -->
-    <!--<bundle>blueprint:mvn:pentaho/pentaho-server-core/1.0-SNAPSHOT/xml/activator</bundle-->
-
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/1.0-SNAPSHOT/xml/server</bundle>
   </feature>
 
@@ -37,4 +34,21 @@
     <bundle>mvn:pentaho/pentaho-osgi-utils-impl/DATA-PROFILING-SNAPSHOT</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
   </feature>
+
+
+<!-- Overriding standard one to exclude log bundle which will not work without pax-logging -->
+  <feature name="management" description="Provide a JMX MBeanServer and a set of MBeans in Karaf" version="5.0">
+    <bundle start-level="30">mvn:org.apache.karaf.management/org.apache.karaf.management.server/2.3.5</bundle>
+    <bundle start-level="30">mvn:org.apache.aries.jmx/org.apache.aries.jmx.api/1.1.0</bundle>
+    <bundle start-level="30">mvn:org.apache.aries.jmx/org.apache.aries.jmx.core/1.1.1</bundle>
+    <bundle start-level="30">mvn:org.apache.aries.jmx/org.apache.aries.jmx.blueprint.api/1.1.0</bundle>
+    <bundle start-level="30">mvn:org.apache.aries.jmx/org.apache.aries.jmx.blueprint.core/1.1.0</bundle>
+    <bundle start-level="30">mvn:org.apache.karaf.management.mbeans/org.apache.karaf.management.mbeans.system/2.3.5</bundle>
+    <bundle start-level="30">mvn:org.apache.karaf.management.mbeans/org.apache.karaf.management.mbeans.bundles/2.3.5</bundle>
+    <bundle start-level="30">mvn:org.apache.karaf.management.mbeans/org.apache.karaf.management.mbeans.services/2.3.5</bundle>
+    <bundle start-level="30">mvn:org.apache.karaf.management.mbeans/org.apache.karaf.management.mbeans.config/2.3.5</bundle>
+    <bundle start-level="30">mvn:org.apache.karaf.management.mbeans/org.apache.karaf.management.mbeans.packages/2.3.5</bundle>
+    <bundle start-level="30">mvn:org.apache.karaf.management.mbeans/org.apache.karaf.management.mbeans.dev/2.3.5</bundle>
+  </feature>
+
 </features>
