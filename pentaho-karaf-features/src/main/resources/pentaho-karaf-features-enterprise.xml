@@ -19,8 +19,21 @@
   <feature name="pentaho-client-ee" version="1.0">
     <feature>pentaho-client</feature>
     <feature>http</feature>
+    <feature>http-whiteboard</feature>
     <feature>cxf</feature>
     <feature>war</feature>
+    <configfile finalname="/etc/jetty.xml">mvn:org.apache.karaf/apache-karaf/2.3.5/xml/jettyconfig</configfile>
+    <config name="org.ops4j.pax.web">
+      org.osgi.service.http.port=8181
+      javax.servlet.context.tempdir=${karaf.data}/pax-web-jsp
+      org.ops4j.pax.web.config.file=${karaf.base}/etc/jetty.xml
+    </config>
+    <feature version="[7.0,8.0)">jetty</feature>
+    <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-api/1.1.17</bundle>
+    <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-spi/1.1.17</bundle>
+    <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-runtime/1.1.17</bundle>
+    <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-jetty/1.1.17</bundle>
+    <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/TRUNK-SNAPSHOT/zip</bundle>
     <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-ee/TRUNK-SNAPSHOT</bundle>
@@ -30,7 +43,6 @@
     <bundle>mvn:pentaho/pentaho-data-profiling-mongo-service-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-notification-service-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/TRUNK-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-angular-bundle/TRUNK-SNAPSHOT</bundle>
   </feature>
 
   <feature name="mongolap" version="1.0">
