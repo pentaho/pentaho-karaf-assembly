@@ -122,7 +122,9 @@
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
               </descriptors>
               <features>
+                <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
+                <feature>pentaho-deployers</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
@@ -144,6 +146,7 @@
               </descriptors>
               <features>
                 <feature>pentaho-server</feature>
+                <feature>pentaho-deployers</feature>
               </features>
               <repository>target/pentaho-server-features-repo</repository>
             </configuration>

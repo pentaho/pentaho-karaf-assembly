@@ -18,14 +18,12 @@
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
 
   <feature name="pentaho-deployers" version="1.0">
-    <feature>cxf</feature>
-    <bundle start-level="24">mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
-    <bundle start-level="25">mvn:pentaho/pentaho-platform-plugin-deployer/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
     <bundle>mvn:com.google.guava/guava/17.0</bundle>
+    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/TRUNK-SNAPSHOT</bundle>
   </feature>
 
   <feature name="pentaho-base" version="1.0">
-    <feature>pentaho-deployers</feature>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/1.7.5</bundle>
   </feature>
 
