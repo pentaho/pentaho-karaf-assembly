@@ -118,6 +118,7 @@
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/2.7.11/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
               </descriptors>
               <features>
@@ -138,6 +139,7 @@
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/2.7.11/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
               </descriptors>
               <features>
