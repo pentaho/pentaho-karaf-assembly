@@ -21,7 +21,7 @@
     <feature>http</feature>
     <feature>cxf</feature>
     <feature>war</feature>
-    <bundle>mvn:com.google.guava/guava/17.0</bundle>
+    <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-service-ee/TRUNK-SNAPSHOT</bundle>
