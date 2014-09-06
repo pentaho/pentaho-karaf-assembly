@@ -43,6 +43,8 @@
     <bundle>mvn:pentaho/pentaho-data-profiling-mongo-service-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-notification-service-ee/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-i18n-bundle/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/TRUNK-SNAPSHOT</bundle>
   </feature>
 
   <feature name="mongolap" version="1.0">
