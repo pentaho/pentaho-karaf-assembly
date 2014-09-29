@@ -20,7 +20,9 @@
   <feature name="pentaho-deployers" version="1.0">
     <bundle>mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
     <bundle>mvn:com.google.guava/guava/17.0</bundle>
-    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:commons-io/commons-io/2.4</bundle>
+    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-webjars-deployer/1.0-SNAPSHOT</bundle>
   </feature>
 
   <feature name="pentaho-base" version="1.0">
