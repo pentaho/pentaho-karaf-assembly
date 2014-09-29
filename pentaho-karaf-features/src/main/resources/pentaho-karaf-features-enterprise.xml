@@ -16,8 +16,7 @@
   -->
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-  <feature name="pentaho-client-ee" version="1.0">
-    <feature>pentaho-client</feature>
+  <feature name="pentaho-data-profiling-ee" version="1.0">
     <feature>http</feature>
     <feature>http-whiteboard</feature>
     <feature>cxf</feature>
@@ -49,6 +48,13 @@
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/1.0-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-i18n-bundle/1.0-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-mongo-utils/DATA-PROFILING-SNAPSHOT</bundle>
+    <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
+  </feature>
+
+  <feature name="pentaho-client-ee" version="1.0">
+    <feature>pentaho-data-profiling-ee</feature>
+    <feature>pentaho-client</feature>
   </feature>
 
   <feature name="mongolap" version="1.0">
