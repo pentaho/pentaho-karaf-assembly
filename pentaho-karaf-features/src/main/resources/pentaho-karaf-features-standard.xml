@@ -26,6 +26,7 @@
   </feature>
 
   <feature name="pentaho-base" version="1.0">
+    <feature>pentaho-deployers</feature>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/1.7.5</bundle>
   </feature>
 
@@ -45,8 +46,14 @@
         <bundle>mvn:org.apache.felix/org.apache.felix.http.proxy/2.2.1</bundle>
   </feature>
 
+  <feature name="pdi-osgi-bridge">
+    <!-- The pdi-osgi-bridge kettle plugin needs to be deployed manually -->
+    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/1.0-SNAPSHOT/xml/pdibridge</bundle>
+  </feature>
+
   <feature name="pentaho-client" version="1.0">
     <feature>pentaho-base</feature>
+    <feature>pdi-osgi-bridge</feature>
     <bundle>mvn:pentaho/pentaho-mongo-utils/DATA-PROFILING-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-mongodb-plugin/DATA-PROFILING-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-osgi-utils-impl/DATA-PROFILING-SNAPSHOT</bundle>

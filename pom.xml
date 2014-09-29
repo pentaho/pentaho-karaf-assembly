@@ -125,7 +125,6 @@
               <features>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
-                <feature>pentaho-deployers</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>

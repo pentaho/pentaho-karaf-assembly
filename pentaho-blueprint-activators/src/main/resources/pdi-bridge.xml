@@ -6,7 +6,4 @@
 
   </bean>
 
-  <!--<reference id="logService" interface="org.osgi.service.log.LogReaderService"/>-->
-
-
 </blueprint>

@@ -63,6 +63,11 @@
                   <type>xml</type>
                   <classifier>snmp</classifier>
                 </artifact>
+                <artifact>
+                  <file>src/main/resources/pdi-bridge.xml</file>
+                  <type>xml</type>
+                  <classifier>pdibridge</classifier>
+                </artifact>
               </artifacts>
             </configuration>
           </execution>
