@@ -38,12 +38,12 @@
     <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.13</bundle>
     <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/INNOVATION-SNAPSHOT/zip</bundle>
     <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-api-ee/TRUNK-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-model-ee/TRUNK-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-service-ee/TRUNK-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-api-ee/TRUNK-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-ee/TRUNK-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-service-ee/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-api-ee/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-model-ee/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-service-ee/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-api-ee/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-ee/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-service-ee/1.0-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-notification-bundle/1.0-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-notification-webservice-bundle/1.0-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/1.0-SNAPSHOT</bundle>
