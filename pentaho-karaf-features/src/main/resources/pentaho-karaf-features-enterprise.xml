@@ -21,6 +21,7 @@
     <feature>http-whiteboard</feature>
     <feature>cxf</feature>
     <feature>war</feature>
+    <feature>pentaho-base</feature>
     <configfile finalname="/etc/jetty.xml">mvn:org.apache.karaf/apache-karaf/2.3.5/xml/jettyconfig</configfile>
     <config name="org.ops4j.pax.web">
       org.osgi.service.http.port=8181
