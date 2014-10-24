@@ -16,7 +16,7 @@
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
-    <version>RELEASE</version>
+    <version>1.0.1</version>
   </parent>
 
   <packaging>pom</packaging>
