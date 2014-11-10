@@ -57,6 +57,7 @@
   <feature name="pentaho-client-ee" version="1.0">
     <feature>pentaho-data-profiling-ee</feature>
     <feature>pentaho-client</feature>
+    <bundle>mvn:pentaho/pentaho-data-profiling-ee-mongodb-plugin-integration/1.0-SNAPSHOT</bundle>
   </feature>
 
   <feature name="mongolap" version="1.0">
