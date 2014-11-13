@@ -1,0 +1,36 @@
+<!--
+  ~ This program is free software; you can redistribute it and/or modify it under the
+  ~ terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
+  ~ Foundation.
+  ~
+  ~ You should have received a copy of the GNU Lesser General Public License along with this
+  ~ program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+  ~ or from the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU Lesser General Public License for more details.
+  ~
+  ~ Copyright 2014 Pentaho Corporation. All rights reserved.
+  -->
+
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+
+  <!-- Overriding the default http feature -->
+  <feature name="http" description="Implementation of the OSGi HTTP service" version="2.7.5" resolver="(obr)">
+    <bundle>mvn:org.apache.felix/org.apache.felix.http.bundle/2.2.2</bundle>
+  </feature>
+
+  <feature name="pentaho-server" version="1.0">
+    <feature>pentaho-base</feature>
+    <feature>http-whiteboard</feature>
+    <bundle>mvn:pentaho/pentaho-server-bundle/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/TRUNK-SNAPSHOT</bundle>
+    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/1.0-SNAPSHOT/xml/server</bundle>
+    <bundle>mvn:pentaho/pentaho-angular-bundle/TRUNK-SNAPSHOT</bundle>
+    <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.2.2</bundle>
+  </feature>
+
+
+</features>
