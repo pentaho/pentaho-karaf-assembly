@@ -79,4 +79,11 @@
     <bundle>mvn:pentaho/pentaho-camel-snmp/1.0-SNAPSHOT</bundle>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/1.0-SNAPSHOT/xml/snmp</bundle>
   </feature>
+  
+  <feature name="pentaho-camel-jms" version="1.0">
+  	<feature>jms</feature>
+    <feature>camel-jms</feature>
+    <feature>activemq</feature>
+    <feature>activemq-camel</feature>
+  </feature>
 </features>
