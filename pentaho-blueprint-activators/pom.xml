@@ -63,6 +63,11 @@
                   <type>xml</type>
                   <classifier>snmp</classifier>
                 </artifact>
+                <artifact>
+                  <file>src/main/resources/jms.xml</file>
+                  <type>xml</type>
+                  <classifier>jms</classifier>
+                </artifact>
               </artifacts>
             </configuration>
           </execution>
