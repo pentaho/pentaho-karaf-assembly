@@ -27,28 +27,13 @@
            default-timeout="20000"
            default-activation="eager">
 
-  <bean id="eventBus" class="org.pentaho.camel.snmp.BusLocator" factory-method="getBus" scope="prototype"/>
-  
-  <!-- configure the camel activemq component to use the current broker -->
-	<reference id="lookupTheConnectionFactory" interface="javax.jms.ConnectionFactory"/>
-
+	<!-- configure centralized jms broker -->
+	<bean class="org.apache.activemq.ActiveMQConnectionFactory" id="connectionFactory">
+		<property name="brokerURL"
+		value="vm://localhost?create=false&amp;waitForStart=10000" />
+		<property name="userName" value="${webconsole.jms.user}" />
+		<property name="password" value="${webconsole.jms.password}" />
+	</bean> 
+	<service ref="connectionFactory" auto-export="interfaces"/>	
 	
-  <camelContext xmlns="http://camel.apache.org/schema/blueprint">
-
-	<!-- Route the IMonitoringEvent from the guava bus to SnmpTransformerEndpoint.  This endpoint transforms the event into an SnmpMessage suitable for JMS transmission.  The SNMP message is then
-	sent out to the snmpQueue using the ActiveMQ broker defined in the activemq.xml and org.apache.activemq.server-default.cfg files.
-	-->
-    <route>
-      <from uri="guava-eventbus:eventBus?eventClass=org.pentaho.platform.api.monitoring.IMonitoringEvent"/>
-	  <to uri="pentaho:snmp:transformer"/>
-	  <to uri="activemq:queue:snmpQueue"/>
-	</route>
-
-	<!-- Route any incomming JMS SnmpMessages to SendTrapEndpoint which will formally send the snmp trap -->
-	<route>
-	  <from uri="activemq:queue:snmpQueue"/>
-	  <to uri="pentaho:snmp:send-trap"/>
-	</route>
-
-  </camelContext>
 </blueprint>
