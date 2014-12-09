@@ -25,9 +25,9 @@
   <feature name="pentaho-server" version="1.0">
     <feature>pentaho-base</feature>
     <feature>http-whiteboard</feature>
-    <bundle>mvn:pentaho/pentaho-server-bundle/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-server-bundle/1.0-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/TRUNK-SNAPSHOT</bundle>
-    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
+    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/1.0-SNAPSHOT/xml/server</bundle>
     <bundle>mvn:pentaho/pentaho-angular-bundle/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.2.2</bundle>
   </feature>
