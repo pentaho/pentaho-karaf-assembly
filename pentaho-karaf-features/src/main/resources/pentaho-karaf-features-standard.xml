@@ -36,9 +36,9 @@
     <feature>pentaho-base</feature>
     <bundle>mvn:pentaho/pentaho-mongo-utils/DATA-PROFILING-SNAPSHOT</bundle>
     <bundle>mvn:pentaho/pentaho-mongodb-plugin/DATA-PROFILING-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-osgi-utils-impl/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-osgi-utils-impl/${project.version}</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
-    <bundle>mvn:pentaho/pdi-osgi-bridge-activator/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${project.version}</bundle>
   </feature>
 
 
