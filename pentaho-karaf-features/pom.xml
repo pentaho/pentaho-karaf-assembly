@@ -38,6 +38,44 @@
 
   <build>
     <plugins>
+
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.7</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <!-- here the phase you need -->
+            <phase>process-sources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <overwrite>true</overwrite>
+              <outputDirectory>${basedir}/target/processed</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src/main/resources</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+              <supportMultiLineFiltering>false</supportMultiLineFiltering>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>${basedir}/target/processed</directory>
+              <followSymlinks>false</followSymlinks>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -52,17 +90,17 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>src/main/resources/pentaho-karaf-features-enterprise.xml</file>
+                  <file>${basedir}/target/processed/pentaho-karaf-features-enterprise.xml</file>
                   <type>xml</type>
                   <classifier>enterprise</classifier>
                 </artifact>
                 <artifact>
-                  <file>src/main/resources/pentaho-karaf-features-standard.xml</file>
+                  <file>${basedir}/target/processed/pentaho-karaf-features-standard.xml</file>
                   <type>xml</type>
                   <classifier>standard</classifier>
                 </artifact>
                 <artifact>
-                  <file>src/main/resources/pentaho-karaf-features-server.xml</file>
+                  <file>${basedir}/target/processed/pentaho-karaf-features-server.xml</file>
                   <type>xml</type>
                   <classifier>server</classifier>
                 </artifact>
