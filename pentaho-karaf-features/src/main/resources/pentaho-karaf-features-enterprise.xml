@@ -29,19 +29,19 @@
     <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.13</bundle>
     <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/INNOVATION-SNAPSHOT/zip</bundle>
     <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-api-ee/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-model-ee/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-service-ee/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-api-ee/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-ee/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-pushdown-ee/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-streaming-ee/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-service-ee/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-notification-bundle/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-notification-webservice-bundle/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-i18n-bundle/1.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/1.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-api-ee/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-model-ee/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-service-ee/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-api-ee/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-ee/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-pushdown-ee/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-model-streaming-ee/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-mongo-service-ee/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-notification-bundle/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-notification-webservice-bundle/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-i18n-bundle/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-mongo-utils/DATA-PROFILING-SNAPSHOT</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
   </feature>
