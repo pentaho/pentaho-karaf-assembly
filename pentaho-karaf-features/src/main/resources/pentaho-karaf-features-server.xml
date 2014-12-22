@@ -31,6 +31,15 @@
     <bundle>mvn:pentaho/pentaho-angular-bundle/TRUNK-SNAPSHOT</bundle>
     <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.2.2</bundle>
   </feature>
-
-
+  
+	<feature name="pentaho-camel-jms" version="1.0">
+		<feature>pentaho-server</feature>
+		<feature>jms</feature>
+		<feature>camel-jms</feature>
+		<feature>activemq</feature>
+		<feature>activemq-camel</feature>
+		<bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/1.0-SNAPSHOT/xml/pentaho-jms
+		</bundle>
+	</feature>
+  
 </features>
