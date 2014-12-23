@@ -64,9 +64,9 @@
                   <classifier>snmp</classifier>
                 </artifact>
                 <artifact>
-                  <file>src/main/resources/jms.xml</file>
+                  <file>src/main/resources/pentaho-jms.xml</file>
                   <type>xml</type>
-                  <classifier>jms</classifier>
+                  <classifier>pentaho-jms</classifier>
                 </artifact>
               </artifacts>
             </configuration>
