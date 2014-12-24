@@ -58,6 +58,11 @@
                   <type>cfg</type>
                   <classifier>snmp</classifier>
                 </artifact>
+                <artifact>
+                  <file>src/main/resources/pentaho.jms.cfg</file>
+                  <type>cfg</type>
+                  <classifier>jms</classifier>
+                </artifact>
               </artifacts>
             </configuration>
           </execution>
