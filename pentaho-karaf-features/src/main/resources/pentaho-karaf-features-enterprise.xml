@@ -85,6 +85,7 @@
   </feature>
 
   <feature name="pentaho-camel-jms" version="1.0">
+  	<configfile finalname="/etc/pentaho.jms.cfg">mvn:pentaho/pentaho-osgi-config/1.0-SNAPSHOT/cfg/jms</configfile>
   	<feature>pentaho-server</feature>
 		<feature>jms</feature>
 		<feature>camel-jms</feature>
