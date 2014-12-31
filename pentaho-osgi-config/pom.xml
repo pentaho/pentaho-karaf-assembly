@@ -61,7 +61,7 @@
                 <artifact>
                   <file>src/main/resources/pentaho.jms.cfg</file>
                   <type>cfg</type>
-                  <classifier>jms</classifier>
+                  <classifier>pentaho-jms</classifier>
                 </artifact>
               </artifacts>
             </configuration>
