@@ -20,6 +20,7 @@
     <feature>http</feature>
     <feature>http-whiteboard</feature>
     <feature>cxf</feature>
+    <feature>cxf-http-async</feature>
     <feature>war</feature>
     <feature>pentaho-base</feature>
     <bundle>wrap:mvn:com.clearspring.analytics/stream/2.7.0</bundle>
