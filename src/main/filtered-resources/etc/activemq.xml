@@ -14,7 +14,7 @@
         See the License for the specific language governing permissions and
         limitations under the License.
     -->
-    <!-- START SNIPPET: example -->
+
     <beans
       xmlns="http://www.springframework.org/schema/beans"
       xmlns:amq="http://activemq.apache.org/schema/core"
@@ -47,8 +47,13 @@
                 For more information, see:
                 http://activemq.apache.org/producer-flow-control.html
             -->
-     
-            <destinationPolicy>
+		
+		<!--  use JAAS to authenticate -->
+		<plugins>
+		  <jaasAuthenticationPlugin configuration="karaf" />
+		</plugins>
+
+		<destinationPolicy>
                 <policyMap>
                   <policyEntries>
                     <policyEntry topic=">" producerFlowControl="true">
@@ -163,4 +168,3 @@
         <!--<import resource="jetty.xml"/>-->
      
     </beans>
-    <!-- END SNIPPET: example --> 
