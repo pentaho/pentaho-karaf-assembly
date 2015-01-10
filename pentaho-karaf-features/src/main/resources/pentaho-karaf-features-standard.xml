@@ -22,6 +22,7 @@
     <bundle>mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
     <bundle>mvn:com.google.guava/guava/17.0</bundle>
     <bundle>mvn:commons-io/commons-io/2.4</bundle>
+    <bundle>mvn:commons-lang/commons-lang/2.6</bundle>
     <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-webjars-deployer/${project.version}</bundle>
   </feature>
