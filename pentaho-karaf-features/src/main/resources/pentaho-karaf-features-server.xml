@@ -33,13 +33,13 @@
   </feature>
   
 	<feature name="pentaho-camel-jms" version="1.0">
-	  <configfile finalname="/etc/pentaho.jms.cfg">mvn:pentaho/pentaho-osgi-config/1.0-SNAPSHOT/cfg/pentaho-jms</configfile>
+	  <configfile finalname="/etc/pentaho.jms.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-jms</configfile>
 		<feature>pentaho-server</feature>
 		<feature>jms</feature>
 		<feature>camel-jms</feature>
 		<feature>activemq</feature>
 		<feature>activemq-camel</feature>
-		<bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/1.0-SNAPSHOT/xml/pentaho-jms
+		<bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/pentaho-jms
 		</bundle>
 	</feature>
   
