@@ -68,6 +68,11 @@
                   <type>xml</type>
                   <classifier>pentaho-jms</classifier>
                 </artifact>
+                <artifact>
+                  <file>src/main/resources/camel-jms.xml</file>
+                  <type>xml</type>
+                  <classifier>camel-jms</classifier>
+                </artifact>
               </artifacts>
             </configuration>
           </execution>

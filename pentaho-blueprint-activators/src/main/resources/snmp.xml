@@ -25,8 +25,9 @@
             http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.1.0 http://aries.apache.org/schemas/blueprint-ext/blueprint-ext-1.1.xsd"
 	default-timeout="20000" default-activation="eager">
 
-	<bean id="eventBus" class="org.pentaho.camel.snmp.BusLocator"
-		factory-method="getBus" scope="prototype" />
+	<reference id="eventBus" interface="com.google.common.eventbus.EventBus" ext:proxy-method='classes'/>
+
+
 	<reference id="activemqx" interface="org.apache.camel.Component" />
 	<reference id="pentahoJmsConfig" ext:proxy-method='classes'
 		interface="org.pentaho.osgi.jms.PentahoJmsConfiguration" />
