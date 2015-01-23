@@ -17,42 +17,33 @@
   -->
 
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
-	xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.1.0"
-	xsi:schemaLocation="
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+           xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.1.0"
+           xsi:schemaLocation="
             http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
             http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
             http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.1.0 http://aries.apache.org/schemas/blueprint-ext/blueprint-ext-1.1.xsd"
-	default-timeout="20000" default-activation="eager">
+           default-timeout="20000" default-activation="eager">
 
-	<cm:property-placeholder persistent-id="pentaho.jms"
-		update-strategy="reload">
-		<cm:default-properties>
-			<cm:property name="enabled" value="true" />
-			<cm:property name="port" value="162" />
-			<cm:property name="toHost" value="" />
-			<cm:property name="user" value="admin" />
-			<cm:property name="password" value="password" />
-		</cm:default-properties>
-	</cm:property-placeholder>
 
-	<bean class="org.pentaho.osgi.jms.PentahoJmsConfiguration" id="pentahoJmsConfiguration">
-		<argument value="${enabled}" />
-		<argument value="${port}" />
-		<argument value="${toHost}" />
-		<argument value="${userName}" />
-		<argument value="${password}" />
-	</bean>
 
-	<service ref="pentahoJmsConfiguration" auto-export="all-classes" />
+  <reference id="activemqx" interface="org.apache.camel.Component" />
+  <!--<reference id="pentahoJmsConfig" ext:proxy-method='classes'-->
+             <!--interface="org.pentaho.osgi.jms.PentahoJmsConfiguration" />-->
 
-	<!-- Connect to centralized jms broker -->
-	<bean class="org.pentaho.osgi.jms.PentahoJmsConnectionFactory" id="connectionFactory">
-		<argument ref="pentahoJmsConfiguration" />
-		<argument value="admin" />
-		<argument value="password" />
-	</bean>
+  <camelContext xmlns="http://camel.apache.org/schema/blueprint">
 
-	<service ref="connectionFactory" auto-export="interfaces" />
+    <!-- Route the IMonitoringEvent from the guava bus to SnmpTransformerEndpoint.
+      This endpoint transforms the event into an SnmpMessage suitable for JMS transmission.
+      The SNMP message is then sent out to the snmpQueue using the ActiveMQ broker
+      defined in the activemq.xml and org.apache.activemq.server-default.cfg files. -->
+    <route>
+      <from
+          uri="guava-eventbus:eventBus?eventClass=org.pentaho.platform.api.monitoring.IMonitoringEvent" />
+      <to uri="pentaho:snmp:transformer" />
+      <to uri="activemqx:queue:snmpQueue" />
+    </route>
 
+
+  </camelContext>
 </blueprint>

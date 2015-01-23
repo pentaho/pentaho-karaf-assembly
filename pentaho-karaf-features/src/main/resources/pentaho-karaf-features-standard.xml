@@ -67,7 +67,7 @@
     <feature>jms</feature>
     <feature>activemq</feature>
     <bundle>mvn:pentaho/pentaho-jms-bundle/6.0-SNAPSHOT</bundle>
-    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/pentaho-jms
+    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/jms
     </bundle>
   </feature>
 

@@ -25,35 +25,26 @@
             http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.1.0 http://aries.apache.org/schemas/blueprint-ext/blueprint-ext-1.1.xsd"
 	default-timeout="20000" default-activation="eager">
 
-	<reference id="eventBus" interface="com.google.common.eventbus.EventBus" ext:proxy-method='classes'/>
+	<cm:property-placeholder persistent-id="pentaho.jms"
+		update-strategy="reload">
+		<cm:default-properties>
+			<cm:property name="enabled" value="true" />
+			<cm:property name="port" value="162" />
+			<cm:property name="toHost" value="" />
+			<cm:property name="userName" value="admin" />
+			<cm:property name="password" value="password" />
+		</cm:default-properties>
+	</cm:property-placeholder>
 
+	<!-- Connect to centralized jms broker -->
+	<bean class="org.apache.activemq.ActiveMQConnectionFactory" id="connectionFactory">
+		<argument value="${userName}" />
+		<argument value="${password}" />
+		<argument>
+			<value type="java.net.URI">tcp://${toHost}:${port}</value>
+		</argument>
+	</bean>
 
-	<reference id="activemqx" interface="org.apache.camel.Component" />
-	<reference id="pentahoJmsConfig" ext:proxy-method='classes'
-		interface="org.pentaho.osgi.jms.PentahoJmsConfiguration" />
+	<service ref="connectionFactory" auto-export="interfaces" />
 
-	<camelContext xmlns="http://camel.apache.org/schema/blueprint">
-
-		<!-- Route the IMonitoringEvent from the guava bus to SnmpTransformerEndpoint. 
-			This endpoint transforms the event into an SnmpMessage suitable for JMS transmission. 
-			The SNMP message is then sent out to the snmpQueue using the ActiveMQ broker 
-			defined in the activemq.xml and org.apache.activemq.server-default.cfg files. -->
-		<route>
-			<from
-				uri="guava-eventbus:eventBus?eventClass=org.pentaho.platform.api.monitoring.IMonitoringEvent" />
-			<to uri="pentaho:snmp:transformer" />
-			<to uri="activemqx:queue:snmpQueue" />
-		</route>
-
-		<!-- Route any incomming JMS SnmpMessages to SendTrapEndpoint which will 
-			formally send the snmp trap -->
-		<route>
-			<from uri="activemqx:queue:snmpQueue" />
-			<filter>
-				<method ref="pentahoJmsConfig" method="isNotRelayServer" />
-				<to uri="pentaho:snmp:send-trap" />
-			</filter>
-		</route>
-
-	</camelContext>
 </blueprint>
