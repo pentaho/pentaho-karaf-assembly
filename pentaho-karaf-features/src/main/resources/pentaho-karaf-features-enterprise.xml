@@ -72,6 +72,8 @@
   </feature>
 
   <feature name="pentaho-monitoring" version="1.0">
+    <configfile finalname="/etc/pentaho.pdi.monitoring.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pdi-monitoring
+    </configfile>
     <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
     <bundle>mvn:org.apache.camel/camel-guava-eventbus/2.13.2</bundle>
     <bundle>mvn:commons-beanutils/commons-beanutils/1.9.2</bundle>
