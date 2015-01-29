@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ This program is free software; you can redistribute it and/or modify it under the
-  ~ terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
-  ~ Foundation.
-  ~
-  ~ You should have received a copy of the GNU Lesser General Public License along with this
-  ~ program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
-  ~ or from the Free Software Foundation, Inc.,
-  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-  ~
-  ~ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-  ~ See the GNU Lesser General Public License for more details.
-  ~
-  ~ Copyright 2014 Pentaho Corporation. All rights reserved.
-  -->
+ ~ This program is free software; you can redistribute it and/or modify it under the
+ ~ terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
+ ~ Foundation.
+ ~
+ ~ You should have received a copy of the GNU Lesser General Public License along with this
+ ~ program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+ ~ or from the Free Software Foundation, Inc.,
+ ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ ~
+ ~ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ ~ See the GNU Lesser General Public License for more details.
+ ~
+ ~ Copyright 2014 Pentaho Corporation. All rights reserved.
+ -->
 
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
            xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.1.0"
            xsi:schemaLocation="
-            http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
-            http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
-            http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.1.0 http://aries.apache.org/schemas/blueprint-ext/blueprint-ext-1.1.xsd"
+    http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+    http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
+    http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.1.0 http://aries.apache.org/schemas/blueprint-ext/blueprint-ext-1.1.xsd"
            default-timeout="20000" default-activation="eager">
 
 
 
   <reference id="activemqx" interface="org.apache.camel.Component" />
-  <!--<reference id="pentahoJmsConfig" ext:proxy-method='classes'-->
-             <!--interface="org.pentaho.osgi.jms.PentahoJmsConfiguration" />-->
+
+  <reference id="eventBus" interface="com.google.common.eventbus.EventBus" ext:proxy-method='classes'/>
 
   <camelContext xmlns="http://camel.apache.org/schema/blueprint">
 
     <!-- Route the IMonitoringEvent from the guava bus to SnmpTransformerEndpoint.
-      This endpoint transforms the event into an SnmpMessage suitable for JMS transmission.
-      The SNMP message is then sent out to the snmpQueue using the ActiveMQ broker
-      defined in the activemq.xml and org.apache.activemq.server-default.cfg files. -->
+     This endpoint transforms the event into an SnmpMessage suitable for JMS transmission.
+     The SNMP message is then sent out to the snmpQueue using the ActiveMQ broker
+     defined in the activemq.xml and org.apache.activemq.server-default.cfg files. -->
     <route>
       <from
           uri="guava-eventbus:eventBus?eventClass=org.pentaho.platform.api.monitoring.IMonitoringEvent" />
