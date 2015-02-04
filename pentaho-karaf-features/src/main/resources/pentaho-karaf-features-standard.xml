@@ -17,20 +17,21 @@
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
 
-<!-- This feature never works reliably due to the asynchronous loading of blueprint files -->
-  <!--<feature name="pentaho-deployers" version="1.0">-->
-    <!--<bundle>mvn:commons-logging/commons-logging/1.1.3</bundle>-->
-    <!--<bundle>mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>-->
-    <!--<bundle>mvn:com.google.guava/guava/16.0.1</bundle>-->
-    <!--<bundle>mvn:commons-io/commons-io/2.4</bundle>-->
-    <!--<bundle>mvn:commons-lang/commons-lang/2.6</bundle>-->
-    <!--<bundle>mvn:log4j/log4j/1.2.17</bundle>-->
-    <!--<bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>-->
-    <!--<bundle>mvn:pentaho/pentaho-webjars-deployer/${project.version}</bundle>-->
-  <!--</feature>-->
+  <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
+  <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
+  <feature name="pentaho-deployers" version="1.0">
+    <bundle>mvn:commons-logging/commons-logging/1.1.3</bundle>
+    <bundle>mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
+    <bundle>mvn:com.google.guava/guava/16.0.1</bundle>
+    <bundle>mvn:commons-io/commons-io/2.4</bundle>
+    <bundle>mvn:commons-lang/commons-lang/2.6</bundle>
+    <bundle>mvn:log4j/log4j/1.2.17</bundle>
+    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-webjars-deployer/${project.version}</bundle>
+  </feature>
 
   <feature name="pentaho-base" version="1.0">
-    <!--<feature>pentaho-deployers</feature>-->
+    <feature>pentaho-deployers</feature>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/1.7.5</bundle>
     <bundle>mvn:log4j/log4j/1.2.17</bundle>
     <bundle>mvn:commons-logging/commons-logging/1.1.3</bundle>
