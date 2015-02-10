@@ -28,7 +28,7 @@
     <bundle>mvn:org.codehaus.jackson/jackson-xc/1.9.13</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-core-asl/1.9.13</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.13</bundle>
-    <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/INNOVATION-SNAPSHOT/zip</bundle>
+    <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/6.0-SNAPSHOT/zip</bundle>
     <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-core/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-mongodb/${project.version}</bundle>
