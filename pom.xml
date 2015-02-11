@@ -7,56 +7,37 @@
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf-assembly</artifactId>
   <version>6.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <parent>
+    <groupId>org.pentaho</groupId>
+    <artifactId>pentaho-ce-parent-pom</artifactId>
+    <version>1.0.5</version>
+    <!-- https://github.com/pentaho/maven-parent-poms/blob/pentaho-ce-parent-pom-1.0.5/pentaho-ce-parent-pom/pom.xml -->
+  </parent>
+
   <modules>
     <module>pentaho-karaf-features</module>
     <module>pentaho-blueprint-activators</module>
     <module>pentaho-osgi-config</module>
   </modules>
-
-  <parent>
-    <groupId>org.pentaho</groupId>
-    <artifactId>pentaho-ce-jar-parent-pom</artifactId>
-    <version>1.0.4</version>
-  </parent>
-
-  <packaging>pom</packaging>
+  
   <properties>
     <package.features>true</package.features>
     <karaf.version>2.3.5</karaf.version>
-
-
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    
+    <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10</plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
+    <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5</plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.karaf</groupId>
-      <artifactId>apache-karaf</artifactId>
-      <version>${karaf.version}</version>
-      <scope>runtime</scope>
-      <type>tar.gz</type>
-      <exclusions>
-        <exclusion>
-          <groupId>org.eclipse</groupId>
-          <artifactId>osgi</artifactId>
-        </exclusion>
-      </exclusions>      
-    </dependency>
-    <dependency>
-      <groupId>org.apache.karaf.assemblies.features</groupId>
-      <artifactId>standard</artifactId>
-      <version>${karaf.version}</version>
-      <type>xml</type>
-      <classifier>features</classifier>
-    </dependency>
-
-
-
-  </dependencies>
 
   <build>
+  
     <resources>
+    
       <resource>
         <directory>${project.basedir}/src/main/filtered-resources</directory>
         <filtering>true</filtering>
@@ -64,12 +45,17 @@
           <include>**/*</include>
         </includes>
       </resource>
+      
     </resources>
+    
+    
     <plugins>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
+        <version>${plugin.org.apache.maven.plugins.maven-resources-plugin.version}</version>
+        <inherited>false</inherited>
         <executions>
           <execution>
             <id>filter</id>
@@ -80,9 +66,12 @@
           </execution>
         </executions>
       </plugin>
+      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
+        <version>${plugin.org.apache.maven.plugins.maven-dependency-plugin.version}</version>
+        <inherited>false</inherited>
         <executions>
           <execution>
             <!-- Uncompress the standard Karaf distribution -->
@@ -104,14 +93,18 @@
           </execution>
         </executions>
       </plugin>
+      
       <plugin>
         <groupId>org.apache.karaf.tooling</groupId>
         <artifactId>features-maven-plugin</artifactId>
         <version>${karaf.version}</version>
+        <inherited>false</inherited>
         <executions>
+        
           <execution>
             <id>compile</id>
           </execution>
+          
           <execution>
             <id>add-features-to-client-repo</id>
             <phase>generate-resources</phase>
@@ -134,6 +127,7 @@
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
           </execution>
+          
           <execution>
             <id>add-features-to-server-repo</id>
             <phase>generate-resources</phase>
@@ -158,13 +152,17 @@
               <repository>target/pentaho-server-features-repo</repository>
             </configuration>
           </execution>
+          
         </executions>
       </plugin>
+      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>2.4</version>
+        <version>${plugin.org.apache.maven.plugins.maven-assembly-plugin.version}</version>
+        <inherited>false</inherited>
         <executions>
+        
           <execution>
             <id>client</id>
             <phase>package</phase>
@@ -179,6 +177,7 @@
               <appendAssemblyId>true</appendAssemblyId>
             </configuration>
           </execution>
+          
           <execution>
             <id>server</id>
             <phase>package</phase>
@@ -193,9 +192,41 @@
               <appendAssemblyId>true</appendAssemblyId>
             </configuration>
           </execution>
+          
         </executions>
       </plugin>
+      
     </plugins>
+    
   </build>
+  
+  
+  
+  <dependencies>
+  
+    <dependency>
+      <groupId>org.apache.karaf</groupId>
+      <artifactId>apache-karaf</artifactId>
+      <version>${karaf.version}</version>
+      <scope>runtime</scope>
+      <type>tar.gz</type>
+      <exclusions>
+        <exclusion>
+          <groupId>org.eclipse</groupId>
+          <artifactId>osgi</artifactId>
+        </exclusion>
+      </exclusions>      
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.karaf.assemblies.features</groupId>
+      <artifactId>standard</artifactId>
+      <version>${karaf.version}</version>
+      <type>xml</type>
+      <classifier>features</classifier>
+    </dependency>
+
+  </dependencies>
+  
 
 </project>

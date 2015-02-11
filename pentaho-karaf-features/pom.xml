@@ -19,29 +19,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <parent>
-    <groupId>org.pentaho</groupId>
-    <artifactId>pentaho-ce-jar-parent-pom</artifactId>
-    <version>1.0.4</version>
-  </parent>
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf-features</artifactId>
   <version>6.0-SNAPSHOT</version>
-  <properties>
-    <pentaho.resolve.repo>http://nexus.pentaho.org/content/groups/omni/</pentaho.resolve.repo>
-    <pentaho.artifactory.resolve.repo>http://repository.pentaho.org/artifactory/repo</pentaho.artifactory.resolve.repo>
-    <pentaho.artifactory.resolve.repo.2>http://repo.pentaho.org/artifactory/repo</pentaho.artifactory.resolve.repo.2>
+  <packaging>pom</packaging>
 
-  </properties>
+  <parent>
+    <groupId>pentaho</groupId>
+    <artifactId>pentaho-karaf-assembly</artifactId>
+    <version>6.0-SNAPSHOT</version>
+  </parent>
+  
 
   <build>
     <plugins>
 
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>2.7</version>
+        <version>${plugin.org.apache.maven.plugins.maven-resources-plugin.version}</version>
         <executions>
           <execution>
             <id>copy-resources</id>
@@ -64,9 +62,11 @@
           </execution>
         </executions>
       </plugin>
+      
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-clean-plugin</artifactId>
-        <version>2.5</version>
+        <version>${plugin.org.apache.maven.plugins.maven-clean-plugin.version}</version>
         <configuration>
           <filesets>
             <fileset>
@@ -76,10 +76,11 @@
           </filesets>
         </configuration>
       </plugin>
+      
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>1.5</version>
+        <version>${plugin.org.codehaus.mojo.build-helper-maven-plugin.version}</version>
         <executions>
           <execution>
             <id>attach-artifacts</id>
@@ -109,51 +110,9 @@
           </execution>
         </executions>
       </plugin>
+      
     </plugins>
   </build>
 
-  <repositories>
-    <repository>
-      <id>pentaho.resolve.repo</id>
-      <name>Pentaho Group Resolve Repository</name>
-      <url>${pentaho.resolve.repo}</url>
-      <releases>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-      </releases>
-      <snapshots>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-      </snapshots>
-    </repository>
-
-    <repository>
-      <id>pentaho.artifactory.resolve.repo</id>
-      <name>Pentaho legacy Resolve Repository</name>
-      <url>${pentaho.artifactory.resolve.repo}</url>
-      <releases>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-      </releases>
-      <snapshots>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-      </snapshots>
-    </repository>
-
-    <repository>
-      <id>pentaho.artifactory.resolve.repo.2</id>
-      <name>Pentaho legacy Resolve Repository</name>
-      <url>${pentaho.artifactory.resolve.repo.2}</url>
-      <releases>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-      </releases>
-      <snapshots>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-      </snapshots>
-    </repository>
-  </repositories>
 
 </project>
