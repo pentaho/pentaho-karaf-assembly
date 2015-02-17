@@ -33,9 +33,7 @@
     <bundle>mvn:pentaho/pentaho-data-profiling-api-core/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-mongodb/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-core/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-model-mongodb-core/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-model-mongodb-pushdown/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-model-mongodb-streaming/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-model-mongodb/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-rest-core/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-rest-mongodb/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-notification-bundle/${project.version}</bundle>
