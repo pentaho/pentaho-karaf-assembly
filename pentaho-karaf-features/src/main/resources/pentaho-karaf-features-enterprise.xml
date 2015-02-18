@@ -31,8 +31,10 @@
     <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/6.0-SNAPSHOT/zip</bundle>
     <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-core/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-api-metrics/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-mongodb/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-core/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-model-metrics/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-mongodb/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-rest-core/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-rest-mongodb/${project.version}</bundle>
@@ -49,7 +51,7 @@
     <feature>pentaho-data-profiling-ee</feature>
     <feature>pentaho-client</feature>
     <bundle>mvn:pentaho/pentaho-data-profiling-kettle-integration-core/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-kettle-integration-mongodb/${project.version}</bundle>
+    <!--<bundle>mvn:pentaho/pentaho-data-profiling-kettle-integration-mongodb/${project.version}</bundle>-->
   </feature>
 
   <feature name="mongolap" version="1.0">
