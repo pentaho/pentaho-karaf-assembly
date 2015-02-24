@@ -139,9 +139,9 @@
 
     <bundle>wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
     <bundle>mvn:com.google.guava/guava/17.0</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-core-asl/1.9.13</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.13</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/1.9.13</bundle>
+    <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.3.3</bundle>
+    <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/2.3.3</bundle>
+    <bundle>mvn:com.fasterxml.jackson.core/jackson-core/2.3.3</bundle>
 
     <bundle>mvn:com.pentaho/pentaho-metaverse-ee/${project.version}</bundle>
   </feature>
