@@ -50,7 +50,7 @@
     <feature>pentaho-data-profiling-ee</feature>
     <feature>pentaho-client</feature>
     <bundle>mvn:pentaho/pentaho-data-profiling-kettle-integration-core/${project.version}</bundle>
-    <!--<bundle>mvn:pentaho/pentaho-data-profiling-kettle-integration-mongodb/${project.version}</bundle>-->
+    <bundle>mvn:pentaho/pentaho-data-profiling-kettle-integration-mongodb/${project.version}</bundle>
   </feature>
 
   <feature name="mongolap" version="1.0">
