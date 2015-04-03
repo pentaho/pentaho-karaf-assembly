@@ -32,6 +32,7 @@
     <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-core/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-mongodb/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-api-json/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-core/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-metrics/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-mongodb/${project.version}</bundle>
