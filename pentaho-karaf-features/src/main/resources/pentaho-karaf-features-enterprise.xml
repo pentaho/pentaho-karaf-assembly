@@ -31,11 +31,12 @@
     <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/6.0-SNAPSHOT/zip</bundle>
     <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-core/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-api-doc-rest/6.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-api-mongodb/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-api-doc-rest/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-api-osgi/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-api-json/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-core/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-metrics/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-data-profiling-model-metric-contributors-percentile/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-model-mongodb/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-rest-core/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-rest-doc/6.0-SNAPSHOT</bundle>
