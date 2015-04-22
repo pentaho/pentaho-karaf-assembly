@@ -133,6 +133,10 @@
 
   <feature name="pentaho-metaverse-ee" version="${project.version}">
     <details>A Pentaho closed-source project to provide data lineage capabilities</details>
+    <configfile finalname="/etc/pentaho.metaverse.cfg">
+      mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-metaverse
+    </configfile>
+
     <feature>pentaho-client</feature>
     <feature>pentaho-tinkerpop-blueprints</feature>
     <feature>pentaho-tinkerpop-gremlin</feature>
@@ -150,6 +154,7 @@
     <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.13</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/1.9.13</bundle>
 
+    <bundle>mvn:com.pentaho/pentaho-metaverse-api/${project.version}</bundle>
     <bundle>mvn:com.pentaho/pentaho-metaverse-ee/${project.version}</bundle>
   </feature>
 
