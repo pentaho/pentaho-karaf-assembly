@@ -45,6 +45,7 @@
     <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/${project.version}</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
     <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-cache-manager-api/${project.version}</bundle>
     <bundle>mvn:pentaho/pdi-dataservice-plugin/${project.version}</bundle>
   </feature>
 
