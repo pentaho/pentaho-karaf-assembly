@@ -28,10 +28,10 @@
 
   <parent>
     <groupId>pentaho</groupId>
-    <artifactId>pentaho-karaf-assembly</artifactId>
+    <artifactId>pentaho-karaf</artifactId>
     <version>6.0-SNAPSHOT</version>
   </parent>
-  
+
 
   <build>
     <plugins>
@@ -62,7 +62,7 @@
           </execution>
         </executions>
       </plugin>
-      
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-clean-plugin</artifactId>
@@ -76,7 +76,7 @@
           </filesets>
         </configuration>
       </plugin>
-      
+
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -110,7 +110,7 @@
           </execution>
         </executions>
       </plugin>
-      
+
     </plugins>
   </build>
 
