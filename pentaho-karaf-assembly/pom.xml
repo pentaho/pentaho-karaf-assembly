@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>pentaho</groupId>
+  <artifactId>pentaho-karaf-assembly</artifactId>
+  <version>6.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>pentaho</groupId>
+    <artifactId>pentaho-karaf</artifactId>
+    <version>6.0-SNAPSHOT</version>
+  </parent>
+
+  <properties>
+    <package.features>true</package.features>
+    <karaf.version>2.3.5</karaf.version>
+
+    <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10</plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
+    <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5</plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
+  </properties>
+
+
+  <build>
+
+    <resources>
+
+      <resource>
+        <directory>${project.basedir}/src/main/filtered-resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>**/*</include>
+        </includes>
+      </resource>
+
+    </resources>
+
+
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>${plugin.org.apache.maven.plugins.maven-resources-plugin.version}</version>
+        <inherited>false</inherited>
+        <executions>
+          <execution>
+            <id>filter</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>resources</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>${plugin.org.apache.maven.plugins.maven-dependency-plugin.version}</version>
+        <inherited>false</inherited>
+        <executions>
+          <execution>
+            <!-- Uncompress the standard Karaf distribution -->
+            <id>unpack</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.apache.karaf</groupId>
+                  <artifactId>apache-karaf</artifactId>
+                  <type>tar.gz</type>
+                  <outputDirectory>target/dependencies</outputDirectory>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.karaf.tooling</groupId>
+        <artifactId>features-maven-plugin</artifactId>
+        <version>${karaf.version}</version>
+        <inherited>false</inherited>
+        <executions>
+
+          <execution>
+            <id>add-features</id>
+          </execution>
+
+          <execution>
+            <id>add-features-to-client-repo</id>
+            <phase>package</phase>
+            <goals>
+              <goal>add-features-to-repo</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/2.7.11/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
+                <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
+                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.13.2/xml/features</descriptor>
+              </descriptors>
+              <features>
+                <feature>pentaho-base</feature>
+                <feature>pentaho-client</feature>
+              </features>
+              <repository>target/pentaho-client-features-repo</repository>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>add-features-to-server-repo</id>
+            <phase>package</phase>
+            <goals>
+              <goal>add-features-to-repo</goal>
+            </goals>
+            <configuration>
+              <includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
+              <addTransitiveFeatures>true</addTransitiveFeatures>
+              <descriptors>
+                <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/2.7.11/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
+                <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/server</descriptor>
+                <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
+                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.13.2/xml/features</descriptor>
+              </descriptors>
+              <features>
+                <feature>pentaho-server</feature>
+              </features>
+              <repository>target/pentaho-server-features-repo</repository>
+            </configuration>
+          </execution>
+
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>${plugin.org.apache.maven.plugins.maven-assembly-plugin.version}</version>
+        <inherited>false</inherited>
+        <executions>
+
+          <execution>
+            <id>client</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>src/main/descriptors/pentaho-client-assembly.xml</descriptor>
+              </descriptors>
+              <finalName>${project.artifactId}</finalName>
+              <appendAssemblyId>true</appendAssemblyId>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>server</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>src/main/descriptors/pentaho-server-assembly.xml</descriptor>
+              </descriptors>
+              <finalName>${project.artifactId}</finalName>
+              <appendAssemblyId>true</appendAssemblyId>
+            </configuration>
+          </execution>
+
+        </executions>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.apache.karaf</groupId>
+      <artifactId>apache-karaf</artifactId>
+      <version>${karaf.version}</version>
+      <scope>runtime</scope>
+      <type>tar.gz</type>
+      <exclusions>
+        <exclusion>
+          <groupId>org.eclipse</groupId>
+          <artifactId>osgi</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.karaf.assemblies.features</groupId>
+      <artifactId>standard</artifactId>
+      <version>${karaf.version}</version>
+      <type>xml</type>
+      <classifier>features</classifier>
+    </dependency>
+
+  </dependencies>
+
+
+</project>
