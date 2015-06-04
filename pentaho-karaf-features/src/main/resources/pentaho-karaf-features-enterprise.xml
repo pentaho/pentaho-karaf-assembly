@@ -118,14 +118,6 @@
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-jms-broker</bundle>
   </feature>
 
-  <feature name="pentaho-tinkerpop-blueprints" version="2.6">
-    <bundle>wrap:mvn:com.tinkerpop.blueprints/blueprints-core/2.6.0</bundle>
-    <bundle>mvn:commons-configuration/commons-configuration/1.9</bundle>
-    <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.3.3</bundle>
-    <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/2.3.3</bundle>
-    <bundle>mvn:com.fasterxml.jackson.core/jackson-core/2.3.3</bundle>
-  </feature>
-
   <feature name="pentaho-tinkerpop-gremlin" version="2.6">
     <bundle>wrap:mvn:com.tinkerpop.gremlin/gremlin-java/2.6.0</bundle>
     <bundle>wrap:mvn:com.tinkerpop/pipes/2.6.0</bundle>
@@ -138,7 +130,6 @@
     </configfile>
 
     <feature>pentaho-client</feature>
-    <feature>pentaho-tinkerpop-blueprints</feature>
     <feature>pentaho-tinkerpop-gremlin</feature>
     <feature>http</feature>
     <feature>http-whiteboard</feature>
@@ -155,7 +146,6 @@
     <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/1.9.13</bundle>
     <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
 
-    <bundle>mvn:com.pentaho/pentaho-metaverse-api/${project.version}</bundle>
     <bundle>mvn:com.pentaho/pentaho-metaverse-ee/${project.version}</bundle>
   </feature>
 
