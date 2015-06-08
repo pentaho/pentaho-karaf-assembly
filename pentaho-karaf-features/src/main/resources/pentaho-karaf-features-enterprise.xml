@@ -16,42 +16,8 @@
   -->
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-  <feature name="pentaho-data-profiling-ee" version="1.0">
-    <feature>http</feature>
-    <feature>http-whiteboard</feature>
-    <feature>cxf</feature>
-    <feature>cxf-http-async</feature>
-    <feature>war</feature>
-    <feature>pentaho-base</feature>
-    <bundle>wrap:mvn:com.clearspring.analytics/stream/2.7.0</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/1.9.13</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-xc/1.9.13</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-core-asl/1.9.13</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.13</bundle>
-    <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/6.0-SNAPSHOT/zip</bundle>
-    <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-api-core/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-api-doc-rest/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-api-osgi/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-api-json/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-model-core/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-model-metrics/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-model-metric-contributors-percentile/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-model-mongodb/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-rest-core/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-rest-doc/6.0-SNAPSHOT</bundle>
-    <bundle>mvn:pentaho/pentaho-data-profiling-rest-mongodb/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-notification-bundle/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-notification-webservice-bundle/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-i18n-bundle/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-mongo-utils/${project.version}</bundle>
-    <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
-  </feature>
-
   <feature name="pentaho-client-ee" version="1.0">
-    <feature>pentaho-data-profiling-ee</feature>
+    <feature>pentaho-data-profiling-ee-kettle</feature>
     <feature>pentaho-client</feature>
     <bundle>mvn:pentaho/pentaho-data-profiling-kettle-integration-core/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-data-profiling-kettle-integration-mongodb/${project.version}</bundle>
