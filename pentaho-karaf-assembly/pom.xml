@@ -116,6 +116,7 @@
               <features>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
+                <feature>pentaho-metaverse</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
@@ -141,6 +142,7 @@
               </descriptors>
               <features>
                 <feature>pentaho-server</feature>
+                <feature>pentaho-metaverse</feature>
               </features>
               <repository>target/pentaho-server-features-repo</repository>
             </configuration>
