@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ This program is free software; you can redistribute it and/or modify it under the
+  ~ terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
+  ~ Foundation.
+  ~
+  ~ You should have received a copy of the GNU Lesser General Public License along with this
+  ~ program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+  ~ or from the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU Lesser General Public License for more details.
+  ~
+  ~ Copyright 2014 Pentaho Corporation. All rights reserved.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>pentaho</groupId>
+  <artifactId>pentaho-blueprint-activators</artifactId>
+  <version>6.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>pentaho</groupId>
+    <artifactId>pentaho-karaf</artifactId>
+    <version>6.0-SNAPSHOT</version>
+  </parent>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>${plugin.org.codehaus.mojo.build-helper-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>attach-artifacts</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attach-artifact</goal>
+            </goals>
+            <configuration>
+              <artifacts>
+                <artifact>
+                  <file>src/main/resources/server.xml</file>
+                  <type>xml</type>
+                  <classifier>server</classifier>
+                </artifact>
+                <artifact>
+                  <file>src/main/resources/monitoring-snmp.xml</file>
+                  <type>xml</type>
+                  <classifier>monitoring-snmp</classifier>
+                </artifact>
+                <artifact>
+                  <file>src/main/resources/monitoring-jms.xml</file>
+                  <type>xml</type>
+                  <classifier>monitoring-jms</classifier>
+                </artifact>
+                <artifact>
+                  <file>src/main/resources/jms.xml</file>
+                  <type>xml</type>
+                  <classifier>jms</classifier>
+                </artifact>
+                <artifact>
+                  <file>src/main/resources/monitoring-jms-broker.xml</file>
+                  <type>xml</type>
+                  <classifier>monitoring-jms-broker</classifier>
+                </artifact>
+                <artifact>
+                  <file>src/main/resources/camel-jms.xml</file>
+                  <type>xml</type>
+                  <classifier>camel-jms</classifier>
+                </artifact>
+              </artifacts>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+
+</project>
