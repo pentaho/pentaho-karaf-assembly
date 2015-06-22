@@ -24,9 +24,12 @@
   </modules>
 
   <properties>
+    <springframework-version>3.2.0</springframework-version> 
     <package.features>true</package.features>
-    <karaf.version>2.3.5</karaf.version>
+    <karaf.version>3.0.3</karaf.version>
 
+<karaf.features.version>3.0.3</karaf.features.version>
+    <features-maven-plugin.version>2.4.2</features-maven-plugin.version>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
     <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10</plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
