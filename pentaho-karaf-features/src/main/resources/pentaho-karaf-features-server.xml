@@ -18,7 +18,7 @@
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
 
   <!-- Overriding the default http feature -->
-  <feature name="http" description="Implementation of the OSGi HTTP service" version="2.7.5" resolver="(obr)">
+  <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
     <bundle>mvn:org.apache.felix/org.apache.felix.http.bundle/2.2.2</bundle>
   </feature>
 
