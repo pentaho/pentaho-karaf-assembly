@@ -52,7 +52,7 @@
   <feature name="pentaho-cache-system" version="1.0">
     <bundle>mvn:pentaho/pentaho-cache-manager-api/${project.version}</bundle>
     <bundle>mvn:pentaho/guava-cache-provider/${project.version}</bundle>
-    <bundle>mvn:pentaho/ehcache-provider/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-ehcache-provider/${project.version}</bundle>
     <bundle>wrap:mvn:org.ehcache/jcache/1.0.0</bundle>
     <bundle>mvn:net.sf.ehcache/ehcache/2.8.3</bundle>
   </feature>
