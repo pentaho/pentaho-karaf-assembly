@@ -41,6 +41,7 @@
 <feature name="pentaho-client" version="1.0">
     <feature>pentaho-base</feature>
     <feature>pentaho-cache-system</feature>
+    <feature>pentaho-big-data-plugin-osgi</feature>
     <bundle>mvn:pentaho/pentaho-osgi-utils-impl/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-mongo-utils/${project.version}</bundle>
     <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/${project.version}</bundle>
