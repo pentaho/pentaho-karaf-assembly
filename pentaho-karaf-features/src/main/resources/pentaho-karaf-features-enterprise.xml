@@ -83,7 +83,7 @@
   </feature>
 
   <feature name="pdi-dataservice" version="${project.version}">
-    <feature>pentaho-base</feature>
+    <feature>pentaho-client</feature>
     <bundle>mvn:pentaho/pdi-dataservice-server-plugin/${project.version}</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
   </feature>
