@@ -60,6 +60,7 @@
       <lineEnding>unix</lineEnding>
       <fileMode>0644</fileMode>
       <excludes>
+        <exclude>**/custom.properties</exclude>
         <exclude>**/*.formatted</exclude>
       </excludes>
     </fileSet>
