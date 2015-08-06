@@ -1,0 +1,9 @@
+#Karaf Port Assignment
+#"port", Id, propertyName, freiendlyName, startPort, endPort
+port,"KARAF_PORT", "karaf.port", "Karaf port", 8801, 8899
+port,"OSGI_SERVICE_PORT", "org.pentaho.osgi.service.http.port","OSGI Service Port", 9050, 9149
+port,"RMI_SERVER_PORT", "org.pentaho.jmx.rmi.server.port", "RMI Server Port",44444, 44499
+port,"RMI_REGISTRY_PORT", "org.pentaho.jmx.rmi.registry.port","JMX RMI Registry Port", 11098, 11190
+
+#Karaf Instance Properties
+#"property", Id, propertyName, Value
