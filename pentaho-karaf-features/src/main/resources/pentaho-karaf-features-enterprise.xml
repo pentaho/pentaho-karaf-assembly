@@ -82,10 +82,4 @@
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-jms-broker</bundle>
   </feature>
 
-  <feature name="pdi-dataservice" version="${project.version}">
-    <feature>pentaho-client</feature>
-    <bundle>mvn:pentaho/pdi-dataservice-server-plugin/${project.version}</bundle>
-    <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
-  </feature>
-
 </features>
