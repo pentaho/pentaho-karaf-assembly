@@ -29,6 +29,7 @@
     <bundle>mvn:pentaho/pentaho-server-bundle/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${project.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
+    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/proxy-watcher</bundle>
     <bundle>mvn:pentaho/pentaho-angular-bundle/${project.version}</bundle>
     <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.2.2</bundle>
   </feature>

@@ -78,6 +78,11 @@
                   <type>xml</type>
                   <classifier>camel-jms</classifier>
                 </artifact>
+                <artifact>
+                  <file>src/main/resources/proxy-watcher.xml</file>
+                  <type>xml</type>
+                  <classifier>proxy-watcher</classifier>
+                </artifact>
               </artifacts>
             </configuration>
           </execution>
