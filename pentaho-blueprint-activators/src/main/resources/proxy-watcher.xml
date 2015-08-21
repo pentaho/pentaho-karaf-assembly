@@ -33,12 +33,18 @@
 
       <bean class="org.pentaho.platform.proxy.impl.ProxyRequestTracker">
         <argument ref="blueprintBundleContext"/>
-        <argument ref="factory"/>
+        <argument ref="proxyFactory"/>
       </bean>
 
     </reference-listener>
   </reference-list>
 
-  <reference interface="org.pentaho.platform.proxy.api.IProxyFactory" id="factory"/>
+  <bean id="proxyFactory" class="org.pentaho.platform.proxy.impl.ProxyFactoryImpl">
+    <property name="creators">
+      <reference-list interface="org.pentaho.platform.proxy.api.IProxyCreator" availability="optional"/>
+    </property>
+  </bean>
+
+  <service auto-export="interfaces" ref="proxyFactory"/>
 
 </blueprint>
