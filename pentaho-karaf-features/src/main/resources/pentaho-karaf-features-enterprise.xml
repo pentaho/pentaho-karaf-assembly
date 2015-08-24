@@ -17,7 +17,6 @@
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
   <feature name="pentaho-client-ee" version="1.0">
-    <feature>pentaho-data-profiling-ee-kettle</feature>
     <feature>pentaho-client</feature>
   </feature>
 

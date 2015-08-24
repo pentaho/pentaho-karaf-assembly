@@ -123,14 +123,12 @@
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.1.2/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/5.12.0/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-data-profiling-ce/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
                 <feature>pentaho-metaverse</feature>
-                <feature>pentaho-data-profiling-ce-kettle</feature>
                 <feature>pdi-dataservice</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
