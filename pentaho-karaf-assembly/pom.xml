@@ -158,6 +158,7 @@
                 <feature>pentaho-server</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pdi-dataservice</feature>
+                <feature>pentaho-marketplace</feature>
               </features>
               <repository>target/pentaho-server-features-repo</repository>
             </configuration>

@@ -70,6 +70,16 @@
     <bundle>mvn:org.pentaho/pentaho-marketplace-di/${project.version}</bundle>
   </feature>
 
+  <feature name="pentaho-marketplace" version="${project.version}">
+    <configfile finalname="/etc/pentaho.marketplace.ba.cfg">
+      mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/cfg/pentaho-marketplace-config
+    </configfile>
+
+    <feature>pentaho-marketplace-base</feature>
+
+    <bundle>mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/</bundle>
+  </feature>
+
   <feature name="pentaho-marketplace-base" version="${project.version}">
 
     <bundle>wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
