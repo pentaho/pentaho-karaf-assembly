@@ -30,8 +30,25 @@
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${project.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/proxy-watcher</bundle>
+    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/proxy-spring4</bundle>
     <bundle>mvn:pentaho/pentaho-angular-bundle/${project.version}</bundle>
     <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.2.2</bundle>
   </feature>
+
+	<feature name="spring4-security-prototype" version="1.0">
+		<feature version="[4,4.1.5)">spring</feature>
+		<feature version="3.1.4.RELEASE">spring-security</feature>
+		<bundle>mvn:pentaho/pentaho-proxy-spring4/6.0-SNAPSHOT</bundle>
+		<bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/6.0-SNAPSHOT/xml/proxy-spring4
+		</bundle>
+	</feature>
+
+	<feature name="spring4-security-wrapper" version="1.0">
+		<!--<feature version="3.2.14.RELEASE">spring</feature> <feature version="2.0.8.RELEASE">spring-security</feature> -->
+		<bundle>mvn:pentaho/pentaho-proxy-factory/6.0-SNAPSHOT</bundle>
+		<bundle>mvn:pentaho/pentaho-proxy-wrapper/6.0-SNAPSHOT</bundle>
+		<bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/6.0-SNAPSHOT/xml/proxy-wrapper
+		</bundle>
+	</feature>  
 
 </features>
