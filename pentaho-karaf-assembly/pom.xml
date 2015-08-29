@@ -19,7 +19,7 @@
     <package.features>true</package.features>
     <karaf.version>4.0.1</karaf.version>
 
-	<karaf.features.version>4.0.1</karaf.features.version>
+    <karaf.features.version>4.0.1</karaf.features.version>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
     <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10</plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
@@ -29,13 +29,13 @@
 
 
   <build>
-     <extensions>
-     	<extension>
-      	<groupId>org.apache.maven.wagon</groupId>
- 	    	<artifactId>wagon-http</artifactId>
-     		<version>2.9</version>
-     	</extension>
-     </extensions>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-http</artifactId>
+        <version>2.9</version>
+      </extension>
+    </extensions>
     <resources>
 
       <resource>
@@ -114,7 +114,6 @@
             </goals>
             <configuration>
               <descriptors>
-
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/framework/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
@@ -123,12 +122,14 @@
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.1.2/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/5.12.0/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-data-profiling-ce/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
                 <feature>pentaho-metaverse</feature>
+                <feature>pentaho-data-profiling-ce-kettle</feature>
                 <feature>pdi-dataservice</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
