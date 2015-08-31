@@ -56,6 +56,43 @@
     <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
   </feature>  
 
+  <feature name="pdi-marketplace" version="${project.version}">
+    <configfile finalname="/etc/pentaho.marketplace.di.cfg">
+      mvn:org.pentaho/pentaho-marketplace-di/${project.version}/cfg/pentaho-marketplace-config
+    </configfile>
+
+    <feature>pentaho-marketplace-base</feature>
+
+    <!-- commons-codec is necessary for commons-httpclient -->
+    <bundle>mvn:commons-codec/commons-codec/1.5</bundle>
+    <bundle>wrap:mvn:commons-httpclient/commons-httpclient/3.1</bundle>
+
+    <bundle>mvn:org.pentaho/pentaho-marketplace-di/${project.version}</bundle>
+  </feature>
+
+  <feature name="pentaho-marketplace" version="${project.version}">
+    <configfile finalname="/etc/pentaho.marketplace.ba.cfg">
+      mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/cfg/pentaho-marketplace-config
+    </configfile>
+
+    <feature>pentaho-marketplace-base</feature>
+
+    <bundle>mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/</bundle>
+  </feature>
+
+  <feature name="pentaho-marketplace-base" version="${project.version}">
+
+    <bundle>wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
+    <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
+
+    <!-- START client side dependencies -->
+    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-angular-bundle/${project.version}</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars/angular-sanitize/1.2.15</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars/underscorejs/1.7.0</bundle>
+    <!-- END -->
+  </feature>
+
   <feature name="pentaho-cache-system" version="1.0">
     <bundle>mvn:pentaho/pentaho-cache-manager-api/${project.version}</bundle>
     <bundle>mvn:pentaho/guava-cache-provider/${project.version}</bundle>
