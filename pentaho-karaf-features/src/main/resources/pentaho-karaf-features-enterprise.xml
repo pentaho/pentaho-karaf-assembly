@@ -30,7 +30,7 @@
     <bundle>mvn:eigenbase/eigenbase-resgen/1.3.6</bundle>
     <bundle>mvn:eigenbase/eigenbase-properties/1.1.4</bundle>
     <bundle>mvn:org.olap4j/olap4j-xmlaserver/1.2.0</bundle>
-    <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
+    <bundle>mvn:org.mongodb/mongo-java-driver/2.13.0</bundle>
     <bundle>mvn:commons-lang/commons-lang/2.4</bundle>
     <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
     <bundle>mvn:commons-io/commons-io/1.4</bundle>
