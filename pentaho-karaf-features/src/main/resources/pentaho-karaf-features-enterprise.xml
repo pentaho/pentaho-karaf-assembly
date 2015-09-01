@@ -22,7 +22,7 @@
 
   <feature name="mongolap" version="1.0">
     <feature>pentaho-server</feature>
-    <bundle>mvn:pentaho/mondrian/4.3-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/mondrian/${dependency.mondrian4.revision}</bundle>
     <bundle>mvn:pentaho/pentaho-mongo-utils/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-mongolap-plain/${project.version}</bundle>
     <bundle>mvn:pentaho/mongo-security-ext/${project.version}</bundle>
