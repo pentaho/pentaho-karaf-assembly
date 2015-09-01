@@ -43,7 +43,6 @@
 
   <bean id="proxyFactory" class="org.pentaho.platform.proxy.impl.ProxyFactoryImpl">
     <argument ref="unwrapper"/>
-    <argument ref="blueprintBundleContext"/>
     <property name="creators">
       <reference-list interface="org.pentaho.platform.proxy.api.IProxyCreator" availability="optional"/>
     </property>
