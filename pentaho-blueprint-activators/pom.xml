@@ -83,17 +83,7 @@
                   <type>xml</type>
                   <classifier>proxy-watcher</classifier>
                 </artifact>
-                <artifact>
-                  <file>src/main/resources/proxy-spring4.xml</file>
-                  <type>xml</type>
-                  <classifier>proxy-spring4</classifier>
-                </artifact>
-                <artifact>
-                  <file>src/main/resources/proxy-wrapper.xml</file>
-                  <type>xml</type>
-                  <classifier>proxy-wrapper</classifier>
-                </artifact>
-              </artifacts>
+                </artifacts>
             </configuration>
           </execution>
         </executions>
