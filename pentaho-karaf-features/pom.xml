@@ -35,12 +35,8 @@
   <properties>
     <obf.jar.designator/>
     <mongolap.unobfuscated.designator>-plain</mongolap.unobfuscated.designator>
-  </properties>
-
-  <properties>
     <dependency.mondrian4.revision>4.4-SNAPSHOT</dependency.mondrian4.revision>
   </properties>
-
 
   <build>
     <plugins>
