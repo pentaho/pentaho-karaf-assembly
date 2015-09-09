@@ -15,111 +15,116 @@
  ~ Copyright 2014 Pentaho Corporation. All rights reserved.
  -->
 
-<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" name="pentaho-standard">
 
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
   <feature name="pentaho-deployers" version="1.0">
+    <feature prerequisite="true">aries-blueprint</feature>
+    <feature prerequisite="true">deployer</feature>
+    <feature prerequisite="true">wrap</feature>
     <bundle>mvn:commons-logging/commons-logging/1.1.3</bundle>
     <bundle>mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
     <bundle>mvn:com.google.guava/guava/16.0.1</bundle>
     <bundle>mvn:commons-io/commons-io/2.4</bundle>
     <bundle>mvn:commons-lang/commons-lang/2.6</bundle>
     <bundle>mvn:log4j/log4j/1.2.17</bundle>
-    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-webjars-deployer/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/6.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-webjars-deployer/6.0-SNAPSHOT</bundle>
   </feature>
 
   <feature name="pentaho-base" version="1.0">
-    <feature>pentaho-deployers</feature>
-    <feature>pentaho-cache-system</feature>
+    <feature prerequisite="true">pentaho-deployers</feature>
+    <feature prerequisite="true">pentaho-cache-system</feature>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/1.7.7</bundle>
     <bundle>mvn:log4j/log4j/1.2.17</bundle>
     <bundle>mvn:commons-logging/commons-logging/1.1.3</bundle>
-    <bundle>mvn:org.apache.felix/org.apache.felix.http.api/2.3.2</bundle>
+    <bundle>mvn:org.apache.mina/mina-core/2.0.9</bundle>
   </feature>
 
   <feature name="pentaho-client" version="1.0">
-    <feature>pentaho-client-minimal</feature>
+    <feature prerequisite="true">pentaho-client-minimal</feature>
     <feature>pentaho-big-data-plugin-osgi</feature>
   </feature>
 
   <feature name="pentaho-client-minimal" version="1.0">
-    <feature>pentaho-base</feature>
-    <bundle>mvn:pentaho/pentaho-osgi-utils-impl/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-mongo-utils/${project.version}</bundle>
-    <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/${project.version}</bundle>
+    <feature prerequisite="true">pentaho-base</feature>
+    <bundle start-level="20">mvn:pentaho/pentaho-osgi-utils-impl/6.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-mongo-utils/6.0-SNAPSHOT</bundle>
+    <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/6.0-SNAPSHOT</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/2.13.0</bundle>
-    <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${project.version}</bundle>
+    <bundle start-level="40">mvn:pentaho/pdi-osgi-bridge-activator/6.0-SNAPSHOT</bundle>
   </feature>
-  
-  <feature name="pdi-dataservice" version="${project.version}">
-    <feature>pentaho-base</feature>
-    <bundle>mvn:pentaho/pdi-dataservice-client-plugin/${project.version}</bundle>
-    <bundle>mvn:pentaho/pdi-dataservice-server-plugin/${project.version}</bundle>
-    <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
-  </feature>  
 
-  <feature name="pdi-marketplace" version="${project.version}">
+  <feature name="pdi-dataservice" version="6.0-SNAPSHOT">
+    <feature prerequisite="true">pentaho-base</feature>
+    <bundle>mvn:pentaho/pdi-dataservice-client-plugin/6.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pdi-dataservice-server-plugin/6.0-SNAPSHOT</bundle>
+    <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
+  </feature>
+
+  <feature name="pdi-marketplace" version="6.0-SNAPSHOT">
     <configfile finalname="/etc/pentaho.marketplace.di.cfg">
-      mvn:org.pentaho/pentaho-marketplace-di/${project.version}/cfg/pentaho-marketplace-config
+      mvn:org.pentaho/pentaho-marketplace-di/6.0-SNAPSHOT/cfg/pentaho-marketplace-config
     </configfile>
 
-    <feature>pentaho-marketplace-base</feature>
+    <feature prerequisite="true">pentaho-marketplace-base</feature>
 
     <!-- commons-codec is necessary for commons-httpclient -->
     <bundle>mvn:commons-codec/commons-codec/1.5</bundle>
     <bundle>wrap:mvn:commons-httpclient/commons-httpclient/3.1</bundle>
 
-    <bundle>mvn:org.pentaho/pentaho-marketplace-di/${project.version}</bundle>
+    <bundle>mvn:org.pentaho/pentaho-marketplace-di/6.0-SNAPSHOT</bundle>
   </feature>
 
-  <feature name="pentaho-marketplace" version="${project.version}">
+  <feature name="pentaho-marketplace" version="6.0-SNAPSHOT">
     <configfile finalname="/etc/pentaho.marketplace.ba.cfg">
-      mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/cfg/pentaho-marketplace-config
+      mvn:org.pentaho/pentaho-marketplace-ba/6.0-SNAPSHOT/cfg/pentaho-marketplace-config
     </configfile>
 
-    <feature>pentaho-marketplace-base</feature>
+    <feature prerequisite="true">pentaho-marketplace-base</feature>
 
-    <bundle>mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/</bundle>
+    <bundle>mvn:org.pentaho/pentaho-marketplace-ba/6.0-SNAPSHOT/</bundle>
   </feature>
 
-  <feature name="pentaho-marketplace-base" version="${project.version}">
-
+  <feature name="pentaho-marketplace-base" version="6.0-SNAPSHOT">
+    <feature prerequisite="true">pentaho-base</feature>
     <bundle>wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
     <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
 
     <!-- START client side dependencies -->
-    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-angular-bundle/${project.version}</bundle>
-    <bundle>pentaho-webjars:mvn:org.webjars/angular-sanitize/1.2.15</bundle>
-    <bundle>pentaho-webjars:mvn:org.webjars/underscorejs/1.7.0</bundle>
+    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/6.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-angular-bundle/6.0-SNAPSHOT</bundle>
+    <!-- <bundle>pentaho-webjars:mvn:org.webjars/angular-sanitize/1.2.15</bundle> -->
+    <!-- <bundle>pentaho-webjars:mvn:org.webjars/underscorejs/1.7.0</bundle> -->
     <!-- END -->
   </feature>
 
   <feature name="pentaho-cache-system" version="1.0">
-    <bundle>mvn:pentaho/pentaho-cache-manager-api/${project.version}</bundle>
-    <bundle>mvn:pentaho/guava-cache-provider/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-ehcache-provider/${project.version}</bundle>
+    <feature prerequisite="true">transaction-api</feature>
+    <bundle>mvn:pentaho/pentaho-cache-manager-api/6.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/guava-cache-provider/6.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-ehcache-provider/6.0-SNAPSHOT</bundle>
     <bundle>wrap:mvn:org.ehcache/jcache/1.0.0</bundle>
-    <bundle>mvn:net.sf.ehcache/ehcache/2.8.3</bundle>
+    <bundle>mvn:net.sf.ehcache/ehcache/2.9.0</bundle>
   </feature>
 
   <!-- Overriding standard one to exclude log bundle which will not work without pax-logging -->
   <feature name="pentaho-jms">
-    <configfile finalname="/etc/pentaho.jms.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-jms
+    <configfile finalname="/etc/pentaho.jms.cfg">mvn:pentaho/pentaho-osgi-config/6.0-SNAPSHOT/cfg/pentaho-jms
     </configfile>
-    <feature>jms</feature>
-    <feature>activemq</feature>
-    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/jms
+    <feature prerequisite="true">jms</feature>
+    <feature prerequisite="true">activemq</feature>
+    <feature  prerequisite="true">pentaho-base</feature>
+    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/6.0-SNAPSHOT/xml/jms
     </bundle>
   </feature>
 
   <feature name="pentaho-camel-jms" version="1.0">
-    <feature>camel-jms</feature>
-    <feature>activemq-camel</feature>
-    <feature>pentaho-jms</feature>
-    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/camel-jms
+    <feature prerequisite="true">camel-jms</feature>
+    <feature prerequisite="true">activemq-camel</feature>
+    <feature prerequisite="true">pentaho-jms</feature>
+    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/6.0-SNAPSHOT/xml/camel-jms
     </bundle>
   </feature>
 
@@ -128,17 +133,17 @@
     <bundle>wrap:mvn:com.tinkerpop/pipes/2.6.0</bundle>
   </feature>
 
-  <feature name="pentaho-metaverse" version="${project.version}">
+  <feature name="pentaho-metaverse" version="6.0-SNAPSHOT">
     <details>Provides data lineage capabilities</details>
     <configfile finalname="/etc/pentaho.metaverse.cfg">
-      mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-metaverse
+      mvn:pentaho/pentaho-osgi-config/6.0-SNAPSHOT/cfg/pentaho-metaverse
     </configfile>
 
-    <feature>pentaho-client</feature>
-    <feature>pentaho-tinkerpop-gremlin</feature>
-    <feature>http</feature>
-    <feature>http-whiteboard</feature>
-    <feature>cxf</feature>
+    <feature prerequisite="true">pentaho-client</feature>
+    <feature prerequisite="true">pentaho-tinkerpop-gremlin</feature>
+    <feature prerequisite="true">http</feature>
+    <feature prerequisite="true">http-whiteboard</feature>
+    <feature prerequisite="true">cxf</feature>
 
     <bundle>wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
     <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.3.3</bundle>
@@ -150,7 +155,7 @@
     <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/1.9.13</bundle>
     <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
 
-    <bundle>mvn:pentaho/pentaho-metaverse-core/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-metaverse-core/6.0-SNAPSHOT</bundle>
   </feature>
 
 </features>

@@ -28,7 +28,7 @@
     <package.features>true</package.features>
     <karaf.version>3.0.3</karaf.version>
 
-<karaf.features.version>3.0.3</karaf.features.version>
+<karaf.features.version>4.0.1</karaf.features.version>
     <karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
