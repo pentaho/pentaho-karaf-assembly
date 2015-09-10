@@ -22,7 +22,7 @@
   <feature name="pentaho-deployers" version="1.0">
     <bundle>mvn:commons-logging/commons-logging/1.1.3</bundle>
     <bundle>mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
-    <bundle>mvn:com.google.guava/guava/16.0.1</bundle>
+    <bundle>mvn:com.google.guava/guava/17.0</bundle>
     <bundle>mvn:commons-io/commons-io/2.4</bundle>
     <bundle>mvn:commons-lang/commons-lang/2.6</bundle>
     <bundle>mvn:log4j/log4j/1.2.17</bundle>
@@ -52,13 +52,13 @@
     <bundle>mvn:org.mongodb/mongo-java-driver/2.13.0</bundle>
     <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${project.version}</bundle>
   </feature>
-  
+
   <feature name="pdi-dataservice" version="${project.version}">
     <feature>pentaho-base</feature>
     <bundle>mvn:pentaho/pdi-dataservice-client-plugin/${project.version}</bundle>
     <bundle>mvn:pentaho/pdi-dataservice-server-plugin/${project.version}</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
-  </feature>  
+  </feature>
 
   <feature name="pdi-marketplace" version="${project.version}">
     <configfile finalname="/etc/pentaho.marketplace.di.cfg">
