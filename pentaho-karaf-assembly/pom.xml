@@ -197,6 +197,7 @@
             <configuration>
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.6/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
