@@ -154,4 +154,11 @@
     <bundle>mvn:pentaho/pentaho-metaverse-core/${project.version}</bundle>
   </feature>
 
+<!-- Overriding KAR to load 3.0.5 of core, remove once 3.0.5 is released -->
+  <feature name="kar" version="3.7.5" description="Provide KAR (KARaf archive) support" resolver="(obr)">
+    <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/3.0.5</bundle>
+    <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.command/3.0.3</bundle>
+    <bundle start-level="30">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.kar/3.0.3</bundle>
+  </feature>
+
 </features>
