@@ -19,23 +19,28 @@
     <package.features>true</package.features>
     <karaf.version>3.0.3</karaf.version>
 
-	<karaf.features.version>3.0.3</karaf.features.version>
-    <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
-    <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
-    <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10</plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
-    <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
-    <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5</plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
+    <karaf.features.version>3.0.3</karaf.features.version>
+    <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7
+    </plugin.org.apache.maven.plugins.maven-resources-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5
+    </plugin.org.apache.maven.plugins.maven-clean-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10
+    </plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4
+    </plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
+    <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5
+    </plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
   </properties>
 
 
   <build>
-     <extensions>
-     	<extension>
-      	<groupId>org.apache.maven.wagon</groupId>
- 	    	<artifactId>wagon-http</artifactId>
-     		<version>2.9</version>
-     	</extension>
-     </extensions>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-http</artifactId>
+        <version>2.9</version>
+      </extension>
+    </extensions>
     <resources>
 
       <resource>
@@ -118,16 +123,23 @@
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.6/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features
+                </descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.13.2/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
               </descriptors>
               <features>
+                <feature>config</feature>
+                <feature>ssh</feature>
+                <feature>kar</feature>
+                <feature>http</feature>
+                <feature>cxf</feature>
+                <feature>war</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
-                <feature>pentaho-metaverse</feature>
                 <feature>pdi-dataservice</feature>
+                <feature>pentaho-metaverse</feature>
                 <feature>pdi-marketplace</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
@@ -146,15 +158,25 @@
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features
+                </descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.6/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/server</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.13.2/xml/features</descriptor>
-                <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>                
+                <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
               </descriptors>
               <features>
+                <feature>config</feature>
+                <feature>ssh</feature>
+                <feature>management</feature>
+                <feature>kar</feature>
+                <feature>cxf</feature>
+                <feature>camel-jms</feature>
+                <feature>camel</feature>
+                <feature>camel-blueprint</feature>
+                <feature>camel-stream</feature>
                 <feature>pentaho-server</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pdi-dataservice</feature>
@@ -176,14 +198,18 @@
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.6/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features
+                </descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.13.2/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
               </descriptors>
               <features>
-                <feature>pentaho-client</feature>
-                <feature>pentaho-big-data-plugin-osgi</feature>
+                <feature>config</feature>
+                <feature>ssh</feature>
+                <feature>kar</feature>
+                <feature>http</feature>
+                <feature>war</feature>
               </features>
               <repository>target/pentaho-pmr-features-repo</repository>
             </configuration>
@@ -198,12 +224,19 @@
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features
+                </descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.6/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
               </descriptors>
               <features>
-                <feature>pentaho-client-minimal</feature>
+                <feature>config</feature>
+                <feature>ssh</feature>
+                <feature>kar</feature>
+                <feature>http</feature>
+                <feature>war</feature>
+                <feature>pentaho-client</feature>
               </features>
               <repository>target/pentaho-prd-features-repo</repository>
             </configuration>
@@ -283,7 +316,6 @@
     </plugins>
 
   </build>
-
 
 
   <dependencies>
