@@ -126,7 +126,7 @@
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features
                 </descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
-                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.13.2/xml/features</descriptor>
+                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.14.3/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
               </descriptors>
               <features>
@@ -164,7 +164,7 @@
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/server</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
-                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.13.2/xml/features</descriptor>
+                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.14.3/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
               </descriptors>
               <features>
@@ -177,6 +177,7 @@
                 <feature>camel</feature>
                 <feature>camel-blueprint</feature>
                 <feature>camel-stream</feature>
+                <feature>http</feature>
                 <feature>pentaho-server</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pdi-dataservice</feature>
@@ -201,7 +202,7 @@
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features
                 </descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
-                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.13.2/xml/features</descriptor>
+                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.14.3/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
               </descriptors>
               <features>
