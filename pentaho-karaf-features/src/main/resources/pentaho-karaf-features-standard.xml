@@ -37,6 +37,7 @@
     <bundle>mvn:log4j/log4j/1.2.17</bundle>
     <bundle>mvn:commons-logging/commons-logging/1.1.3</bundle>
     <bundle>mvn:org.apache.felix/org.apache.felix.http.api/2.3.2</bundle>
+    <bundle>mvn:org.apache.mina/mina-core/2.0.7</bundle>
     <bundle>mvn:pentaho/pentaho-osgi-utils-impl/${project.version}</bundle>
   </feature>
 
