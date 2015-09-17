@@ -210,7 +210,10 @@
                 <feature>ssh</feature>
                 <feature>kar</feature>
                 <feature>http</feature>
+                <feature>cxf</feature>
                 <feature>war</feature>
+                <feature>pentaho-base</feature>
+                <feature>pentaho-client</feature>
               </features>
               <repository>target/pentaho-pmr-features-repo</repository>
             </configuration>
