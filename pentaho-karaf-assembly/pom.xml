@@ -141,6 +141,7 @@
                 <feature>pdi-dataservice</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pdi-marketplace</feature>
+                <feature>build-helper</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
@@ -182,6 +183,7 @@
                 <feature>pentaho-metaverse</feature>
                 <feature>pdi-dataservice</feature>
                 <feature>pentaho-marketplace</feature>
+                <feature>build-helper</feature>
               </features>
               <repository>target/pentaho-server-features-repo</repository>
             </configuration>
@@ -211,6 +213,7 @@
                 <feature>kar</feature>
                 <feature>http</feature>
                 <feature>war</feature>
+                <feature>build-helper</feature>
               </features>
               <repository>target/pentaho-pmr-features-repo</repository>
             </configuration>
@@ -238,6 +241,7 @@
                 <feature>http</feature>
                 <feature>war</feature>
                 <feature>pentaho-client</feature>
+                <feature>build-helper</feature>
               </features>
               <repository>target/pentaho-prd-features-repo</repository>
             </configuration>
