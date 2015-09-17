@@ -165,4 +165,11 @@
     <bundle start-level="30">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.kar/3.0.3</bundle>
   </feature>
 
+
+  <feature name="build-helper" description="This is never used in production, exists only to facilitate the build">
+    <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.3.2</bundle>
+    <bundle>mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/3.0.5</bundle>
+    <bundle>mvn:org.apache.aries.transaction/org.apache.aries.transaction.manager/1.1.1</bundle>
+  </feature>
+
 </features>
