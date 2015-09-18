@@ -244,6 +244,7 @@
                 <feature>http</feature>
                 <feature>war</feature>
                 <feature>pentaho-client</feature>
+                <feature>pdi-dataservice-client</feature>
                 <feature>build-helper</feature>
               </features>
               <repository>target/pentaho-prd-features-repo</repository>

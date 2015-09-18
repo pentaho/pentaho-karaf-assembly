@@ -54,9 +54,13 @@
     <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${project.version}</bundle>
   </feature>
 
-  <feature name="pdi-dataservice" version="${project.version}">
+  <feature name="pdi-dataservice-client" version="${project.version}">
     <feature>pentaho-base</feature>
     <bundle>mvn:pentaho/pdi-dataservice-client-plugin/${project.version}</bundle>
+  </feature>
+  
+  <feature name="pdi-dataservice" version="${project.version}">
+    <feature>pdi-dataservice-client</feature>
     <bundle>mvn:pentaho/pdi-dataservice-server-plugin/${project.version}</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/2.11.1</bundle>
   </feature>
