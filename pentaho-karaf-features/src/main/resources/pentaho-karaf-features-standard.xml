@@ -66,7 +66,15 @@
       mvn:org.pentaho/pentaho-marketplace-di/${project.version}/cfg/pentaho-marketplace-config
     </configfile>
 
-    <feature>pentaho-marketplace-base</feature>
+    <bundle>wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
+    <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
+
+    <!-- START client side dependencies -->
+    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-angular-bundle/${project.version}</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars/angular-sanitize/1.2.15</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars/underscorejs/1.7.0</bundle>
+    <!-- END -->
 
     <!-- commons-codec is necessary for commons-httpclient -->
     <bundle>mvn:commons-codec/commons-codec/1.5</bundle>
@@ -80,13 +88,6 @@
       mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/cfg/pentaho-marketplace-config
     </configfile>
 
-    <feature>pentaho-marketplace-base</feature>
-
-    <bundle>mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/</bundle>
-  </feature>
-
-  <feature name="pentaho-marketplace-base" version="${project.version}">
-
     <bundle>wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
     <bundle>mvn:commons-collections/commons-collections/3.2.1</bundle>
 
@@ -96,6 +97,8 @@
     <bundle>pentaho-webjars:mvn:org.webjars/angular-sanitize/1.2.15</bundle>
     <bundle>pentaho-webjars:mvn:org.webjars/underscorejs/1.7.0</bundle>
     <!-- END -->
+
+    <bundle>mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/</bundle>
   </feature>
 
   <feature name="pentaho-cache-system" version="1.0">
