@@ -243,7 +243,8 @@
                 <feature>kar</feature>
                 <feature>http</feature>
                 <feature>war</feature>
-                <feature>pentaho-client</feature>
+                <feature>pentaho-client-minimal</feature>
+                <feature>pentaho-big-data-plugin-testless-osgi</feature>
                 <feature>pdi-dataservice-client</feature>
                 <feature>build-helper</feature>
               </features>
