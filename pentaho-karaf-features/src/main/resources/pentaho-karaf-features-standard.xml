@@ -186,4 +186,12 @@
    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
   </feature>
 
+  <feature name="data-refinery" description="pentaho data refinery">
+    <bundle>wrap:mvn:pentaho/pentaho-modeler/6.1-SNAPSHOT</bundle>
+    <bundle>wrap:mvn:pentaho/pentaho-metadata/6.1-SNAPSHOT</bundle>
+
+    <bundle>wrap:mvn:jfree/jcommon/1.0.14</bundle>
+    <bundle>mvn:pentaho/data-refinery-pdi-plugin/6.1-SNAPSHOT</bundle>
+  </feature>
+
 </features>
