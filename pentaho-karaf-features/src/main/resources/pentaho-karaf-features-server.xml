@@ -20,22 +20,26 @@
     <!-- Overriding the default http feature -->
     <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
         <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.3.2</bundle>
+    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
     </feature>
 
     <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
     <feature name="http-whiteboard" version="3.7.5" description="Provide HTTP Whiteboard pattern support" resolver="(obr)">
         <feature>http</feature>
         <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/3.1.4</bundle>
+    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
     </feature>
 
     <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
     <feature name="pax-http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="3.1.4" resolver="(obr)">
         <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/3.1.4</bundle>
+    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
     </feature>
 
     <!-- Overriding WAR to ensure that Jetty isn't started -->
     <feature name="war" version="3.7.5" description="Turn Karaf as a full WebContainer" resolver="(obr)">
         <feature>http</feature>
+    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
     </feature>
 
     <!-- Overriding CXF to ensure that Jetty isn't started -->
@@ -62,6 +66,7 @@
         <feature version="3.0.6">cxf-javascript</feature>
         <!-- <feature version="3.0.6">cxf-frontend-javascript</feature> -->
         <!-- <feature version="3.0.6">cxf-features-clustering</feature> -->
+        <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
     </feature>
 
     <feature name="pentaho-server" version="1.0">
@@ -82,8 +87,7 @@
         <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
         <bundle>mvn:pentaho/pentaho-angular-bundle/${project.version}</bundle>
         <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.2.2</bundle>
-
-
+        <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
     </feature>
 
 
