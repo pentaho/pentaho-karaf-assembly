@@ -137,6 +137,7 @@
                 <feature>pentaho-metaverse</feature>
                 <feature>pdi-marketplace</feature>
                 <feature>build-helper</feature>
+                <feature>pdi-data-refinery</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
@@ -177,6 +178,7 @@
                 <feature>pdi-dataservice</feature>
                 <feature>pentaho-marketplace</feature>
                 <feature>build-helper</feature>
+                <feature>pdi-data-refinery</feature>
               </features>
               <repository>target/pentaho-server-features-repo</repository>
             </configuration>
