@@ -187,6 +187,10 @@
   </feature>
 
   <feature name="pdi-data-refinery" description="pentaho data refinery">
+    <configfile finalname="/etc/pentaho.geo.roles.cfg">
+      mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-geo-roles
+    </configfile>
+
     <bundle>wrap:mvn:pentaho/pentaho-modeler/${project.version}</bundle>
 
     <bundle>wrap:mvn:jfree/jcommon/1.0.14</bundle>
