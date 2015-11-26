@@ -186,6 +186,7 @@
    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
   </feature>
 
+  <!--
   <feature name="pdi-data-refinery" description="pentaho data refinery">
     <configfile finalname="/etc/pentaho.geo.roles.cfg">
       mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-geo-roles
@@ -196,5 +197,6 @@
     <bundle>wrap:mvn:jfree/jcommon/1.0.14</bundle>
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${project.version}</bundle>
   </feature>
+  -->
 
 </features>
