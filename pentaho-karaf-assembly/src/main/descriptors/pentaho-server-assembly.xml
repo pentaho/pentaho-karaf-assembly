@@ -70,7 +70,7 @@
       <lineEnding>unix</lineEnding>
       <fileMode>0644</fileMode>
       <includes>
-        <include>**/custom.properties</include>
+        <include>**/*.*</include>
       </includes>
       <excludes>
         <exclude>**/*.formatted</exclude>
