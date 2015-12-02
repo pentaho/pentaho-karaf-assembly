@@ -83,7 +83,7 @@
         <bundle start-level="20">mvn:pentaho/pentaho-ss2-proxies/${project.version}</bundle>
         <bundle start-level="50">mvn:pentaho/pentaho-proxy-spring4/${project.version}</bundle>
 
-        <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${project.version}</bundle>
+        <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
         <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
         <bundle>mvn:pentaho/pentaho-angular-bundle/${project.version}</bundle>
         <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.2.2</bundle>
