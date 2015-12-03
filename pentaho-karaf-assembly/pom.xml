@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-
-  <groupId>pentaho</groupId>
-  <artifactId>pentaho-karaf-assembly</artifactId>
-  <version>6.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
-
   <parent>
     <groupId>pentaho</groupId>
     <artifactId>pentaho-karaf</artifactId>
-    <version>6.0-SNAPSHOT</version>
+    <version>6.0.1.0-386</version>
   </parent>
-
+  <groupId>pentaho</groupId>
+  <artifactId>pentaho-karaf-assembly</artifactId>
+  <version>6.0.1.0-386</version>
+  <packaging>pom</packaging>
   <properties>
     <package.features>true</package.features>
+    <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5</plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10</plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
     <karaf.version>3.0.3</karaf.version>
-
+    <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
     <karaf.features.version>3.0.3</karaf.features.version>
-    <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7
-    </plugin.org.apache.maven.plugins.maven-resources-plugin.version>
-    <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5
-    </plugin.org.apache.maven.plugins.maven-clean-plugin.version>
-    <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10
-    </plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
-    <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4
-    </plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
-    <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5
-    </plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
   </properties>
-
-
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.karaf</groupId>
+      <artifactId>apache-karaf</artifactId>
+      <version>${karaf.version}</version>
+      <type>tar.gz</type>
+      <scope>runtime</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>org.eclipse.osgi</artifactId>
+          <groupId>org.eclipse</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.karaf.features</groupId>
+      <artifactId>standard</artifactId>
+      <version>${karaf.features.version}</version>
+      <type>xml</type>
+      <classifier>features</classifier>
+    </dependency>
+  </dependencies>
   <build>
     <extensions>
       <extension>
@@ -42,25 +52,18 @@
       </extension>
     </extensions>
     <resources>
-
       <resource>
-        <directory>${project.basedir}/src/main/filtered-resources</directory>
         <filtering>true</filtering>
+        <directory>${project.basedir}/src/main/filtered-resources</directory>
         <includes>
           <include>**/*</include>
         </includes>
       </resource>
-
     </resources>
-
-
     <plugins>
-
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <version>${plugin.org.apache.maven.plugins.maven-resources-plugin.version}</version>
-        <inherited>false</inherited>
         <executions>
           <execution>
             <id>filter</id>
@@ -70,16 +73,13 @@
             </goals>
           </execution>
         </executions>
+        <inherited>false</inherited>
       </plugin>
-
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <version>${plugin.org.apache.maven.plugins.maven-dependency-plugin.version}</version>
-        <inherited>false</inherited>
         <executions>
           <execution>
-            <!-- Uncompress the standard Karaf distribution -->
             <id>unpack</id>
             <phase>generate-resources</phase>
             <goals>
@@ -97,20 +97,16 @@
             </configuration>
           </execution>
         </executions>
+        <inherited>false</inherited>
       </plugin>
-
       <plugin>
         <groupId>org.apache.karaf.tooling</groupId>
         <artifactId>karaf-maven-plugin</artifactId>
         <version>${karaf-maven-plugin.version}</version>
-        <inherited>false</inherited>
-
         <executions>
-
           <execution>
             <id>add-features</id>
           </execution>
-
           <execution>
             <id>add-features-to-client-repo</id>
             <phase>package</phase>
@@ -123,8 +119,7 @@
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.6/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features
-                </descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.14.3/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
@@ -146,7 +141,6 @@
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
           </execution>
-
           <execution>
             <id>add-features-to-server-repo</id>
             <phase>package</phase>
@@ -159,8 +153,7 @@
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features
-                </descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.6/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/server</descriptor>
@@ -188,7 +181,6 @@
               <repository>target/pentaho-server-features-repo</repository>
             </configuration>
           </execution>
-
           <execution>
             <id>add-features-to-pmr-repo</id>
             <phase>package</phase>
@@ -201,8 +193,7 @@
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.6/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features
-                </descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.14.3/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
@@ -231,8 +222,7 @@
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features
-                </descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.6/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
@@ -252,15 +242,12 @@
             </configuration>
           </execution>
         </executions>
+        <inherited>false</inherited>
       </plugin>
-
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
         <version>${plugin.org.apache.maven.plugins.maven-assembly-plugin.version}</version>
-        <inherited>false</inherited>
         <executions>
-
           <execution>
             <id>client</id>
             <phase>package</phase>
@@ -275,7 +262,6 @@
               <appendAssemblyId>true</appendAssemblyId>
             </configuration>
           </execution>
-
           <execution>
             <id>server</id>
             <phase>package</phase>
@@ -290,7 +276,6 @@
               <appendAssemblyId>true</appendAssemblyId>
             </configuration>
           </execution>
-
           <execution>
             <id>pmr</id>
             <phase>package</phase>
@@ -305,7 +290,6 @@
               <appendAssemblyId>true</appendAssemblyId>
             </configuration>
           </execution>
-
           <execution>
             <id>prd</id>
             <phase>package</phase>
@@ -321,38 +305,8 @@
             </configuration>
           </execution>
         </executions>
+        <inherited>false</inherited>
       </plugin>
-
     </plugins>
-
   </build>
-
-
-  <dependencies>
-
-    <dependency>
-      <groupId>org.apache.karaf</groupId>
-      <artifactId>apache-karaf</artifactId>
-      <version>${karaf.version}</version>
-      <scope>runtime</scope>
-      <type>tar.gz</type>
-      <exclusions>
-        <exclusion>
-          <groupId>org.eclipse</groupId>
-          <artifactId>org.eclipse.osgi</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.karaf.features</groupId>
-      <artifactId>standard</artifactId>
-      <version>${karaf.features.version}</version>
-      <type>xml</type>
-      <classifier>features</classifier>
-    </dependency>
-
-  </dependencies>
-
-
 </project>

@@ -1,54 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ This program is free software; you can redistribute it and/or modify it under the
-  ~ terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
-  ~ Foundation.
-  ~
-  ~ You should have received a copy of the GNU Lesser General Public License along with this
-  ~ program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
-  ~ or from the Free Software Foundation, Inc.,
-  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-  ~
-  ~ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-  ~ See the GNU Lesser General Public License for more details.
-  ~
-  ~ Copyright 2014 Pentaho Corporation. All rights reserved.
-  -->
-
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-
-  <groupId>pentaho</groupId>
-  <artifactId>pentaho-karaf-features</artifactId>
-  <version>6.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
-
   <parent>
     <groupId>pentaho</groupId>
     <artifactId>pentaho-karaf</artifactId>
-    <version>6.0-SNAPSHOT</version>
+    <version>6.0.1.0-386</version>
   </parent>
-  
+  <groupId>pentaho</groupId>
+  <artifactId>pentaho-karaf-features</artifactId>
+  <version>6.0.1.0-386</version>
+  <packaging>pom</packaging>
   <properties>
-    <obf.jar.designator/>
+    <obf.jar.designator></obf.jar.designator>
     <mongolap.unobfuscated.designator>-plain</mongolap.unobfuscated.designator>
-    <dependency.mondrian4.revision>4.4-SNAPSHOT</dependency.mondrian4.revision>
+    <dependency.mondrian4.revision>4.4.1.0-386</dependency.mondrian4.revision>
   </properties>
-
   <build>
     <plugins>
-
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <version>${plugin.org.apache.maven.plugins.maven-resources-plugin.version}</version>
         <executions>
           <execution>
             <id>copy-resources</id>
-            <!-- here the phase you need -->
             <phase>process-sources</phase>
             <goals>
               <goal>copy-resources</goal>
@@ -67,9 +42,7 @@
           </execution>
         </executions>
       </plugin>
-
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-clean-plugin</artifactId>
         <version>${plugin.org.apache.maven.plugins.maven-clean-plugin.version}</version>
         <configuration>
@@ -81,7 +54,6 @@
           </filesets>
         </configuration>
       </plugin>
-
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -115,26 +87,20 @@
           </execution>
         </executions>
       </plugin>
-
     </plugins>
   </build>
-
   <profiles>
     <profile>
       <id>obfuscated</id>
-
       <activation>
-        <activeByDefault>false</activeByDefault>
         <property>
           <name>release</name>
         </property>
       </activation>
-
       <properties>
         <obf.jar.designator>/jar/obf</obf.jar.designator>
-        <mongolap.unobfuscated.designator/>
+        <mongolap.unobfuscated.designator></mongolap.unobfuscated.designator>
       </properties>
     </profile>
   </profiles>
-
 </project>
