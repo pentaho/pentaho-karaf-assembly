@@ -203,6 +203,7 @@
     <configfile finalname="/etc/pentaho.geo.roles.cfg">
       mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-geo-roles
     </configfile>
+    <feature>pdi-dataservice</feature>
 
     <bundle>wrap:mvn:pentaho/pentaho-modeler/${project.version}</bundle>
 
