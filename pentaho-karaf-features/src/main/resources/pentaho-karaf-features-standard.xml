@@ -26,7 +26,6 @@
     <bundle>mvn:commons-io/commons-io/2.4</bundle>
     <bundle>mvn:commons-lang/commons-lang/2.6</bundle>
     <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
-    <bundle>mvn:log4j/log4j/1.2.17</bundle>
     <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
     <feature version="${project.version}">pentaho-webjars-deployer</feature>
   </feature>
@@ -35,7 +34,6 @@
     <feature>pentaho-deployers</feature>
     <feature>pentaho-cache-system</feature>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/1.7.7</bundle>
-    <bundle>mvn:log4j/log4j/1.2.17</bundle>
     <bundle>mvn:commons-logging/commons-logging/1.1.3</bundle>
     <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
     <bundle>mvn:org.apache.felix/org.apache.felix.http.api/2.3.2</bundle>
