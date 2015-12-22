@@ -19,54 +19,54 @@
 
     <!-- Overriding the default http feature -->
     <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
-        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.3.2</bundle>
-    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
+        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.bridge.version}</bundle>
+		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
     <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
     <feature name="http-whiteboard" version="3.7.5" description="Provide HTTP Whiteboard pattern support" resolver="(obr)">
         <feature>http</feature>
-        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/3.1.4</bundle>
-    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
+        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
+		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
     <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
     <feature name="pax-http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="3.1.4" resolver="(obr)">
-        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/3.1.4</bundle>
-    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
+        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
+		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
     <!-- Overriding WAR to ensure that Jetty isn't started -->
     <feature name="war" version="3.7.5" description="Turn Karaf as a full WebContainer" resolver="(obr)">
         <feature>http</feature>
-    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
+		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
     <!-- Overriding CXF to ensure that Jetty isn't started -->
     <feature name="cxf" version="3.7.5" resolver='(obr)'>
         <feature version="[3,4)">spring</feature>
         <feature version="[1.2,2)">spring-dm</feature>
-        <feature version="3.0.7">cxf-core</feature>
-        <feature version="3.0.7">cxf-jaxws</feature>
-        <feature version="3.0.7">cxf-jaxrs</feature>
-        <feature version="3.0.7">cxf-databinding-jaxb</feature>
-        <feature version="3.0.7">cxf-databinding-aegis</feature>
-        <feature version="3.0.7">cxf-databinding-xmlbeans</feature>
-        <!-- <feature version="3.0.7">cxf-bindings-corba</feature> -->
-        <feature version="3.0.7">cxf-bindings-coloc</feature>
-        <feature version="3.0.7">cxf-bindings-object</feature>
-        <!-- <feature version="3.0.7">cxf-http-jetty</feature> -->
-        <feature version="3.0.7">cxf-transports-local</feature>
-        <!-- <feature version="3.0.7">cxf-transports-jms</feature> -->
-        <!-- <feature version="3.0.7">cxf-transports-udp</feature> -->
-        <feature version="3.0.7">cxf-xjc-runtime</feature>
-        <feature version="3.0.7">cxf-ws-security</feature>
-        <feature version="3.0.7">cxf-ws-rm</feature>
-        <!-- <feature version="3.0.7">cxf-ws-mex</feature> -->
-        <feature version="3.0.7">cxf-javascript</feature>
-        <!-- <feature version="3.0.7">cxf-frontend-javascript</feature> -->
-        <!-- <feature version="3.0.7">cxf-features-clustering</feature> -->
-        <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
+        <feature version="${cxf.karaf.version}">cxf-core</feature>
+        <feature version="${cxf.karaf.version}">cxf-jaxws</feature>
+        <feature version="${cxf.karaf.version}">cxf-jaxrs</feature>
+        <feature version="${cxf.karaf.version}">cxf-databinding-jaxb</feature>
+        <feature version="${cxf.karaf.version}">cxf-databinding-aegis</feature>
+        <feature version="${cxf.karaf.version}">cxf-databinding-xmlbeans</feature>
+        <!-- <feature version="${cxf.karaf.version}">cxf-bindings-corba</feature> -->
+        <feature version="${cxf.karaf.version}">cxf-bindings-coloc</feature>
+        <feature version="${cxf.karaf.version}">cxf-bindings-object</feature>
+        <!-- <feature version="${cxf.karaf.version}">cxf-http-jetty</feature> -->
+        <feature version="${cxf.karaf.version}">cxf-transports-local</feature>
+        <!-- <feature version="${cxf.karaf.version}">cxf-transports-jms</feature> -->
+        <!-- <feature version="${cxf.karaf.version}">cxf-transports-udp</feature> -->
+        <feature version="${cxf.karaf.version}">cxf-xjc-runtime</feature>
+        <feature version="${cxf.karaf.version}">cxf-ws-security</feature>
+        <feature version="${cxf.karaf.version}">cxf-ws-rm</feature>
+        <!-- <feature version="${cxf.karaf.version}">cxf-ws-mex</feature> -->
+        <feature version="${cxf.karaf.version}">cxf-javascript</feature>
+        <!-- <feature version="${cxf.karaf.version}">cxf-frontend-javascript</feature> -->
+        <!-- <feature version="${cxf.karaf.version}">cxf-features-clustering</feature> -->
+        <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
     <feature name="pentaho-server" version="1.0">
@@ -86,8 +86,8 @@
         <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
         <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
         <bundle>mvn:pentaho/pentaho-angular-bundle/${project.version}</bundle>
-        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/2.2.2</bundle>
-        <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
+        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
+        <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
 

@@ -15,11 +15,52 @@
     <package.features>true</package.features>
     <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5</plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
     <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10</plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
-    <karaf.version>3.0.3</karaf.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
     <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
+    <!-- karaf -->
+	<karaf.version>3.0.3</karaf.version>
     <karaf.features.version>3.0.3</karaf.features.version>
+	<karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
+	<activemq.karaf.version>5.10.0</activemq.karaf.version>
+	<cxf.karaf.version>3.0.7</cxf.karaf.version>
+	<camel.karaf.version>2.14.3</camel.karaf.version>
+	
+	<camel.guava.eventbus.version>2.14.3</camel.guava.eventbus.version>
+	<!-- commons -->
+	<commons.collections.version>3.2.2</commons.collections.version>
+	<commons.logging.version>1.1.3</commons.logging.version>
+	<commons.lang.version>2.6</commons.lang.version>
+	<commons.io.version>2.4</commons.io.version>
+	<commons.codec.version>1.5</commons.codec.version>
+	<commons.httpclient.version>3.1</commons.httpclient.version>
+	<commons.beanutils.version>1.9.2</commons.beanutils.version>
+	<!-- felix.http -->
+    <org.apache.felix.http.version>2.3.2</org.apache.felix.http.version>
+	<!-- eigenbase -->
+	<eigenbase.xom.version>1.3.4</eigenbase.xom.version>
+	<eigenbase.resgen.version>1.3.6</eigenbase.resgen.version>
+	<eigenbase.properties.version>1.1.4</eigenbase.properties.version>
+	<!-- mongo db -->
+	<mongo.java.driver.version>2.13.0</mongo.java.driver.version>
+	
+	<com.github.zafarkhaja.version>0.9.0</com.github.zafarkhaja.version>
+	<com.fasterxml.jackson.core.version>2.3.3</com.fasterxml.jackson.core.version>
+	<com.tinkerpop.version>2.6.0</com.tinkerpop.version>
+	<google.guava.version>17.0</google.guava.version>
+	<net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
+	<net.sf.flexjson.version>2.1</net.sf.flexjson.version>
+	<json.simple.version>1.1.1</json.simple.version>
+	<jfree.jcommon.version>1.0.14</jfree.jcommon.version>
+	<olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
+	<org.apache.mina.version>2.0.7</org.apache.mina.version>
+	<org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
+	<org.ehcache.version>1.0.0</org.ehcache.version>
+	<org.ops4j.pax.web.version>3.1.4</org.ops4j.pax.web.version>
+	<osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
+	<!-- org.webjars -->
+	<angular.sanitize.version>1.2.15</angular.sanitize.version>
+	<underscorejs.version>1.7.0</underscorejs.version>
   </properties>
   <dependencies>
     <dependency>
@@ -117,12 +158,12 @@
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.7/xml/features</descriptor>
+                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
-                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.14.3/xml/features</descriptor>
-                <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
+                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
@@ -155,12 +196,12 @@
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.7/xml/features</descriptor>
+                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/server</descriptor>
-                <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
-                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.14.3/xml/features</descriptor>
-                <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
+                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
@@ -193,12 +234,12 @@
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.7/xml/features</descriptor>
+                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.activemq/activemq-karaf/5.10.0/xml/features</descriptor>
-                <descriptor>mvn:org.apache.camel.karaf/apache-camel/2.14.3/xml/features</descriptor>
-                <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
+                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
@@ -225,9 +266,9 @@
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/3.0.7/xml/features</descriptor>
+                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
-                <descriptor>mvn:org.apache.karaf.features/spring/3.0.3/xml/features</descriptor>
+                <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
