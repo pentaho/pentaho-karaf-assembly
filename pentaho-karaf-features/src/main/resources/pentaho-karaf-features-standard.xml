@@ -166,7 +166,7 @@
     <feature>pentaho-tinkerpop-gremlin</feature>
     <feature>http</feature>
     <feature>http-whiteboard</feature>
-    <feature>cxf</feature>
+    <feature version="${cxf.karaf.version}">cxf</feature>
 
     <bundle>wrap:mvn:net.sf.flexjson/flexjson/${net.sf.flexjson.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/${com.fasterxml.jackson.core.version}</bundle>
