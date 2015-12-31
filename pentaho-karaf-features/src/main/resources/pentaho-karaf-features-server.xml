@@ -19,7 +19,7 @@
 
     <!-- Overriding the default http feature -->
     <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
-        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.bridge.version}</bundle>
+        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
 		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
