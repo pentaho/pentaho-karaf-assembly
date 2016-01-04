@@ -32,6 +32,11 @@
                   <classifier>server</classifier>
                 </artifact>
                 <artifact>
+                  <file>src/main/resources/standard.xml</file>
+                  <type>xml</type>
+                  <classifier>standard</classifier>
+                </artifact>
+                <artifact>
                   <file>src/main/resources/monitoring-snmp.xml</file>
                   <type>xml</type>
                   <classifier>monitoring-snmp</classifier>
