@@ -176,4 +176,30 @@
     <bundle>mvn:org.apache.aries.transaction/org.apache.aries.transaction.manager/1.1.1</bundle>
   </feature>
 
+  <!-- Overriding CXF to ensure that Jetty isn't started -->
+    <feature name="cxf" version="3.7.5" resolver='(obr)'>
+        <feature version="[3,4)">spring</feature>
+        <feature version="[1.2,2)">spring-dm</feature>
+        <feature version="3.0.7">cxf-core</feature>
+        <feature version="3.0.7">cxf-jaxws</feature>
+        <feature version="3.0.7">cxf-jaxrs</feature>
+        <feature version="3.0.7">cxf-databinding-jaxb</feature>
+        <feature version="3.0.7">cxf-databinding-aegis</feature>
+        <feature version="3.0.7">cxf-databinding-xmlbeans</feature>
+        <!-- <feature version="3.0.7">cxf-bindings-corba</feature> -->
+        <feature version="3.0.7">cxf-bindings-coloc</feature>
+        <feature version="3.0.7">cxf-bindings-object</feature>
+        <!-- <feature version="3.0.7">cxf-http-jetty</feature> -->
+        <feature version="3.0.7">cxf-transports-local</feature>
+        <!-- <feature version="3.0.7">cxf-transports-jms</feature> -->
+        <!-- <feature version="3.0.7">cxf-transports-udp</feature> -->
+        <feature version="3.0.7">cxf-xjc-runtime</feature>
+        <feature version="3.0.7">cxf-ws-security</feature>
+        <feature version="3.0.7">cxf-ws-rm</feature>
+        <!-- <feature version="3.0.7">cxf-ws-mex</feature> -->
+        <feature version="3.0.7">cxf-javascript</feature>
+        <!-- <feature version="3.0.7">cxf-frontend-javascript</feature> -->
+        <!-- <feature version="3.0.7">cxf-features-clustering</feature> -->
+    </feature>
+
 </features>
