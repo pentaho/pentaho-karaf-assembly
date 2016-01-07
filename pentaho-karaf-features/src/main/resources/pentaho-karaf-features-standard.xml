@@ -209,5 +209,32 @@
     <bundle>wrap:mvn:jfree/jcommon/${jfree.jcommon.version}</bundle>
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${project.version}</bundle>
   </feature>
+  
+   <!-- Overriding CXF to ensure that Jetty isn't started -->
+    <feature name="cxf" version="3.7.5" resolver='(obr)'>
+        <feature version="[3,4)">spring</feature>
+        <feature version="[1.2,2)">spring-dm</feature>
+        <feature version="${cxf.karaf.version}">cxf-core</feature>
+        <feature version="${cxf.karaf.version}">cxf-jaxws</feature>
+        <feature version="${cxf.karaf.version}">cxf-jaxrs</feature>
+        <feature version="${cxf.karaf.version}">cxf-databinding-jaxb</feature>
+        <feature version="${cxf.karaf.version}">cxf-databinding-aegis</feature>
+        <feature version="${cxf.karaf.version}">cxf-databinding-xmlbeans</feature>
+        <!-- <feature version="${cxf.karaf.version}">cxf-bindings-corba</feature> -->
+        <feature version="${cxf.karaf.version}">cxf-bindings-coloc</feature>
+        <feature version="${cxf.karaf.version}">cxf-bindings-object</feature>
+        <!-- <feature version="${cxf.karaf.version}">cxf-http-jetty</feature> -->
+        <feature version="${cxf.karaf.version}">cxf-transports-local</feature>
+        <!-- <feature version="${cxf.karaf.version}">cxf-transports-jms</feature> -->
+        <!-- <feature version="${cxf.karaf.version}">cxf-transports-udp</feature> -->
+        <feature version="${cxf.karaf.version}">cxf-xjc-runtime</feature>
+        <feature version="${cxf.karaf.version}">cxf-ws-security</feature>
+        <feature version="${cxf.karaf.version}">cxf-ws-rm</feature>
+        <!-- <feature version="${cxf.karaf.version}">cxf-ws-mex</feature> -->
+        <feature version="${cxf.karaf.version}">cxf-javascript</feature>
+        <!-- <feature version="${cxf.karaf.version}">cxf-frontend-javascript</feature> -->
+        <!-- <feature version="${cxf.karaf.version}">cxf-features-clustering</feature> -->
+        <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    </feature>
 
 </features>
