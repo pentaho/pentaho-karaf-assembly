@@ -95,6 +95,7 @@
     <bundle>mvn:pentaho/pentaho-angular-bundle/${project.version}</bundle>
     <bundle>pentaho-webjars:mvn:org.webjars/angular-sanitize/${angular.sanitize.version}</bundle>
     <bundle>pentaho-webjars:mvn:org.webjars/underscorejs/${underscorejs.version}</bundle>
+    <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/${project.version}/zip</bundle>
     <!-- END -->
 
     <!-- commons-codec is necessary for commons-httpclient -->
