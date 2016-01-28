@@ -15,6 +15,8 @@
     <obf.jar.designator></obf.jar.designator>
     <mongolap.unobfuscated.designator>-plain</mongolap.unobfuscated.designator>
     <dependency.mondrian4.revision>4.5-SNAPSHOT</dependency.mondrian4.revision>
+    <dependency.common-ui.revision>${project.version}</dependency.common-ui.revision>
+    <dependency.pentaho-osgi-bundles.revision>${project.version}</dependency.pentaho-osgi-bundles.revision>
   </properties>
   <build>
     <plugins>
