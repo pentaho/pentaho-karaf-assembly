@@ -15,7 +15,7 @@
  ~ Copyright 2014 Pentaho Corporation. All rights reserved.
  -->
 
-<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+<features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
 
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
@@ -37,7 +37,10 @@
     <bundle>mvn:org.slf4j/osgi-over-slf4j/${osgi.over.slf4j.version}</bundle>
     <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    <bundle>mvn:org.apache.felix/org.apache.felix.http.api/${org.apache.felix.http.version}</bundle>
+    <conditional>
+      <condition>http</condition>
+      <bundle>mvn:org.apache.felix/org.apache.felix.http.api/${org.apache.felix.http.version}</bundle>
+    </conditional>
     <bundle>mvn:org.apache.mina/mina-core/${org.apache.mina.version}</bundle>
     <bundle>mvn:pentaho/pentaho-osgi-utils-impl/${project.version}</bundle>
   </feature>
@@ -155,7 +158,7 @@
   <feature name="pentaho-tinkerpop-gremlin" version="2.6">
     <bundle>wrap:mvn:com.tinkerpop.gremlin/gremlin-java/${com.tinkerpop.version}</bundle>
     <bundle>wrap:mvn:com.tinkerpop/pipes/${com.tinkerpop.version}</bundle>
-	<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+	 <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-metaverse" version="${project.version}">
@@ -166,22 +169,31 @@
 
     <feature>pentaho-client</feature>
     <feature>pentaho-tinkerpop-gremlin</feature>
-    <feature>http</feature>
-    <feature>http-whiteboard</feature>
-    <feature>cxf</feature>
+    <conditional>
+      <condition>http</condition>    
+      <feature>pentaho-metaverse-web</feature>
+    </conditional> 
 
     <bundle>wrap:mvn:net.sf.flexjson/flexjson/${net.sf.flexjson.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/${com.fasterxml.jackson.core.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/${com.fasterxml.jackson.core.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.core/jackson-core/${com.fasterxml.jackson.core.version}</bundle>
-
-    <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${org.codehaus.jackson.version}</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${org.codehaus.jackson.version}</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/${org.codehaus.jackson.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
 
     <bundle>mvn:pentaho/pentaho-metaverse-core/${project.version}</bundle>
   </feature>
+
+  <feature name="pentaho-metaverse-web" version="${project.version}">
+    <feature>http</feature>
+    <feature>http-whiteboard</feature>
+    <feature>cxf</feature>
+
+    <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${org.codehaus.jackson.version}</bundle>
+    <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${org.codehaus.jackson.version}</bundle>
+    <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/${org.codehaus.jackson.version}</bundle>
+
+    <bundle>mvn:pentaho/pentaho-metaverse-web/${project.version}</bundle>
+  </feature>  
 
 <!-- Overriding KAR to load 3.0.5 of core, remove once 3.0.5 is released -->
   <feature name="kar" version="3.7.5" description="Provide KAR (KARaf archive) support" resolver="(obr)">
