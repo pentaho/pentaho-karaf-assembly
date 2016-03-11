@@ -30,6 +30,7 @@
       <directory>target/dependencies/apache-karaf-${karaf.version}</directory>
       <outputDirectory>/</outputDirectory>
       <excludes>
+        <exclude>etc/config.properties</exclude>
         <exclude>etc/custom.properties</exclude>
         <exclude>etc/org.apache.karaf.management.cfg</exclude>
         <exclude>etc/org.apache.karaf.features.cfg</exclude>
