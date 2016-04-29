@@ -107,6 +107,10 @@
 
     <bundle>mvn:org.pentaho/pentaho-marketplace-di/${project.version}</bundle>
   </feature>
+  
+  <feature name="repositories-plugin" version="${project.version}">
+    <bundle>mvn:pentaho-kettle/repositories-plugin/${project.version}</bundle>
+  </feature>  
 
   <feature name="pentaho-marketplace" version="${project.version}">
     <feature>pentaho-requirejs-osgi-manager</feature>
