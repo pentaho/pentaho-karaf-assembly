@@ -12,7 +12,6 @@
   <version>7.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
-    <mongo.java.driver.version>2.13.0</mongo.java.driver.version>
     <org.ehcache.version>1.0.0</org.ehcache.version>
     <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
     <net.sf.flexjson.version>2.1</net.sf.flexjson.version>

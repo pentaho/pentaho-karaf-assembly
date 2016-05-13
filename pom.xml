@@ -18,7 +18,7 @@
     <module>pentaho-karaf-assembly</module>
   </modules>
   <properties>
-    <mongo.java.driver.version>2.13.3</mongo.java.driver.version>
+    <mongo.java.driver.version>3.2.2</mongo.java.driver.version>
     <org.ehcache.version>1.0.0</org.ehcache.version>
     <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
     <net.sf.flexjson.version>2.1</net.sf.flexjson.version>
