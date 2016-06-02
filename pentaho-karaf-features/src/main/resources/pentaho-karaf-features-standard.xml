@@ -33,6 +33,7 @@
   <feature name="pentaho-base" version="1.0">
     <feature>pentaho-deployers</feature>
     <feature>pentaho-cache-system</feature>
+    <feature>pentaho-i18n</feature>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/${osgi.over.slf4j.version}</bundle>
     <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
@@ -255,5 +256,8 @@
         <!-- <feature version="${cxf.karaf.version}">cxf-features-clustering</feature> -->
         <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
-
+    <feature name="pentaho-i18n" version="${project.version}">
+      <bundle>mvn:pentaho/pentaho-i18n-bundle/${project.version}</bundle>
+      <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${project.version}</bundle>
+    </feature>
 </features>
