@@ -47,9 +47,9 @@
   </feature>
 
   <feature name="pentaho-requirejs-osgi-manager" version="${project.version}">
-    <bundle>mvn:pentaho/pentaho-requirejs-utils/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-requirejs-utils/${dependency.pentaho-osgi-bundles.revision}</bundle>
     <bundle>wrap:mvn:com.github.zafarkhaja/java-semver/${com.github.zafarkhaja.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${dependency.pentaho-osgi-bundles.revision}</bundle>
   </feature>
 
   <feature name="pentaho-webjars-deployer" version="${project.version}">
@@ -257,7 +257,7 @@
         <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
     <feature name="pentaho-i18n" version="${project.version}">
-      <bundle>mvn:pentaho/pentaho-i18n-bundle/${project.version}</bundle>
-      <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${project.version}</bundle>
+      <bundle>mvn:pentaho/pentaho-i18n-bundle/${dependency.pentaho-osgi-bundles.revision}</bundle>
+      <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${dependency.pentaho-osgi-bundles.revision}</bundle>
     </feature>
 </features>
