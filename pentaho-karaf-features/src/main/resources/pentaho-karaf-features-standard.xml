@@ -228,7 +228,7 @@
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${project.version}</bundle>
   </feature>
 
-  <feature name="community-edition" version="${project.version}" description="Marker feature for Community Edition Builds"/>
+  <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds"/>
   
    <!-- Overriding CXF to ensure that Jetty isn't started -->
     <feature name="cxf" version="3.7.5" resolver='(obr)'>
