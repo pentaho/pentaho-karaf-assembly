@@ -47,6 +47,7 @@
   </feature>
 
   <feature name="pentaho-requirejs-osgi-manager" version="${project.version}">
+    <feature>http</feature>
     <bundle>mvn:pentaho/pentaho-requirejs-utils/${dependency.pentaho-osgi-bundles.revision}</bundle>
     <bundle>wrap:mvn:com.github.zafarkhaja/java-semver/${com.github.zafarkhaja.version}</bundle>
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${dependency.pentaho-osgi-bundles.revision}</bundle>
