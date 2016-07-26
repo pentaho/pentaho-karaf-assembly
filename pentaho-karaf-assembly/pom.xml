@@ -166,7 +166,6 @@
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
                 <feature>pdi-dataservice</feature>
-                <feature>pdi-steps</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pdi-marketplace</feature>
                 <feature>build-helper</feature>
@@ -210,7 +209,6 @@
                 <feature>pentaho-server</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pdi-dataservice</feature>
-                <feature>pdi-steps</feature>
                 <feature>pentaho-marketplace</feature>
                 <feature>build-helper</feature>
                 <feature>pdi-data-refinery</feature>
