@@ -81,9 +81,10 @@
 
   <feature name="pdi-dataservice" version="${project.version}">
     <feature>pdi-dataservice-client</feature>
+    <bundle>wrap:mvn:pentaho/pentaho-modeler/${project.version}</bundle>
     <bundle>mvn:pentaho/pdi-dataservice-server-plugin/${project.version}</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/${mongo.java.driver.version}</bundle>
-   <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pdi-marketplace" version="${project.version}">
