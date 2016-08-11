@@ -199,6 +199,7 @@
     <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${org.codehaus.jackson.version}</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${org.codehaus.jackson.version}</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/${org.codehaus.jackson.version}</bundle>
+    <bundle>mvn:org.codehaus.jackson/jackson-xc/${org.codehaus.jackson.version}</bundle>
 
     <bundle>mvn:pentaho/pentaho-metaverse-web/${project.version}</bundle>
   </feature>  
