@@ -82,7 +82,8 @@
 
   <feature name="pdi-dataservice" version="${project.version}">
     <feature>pdi-dataservice-client</feature>
-    <bundle>wrap:mvn:pentaho/pentaho-modeler/${project.version}</bundle>
+    <bundle>wrap:mvn:pentaho/pentaho-modeler-gwt/${project.version}</bundle>
+    <bundle>wrap:mvn:pentaho/pentaho-modeler-xul/${project.version}</bundle>
     <bundle>mvn:pentaho/pdi-dataservice-server-plugin/${project.version}</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/${mongo.java.driver.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
@@ -226,7 +227,7 @@
     </configfile>
     <feature>pdi-dataservice</feature>
 
-    <bundle>wrap:mvn:pentaho/pentaho-modeler/${project.version}</bundle>
+    <bundle>wrap:mvn:pentaho/pentaho-modeler-xul/${project.version}</bundle>
 
     <bundle>wrap:mvn:jfree/jcommon/${jfree.jcommon.version}</bundle>
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${project.version}</bundle>
