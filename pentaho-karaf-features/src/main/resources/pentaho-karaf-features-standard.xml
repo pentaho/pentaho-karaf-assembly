@@ -35,11 +35,8 @@
     <feature>pentaho-deployers</feature>
     <feature>pentaho-cache-system</feature>
     <feature>pentaho-i18n</feature>
-    <feature>spring-dm</feature>
 
-    <bundle>wrap:mvn:pentaho/pentaho-connections/${project.version}</bundle>
     <bundle>wrap:mvn:org.json/json/${project.version}</bundle>
-    <bundle>wrap:mvn:pentaho/pentaho-server-bundle/${project.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/${osgi.over.slf4j.version}</bundle>
     <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
