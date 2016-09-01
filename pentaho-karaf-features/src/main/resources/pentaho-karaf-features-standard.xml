@@ -27,6 +27,7 @@
     <bundle>mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-spring-dm-extender/${project.version}</bundle>
     <feature version="${project.version}">pentaho-webjars-deployer</feature>
   </feature>
 
@@ -34,6 +35,11 @@
     <feature>pentaho-deployers</feature>
     <feature>pentaho-cache-system</feature>
     <feature>pentaho-i18n</feature>
+    <feature>spring-dm</feature>
+
+    <bundle>wrap:mvn:pentaho/pentaho-connections/${project.version}</bundle>
+    <bundle>wrap:mvn:org.json/json/${project.version}</bundle>
+    <bundle>wrap:mvn:pentaho/pentaho-server-bundle/${project.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/${osgi.over.slf4j.version}</bundle>
     <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
@@ -66,6 +72,7 @@
 
   <feature name="pentaho-client-minimal" version="1.0">
     <feature>pentaho-base</feature>
+    <bundle>mvn:pentaho/pentaho-pdi-platform/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-mongo-utils/${project.version}</bundle>
     <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/${project.version}</bundle>
     <bundle>wrap:mvn:org.pentaho/meta-inject-plugin/${project.version}</bundle>
@@ -267,4 +274,16 @@
         <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${dependency.pentaho-osgi-bundles.revision}</bundle>
       </conditional>
     </feature>
+
+
+  <feature name="pax-jetty" description="Provide Jetty engine support" version="8.9" resolver="(obr)">
+    <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.activation-api-1.1/2.2.0</bundle>
+
+    <bundle dependency="true" start-level="30">mvn:javax.mail/mail/1.4.4</bundle>
+    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
+    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-annotation_1.1_spec/1.0.1</bundle>
+    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-jaspic_1.0_spec/1.1</bundle>
+    <bundle dependency="true" start-level="30">mvn:org.ow2.asm/asm-all/5.0.2</bundle>
+    <bundle start-level="30">mvn:org.eclipse.jetty.aggregate/jetty-all-server/8.1.15.v20140411</bundle>
+  </feature>
 </features>
