@@ -185,14 +185,17 @@
       <condition>http</condition>    
       <feature>pentaho-metaverse-web</feature>
     </conditional> 
+ 
+    <feature>pentaho-fasterxml</feature>
+    <bundle>mvn:pentaho/pentaho-metaverse-core/7.0-SNAPSHOT</bundle>
+  </feature>
 
-    <bundle>wrap:mvn:net.sf.flexjson/flexjson/${net.sf.flexjson.version}</bundle>
-    <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/${com.fasterxml.jackson.core.version}</bundle>
-    <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/${com.fasterxml.jackson.core.version}</bundle>
-    <bundle>mvn:com.fasterxml.jackson.core/jackson-core/${com.fasterxml.jackson.core.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-
-    <bundle>mvn:pentaho/pentaho-metaverse-core/${project.version}</bundle>
+  <feature name="pentaho-fasterxml" version="1.0">
+    <bundle>wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
+    <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.3.3</bundle>
+    <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/2.3.3</bundle>
+    <bundle>mvn:com.fasterxml.jackson.core/jackson-core/2.3.3</bundle>
+    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
   </feature>
 
   <feature name="pentaho-metaverse-web" version="${project.version}">

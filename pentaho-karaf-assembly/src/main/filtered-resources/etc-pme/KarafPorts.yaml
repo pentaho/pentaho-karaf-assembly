@@ -1,0 +1,18 @@
+Service:
+ - serviceName: karaf
+   serviceDescription: Karaf service ports
+
+ServerPort:
+- id: KARAF_PORT
+  property: karaf.port
+  friendlyName: Karaf Port
+  startPort: 8801
+  endPort: 8899
+  serviceName: karaf
+
+- id: OSGI_SERVICE_PORT
+  property: org.pentaho.osgi.service.http.port
+  friendlyName: OSGI Service Port
+  startPort: 9050
+  endPort: 9149
+  serviceName: karaf
