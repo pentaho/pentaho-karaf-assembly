@@ -22,6 +22,7 @@
   </feature>
   <feature name="pentaho-analyzer" version="1.0">
     <feature>spring-dm</feature>
+    <feature>pdi-platform</feature>
     <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
     <bundle>wrap:mvn:pentaho/pentaho-connections/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-analyzer-xsd/${project.version}</bundle>

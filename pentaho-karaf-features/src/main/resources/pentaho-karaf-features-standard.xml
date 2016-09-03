@@ -69,13 +69,16 @@
 
   <feature name="pentaho-client-minimal" version="1.0">
     <feature>pentaho-base</feature>
-    <bundle>mvn:pentaho/pentaho-pdi-platform/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-mongo-utils/${project.version}</bundle>
     <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/${project.version}</bundle>
     <bundle>wrap:mvn:org.pentaho/meta-inject-plugin/${project.version}</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/${mongo.java.driver.version}</bundle>
     <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${project.version}</bundle>
    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+  </feature>
+
+  <feature name="pdi-platform" version="7.0-SNAPSHOT">
+    <bundle>mvn:pentaho/pentaho-pdi-platform/7.0-SNAPSHOT</bundle>
   </feature>
 
   <feature name="pdi-dataservice-client" version="${project.version}">
