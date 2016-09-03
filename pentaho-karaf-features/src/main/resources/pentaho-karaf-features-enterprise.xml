@@ -20,15 +20,14 @@
     <feature>pentaho-client</feature>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
-  <!--<feature name="pentaho-analyzer" version="1.0">-->
-    <!--<feature>spring-dm</feature>-->
-    <!--<feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>-->
-    <!--<bundle>wrap:mvn:pentaho/pentaho-server-bundle/${project.version}</bundle>-->
-    <!--<bundle>wrap:mvn:pentaho/pentaho-connections/${project.version}</bundle>-->
-    <!--<bundle>wrap:mvn:pentaho/agile-bi/${project.version}$Import-Package=org.pentaho.di.osgi,*;resolution:=optional</bundle>-->
-    <!--<bundle>mvn:pentaho/pentaho-analyzer-xsd/${project.version}</bundle>-->
-    <!--<bundle>pentaho-platform-plugin-mvn:pentaho/paz-plugin-ce/${project.version}/zip</bundle>-->
-  <!--</feature>-->
+  <feature name="pentaho-analyzer" version="1.0">
+    <feature>spring-dm</feature>
+    <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
+    <bundle>wrap:mvn:pentaho/pentaho-connections/${project.version}</bundle>
+    <bundle>wrap:mvn:pentaho/agile-bi/${project.version}$Import-Package=org.pentaho.di.osgi,*;resolution:=optional</bundle>
+    <bundle>mvn:pentaho/pentaho-analyzer-xsd/${project.version}</bundle>
+    <bundle>pentaho-platform-plugin-mvn:pentaho/paz-plugin-ce/${project.version}/zip</bundle>
+  </feature>
 
   <feature name="mongolap" version="1.0">
     <feature>pentaho-server</feature>
