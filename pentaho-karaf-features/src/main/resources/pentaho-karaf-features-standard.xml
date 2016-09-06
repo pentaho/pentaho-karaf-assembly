@@ -190,7 +190,7 @@
     </conditional> 
  
     <feature>pentaho-fasterxml</feature>
-    <bundle>mvn:pentaho/pentaho-metaverse-core/7.0-SNAPSHOT</bundle>
+    <bundle>mvn:pentaho/pentaho-metaverse-core/${project.version}</bundle>
   </feature>
 
   <feature name="pentaho-fasterxml" version="1.0">
