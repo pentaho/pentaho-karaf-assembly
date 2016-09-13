@@ -67,6 +67,11 @@
    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
+  <feature name="pentaho-spoon" version="${project.version}">
+    <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-spoon/${project.version}</bundle>
+    <bundle>mvn:pentaho-kettle/repositories-plugin/${project.version}</bundle>
+  </feature>
+
   <feature name="pentaho-client-minimal" version="1.0">
     <feature>pentaho-base</feature>
     <bundle>mvn:pentaho/pentaho-mongo-utils/${project.version}</bundle>
@@ -118,11 +123,7 @@
 
     <bundle>mvn:org.pentaho/pentaho-marketplace-di/${project.version}</bundle>
   </feature>
-  
-  <feature name="repositories-plugin" version="${project.version}">
-    <bundle>mvn:pentaho-kettle/repositories-plugin/${project.version}</bundle>
-  </feature>  
-  
+
   <feature name="pentaho-marketplace" version="${project.version}">
     <feature>pentaho-requirejs-osgi-manager</feature>
 
