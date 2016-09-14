@@ -170,7 +170,7 @@
                 <feature>pdi-marketplace</feature>
                 <feature>build-helper</feature>
                 <feature>pdi-data-refinery</feature>
-                <feature>repositories-plugin</feature>
+                <feature>pentaho-spoon</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>

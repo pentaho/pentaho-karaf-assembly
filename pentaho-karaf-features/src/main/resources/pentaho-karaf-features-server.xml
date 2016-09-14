@@ -62,6 +62,7 @@
         <bundle>mvn:pentaho/pentaho-angular-bundle/${project.version}</bundle>
         <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
         <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+        <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-platform/${project.version}</bundle>
     </feature>
 
 
