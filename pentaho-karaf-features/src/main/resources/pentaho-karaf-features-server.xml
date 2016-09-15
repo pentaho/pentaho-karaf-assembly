@@ -46,14 +46,12 @@
         <feature>pentaho-base</feature>
         <feature>pentaho-client</feature>
         <feature>http-whiteboard</feature>
-        <feature version="[4,4.1.5)">spring</feature>
+        <feature version="[4,4.3.2]">spring</feature>
         <feature version="3.1.4.RELEASE">spring-security</feature>
 
         <bundle>mvn:pentaho/pentaho-server-bundle/${project.version}</bundle>
 
         <bundle start-level="20">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/proxy-watcher</bundle>
-        <bundle start-level="20">mvn:pentaho/pentaho-ss4-proxies/${project.version}</bundle>
-        <bundle start-level="20">mvn:pentaho/pentaho-ss2-proxies/${project.version}</bundle>
         <bundle start-level="50">mvn:pentaho/pentaho-proxy-spring4/${project.version}</bundle>
         <bundle>mvn:pentaho/pentaho-server-bundle/${project.version}</bundle>
 
