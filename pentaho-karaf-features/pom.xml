@@ -5,18 +5,18 @@
   <parent>
     <groupId>pentaho</groupId>
     <artifactId>pentaho-karaf</artifactId>
-    <version>6.1-SNAPSHOT</version>
+    <version>6.1.0.6-242</version>
   </parent>
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf-features</artifactId>
-  <version>6.1-SNAPSHOT</version>
+  <version>6.1.0.6-242</version>
   <packaging>pom</packaging>
   <properties>
+    <dependency.pentaho-osgi-bundles.revision>6.1.0.6-242</dependency.pentaho-osgi-bundles.revision>
     <obf.jar.designator></obf.jar.designator>
     <mongolap.unobfuscated.designator>-plain</mongolap.unobfuscated.designator>
-    <dependency.mondrian4.revision>4.5-SNAPSHOT</dependency.mondrian4.revision>
-    <dependency.common-ui.revision>${project.version}</dependency.common-ui.revision>
-    <dependency.pentaho-osgi-bundles.revision>${project.version}</dependency.pentaho-osgi-bundles.revision>
+    <dependency.common-ui.revision>6.1.0.6-242</dependency.common-ui.revision>
+    <dependency.mondrian4.revision>4.5.0.6-242</dependency.mondrian4.revision>
   </properties>
   <build>
     <plugins>
