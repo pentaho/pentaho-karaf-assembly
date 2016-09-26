@@ -65,6 +65,7 @@
     <feature>pentaho-client-minimal</feature>
     <feature>pentaho-big-data-plugin-osgi</feature>
    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <feature>pdi-platform</feature>
   </feature>
 
   <feature name="pentaho-spoon" version="${project.version}">
