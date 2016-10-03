@@ -101,49 +101,6 @@
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
-  <feature name="pdi-marketplace" version="${project.version}">
-    <feature>pentaho-requirejs-osgi-manager</feature>
-
-    <configfile finalname="/etc/pentaho.marketplace.di.cfg">
-      mvn:org.pentaho/pentaho-marketplace-di/${project.version}/cfg/pentaho-marketplace-config
-    </configfile>
-
-    <bundle>wrap:mvn:net.sf.flexjson/flexjson/${net.sf.flexjson.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-
-    <!-- START client side dependencies -->
-    <bundle>mvn:pentaho/pentaho-angular-bundle/${dependency.pentaho-osgi-bundles.revision}</bundle>
-    <bundle>pentaho-webjars:mvn:org.webjars/angular-sanitize/${angular.sanitize.version}</bundle>
-    <bundle>pentaho-webjars:mvn:org.webjars/underscorejs/${underscorejs.version}</bundle>
-    <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/${dependency.common-ui.revision}/zip</bundle>
-    <!-- END -->
-
-    <!-- commons-codec is necessary for commons-httpclient -->
-    <bundle>mvn:commons-codec/commons-codec/${commons.codec.version}</bundle>
-    <bundle>wrap:mvn:commons-httpclient/commons-httpclient/${commons.httpclient.version}</bundle>
-
-    <bundle>mvn:org.pentaho/pentaho-marketplace-di/${project.version}</bundle>
-  </feature>
-
-  <feature name="pentaho-marketplace" version="${project.version}">
-    <feature>pentaho-requirejs-osgi-manager</feature>
-
-    <configfile finalname="/etc/pentaho.marketplace.ba.cfg">
-      mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/cfg/pentaho-marketplace-config
-    </configfile>
-
-    <bundle>wrap:mvn:net.sf.flexjson/flexjson/${net.sf.flexjson.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-
-    <!-- START client side dependencies -->
-    <bundle>mvn:pentaho/pentaho-angular-bundle/${dependency.pentaho-osgi-bundles.revision}</bundle>
-    <bundle>pentaho-webjars:mvn:org.webjars/angular-sanitize/${angular.sanitize.version}</bundle>
-    <bundle>pentaho-webjars:mvn:org.webjars/underscorejs/${underscorejs.version}</bundle>
-    <!-- END -->
-
-    <bundle>mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/</bundle>
-  </feature>
-
   <feature name="pentaho-cache-system" version="1.0">
     <feature>transaction</feature>
     <bundle>mvn:pentaho/pentaho-cache-manager-api/${project.version}</bundle>
