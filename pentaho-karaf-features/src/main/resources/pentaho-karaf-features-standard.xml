@@ -69,7 +69,6 @@
 
   <feature name="pentaho-spoon" version="${project.version}">
     <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-spoon/${project.version}</bundle>
-    <bundle>mvn:pentaho-kettle/repositories-plugin/${project.version}</bundle>
     <feature>pdi-platform</feature>
   </feature>
 
@@ -144,10 +143,10 @@
     <feature>pentaho-client</feature>
     <feature>pentaho-tinkerpop-gremlin</feature>
     <conditional>
-      <condition>http</condition>    
+      <condition>http</condition>
       <feature>pentaho-metaverse-web</feature>
-    </conditional> 
- 
+    </conditional>
+
     <feature>pentaho-fasterxml</feature>
     <bundle>mvn:pentaho/pentaho-metaverse-core/${project.version}</bundle>
   </feature>
@@ -171,7 +170,7 @@
     <bundle>mvn:org.codehaus.jackson/jackson-xc/${org.codehaus.jackson.version}</bundle>
 
     <bundle>mvn:pentaho/pentaho-metaverse-web/${project.version}</bundle>
-  </feature>  
+  </feature>
 
 <!-- Overriding KAR to load 3.0.5 of core, remove once 3.0.5 is released -->
   <feature name="kar" version="3.7.5" description="Provide KAR (KARaf archive) support" resolver="(obr)">
@@ -202,7 +201,7 @@
   </feature>
 
   <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds"/>
-  
+
    <!-- Overriding CXF to ensure that Jetty isn't started -->
     <feature name="cxf" version="3.7.5" resolver='(obr)'>
         <feature version="[3,4)">spring</feature>
