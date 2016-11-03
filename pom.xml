@@ -69,5 +69,7 @@
 	<underscorejs.version>1.7.0</underscorejs.version>
 	
 	<springframework-version>3.2.0</springframework-version>
+	
+	<com.thoughtworks.xstream.version>1.4.9</com.thoughtworks.xstream.version>
   </properties>
 </project>
