@@ -55,5 +55,6 @@
     <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
     <commons.io.version>2.4</commons.io.version>
     <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
+    <com.thoughtworks.xstream.version>1.4.9</com.thoughtworks.xstream.version>
   </properties>
 </project>
