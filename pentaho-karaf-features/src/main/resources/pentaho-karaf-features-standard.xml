@@ -198,7 +198,7 @@
     <bundle>wrap:mvn:pentaho/pentaho-modeler/${project.version}</bundle>
 
     <bundle>wrap:mvn:jfree/jcommon/${jfree.jcommon.version}</bundle>
-    <bundle>mvn:com.thoughtworks.xstream/xstream/${com.thoughtworks.xstream.version}</bundle>
+    <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xstream/${org.apache.servicemix.bundles.xstream.version}</bundle>
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${project.version}</bundle>
   </feature>
 
