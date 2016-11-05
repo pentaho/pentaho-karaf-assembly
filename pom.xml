@@ -9,7 +9,7 @@
   </parent>
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf</artifactId>
-  <version>7.0-SNAPSHOT</version>
+  <version>7.0.0.0-25</version>
   <packaging>pom</packaging>
   <modules>
     <module>pentaho-karaf-features</module>
@@ -27,6 +27,7 @@
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
     <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10</plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
     <commons.beanutils.version>1.9.2</commons.beanutils.version>
+    <org.apache.servicemix.bundles.xstream.version>1.4.9_1</org.apache.servicemix.bundles.xstream.version>
     <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5</plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
     <package.features>true</package.features>
     <commons.collections.version>3.2.2</commons.collections.version>
@@ -55,6 +56,5 @@
     <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
     <commons.io.version>2.4</commons.io.version>
     <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
-    <org.apache.servicemix.bundles.xstream.version>1.4.9_1</org.apache.servicemix.bundles.xstream.version>
   </properties>
 </project>
