@@ -252,7 +252,7 @@
     </feature>
 
     <!-- Overriding activemq to exclude xtreaam 1.4.7 version  -->
-    <feature name="activemq" description="ActiveMQ broker libraries" version="5.12.0" resolver="(obr)" start-level="50">
+    <feature name="activemq" description="ActiveMQ broker libraries" version="5.10.0" resolver="(obr)" start-level="50">
         <feature>http</feature>
         <feature version="5.10.0">activemq-client</feature>
         <bundle>mvn:org.apache.activemq/activemq-karaf/5.10.0</bundle>
