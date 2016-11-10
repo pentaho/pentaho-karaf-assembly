@@ -69,7 +69,6 @@
 
   <feature name="pentaho-spoon" version="${project.version}">
     <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-spoon/${project.version}</bundle>
-    <bundle>mvn:pentaho-kettle/repositories-plugin/${project.version}</bundle>
     <feature>pdi-platform</feature>
   </feature>
 
