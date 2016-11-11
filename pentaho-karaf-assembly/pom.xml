@@ -59,7 +59,7 @@
 	<org.ops4j.pax.web.version>3.1.4</org.ops4j.pax.web.version>
 	<osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
 	<!-- org.webjars -->
-	<angular.sanitize.version>1.2.15</angular.sanitize.version>
+	<angular.sanitize.version>1.5.8</angular.sanitize.version>
 	<underscorejs.version>1.7.0</underscorejs.version>
   </properties>
   <dependencies>
