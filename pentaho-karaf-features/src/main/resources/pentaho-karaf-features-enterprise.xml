@@ -34,7 +34,6 @@
     <bundle>mvn:org.pentaho/mondrian/${dependency.mondrian4.revision}</bundle>
     <bundle>mvn:pentaho/pentaho-mongo-utils/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-mongolap${mongolap.unobfuscated.designator}/${project.version}</bundle>
-    <bundle>mvn:pentaho/mongo-security-ext/${project.version}</bundle>
     <bundle>mvn:eigenbase/eigenbase-xom/${eigenbase.xom.version}</bundle>
     <bundle>mvn:eigenbase/eigenbase-resgen/${eigenbase.resgen.version}</bundle>
     <bundle>mvn:eigenbase/eigenbase-properties/${eigenbase.properties.version}</bundle>
