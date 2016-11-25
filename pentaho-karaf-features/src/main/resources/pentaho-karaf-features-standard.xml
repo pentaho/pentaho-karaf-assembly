@@ -320,6 +320,10 @@
     <feature version='2.14.3'>camel-core</feature>
     <bundle>mvn:org.apache.camel/camel-jms/2.14.3</bundle>
   </feature>
+  <feature name='camel-stream' version='2.14.3' resolver='(obr)' start-level='50'>
+    <feature version='2.14.3'>camel-core</feature>
+    <bundle>mvn:org.apache.camel/camel-stream/2.14.3</bundle>
+  </feature>
   <feature name='camel' version='2.14.3' resolver='(obr)' start-level='50'>
     <feature version='2.14.3'>camel-core</feature>
     <feature version='2.14.3'>camel-spring</feature>
