@@ -59,7 +59,7 @@
 	<org.ops4j.pax.web.version>3.1.4</org.ops4j.pax.web.version>
 	<osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
 	<!-- org.webjars -->
-	<angular.sanitize.version>1.5.8</angular.sanitize.version>
+	<angular.sanitize.version>1.2.15</angular.sanitize.version>
 	<underscorejs.version>1.7.0</underscorejs.version>
   </properties>
   <dependencies>
@@ -162,7 +162,6 @@
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pdi-marketplace/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
@@ -199,7 +198,6 @@
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/server</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pentaho-marketplace/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
