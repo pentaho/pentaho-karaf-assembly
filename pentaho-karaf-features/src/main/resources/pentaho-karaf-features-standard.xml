@@ -97,7 +97,6 @@
     <!-- START client side dependencies -->
     <bundle>mvn:pentaho/pentaho-angular-bundle/${dependency.pentaho-osgi-bundles.revision}</bundle>
     <bundle>pentaho-webjars:mvn:org.webjars.bower/angular-sanitize/${angular.sanitize.version}</bundle>
-    <bundle>pentaho-webjars:mvn:org.webjars.bower/angular-translate/${angular-translate.version}</bundle>
     <bundle>pentaho-webjars:mvn:org.webjars/underscorejs/${underscorejs.version}</bundle>
     <bundle>pentaho-platform-plugin-mvn:pentaho/common-ui/${dependency.common-ui.revision}/zip</bundle>
     <!-- END -->
@@ -122,7 +121,6 @@
     <!-- START client side dependencies -->
     <bundle>mvn:pentaho/pentaho-angular-bundle/${dependency.pentaho-osgi-bundles.revision}</bundle>
     <bundle>pentaho-webjars:mvn:org.webjars.bower/angular-sanitize/${angular.sanitize.version}</bundle>
-    <bundle>pentaho-webjars:mvn:org.webjars.bower/angular-translate/${angular-translate.version}</bundle>
     <bundle>pentaho-webjars:mvn:org.webjars/underscorejs/${underscorejs.version}</bundle>
     <!-- END -->
 
