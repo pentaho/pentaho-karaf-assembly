@@ -60,7 +60,6 @@
 	<osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
 	<!-- org.webjars -->
 	<angular.sanitize.version>1.5.8</angular.sanitize.version>
-  <angular-translate.version>2.12.1</angular-translate.version>
 	<underscorejs.version>1.7.0</underscorejs.version>
   </properties>
   <dependencies>
