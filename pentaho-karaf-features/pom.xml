@@ -16,6 +16,7 @@
     <obf.jar.designator></obf.jar.designator>
     <mongolap.unobfuscated.designator>-plain</mongolap.unobfuscated.designator>
     <dependency.mondrian4.revision>4.7-SNAPSHOT</dependency.mondrian4.revision>
+    <dependency.flexjson.version>3.3</dependency.flexjson.version>
   </properties>
   <build>
     <plugins>
