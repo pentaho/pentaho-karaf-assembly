@@ -29,6 +29,11 @@
     <bundle>pentaho-platform-plugin-mvn:pentaho/paz-plugin-ce/${project.version}/zip</bundle>
   </feature>
 
+  <feature name="pentaho-geo" version="1.0">
+    <bundle>mvn:net.sf.flexjson/flexjson/${dependency.flexjson.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-geo-agile-bi/${project.version}</bundle>
+  </feature>
+
   <feature name="mongolap" version="1.0">
     <feature>pentaho-server</feature>
     <bundle>mvn:org.pentaho/mondrian/${dependency.mondrian4.revision}</bundle>
