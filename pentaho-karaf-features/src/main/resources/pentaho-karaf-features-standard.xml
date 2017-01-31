@@ -36,7 +36,7 @@
     <feature>pentaho-cache-system</feature>
     <feature>pentaho-i18n</feature>
 
-    <bundle>wrap:mvn:org.json/json/${project.version}</bundle>
+    <bundle>wrap:mvn:org.pentaho/json/${project.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/${osgi.over.slf4j.version}</bundle>
     <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
