@@ -39,7 +39,6 @@
     <org.ehcache.version>1.0.0</org.ehcache.version>
     <package.features>true</package.features>
     <karaf.features.version>3.0.3</karaf.features.version>
-    <plugin.org.apache.maven.plugins.maven-dependency-plugin.version>2.10</plugin.org.apache.maven.plugins.maven-dependency-plugin.version>
     <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
     <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
     <camel.guava.eventbus.version>2.14.3</camel.guava.eventbus.version>
@@ -116,9 +115,7 @@
 
       <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
-        <!-- any reason for not upgrading the version to 3.0.0? -->
-        <!-- and why isn't it using the parent pom's ${maven-dependency-plugin.version} -->
-        <version>${plugin.org.apache.maven.plugins.maven-dependency-plugin.version}</version>
+        <version>${maven-dependency-plugin.version}</version>
 
         <executions>
 
@@ -149,23 +146,6 @@
               </artifactItems>
             </configuration>
           </execution>
-
-          <!-- this would be more "fun", but currently we're unable to strip both the classifier and the type
-          from the artifact folder name (https://issues.apache.org/jira/browse/MDEP-505) so it gets pretty ugly -->
-          <!-- execution>
-            <id>unpack-configuration-bundles</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <classifier>${configuration-bundles.classifier}</classifier>
-              <outputDirectory>${configuration-bundles.unpacked}</outputDirectory>
-              <useSubDirectoryPerArtifact>true</useSubDirectoryPerArtifact>
-              <stripClassifier>true</stripClassifier>
-              <stripVersion>true</stripVersion>
-            </configuration>
-          </execution -->
 
         </executions>
 

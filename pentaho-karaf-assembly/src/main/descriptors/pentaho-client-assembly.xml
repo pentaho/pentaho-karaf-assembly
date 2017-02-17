@@ -48,6 +48,12 @@
       </excludes>
     </fileSet>
 
+    <fileSet>
+      <directory>src/main/resources/configuration-bundles</directory>
+      <outputDirectory>/${configuration-bundles.target}</outputDirectory>
+      <fileMode>0644</fileMode>
+    </fileSet>
+
     <!-- copy the exploded configuration bundles to the configurations' deploy folder -->
     <fileSet>
       <directory>${configuration-bundles.unpacked}</directory>
