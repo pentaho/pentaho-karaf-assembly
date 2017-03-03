@@ -40,8 +40,7 @@
     <package.features>true</package.features>
     <karaf.features.version>3.0.3</karaf.features.version>
     <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
-    <osgi.over.slf4j.version>1.7.22</osgi.over.slf4j.version>
-    <slf4j.version>1.7.22</slf4j.version>
+    <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
     <camel.guava.eventbus.version>2.14.3</camel.guava.eventbus.version>
     <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5</plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
     <eigenbase.resgen.version>1.3.6</eigenbase.resgen.version>

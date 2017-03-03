@@ -37,7 +37,6 @@
         <exclude>etc/org.ops4j.pax.url.mvn.cfg</exclude>
         <exclude>etc/org.apache.karaf.shell.cfg</exclude>
         <exclude>etc/system.properties</exclude>
-        <exclude>system/org/slf4j/**</exclude>
         <exclude>**/demos/**</exclude>
         <exclude>bin/**</exclude>
         <exclude>LICENSE</exclude>
