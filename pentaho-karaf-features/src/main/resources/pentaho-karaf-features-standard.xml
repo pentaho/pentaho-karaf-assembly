@@ -47,6 +47,10 @@
     </conditional>
     <bundle>mvn:org.apache.mina/mina-core/${org.apache.mina.version}</bundle>
     <bundle>mvn:pentaho/pentaho-osgi-utils-impl/${pentaho-osgi-bundles.version}</bundle>
+
+
+    <!-- Fragment Bundles to patch others. Safe to be installed at any time as they never start -->
+    <bundle>mvn:pentaho/pentaho-zookeeper-fragment/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
   <feature name="pentaho-requirejs-osgi-manager" version="${project.version}">
