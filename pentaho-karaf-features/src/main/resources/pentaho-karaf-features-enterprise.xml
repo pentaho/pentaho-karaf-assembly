@@ -24,16 +24,16 @@
     <feature>spring-dm</feature>
     <feature>pdi-platform</feature>
     <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
-    <bundle>wrap:mvn:pentaho/pentaho-connections/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-analyzer-xsd/${project.version}</bundle>
-    <bundle>pentaho-platform-plugin-mvn:pentaho/paz-plugin-ce/${project.version}/zip</bundle>
+    <bundle>wrap:mvn:pentaho/pentaho-connections/${pentaho-connections.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-analyzer-xsd/${analyzer-plugin.version}</bundle>
+    <bundle>pentaho-platform-plugin-mvn:pentaho/paz-plugin-ce/${analyzer-plugin.version}/zip</bundle>
   </feature>
 
   <feature name="mongolap" version="1.0">
     <feature>pentaho-server</feature>
     <bundle>mvn:org.pentaho/mondrian/${dependency.mondrian4.revision}</bundle>
-    <bundle>mvn:pentaho/pentaho-mongo-utils/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-mongolap${mongolap.unobfuscated.designator}/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-mongo-utils/${pentaho-mongo-utils.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-mongolap${mongolap.unobfuscated.designator}/${pentaho-mongolap.version}</bundle>
     <bundle>mvn:eigenbase/eigenbase-xom/${eigenbase.xom.version}</bundle>
     <bundle>mvn:eigenbase/eigenbase-resgen/${eigenbase.resgen.version}</bundle>
     <bundle>mvn:eigenbase/eigenbase-properties/${eigenbase.properties.version}</bundle>
@@ -50,7 +50,7 @@
     </configfile>
     <!-- <bundle>mvn:org.apache.camel/camel-guava-eventbus/2.15.3</bundle> -->
     <bundle>mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-monitoring-plugin/${project.version}${obf.jar.designator}</bundle>
+    <bundle>mvn:pentaho/pentaho-monitoring-plugin/${pdi-monitoring-plugin.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
@@ -60,8 +60,8 @@
     <feature>camel-stream</feature>
     <bundle>mvn:org.apache.camel/camel-guava-eventbus/${camel.guava.eventbus.version}</bundle>
     <bundle>mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-camel-core/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-camel-snmp/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-camel-core/${camel-components.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-camel-snmp/${camel-components.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 

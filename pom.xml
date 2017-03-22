@@ -7,17 +7,36 @@
     <artifactId>pentaho-ce-parent-pom</artifactId>
     <version>7.1-SNAPSHOT</version>
   </parent>
+  
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf</artifactId>
   <version>7.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  
   <modules>
     <module>pentaho-karaf-features</module>
     <module>pentaho-blueprint-activators</module>
     <module>pentaho-osgi-config</module>
     <module>pentaho-karaf-assembly</module>
   </modules>
+  
   <properties>
+    <camel-components.version>${project.version}</camel-components.version>
+    <json.version>${project.version}</json.version>
+    <pdi-dataservice-plugin.version>${project.version}</pdi-dataservice-plugin.version>
+    <pdi-monitoring-plugin.version>${project.version}</pdi-monitoring-plugin.version>
+    <pdi-osgi-bridge.version>${project.version}</pdi-osgi-bridge.version>
+    <pentaho-connections.version>${project.version}</pentaho-connections.version>
+    <pentaho-metaverse.version>${project.version}</pentaho-metaverse.version>
+    <pentaho-mongodb-plugin.version>${project.version}</pentaho-mongodb-plugin.version>
+    <pentaho-modeler.version>${project.version}</pentaho-modeler.version>
+    <pdi-data-refinery-plugin.version>${project.version}</pdi-data-refinery-plugin.version>
+    <analyzer-plugin.version>${project.version}</analyzer-plugin.version>
+    <pentaho-mongolap.version>${project.version}</pentaho-mongolap.version>
+    <pentaho-mongo-utils.version>${project.version}</pentaho-mongo-utils.version>
+    <pentaho-osgi-bundles.version>${project.version}</pentaho-osgi-bundles.version>
+    <dependency.mondrian4.revision>4.7-SNAPSHOT</dependency.mondrian4.revision>
+    
     <mongo.java.driver.version>3.2.2</mongo.java.driver.version>
     <org.ehcache.version>1.0.0</org.ehcache.version>
     <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
@@ -55,4 +74,5 @@
     <commons.io.version>2.4</commons.io.version>
     <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
   </properties>
+  
 </project>

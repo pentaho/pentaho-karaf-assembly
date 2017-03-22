@@ -51,10 +51,14 @@
                   <type>cfg</type>
                   <classifier>pentaho-geo-roles</classifier>
                 </artifact>
-				<artifact>
+                <artifact>
                   <file>src/main/resources/pentaho.big.data.impl.cluster.cfg</file>
                   <type>cfg</type>
                   <classifier>pentaho-big-data-impl-cluster</classifier>
+                <artifact>
+                  <file>src/main/resources/pentaho.kerberos.cfg</file>
+                  <type>cfg</type>
+                  <classifier>pentaho-kerberos</classifier>
                 </artifact>
               </artifacts>
             </configuration>
