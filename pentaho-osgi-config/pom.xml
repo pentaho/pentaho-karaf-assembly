@@ -56,11 +56,6 @@
                   <type>cfg</type>
                   <classifier>pentaho-kerberos</classifier>
                 </artifact>
-				<artifact>
-                  <file>src/main/resources/pentaho.big.data.impl.cluster.cfg</file>
-                  <type>cfg</type>
-                  <classifier>pentaho-big-data-impl-cluster</classifier>
-               </artifact>
               </artifacts>
             </configuration>
           </execution>
