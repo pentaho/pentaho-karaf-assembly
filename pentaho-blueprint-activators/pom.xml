@@ -66,6 +66,11 @@
                   <type>xml</type>
                   <classifier>proxy-watcher</classifier>
                 </artifact>
+                <artifact>
+                  <file>src/main/resources/krb5-jaas.xml</file>
+                  <type>xml</type>
+                  <classifier>krb5-jaas</classifier>
+                </artifact>
               </artifacts>
             </configuration>
           </execution>
