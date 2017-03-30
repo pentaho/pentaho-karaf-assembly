@@ -178,6 +178,7 @@
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pdi-marketplace/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/repositories-plugin/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pdi-engine-configuration/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
@@ -195,6 +196,7 @@
                 <feature>pdi-data-refinery</feature>
                 <feature>pentaho-spoon</feature>
                 <feature>repositories-plugin</feature>
+                <feature>pdi-engine-configuration-ui</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
@@ -252,6 +254,7 @@
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pentaho-marketplace/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pdi-engine-configuration/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
@@ -270,6 +273,7 @@
                 <feature>pentaho-marketplace</feature>
                 <feature>build-helper</feature>
                 <feature>pdi-data-refinery</feature>
+                <feature>pdi-engine-configuration</feature>
               </features>
               <repository>target/pentaho-server-features-repo</repository>
             </configuration>
