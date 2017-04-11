@@ -40,7 +40,7 @@
  <jaas:config name="Client" rank="1">
     <jaas:module className="com.sun.security.auth.module.Krb5LoginModule" flags="required">
       storeKey = true
-      debug = true
+      debug = false
       useKeyTab = true
       useTicketCache = false
       principal = ${principal}
