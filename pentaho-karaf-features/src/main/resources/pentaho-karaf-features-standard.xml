@@ -69,7 +69,6 @@
     <feature>pentaho-client-minimal</feature>
     <feature>pentaho-big-data-plugin-osgi</feature>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    <feature>pentaho-kerberos-jaas</feature>
   </feature>
 
   <feature name="pentaho-kerberos-jaas" version="1.0">
@@ -77,6 +76,8 @@
     </configfile>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/krb5-jaas</bundle>
   </feature>
+
+  <feature name="ael-security"  version="1.0" />
 
   <feature name="pentaho-spoon" version="${project.version}">
     <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-spoon/${pentaho-osgi-bundles.version}</bundle>
