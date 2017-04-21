@@ -37,6 +37,7 @@
         <exclude>etc/org.ops4j.pax.url.mvn.cfg</exclude>
         <exclude>etc/org.apache.karaf.shell.cfg</exclude>
         <exclude>etc/system.properties</exclude>
+        <exclude>etc-default/**</exclude>
         <exclude>**/demos/**</exclude>
         <exclude>bin/**</exclude>
         <exclude>LICENSE</exclude>
@@ -69,7 +70,14 @@
       <fileMode>0644</fileMode>
       <excludes>
         <exclude>**/*.formatted</exclude>
+        <exclude>**/etc-default/*</exclude>
       </excludes>
+    </fileSet>
+    <fileSet>
+      <directory>target/classes/etc-pmr/etc-default</directory>
+      <outputDirectory>/etc-default/</outputDirectory>
+      <lineEnding>unix</lineEnding>
+      <fileMode>0644</fileMode>
     </fileSet>
     <fileSet>
       <directory>target/classes/client-extras</directory>
@@ -78,6 +86,7 @@
       <fileMode>0644</fileMode>
       <excludes>
         <exclude>**/*.formatted</exclude>
+        <exclude>**/etc-default/*</exclude>
       </excludes>
     </fileSet>
 
