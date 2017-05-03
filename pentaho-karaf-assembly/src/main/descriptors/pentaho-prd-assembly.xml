@@ -72,16 +72,6 @@
       </excludes>
     </fileSet>
     <fileSet>
-      <directory>target/classes/client-extras</directory>
-      <outputDirectory>/</outputDirectory>
-      <lineEnding>unix</lineEnding>
-      <fileMode>0644</fileMode>
-      <excludes>
-        <exclude>**/*.formatted</exclude>
-      </excludes>
-    </fileSet>
-
-    <fileSet>
       <directory>target/classes/deploy</directory>
       <outputDirectory>/deploy/</outputDirectory>
       <lineEnding>unix</lineEnding>
