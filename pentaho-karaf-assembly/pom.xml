@@ -242,7 +242,7 @@
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pentaho-marketplace/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pdi-engine-configuration/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.kettle.plugins/pdi-engine-configuration/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
