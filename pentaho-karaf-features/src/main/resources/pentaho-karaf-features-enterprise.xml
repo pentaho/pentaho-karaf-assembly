@@ -90,4 +90,9 @@
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
+  <feature name="pentaho-ael" version="1.0">
+    <feature>pdi-remote-client</feature>
+    <feature>aries-rsa-provider-fastbin</feature>
+    <feature>aries-rsa-discovery-zookeeper</feature>
+  </feature>
 </features>
