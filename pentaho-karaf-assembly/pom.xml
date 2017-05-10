@@ -178,6 +178,8 @@
                 <descriptor>mvn:org.pentaho/pdi-marketplace/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/repositories-plugin/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pdi-engine-configuration/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.adaptive/adaptive-execution-features/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.aries.rsa/rsa-features/1.10.0/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
@@ -196,6 +198,10 @@
                 <feature>pentaho-spoon</feature>
                 <feature>repositories-plugin</feature>
                 <feature>pdi-engine-configuration-ui</feature>
+                <feature>pdi-spark</feature>
+                <feature>pdi-remote-client</feature>
+                <feature>aries-rsa-provider-fastbin</feature>
+                <feature>aries-rsa-discovery-zookeeper</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
@@ -254,6 +260,8 @@
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pentaho-marketplace/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pdi-engine-configuration/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.adaptive/adaptive-execution-features/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.aries.rsa/rsa-features/1.10.0/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>config</feature>
@@ -273,6 +281,10 @@
                 <feature>build-helper</feature>
                 <feature>pdi-data-refinery</feature>
                 <feature>pdi-engine-configuration</feature>
+                <feature>pdi-spark</feature>
+                <feature>pdi-remote-client</feature>
+                <feature>aries-rsa-provider-fastbin</feature>
+                <feature>aries-rsa-discovery-zookeeper</feature>
               </features>
               <repository>target/pentaho-server-features-repo</repository>
             </configuration>
