@@ -18,13 +18,13 @@
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
 
     <!-- Overriding the default http feature -->
-    <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
+    <feature name="http" description="Implementation of the OSGi HTTP service" version="4.7.5" resolver="(obr)">
         <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
 		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
     <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
-    <feature name="http-whiteboard" version="3.7.5" description="Provide HTTP Whiteboard pattern support" resolver="(obr)">
+    <feature name="http-whiteboard" version="4.7.5" description="Provide HTTP Whiteboard pattern support" resolver="(obr)">
         <feature>http</feature>
         <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
 		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
@@ -37,7 +37,7 @@
     </feature>
 
     <!-- Overriding WAR to ensure that Jetty isn't started -->
-    <feature name="war" version="3.7.5" description="Turn Karaf as a full WebContainer" resolver="(obr)">
+    <feature name="war" version="4.7.5" description="Turn Karaf as a full WebContainer" resolver="(obr)">
         <feature>http</feature>
 		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
@@ -46,7 +46,7 @@
         <feature>pentaho-base</feature>
         <feature>pentaho-client</feature>
         <feature>http-whiteboard</feature>
-        <feature version="[4,4.3.2]">spring</feature>
+        <feature version="[4,4.3.7]">spring</feature>
         <feature version="3.1.4.RELEASE">spring-security</feature>
 
         <bundle>mvn:pentaho/pentaho-server-bundle/${pentaho-osgi-bundles.version}</bundle>
