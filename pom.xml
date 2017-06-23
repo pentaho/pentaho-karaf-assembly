@@ -5,45 +5,29 @@
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-parent-pom</artifactId>
-    <version>7.1-SNAPSHOT</version>
+    <version>7.1.0.1-34</version>
   </parent>
-  
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf</artifactId>
-  <version>7.1-SNAPSHOT</version>
+  <version>7.1.0.1-34</version>
   <packaging>pom</packaging>
-  
   <modules>
     <module>pentaho-karaf-features</module>
     <module>pentaho-blueprint-activators</module>
     <module>pentaho-osgi-config</module>
     <module>pentaho-karaf-assembly</module>
   </modules>
-  
   <properties>
-    <camel-components.version>${project.version}</camel-components.version>
-    <json.version>${project.version}</json.version>
-    <pdi-dataservice-plugin.version>${project.version}</pdi-dataservice-plugin.version>
-    <pdi-monitoring-plugin.version>${project.version}</pdi-monitoring-plugin.version>
-    <pdi-osgi-bridge.version>${project.version}</pdi-osgi-bridge.version>
-    <pentaho-connections.version>${project.version}</pentaho-connections.version>
-    <pentaho-metaverse.version>${project.version}</pentaho-metaverse.version>
-    <pentaho-mongodb-plugin.version>${project.version}</pentaho-mongodb-plugin.version>
-    <pentaho-modeler.version>${project.version}</pentaho-modeler.version>
-    <pdi-data-refinery-plugin.version>${project.version}</pdi-data-refinery-plugin.version>
-    <analyzer-plugin.version>${project.version}</analyzer-plugin.version>
-    <pentaho-mongolap.version>${project.version}</pentaho-mongolap.version>
-    <pentaho-mongo-utils.version>${project.version}</pentaho-mongo-utils.version>
-    <pentaho-osgi-bundles.version>${project.version}</pentaho-osgi-bundles.version>
-    <dependency.mondrian4.revision>4.7-SNAPSHOT</dependency.mondrian4.revision>
-    
     <mongo.java.driver.version>3.2.2</mongo.java.driver.version>
     <org.ehcache.version>1.0.0</org.ehcache.version>
     <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
+    <pdi-data-refinery-plugin.version>7.1.0.1-34</pdi-data-refinery-plugin.version>
     <org.apache.felix.http.version>2.3.2</org.apache.felix.http.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
+    <pentaho-mongo-utils.version>7.1.0.1-34</pentaho-mongo-utils.version>
     <karaf.version>3.0.3</karaf.version>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
+    <pdi-dataservice-plugin.version>7.1.0.1-34</pdi-dataservice-plugin.version>
     <commons.beanutils.version>1.9.3</commons.beanutils.version>
     <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5</plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
     <package.features>true</package.features>
@@ -57,22 +41,33 @@
     <activemq.karaf.version>5.10.0</activemq.karaf.version>
     <camel.karaf.version>2.14.3</camel.karaf.version>
     <olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
+    <dependency.mondrian4.revision>4.7.0.1-34</dependency.mondrian4.revision>
     <google.guava.version>17.0</google.guava.version>
-    <cxf.karaf.version>3.0.7</cxf.karaf.version>
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
+    <cxf.karaf.version>3.0.7</cxf.karaf.version>
+    <camel-components.version>7.1.0.1-34</camel-components.version>
+    <pdi-monitoring-plugin.version>7.1.0.1-34</pdi-monitoring-plugin.version>
     <com.fasterxml.jackson.core.version>2.3.3</com.fasterxml.jackson.core.version>
+    <pentaho-mongolap.version>7.1.0.1-34</pentaho-mongolap.version>
+    <pentaho-metaverse.version>7.1.0.1-34</pentaho-metaverse.version>
     <commons.lang.version>2.6</commons.lang.version>
-    <springframework-version>3.2.0</springframework-version>
-    <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
+    <pentaho-osgi-bundles.version>7.1.0.1-34</pentaho-osgi-bundles.version>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
+    <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
+    <springframework-version>3.2.0</springframework-version>
     <karaf.features.version>3.0.3</karaf.features.version>
+    <pentaho-modeler.version>7.1.0.1-34</pentaho-modeler.version>
     <commons.logging.version>1.1.3</commons.logging.version>
+    <json.version>7.1.0.1-34</json.version>
+    <pdi-osgi-bridge.version>7.1.0.1-34</pdi-osgi-bridge.version>
+    <pentaho-connections.version>7.1.0.1-34</pentaho-connections.version>
+    <analyzer-plugin.version>7.1.0.1-34</analyzer-plugin.version>
     <org.ops4j.pax.web.version>3.1.4</org.ops4j.pax.web.version>
+    <pentaho-mongodb-plugin.version>7.1.0.1-34</pentaho-mongodb-plugin.version>
     <com.github.zafarkhaja.version>0.9.0</com.github.zafarkhaja.version>
     <json.simple.version>1.1.1</json.simple.version>
     <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
     <commons.io.version>2.4</commons.io.version>
     <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
   </properties>
-  
 </project>
