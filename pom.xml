@@ -45,6 +45,7 @@
     <google.guava.version>17.0</google.guava.version>
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
     <cxf.karaf.version>3.0.7</cxf.karaf.version>
+    <cxf.karaf.patched.version>3.0.7-pentaho</cxf.karaf.patched.version>
     <camel-components.version>8.0-SNAPSHOT</camel-components.version>
     <pdi-monitoring-plugin.version>8.0-SNAPSHOT</pdi-monitoring-plugin.version>
     <com.fasterxml.jackson.core.version>2.3.3</com.fasterxml.jackson.core.version>
