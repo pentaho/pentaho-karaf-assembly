@@ -12,7 +12,7 @@
  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  ~ See the GNU Lesser General Public License for more details.
  ~
- ~ Copyright 2014 Pentaho Corporation. All rights reserved.
+ ~ Copyright 2014-2017 Pentaho Corporation. All rights reserved.
  -->
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
@@ -47,7 +47,7 @@
         <feature>pentaho-client</feature>
         <feature>http-whiteboard</feature>
         <feature version="[4,4.3.2]">spring</feature>
-        <feature version="3.1.4.RELEASE">spring-security</feature>
+        <feature version="3.1.7.RELEASE">spring-security</feature>
 
         <bundle>mvn:pentaho/pentaho-server-bundle/${pentaho-osgi-bundles.version}</bundle>
 
