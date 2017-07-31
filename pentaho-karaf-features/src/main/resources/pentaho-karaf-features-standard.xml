@@ -316,4 +316,15 @@
     <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-policy-stax/2.0.6</bundle>
   </feature>
 
+  <!-- Overriding spring-security feature to update bundles to 3.1.7.RELEASE version  -->
+  <feature name="spring-security" version="3.1.7.RELEASE" description="Spring Security 3.1.x support" resolver="(obr)">
+    <feature>war</feature>
+    <feature>spring-dm-web</feature>
+    <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/1.7.4_1</bundle>
+    <bundle start-level="30">mvn:org.springframework.security/spring-security-core/3.1.7.RELEASE</bundle>
+    <bundle start-level="30">mvn:org.springframework.security/spring-security-config/3.1.7.RELEASE</bundle>
+    <bundle start-level="30">mvn:org.springframework.security/spring-security-web/3.1.7.RELEASE</bundle>
+    <bundle start-level="30">mvn:org.springframework.security/spring-security-acl/3.1.7.RELEASE</bundle>
+    <bundle start-level="30">mvn:org.springframework.security/spring-security-taglibs/3.1.7.RELEASE</bundle>
+  </feature>
 </features>
