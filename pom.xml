@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.pentaho</groupId>
@@ -23,13 +24,16 @@
     <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
     <pdi-data-refinery-plugin.version>8.0-SNAPSHOT</pdi-data-refinery-plugin.version>
     <org.apache.felix.http.version>2.3.2</org.apache.felix.http.version>
-    <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5
+    </plugin.org.apache.maven.plugins.maven-clean-plugin.version>
     <pentaho-mongo-utils.version>8.0-SNAPSHOT</pentaho-mongo-utils.version>
     <karaf.version>3.0.3</karaf.version>
-    <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
+    <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7
+    </plugin.org.apache.maven.plugins.maven-resources-plugin.version>
     <pdi-dataservice-plugin.version>8.0-SNAPSHOT</pdi-dataservice-plugin.version>
     <commons.beanutils.version>1.9.3</commons.beanutils.version>
-    <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5</plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
+    <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5
+    </plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
     <package.features>true</package.features>
     <commons.collections.version>3.2.2</commons.collections.version>
     <org.apache.mina.version>2.0.7</org.apache.mina.version>
@@ -73,5 +77,6 @@
     <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
     <commons.io.version>2.4</commons.io.version>
     <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
+    <net.java.dev.jna.version>4.4.0</net.java.dev.jna.version>
   </properties>
 </project>
