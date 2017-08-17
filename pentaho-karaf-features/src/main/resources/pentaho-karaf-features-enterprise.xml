@@ -71,6 +71,7 @@
     </configfile>
     <feature>pentaho-monitoring</feature>
     <feature>pentaho-monitoring-camel-base</feature>
+    <feature>camel-guava-eventbus</feature>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-snmp</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
