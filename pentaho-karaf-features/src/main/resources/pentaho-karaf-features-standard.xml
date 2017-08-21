@@ -136,7 +136,7 @@
   </feature>
 
   <feature name="pentaho-camel-jms" version="1.0">
-    <feature>camel-jms</feature>
+    <feature version="${camel.overriden.karaf.version}">camel-jms</feature>
     <feature>activemq-camel</feature>
     <feature>pentaho-jms</feature>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/camel-jms</bundle>
@@ -329,5 +329,16 @@
     <bundle start-level="30">mvn:org.springframework.security/spring-security-web/3.1.7.RELEASE</bundle>
     <bundle start-level="30">mvn:org.springframework.security/spring-security-acl/3.1.7.RELEASE</bundle>
     <bundle start-level="30">mvn:org.springframework.security/spring-security-taglibs/3.1.7.RELEASE</bundle>
+  </feature>
+
+  <!-- Overriding camel-jms feature to force using Spring 3.2.11.RELEASE_1  -->
+  <feature name='camel-jms' version='${camel.overriden.karaf.version}' resolver='(obr)' start-level='50'>
+    <feature version='${camel.karaf.version}'>camel-core</feature>
+    <feature version='3.2.11.RELEASE_1'>spring</feature>
+    <feature version='3.2.11.RELEASE_1'>spring-jms</feature>
+    <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
+    <bundle dependency='true'>mvn:commons-pool/commons-pool/1.6</bundle>
+    <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1</bundle>
+    <bundle>mvn:org.apache.camel/camel-jms/${camel.karaf.version}</bundle>
   </feature>
 </features>
