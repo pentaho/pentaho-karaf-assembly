@@ -29,22 +29,6 @@
     <bundle>pentaho-platform-plugin-mvn:pentaho/paz-plugin-ce/${analyzer-plugin.version}/zip</bundle>
   </feature>
 
-  <feature name="mongolap" version="1.0">
-    <feature>pentaho-server</feature>
-    <bundle>mvn:org.pentaho/mondrian/${dependency.mondrian4.revision}</bundle>
-    <bundle>mvn:pentaho/pentaho-mongo-utils/${pentaho-mongo-utils.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-mongolap${mongolap.unobfuscated.designator}/${pentaho-mongolap.version}</bundle>
-    <bundle>mvn:eigenbase/eigenbase-xom/${eigenbase.xom.version}</bundle>
-    <bundle>mvn:eigenbase/eigenbase-resgen/${eigenbase.resgen.version}</bundle>
-    <bundle>mvn:eigenbase/eigenbase-properties/${eigenbase.properties.version}</bundle>
-    <bundle>mvn:org.olap4j/olap4j-xmlaserver/${olap4j.xmlaserver.version}</bundle>
-    <bundle>mvn:org.mongodb/mongo-java-driver/${mongo.java.driver.version}</bundle>
-    <bundle>mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
-    <bundle>mvn:org.apache.commons/com.springsource.org.apache.commons.logging/1.1.1</bundle>
-    <bundle>mvn:commons-io/commons-io/${commons.io.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
   <feature name="pentaho-monitoring" version="1.0">
     <configfile finalname="/etc/pentaho.pdi.monitoring.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pdi-monitoring
     </configfile>

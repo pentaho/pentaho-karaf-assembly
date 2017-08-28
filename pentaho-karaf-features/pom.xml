@@ -87,17 +87,4 @@
       </plugin>
     </plugins>
   </build>
-  <profiles>
-    <profile>
-      <id>obfuscated</id>
-      <activation>
-        <property>
-          <name>release</name>
-        </property>
-      </activation>
-      <properties>
-        <mongolap.unobfuscated.designator></mongolap.unobfuscated.designator>
-      </properties>
-    </profile>
-  </profiles>
 </project>
