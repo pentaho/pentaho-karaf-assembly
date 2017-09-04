@@ -29,6 +29,7 @@
     <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-bundle-resource-manager/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-spring-dm-extender/${project.version}</bundle>
+    <feature version="${project.version}">pentaho-webpackage</feature>
     <feature version="${project.version}">pentaho-webjars-deployer</feature>
   </feature>
 
@@ -61,6 +62,15 @@
     <bundle>mvn:pentaho/pentaho-requirejs-utils/${pentaho-osgi-bundles.version}</bundle>
     <bundle>wrap:mvn:com.github.zafarkhaja/java-semver/${com.github.zafarkhaja.version}</bundle>
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}</bundle>
+  </feature>
+
+  <feature name="pentaho-webpackage" version="${project.version}">
+    <bundle>mvn:commons-io/commons-io/${commons.io.version}</bundle>
+    <bundle>mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
+    <bundle>mvn:com.googlecode.json-simple/json-simple/${json.simple.version}</bundle>
+    <feature>http-whiteboard</feature>
+
+    <bundle>mvn:org.pentaho/pentaho-webpackage-extender/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
   <feature name="pentaho-webjars-deployer" version="${project.version}">
