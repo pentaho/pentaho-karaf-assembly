@@ -68,9 +68,12 @@
     <bundle>mvn:commons-io/commons-io/${commons.io.version}</bundle>
     <bundle>mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
     <bundle>mvn:com.googlecode.json-simple/json-simple/${json.simple.version}</bundle>
+    <bundle>mvn:org.apache.commons/commons-compress/${commons-compress.version}</bundle>
+
     <feature>http-whiteboard</feature>
 
     <bundle>mvn:org.pentaho/pentaho-webpackage-extender/${pentaho-osgi-bundles.version}</bundle>
+    <bundle>mvn:org.pentaho/pentaho-webpackage-deployer/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
   <feature name="pentaho-webjars-deployer" version="${project.version}">
