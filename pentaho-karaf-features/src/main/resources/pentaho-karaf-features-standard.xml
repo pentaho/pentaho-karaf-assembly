@@ -16,6 +16,7 @@
  -->
 
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
+  <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</repository>
 
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
@@ -29,7 +30,6 @@
     <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-bundle-resource-manager/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-spring-dm-extender/${project.version}</bundle>
-    <feature version="${project.version}">pentaho-webpackage</feature>
     <feature version="${project.version}">pentaho-webjars-deployer</feature>
   </feature>
 
@@ -64,18 +64,6 @@
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
-  <feature name="pentaho-webpackage" version="${project.version}">
-    <bundle>mvn:commons-io/commons-io/${commons.io.version}</bundle>
-    <bundle>mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
-    <bundle>mvn:com.googlecode.json-simple/json-simple/${json.simple.version}</bundle>
-    <bundle>mvn:org.apache.commons/commons-compress/${commons-compress.version}</bundle>
-
-    <feature>http-whiteboard</feature>
-
-    <bundle>mvn:org.pentaho/pentaho-webpackage-extender/${pentaho-osgi-bundles.version}</bundle>
-    <bundle>mvn:org.pentaho/pentaho-webpackage-deployer/${pentaho-osgi-bundles.version}</bundle>
-  </feature>
-
   <feature name="pentaho-webjars-deployer" version="${project.version}">
     <bundle>mvn:pentaho/pentaho-requirejs-utils/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/pentaho-webjars-deployer/${pentaho-osgi-bundles.version}</bundle>
@@ -83,6 +71,7 @@
 
   <feature name="pentaho-client" version="1.0">
     <feature>pentaho-client-minimal</feature>
+    <feature>pentaho-webpackage</feature>
     <feature>pentaho-big-data-plugin-osgi</feature>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
