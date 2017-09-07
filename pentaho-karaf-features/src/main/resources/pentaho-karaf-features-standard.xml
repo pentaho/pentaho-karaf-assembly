@@ -16,6 +16,7 @@
  -->
 
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
+  <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</repository>
 
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
@@ -70,6 +71,7 @@
 
   <feature name="pentaho-client" version="1.0">
     <feature>pentaho-client-minimal</feature>
+    <feature>pentaho-webpackage</feature>
     <feature>pentaho-big-data-plugin-osgi</feature>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
