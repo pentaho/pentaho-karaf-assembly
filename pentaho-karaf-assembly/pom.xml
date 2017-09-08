@@ -132,6 +132,7 @@
                   <outputDirectory>${configuration-bundles.unpacked}/web-client</outputDirectory>
                 </artifactItem>
               </artifactItems>
+              <excludes>/META-INF/**</excludes>
             </configuration>
           </execution>
         </executions>
