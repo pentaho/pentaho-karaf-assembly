@@ -84,6 +84,6 @@
   <feature name='camel-guava-eventbus' version='2.17.7-pentaho' resolver='(obr)' start-level='50'>
     <feature version='2.17.7'>camel-core</feature>
     <bundle dependency='true'>mvn:com.google.guava/guava/17.0</bundle>
-    <bundle>mvn:org.apache.camel/camel-guava-eventbus/2.17.7</bundle>
+    <bundle>mvn:pentaho/pentaho-camel-guava-eventbus/${project.version}</bundle>
   </feature>
 </features>
