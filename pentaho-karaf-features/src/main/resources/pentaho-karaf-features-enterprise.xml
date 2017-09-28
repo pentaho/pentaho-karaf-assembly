@@ -42,7 +42,7 @@
     <feature>camel</feature>
     <feature>camel-blueprint</feature>
     <feature>camel-stream</feature>
-    <feature version="2.17.7-pentaho">camel-guava-eventbus</feature>
+    <feature version="${camel.karaf.overridden.version}">camel-guava-eventbus</feature>
     <bundle>mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
     <bundle>mvn:pentaho/pentaho-camel-core/${camel-components.version}</bundle>
     <bundle>mvn:pentaho/pentaho-camel-snmp/${camel-components.version}</bundle>
@@ -81,9 +81,9 @@
   </feature>
 
   <!-- Overriding camel-guava-eventbus feature to force using guava-17.0 version -->
-  <feature name='camel-guava-eventbus' version='2.17.7-pentaho' resolver='(obr)' start-level='50'>
-    <feature version='2.17.7'>camel-core</feature>
-    <bundle dependency='true'>mvn:com.google.guava/guava/17.0</bundle>
+  <feature name='camel-guava-eventbus' version='${camel.karaf.overridden.version}' resolver='(obr)' start-level='50'>
+    <feature version='${camel.karaf.version}'>camel-core</feature>
+    <bundle dependency='true'>mvn:com.google.guava/guava/${google.guava.version}</bundle>
     <bundle>mvn:pentaho/pentaho-camel-guava-eventbus/${project.version}</bundle>
   </feature>
 </features>

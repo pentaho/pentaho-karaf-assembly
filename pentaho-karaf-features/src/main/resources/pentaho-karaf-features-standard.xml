@@ -58,7 +58,7 @@
   </feature>
 
   <feature name="pentaho-requirejs-osgi-manager" version="${project.version}">
-    <feature>http</feature>
+    <feature version="${karaf.features.overridden.version}">http</feature>
     <bundle>mvn:pentaho/pentaho-requirejs-utils/${pentaho-osgi-bundles.version}</bundle>
     <bundle>wrap:mvn:com.github.zafarkhaja/java-semver/${com.github.zafarkhaja.version}</bundle>
     <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}</bundle>
@@ -118,7 +118,7 @@
   </feature>
 
   <feature name="pentaho-cache-system" version="1.0">
-    <feature>transaction</feature>
+    <feature version="1.0.0">transaction</feature>
     <bundle>mvn:pentaho/pentaho-cache-manager-api/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/guava-cache-provider/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/pentaho-ehcache-provider/${pentaho-osgi-bundles.version}</bundle>
@@ -132,13 +132,13 @@
     <configfile finalname="/etc/pentaho.jms.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-jms
     </configfile>
     <feature>jms</feature>
-    <feature>activemq</feature>
+    <feature version="${activemq.karaf.overridden.version}">activemq</feature>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/jms</bundle>
    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-camel-jms" version="1.0">
-    <feature version="${camel.overriden.karaf.version}">camel-jms</feature>
+    <feature version="${camel.overridden.karaf.version}">camel-jms</feature>
     <feature>activemq-camel</feature>
     <feature>pentaho-jms</feature>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/camel-jms</bundle>
@@ -177,9 +177,9 @@
   </feature>
 
   <feature name="pentaho-metaverse-web" version="${project.version}">
-    <feature>http</feature>
-    <feature>http-whiteboard</feature>
-    <feature>cxf</feature>
+    <feature version="${karaf.features.overridden.version}">http</feature>
+    <feature version="${karaf.features.overridden.version}">http-whiteboard</feature>
+    <feature version="${cxf.karaf.overridden.version}">cxf</feature>
 
     <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${org.codehaus.jackson.version}</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${org.codehaus.jackson.version}</bundle>
@@ -187,16 +187,7 @@
     <bundle>mvn:org.codehaus.jackson/jackson-xc/${org.codehaus.jackson.version}</bundle>
 
     <bundle>mvn:pentaho/pentaho-metaverse-web/${pentaho-metaverse.version}</bundle>
-  </feature>  
-
-<!-- Overriding KAR to load 3.0.5 of core, remove once 3.0.5 is released -->
-  <feature name="kar" version="3.7.5" description="Provide KAR (KARaf archive) support" resolver="(obr)">
-    <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/3.0.5</bundle>
-    <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.command/3.0.3</bundle>
-    <bundle start-level="30">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.kar/3.0.3</bundle>
-       <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
-
 
   <feature name="build-helper" description="This is never used in production, exists only to facilitate the build">
     <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
@@ -217,59 +208,95 @@
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${pdi-data-refinery-plugin.version}</bundle>
   </feature>
 
+  <feature name="pentaho-i18n" version="${project.version}">
+    <bundle>mvn:pentaho/pentaho-i18n-bundle/${pentaho-osgi-bundles.version}</bundle>
+    <conditional>
+      <condition>cxf</condition>
+      <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${pentaho-osgi-bundles.version}</bundle>
+    </conditional>
+  </feature>
+
   <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds"/>
 
-   <!-- Overriding CXF to ensure that Jetty isn't started -->
-    <feature name="cxf" version="3.7.5" resolver='(obr)'>
-        <feature version="[3,4)">spring</feature>
-        <feature version="[1.2,2)">spring-dm</feature>
-        <feature version="${cxf.karaf.version}">cxf-core</feature>
-        <feature version="${cxf.karaf.version}">cxf-jaxws</feature>
-        <feature version="${cxf.karaf.version}">cxf-jaxrs</feature>
-        <feature version="${cxf.karaf.version}">cxf-databinding-jaxb</feature>
-        <feature version="${cxf.karaf.version}">cxf-databinding-aegis</feature>
-        <feature version="${cxf.karaf.version}">cxf-databinding-xmlbeans</feature>
-        <!-- <feature version="${cxf.karaf.version}">cxf-bindings-corba</feature> -->
-        <feature version="${cxf.karaf.version}">cxf-bindings-coloc</feature>
-        <feature version="${cxf.karaf.version}">cxf-bindings-object</feature>
-        <!-- <feature version="${cxf.karaf.version}">cxf-http-jetty</feature> -->
-        <feature version="${cxf.karaf.version}">cxf-transports-local</feature>
-        <!-- <feature version="${cxf.karaf.version}">cxf-transports-jms</feature> -->
-        <!-- <feature version="${cxf.karaf.version}">cxf-transports-udp</feature> -->
-        <feature version="${cxf.karaf.version}">cxf-xjc-runtime</feature>
-        <!-- Using our patched descriptor with overridden jasypt bundle -->
-        <feature version="${cxf.karaf.patched.version}">cxf-ws-security</feature>
-        <feature version="${cxf.karaf.version}">cxf-ws-rm</feature>
-        <!-- <feature version="${cxf.karaf.version}">cxf-ws-mex</feature> -->
-        <feature version="${cxf.karaf.version}">cxf-javascript</feature>
-        <!-- <feature version="${cxf.karaf.version}">cxf-frontend-javascript</feature> -->
-        <!-- <feature version="${cxf.karaf.version}">cxf-features-clustering</feature> -->
-        <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    </feature>
-    <feature name="pentaho-i18n" version="${project.version}">
-      <bundle>mvn:pentaho/pentaho-i18n-bundle/${pentaho-osgi-bundles.version}</bundle>
-      <conditional>
-        <condition>cxf</condition>
-        <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${pentaho-osgi-bundles.version}</bundle>
-      </conditional>
-    </feature>
 
 
-  <feature name="pax-jetty" description="Provide Jetty engine support" version="8.9" resolver="(obr)">
-    <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.activation-api-1.1/2.2.0</bundle>
+  <!--
+    Below are the overriding features that are copied from 3rd party feature xmls,
+    with the reason to exclude some bundle or override its version.
 
-    <bundle dependency="true" start-level="30">mvn:javax.mail/mail/1.4.4</bundle>
-    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
-    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-annotation_1.1_spec/1.0.1</bundle>
-    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-jaspic_1.0_spec/1.1</bundle>
-    <bundle dependency="true" start-level="30">mvn:org.ow2.asm/asm-all/5.0.2</bundle>
-    <bundle start-level="30">mvn:org.eclipse.jetty.aggregate/jetty-all-server/8.1.15.v20140411</bundle>
+    When copying a feature here, with intention to replace original one in the Karaf build,
+    make sure you have overridden its version, e.g. to something like <original-version>-pentaho,
+    and that other features that are used in our build, also using this overridden feature version.
+  -->
+
+  <!-- Copied from org.apache.karaf.features/standard/3.0.3/xml/features -->
+  <!-- Overriding KAR to load 3.0.5 of core, remove once 3.0.5 is released -->
+  <feature name="kar" version="${karaf.features.overridden.version}" description="Provide KAR (KARaf archive) support" resolver="(obr)">
+    <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/3.0.5</bundle>
+    <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.command/${karaf.features.version}</bundle>
+    <bundle start-level="30">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.kar/${karaf.features.version}</bundle>
+    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
-    <!-- Overriding activemq to exclude xtreaam 1.4.7 version  -->
-  <feature name="activemq" description="ActiveMQ broker libraries" version="5.12.0" resolver="(obr)" start-level="50">
-    <feature>http</feature>
-    <feature version="5.10.0">activemq-client</feature>
-    <bundle>mvn:org.apache.activemq/activemq-karaf/5.10.0</bundle>
+
+
+  <!-- Overriding CXF to ensure that Jetty isn't started -->
+  <feature name="cxf-http" version="${cxf.karaf.overridden.version}" resolver="(obr)">
+    <feature version="${cxf.karaf.version}">cxf-core</feature>
+    <feature version="${karaf.features.overridden.version}">http-whiteboard</feature>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-transports-http/${cxf.karaf.version}</bundle>
+  </feature>
+  <feature name="cxf-jaxws" version="${cxf.karaf.overridden.version}" resolver="(obr)">
+    <feature version="${cxf.karaf.version}">cxf-wsdl</feature>
+    <feature version="${cxf.karaf.version}">cxf-databinding-jaxb</feature>
+    <feature version="${cxf.karaf.version}">cxf-bindings-soap</feature>
+    <feature version="${cxf.karaf.overridden.version}">cxf-http</feature>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-frontend-simple/${cxf.karaf.version}</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-frontend-jaxws/${cxf.karaf.version}</bundle>
+  </feature>
+  <feature name="cxf-jaxrs" version="${cxf.karaf.overridden.version}" resolver="(obr)">
+    <feature version="${cxf.karaf.version}">cxf-core</feature>
+    <feature version="${cxf.karaf.overridden.version}">cxf-http</feature>
+    <bundle start-level="30" dependency="true">mvn:org.codehaus.jettison/jettison/1.3.7</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-rs-extension-providers/${cxf.karaf.version}</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-rs-extension-search/${cxf.karaf.version}</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-rs-service-description/${cxf.karaf.version}</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-frontend-jaxrs/${cxf.karaf.version}</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-rs-client/${cxf.karaf.version}</bundle>
+  </feature>
+  <feature name="cxf" version="${cxf.karaf.overridden.version}" resolver='(obr)'>
+    <feature version="${springframework.version}">spring</feature>
+    <feature version="${sprin-dm.version}">spring-dm</feature>
+    <feature version="${cxf.karaf.version}">cxf-core</feature>
+    <feature version="${cxf.karaf.overridden.version}">cxf-jaxws</feature>
+    <feature version="${cxf.karaf.overridden.version}">cxf-jaxrs</feature>
+    <feature version="${cxf.karaf.version}">cxf-databinding-jaxb</feature>
+    <feature version="${cxf.karaf.version}">cxf-databinding-aegis</feature>
+    <feature version="${cxf.karaf.version}">cxf-databinding-xmlbeans</feature>
+    <!-- <feature version="${cxf.karaf.version}">cxf-bindings-corba</feature> -->
+    <feature version="${cxf.karaf.version}">cxf-bindings-coloc</feature>
+    <feature version="${cxf.karaf.version}">cxf-bindings-object</feature>
+    <!-- <feature version="${cxf.karaf.version}">cxf-http-jetty</feature> -->
+    <feature version="${cxf.karaf.version}">cxf-transports-local</feature>
+    <!-- <feature version="${cxf.karaf.version}">cxf-transports-jms</feature> -->
+    <!-- <feature version="${cxf.karaf.version}">cxf-transports-udp</feature> -->
+    <feature version="${cxf.karaf.version}">cxf-xjc-runtime</feature>
+    <!-- Using our patched descriptor with overridden jasypt bundle -->
+    <feature version="${cxf.karaf.overridden.version}">cxf-ws-security</feature>
+    <feature version="${cxf.karaf.version}">cxf-ws-rm</feature>
+    <!-- <feature version="${cxf.karaf.version}">cxf-ws-mex</feature> -->
+    <feature version="${cxf.karaf.version}">cxf-javascript</feature>
+    <!-- <feature version="${cxf.karaf.version}">cxf-frontend-javascript</feature> -->
+    <!-- <feature version="${cxf.karaf.version}">cxf-features-clustering</feature> -->
+    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+  </feature>
+
+
+  <!-- Overriding activemq to exclude xtreaam 1.4.7 version  -->
+  <feature name="activemq" description="ActiveMQ broker libraries" version="${activemq.karaf.overridden.version}"
+           resolver="(obr)" start-level="50">
+    <feature version="${karaf.features.overridden.version}">http</feature>
+    <feature version="${activemq.karaf.version}">activemq-client</feature>
+    <bundle>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}</bundle>
     <bundle dependency="true">mvn:org.apache.xbean/xbean-spring/3.16</bundle>
     <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
     <bundle dependency='true'>mvn:commons-lang/commons-lang/2.6</bundle>
@@ -291,16 +318,16 @@
   </feature>
 
   <!-- Overriding cxf-ws-security and wss4j feature to update jasypt to 1.9.2_1 version  -->
-  <feature name="cxf-ws-security" version="3.0.7-pentaho" resolver="(obr)">
-    <feature version="3.0.7">cxf-ws-policy</feature>
+  <feature name="cxf-ws-security" version="${cxf.karaf.overridden.version}" resolver="(obr)">
+    <feature version="${cxf.karaf.version}">cxf-ws-policy</feature>
     <feature version="2.0.6-pentaho">wss4j</feature>
-    <feature version="3.0.7">cxf-ws-addr</feature>
+    <feature version="${cxf.karaf.version}">cxf-ws-addr</feature>
     <bundle start-level="40" dependency="true">mvn:net.sf.ehcache/ehcache/2.8.5</bundle>
-    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-ws-security/3.0.7</bundle>
-    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-security/3.0.7</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-ws-security/${cxf.karaf.version}</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-security/${cxf.karaf.version}</bundle>
   </feature>
   <feature name="wss4j" version="2.0.6-pentaho" resolver="(obr)">
-    <feature version="3.0.7">cxf-specs</feature>
+    <feature version="${cxf.karaf.version}">cxf-specs</feature>
     <bundle start-level="25" dependency="true">mvn:joda-time/joda-time/2.2</bundle>
     <bundle start-level="25" dependency="true">mvn:commons-codec/commons-codec/1.10</bundle>
     <bundle start-level="25" dependency="true">mvn:org.apache.santuario/xmlsec/2.0.5</bundle>
@@ -321,26 +348,55 @@
     <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-policy-stax/2.0.6</bundle>
   </feature>
 
-  <!-- Overriding spring-security feature to update bundles to 3.1.7.RELEASE version  -->
-  <feature name="spring-security" version="3.1.7.RELEASE" description="Spring Security 3.1.x support" resolver="(obr)">
-    <feature>war</feature>
-    <feature>spring-dm-web</feature>
-    <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/1.7.4_1</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-core/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-config/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-web/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-acl/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-taglibs/3.1.7.RELEASE</bundle>
-  </feature>
 
-  <!-- Overriding camel-jms feature to force using Spring 3.2.11.RELEASE_1  -->
-  <feature name='camel-jms' version='${camel.overriden.karaf.version}' resolver='(obr)' start-level='50'>
+  <!-- Copied from org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features -->
+  <!-- activemq-camel depends on spring-jms of 3 version,
+    but upgraded camel downloads spring-jms 4 (it requires 3 or 4 version).
+    Since camel bundles are known to work correctly with spring 3, let's force them using this version. -->
+  <!-- Overriding camel-jms feature to force using Spring 3.2.11.RELEASE_1 -->
+  <feature name='camel-jms' version='${camel.karaf.overridden.version}' resolver='(obr)' start-level='50'>
     <feature version='${camel.karaf.version}'>camel-core</feature>
-    <feature version='3.2.11.RELEASE_1'>spring</feature>
-    <feature version='3.2.11.RELEASE_1'>spring-jms</feature>
+    <feature version='${springframework.version}'>spring</feature>
+    <feature version='${springframework.version}'>spring-jms</feature>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
     <bundle dependency='true'>mvn:commons-pool/commons-pool/1.6</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1</bundle>
     <bundle>mvn:org.apache.camel/camel-jms/${camel.karaf.version}</bundle>
   </feature>
+
+
+  <!-- Copied from org.apache.karaf.features/spring/${karaf.features.version}/xml/features -->
+  <!-- Overriding the default http feature -->
+  <feature name="spring-dm-web" version="${sprin-dm.overridden.version}" description="Spring DM Web support" resolver="(obr)">
+    <feature version="${sprin-dm.version}">spring-dm</feature>
+    <feature version="${springframework.overridden.version}">spring-web</feature>
+    <feature version="${karaf.features.overridden.version}">http</feature>
+    <bundle start-level="30">mvn:org.springframework.osgi/spring-osgi-web/${sprin-dm.version}</bundle>
+  </feature>
+  <!-- Overriding the default http feature -->
+  <feature name="spring-web" version="${springframework.overridden.version}" description="Spring 3.2.x Web support" resolver="(obr)">
+    <feature version="${springframework.version}">spring</feature>
+    <feature version="${karaf.features.overridden.version}">http</feature>
+    <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-web/${springframework.version}</bundle>
+    <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc/${springframework.version}</bundle>
+  </feature>
+
+  <!-- Copied from org.apache.karaf.features/standard/${karaf.features.version}/xml/features -->
+  <!-- Overriding the default http feature -->
+  <feature name="http" description="Implementation of the OSGi HTTP service" version="${karaf.features.overridden.version}" resolver="(obr)">
+    <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
+    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+  </feature>
+  <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
+  <feature name="http-whiteboard" version="${karaf.features.overridden.version}" description="Provide HTTP Whiteboard pattern support" resolver="(obr)">
+    <feature version="${karaf.features.overridden.version}">http</feature>
+    <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
+    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+  </feature>
+  <!-- Overriding WAR to ensure that Jetty isn't started -->
+  <feature name="war" version="${karaf.features.overridden.version}" description="Turn Karaf as a full WebContainer" resolver="(obr)">
+    <feature version="${karaf.features.overridden.version}">http</feature>
+    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+  </feature>
+
 </features>
