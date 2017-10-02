@@ -173,10 +173,10 @@
               <features>
                 <feature>config</feature>
                 <feature>ssh</feature>
-                <feature>kar/${karaf.features.overridden.version}</feature>
-                <feature>http/${karaf.features.overridden.version}</feature>
-                <feature>cxf/${cxf.karaf.overridden.version}</feature>
-                <feature>war/${karaf.features.overridden.version}</feature>
+                <feature>kar</feature>
+                <feature>http</feature>
+                <feature>cxf</feature>
+                <feature>war</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
                 <feature>pdi-dataservice</feature>
@@ -218,10 +218,10 @@
               <features>
                 <feature>config</feature>
                 <feature>ssh</feature>
-                <feature>kar/${karaf.features.overridden.version}</feature>
-                <feature>http/${karaf.features.overridden.version}</feature>
-                <feature>cxf/${cxf.karaf.overridden.version}</feature>
-                <feature>war/${karaf.features.overridden.version}</feature>
+                <feature>kar</feature>
+                <feature>http</feature>
+                <feature>cxf</feature>
+                <feature>war</feature>
                 <feature>pentaho-client-minimal</feature>
                 <feature>pdi-dataservice-client</feature>
                 <feature>pentaho-big-data-plugin-testless-osgi</feature>
@@ -261,13 +261,13 @@
                 <feature>config</feature>
                 <feature>ssh</feature>
                 <feature>management</feature>
-                <feature>kar/${karaf.features.overridden.version}</feature>
-                <feature>cxf/${cxf.karaf.overridden.version}</feature>
-                <feature>camel-jms/${camel.karaf.overridden.version}</feature>
+                <feature>kar</feature>
+                <feature>cxf</feature>
+                <feature>camel-jms/${camel.overriden.karaf.version}</feature>
                 <feature>camel</feature>
                 <feature>camel-blueprint</feature>
                 <feature>camel-stream</feature>
-                <feature>http/${karaf.features.overridden.version}</feature>
+                <feature>http</feature>
                 <feature>pentaho-server</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pdi-dataservice</feature>
@@ -305,10 +305,10 @@
               <features>
                 <feature>config</feature>
                 <feature>ssh</feature>
-                <feature>kar/${karaf.features.overridden.version}</feature>
-                <feature>http/${karaf.features.overridden.version}</feature>
-                <feature>cxf/${cxf.karaf.overridden.version}</feature>
-                <feature>war/${karaf.features.overridden.version}</feature>
+                <feature>kar</feature>
+                <feature>http</feature>
+                <feature>cxf</feature>
+                <feature>war</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
                 <feature>build-helper</feature>
@@ -338,10 +338,10 @@
               <features>
                 <feature>config</feature>
                 <feature>ssh</feature>
-                <feature>kar/${karaf.features.overridden.version}</feature>
-                <feature>http/${karaf.features.overridden.version}</feature>
-                <feature>cxf/${cxf.karaf.overridden.version}</feature>
-                <feature>war/${karaf.features.overridden.version}</feature>
+                <feature>kar</feature>
+                <feature>http</feature>
+                <feature>cxf</feature>
+                <feature>war</feature>
                 <feature>pentaho-client-minimal</feature>
                 <feature>pdi-dataservice-client</feature>
                 <feature>pentaho-big-data-plugin-testless-osgi</feature>

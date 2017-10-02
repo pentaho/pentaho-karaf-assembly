@@ -44,14 +44,13 @@
     <eigenbase.properties.version>1.1.4</eigenbase.properties.version>
     <eigenbase.resgen.version>1.3.6</eigenbase.resgen.version>
     <activemq.karaf.version>5.10.0</activemq.karaf.version>
-    <activemq.karaf.overridden.version>5.10.0-pentaho</activemq.karaf.overridden.version>
     <camel.karaf.version>2.17.7</camel.karaf.version>
-    <camel.karaf.overridden.version>2.17.7-pentaho</camel.karaf.overridden.version>
+    <camel.overriden.karaf.version>2.17.7-pentaho</camel.overriden.karaf.version>
     <olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
     <google.guava.version>17.0</google.guava.version>
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
     <cxf.karaf.version>3.0.7</cxf.karaf.version>
-    <cxf.karaf.overridden.version>3.0.7-pentaho</cxf.karaf.overridden.version>
+    <cxf.karaf.patched.version>3.0.7-pentaho</cxf.karaf.patched.version>
     <camel-components.version>8.0-SNAPSHOT</camel-components.version>
     <pdi-monitoring-plugin.version>8.0-SNAPSHOT</pdi-monitoring-plugin.version>
     <com.fasterxml.jackson.core.version>2.3.3</com.fasterxml.jackson.core.version>
@@ -63,12 +62,8 @@
     <kettle.osgi.version>8.0.0.SNAPSHOT</kettle.osgi.version>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
     <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
-    <springframework.version>3.2.11.RELEASE_1</springframework.version>
-    <springframework.overridden.version>3.2.11.RELEASE_1-pentaho</springframework.overridden.version>
-    <sprin-dm.version>1.2.1</sprin-dm.version>
-    <sprin-dm.overridden.version>1.2.1-pentaho</sprin-dm.overridden.version>
+    <springframework-version>3.2.0</springframework-version>
     <karaf.features.version>3.0.3</karaf.features.version>
-    <karaf.features.overridden.version>3.0.3-pentaho</karaf.features.overridden.version>
     <pentaho-modeler.version>8.0-SNAPSHOT</pentaho-modeler.version>
     <commons.logging.version>1.1.3</commons.logging.version>
     <json.version>8.0-SNAPSHOT</json.version>
@@ -76,13 +71,12 @@
     <pentaho-connections.version>8.0-SNAPSHOT</pentaho-connections.version>
     <analyzer-plugin.version>8.0-SNAPSHOT</analyzer-plugin.version>
     <org.ops4j.pax.web.version>3.1.4</org.ops4j.pax.web.version>
-    <org.ops4j.pax.web.overridden.version>3.1.4-pentaho</org.ops4j.pax.web.overridden.version>
     <pentaho-mongodb-plugin.version>8.0-SNAPSHOT</pentaho-mongodb-plugin.version>
     <com.github.zafarkhaja.version>0.9.0</com.github.zafarkhaja.version>
     <json.simple.version>1.1.1</json.simple.version>
     <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
     <commons.io.version>2.4</commons.io.version>
-    <net.sf.ehcache.version>2.8.5</net.sf.ehcache.version>
+    <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
     <net.java.dev.jna.version>4.4.0</net.java.dev.jna.version>
   </properties>
 </project>
