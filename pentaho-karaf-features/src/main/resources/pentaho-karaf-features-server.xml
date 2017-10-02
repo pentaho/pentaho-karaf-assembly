@@ -17,10 +17,35 @@
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
 
+    <!-- Overriding the default http feature -->
+    <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
+        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
+		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    </feature>
+
+    <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
+    <feature name="http-whiteboard" version="3.7.5" description="Provide HTTP Whiteboard pattern support" resolver="(obr)">
+        <feature>http</feature>
+        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
+		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    </feature>
+
+    <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
+    <feature name="pax-http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="3.1.4" resolver="(obr)">
+        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
+		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    </feature>
+
+    <!-- Overriding WAR to ensure that Jetty isn't started -->
+    <feature name="war" version="3.7.5" description="Turn Karaf as a full WebContainer" resolver="(obr)">
+        <feature>http</feature>
+		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    </feature>
+
     <feature name="pentaho-server" version="1.0">
         <feature>pentaho-base</feature>
         <feature>pentaho-client</feature>
-        <feature version="${karaf.features.overridden.version}">http-whiteboard</feature>
+        <feature>http-whiteboard</feature>
         <feature version="[4,4.3.2]">spring</feature>
         <feature version="3.1.7.RELEASE">spring-security</feature>
 
@@ -36,21 +61,6 @@
         <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
         <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-platform/${pentaho-osgi-bundles.version}</bundle>
     </feature>
-
-
-    <!-- Overriding spring-security feature to update bundles to 3.1.7.RELEASE version  -->
-    <feature name="spring-security" version="3.1.7.RELEASE" description="Spring Security 3.1.x support" resolver="(obr)">
-        <feature version="${karaf.features.overridden.version}">war</feature>
-        <feature version="${sprin-dm.overridden.version}">spring-dm-web</feature>
-        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/1.7.4_1</bundle>
-        <bundle start-level="30">mvn:org.springframework.security/spring-security-core/3.1.7.RELEASE</bundle>
-        <bundle start-level="30">mvn:org.springframework.security/spring-security-config/3.1.7.RELEASE</bundle>
-        <bundle start-level="30">mvn:org.springframework.security/spring-security-web/3.1.7.RELEASE</bundle>
-        <bundle start-level="30">mvn:org.springframework.security/spring-security-acl/3.1.7.RELEASE</bundle>
-        <bundle start-level="30">mvn:org.springframework.security/spring-security-taglibs/3.1.7.RELEASE</bundle>
-    </feature>
-
-
     <!-- Added as a fix for [PPP-3862]-Use of vulnerable component spring-core 4.1.2 SONATYPE 2015-0003.
     Overriden version which comes with karaf 3.0.3 -->
     <feature name="spring" version="4.1.9.RELEASE_1" description="Spring 4.1.x support" resolver="(obr)">
