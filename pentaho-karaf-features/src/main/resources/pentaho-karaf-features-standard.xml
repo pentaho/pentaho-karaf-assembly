@@ -384,6 +384,7 @@
   <!-- Copied from org.apache.karaf.features/standard/${karaf.features.version}/xml/features -->
   <!-- Overriding the default http feature -->
   <feature name="http" description="Implementation of the OSGi HTTP service" version="${karaf.features.overridden.version}" resolver="(obr)">
+    <feature version="${org.ops4j.pax.web.overridden.version}">pax-http</feature>
     <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
@@ -397,6 +398,38 @@
   <feature name="war" version="${karaf.features.overridden.version}" description="Turn Karaf as a full WebContainer" resolver="(obr)">
     <feature version="${karaf.features.overridden.version}">http</feature>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+  </feature>
+
+
+  <feature name="pax-http" version="${org.ops4j.pax.web.overridden.version}" resolver="(obr)" description="Implementation of the OSGI HTTP Service">
+    <details>Allows to publish servlets using pax web and jetty</details>
+    <configfile finalname="/etc/jetty.xml">mvn:org.ops4j.pax.web/pax-web-features/${org.ops4j.pax.web.version}/xml/jettyconfig</configfile>
+    <config name="org.ops4j.pax.web">
+      org.osgi.service.http.port=8181
+      javax.servlet.context.tempdir=${karaf.data}/pax-web-jsp
+      org.ops4j.pax.web.config.file=${karaf.base}/etc/jetty.xml
+    </config>
+    <feature version="${org.ops4j.pax.web.overridden.version}">pax-jetty</feature>
+    <bundle dependency="true" start-level="30">mvn:org.ops4j.base/ops4j-base-lang/1.4.0</bundle>
+    <bundle dependency="true" start-level="30">mvn:org.ops4j.pax.swissbox/pax-swissbox-core/1.7.0</bundle>
+    <bundle dependency="true" start-level="20">mvn:org.ow2.asm/asm-all/5.0.2</bundle>
+    <bundle dependency="true" start-level="20">mvn:org.apache.xbean/xbean-bundleutils/3.18</bundle>
+    <bundle dependency="true" start-level="20">mvn:org.apache.xbean/xbean-reflect/3.18</bundle>
+    <bundle dependency="true" start-level="20">mvn:org.apache.xbean/xbean-finder/3.18</bundle>
+    <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-api/${org.ops4j.pax.web.version}</bundle>
+    <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-spi/${org.ops4j.pax.web.version}</bundle>
+    <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-runtime/${org.ops4j.pax.web.version}</bundle>
+    <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-jetty/${org.ops4j.pax.web.version}</bundle>
+  </feature>
+  <feature name="pax-jetty" description="Provide Jetty engine support" version="${org.ops4j.pax.web.overridden.version}" resolver="(obr)">
+    <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.activation-api-1.1/2.2.0</bundle>
+
+    <bundle dependency="true" start-level="30">mvn:javax.mail/mail/1.4.4</bundle>
+    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
+    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-annotation_1.1_spec/1.0.1</bundle>
+    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-jaspic_1.0_spec/1.1</bundle>
+    <bundle dependency="true" start-level="30">mvn:org.ow2.asm/asm-all/5.0.2</bundle>
+    <bundle start-level="30">mvn:org.eclipse.jetty.aggregate/jetty-all-server/8.1.15.v20140411</bundle>
   </feature>
 
 </features>
