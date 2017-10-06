@@ -5,11 +5,11 @@
   <parent>
     <groupId>pentaho</groupId>
     <artifactId>pentaho-karaf</artifactId>
-    <version>6.1-SNAPSHOT</version>
+    <version>6.1.0.19-384</version>
   </parent>
   <groupId>pentaho</groupId>
   <artifactId>pentaho-blueprint-activators</artifactId>
-  <version>6.1-SNAPSHOT</version>
+  <version>6.1.0.19-384</version>
   <packaging>pom</packaging>
   <build>
     <plugins>
