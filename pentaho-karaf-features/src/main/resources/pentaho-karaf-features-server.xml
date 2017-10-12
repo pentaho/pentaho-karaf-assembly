@@ -61,67 +61,6 @@
         <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
         <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-platform/${pentaho-osgi-bundles.version}</bundle>
     </feature>
-    <!-- Added as a fix for [PPP-3862]-Use of vulnerable component spring-core 4.1.2 SONATYPE 2015-0003.
-    Overriden version which comes with karaf 3.0.3 -->
-    <feature name="spring" version="4.1.9.RELEASE_1" description="Spring 4.1.x support" resolver="(obr)">
-        <details>Spring Support</details>
-        <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aopalliance/1.0_6</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-core/4.1.9.RELEASE_1</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-expression/4.1.9.RELEASE_1</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-beans/4.1.9.RELEASE_1</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-aop/4.1.9.RELEASE_1</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-context/4.1.9.RELEASE_1</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-context-support/4.1.9.RELEASE_1</bundle>
-        <bundle start-level="30">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.spring/3.0.3</bundle>
-    </feature>
-    <feature name="spring-aspects" version="4.1.9.RELEASE_1" description="Spring 4.1.x AOP support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-aspects/4.1.9.RELEASE_1</bundle>
-    </feature>
-    <feature name="spring-instrument" version="4.1.9.RELEASE_1" description="Spring 4.1.x Instrument support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-instrument/4.1.9.RELEASE_1</bundle>
-    </feature>
-    <feature name="spring-jdbc" version="4.1.9.RELEASE_1" description="Spring 4.1.x JDBC support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring-tx</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jdbc/4.1.9.RELEASE_1</bundle>
-    </feature>
-    <feature name="spring-jms" version="4.1.9.RELEASE_1" description="Spring 4.1.x JMS support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring-tx</feature>
-        <bundle start-level="10">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
-        <bundle start-level="10">mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/4.1.9.RELEASE_1</bundle>
-    </feature>
-    <feature name="spring-test" version="4.1.9.RELEASE_1" description="Spring 4.1.x Test support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-test/4.1.9.RELEASE_1</bundle>
-    </feature>
-    <feature name="spring-orm" version="4.1.9.RELEASE_1" description="Spring 4.1.x ORM support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring-jdbc</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-orm/4.1.9.RELEASE_1</bundle>
-    </feature>
-    <feature name="spring-oxm" version="4.1.9.RELEASE_1" description="Spring 4.1.x OXM support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-oxm/4.1.9.RELEASE_1</bundle>
-    </feature>
-    <feature name="spring-tx" version="4.1.9.RELEASE_1" description="Spring 4.1.x Transaction (TX) support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-tx/4.1.9.RELEASE_1</bundle>
-    </feature>
-    <feature name="spring-web" version="4.1.9.RELEASE_1" description="Spring 4.1.x Web support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring</feature>
-        <feature>http</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-web/4.1.9.RELEASE_1</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc/4.1.9.RELEASE_1</bundle>
-    </feature>
-    <feature name="spring-web-portlet" version="4.1.9.RELEASE_1" description="Spring 4.1.x Web Portlet support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring-web</feature>
-        <bundle start-level="30" dependency="true">mvn:javax.portlet/portlet-api/2.0</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc-portlet/4.1.9.RELEASE_1</bundle>
-    </feature>
-    <feature name="spring-websocket" version="4.1.9.RELEASE_1" description="Spring 4.1.x WebSocket support" resolver="(obr)">
-        <feature version="[4.1.9.RELEASE_1,4.2)">spring-web</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-websocket/4.1.9.RELEASE_1</bundle>
-    </feature>
+
 
 </features>
