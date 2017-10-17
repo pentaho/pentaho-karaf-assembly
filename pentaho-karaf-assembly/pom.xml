@@ -223,6 +223,7 @@
                 <feature>cxf</feature>
                 <feature>war</feature>
                 <feature>pentaho-client-minimal</feature>
+                <feature>pentaho-fasterxml</feature>
                 <feature>pdi-dataservice-client</feature>
                 <feature>pentaho-big-data-plugin-testless-osgi</feature>
                 <feature>build-helper</feature>
