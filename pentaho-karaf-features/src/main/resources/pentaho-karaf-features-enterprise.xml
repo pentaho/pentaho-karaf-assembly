@@ -76,8 +76,6 @@
 
   <feature name="pentaho-ael" version="1.0">
     <feature>pdi-remote-client</feature>
-    <feature>aries-rsa-provider-fastbin</feature>
-    <feature>aries-rsa-discovery-zookeeper</feature>
   </feature>
 
   <!-- Overriding camel-guava-eventbus feature to force using guava-17.0 version -->
