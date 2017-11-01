@@ -166,7 +166,6 @@
                 <descriptor>mvn:org.pentaho.di.plugins/repositories-plugin/${kettle.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/${kettle.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.adaptive/adaptive-execution-features/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.aries.rsa/rsa-features/1.10.0/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/file-open-save-plugin/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
               </descriptors>
@@ -189,8 +188,6 @@
                 <feature>pdi-engine-configuration-ui</feature>
                 <feature>pdi-spark</feature>
                 <feature>pdi-remote-client</feature>
-                <feature>aries-rsa-provider-fastbin</feature>
-                <feature>aries-rsa-discovery-zookeeper</feature>
                 <feature>file-open-save-plugin</feature>
                 <feature>pentaho-webpackage</feature>
               </features>
@@ -255,7 +252,6 @@
                 <descriptor>mvn:org.pentaho/pentaho-marketplace/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.adaptive/adaptive-execution-features/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.aries.rsa/rsa-features/1.10.0/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
@@ -278,8 +274,6 @@
                 <feature>pdi-engine-configuration</feature>
                 <feature>pdi-spark</feature>
                 <feature>pdi-remote-client</feature>
-                <feature>aries-rsa-provider-fastbin</feature>
-                <feature>aries-rsa-discovery-zookeeper</feature>
                 <feature>pentaho-webpackage</feature>
               </features>
               <repository>target/pentaho-server-features-repo</repository>
