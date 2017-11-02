@@ -1,4 +1,4 @@
-# Pentaho Karaf Assembly
+# Hitachi Vantara Karaf Assembly
 This project builds and assembles the customized Pentaho Karaf Assembly.
 
 ### Development
