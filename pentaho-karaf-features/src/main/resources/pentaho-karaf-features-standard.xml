@@ -170,9 +170,9 @@
 
   <feature name="pentaho-fasterxml" version="1.0">
     <bundle>wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
-    <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.3.3</bundle>
-    <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/2.3.3</bundle>
-    <bundle>mvn:com.fasterxml.jackson.core/jackson-core/2.3.3</bundle>
+    <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.9.2</bundle>
+    <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/2.9.2</bundle>
+    <bundle>mvn:com.fasterxml.jackson.core/jackson-core/2.9.2</bundle>
     <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
   </feature>
 
