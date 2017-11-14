@@ -74,10 +74,6 @@
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
-  <feature name="pentaho-ael" version="1.0">
-    <feature>pdi-remote-client</feature>
-  </feature>
-
   <!-- Overriding camel-guava-eventbus feature to force using guava-17.0 version -->
   <feature name='camel-guava-eventbus' version='2.17.7-pentaho' resolver='(obr)' start-level='50'>
     <feature version='2.17.7'>camel-core</feature>

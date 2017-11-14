@@ -187,7 +187,6 @@
                 <feature>repositories-plugin</feature>
                 <feature>pdi-engine-configuration-ui</feature>
                 <feature>pdi-spark</feature>
-                <feature>pdi-remote-client</feature>
                 <feature>file-open-save-plugin</feature>
                 <feature>pentaho-webpackage</feature>
               </features>
@@ -273,7 +272,6 @@
                 <feature>pdi-data-refinery</feature>
                 <feature>pdi-engine-configuration</feature>
                 <feature>pdi-spark</feature>
-                <feature>pdi-remote-client</feature>
                 <feature>pentaho-webpackage</feature>
               </features>
               <repository>target/pentaho-server-features-repo</repository>
