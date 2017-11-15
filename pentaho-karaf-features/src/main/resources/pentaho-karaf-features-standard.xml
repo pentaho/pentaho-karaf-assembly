@@ -181,8 +181,6 @@
     <feature>http-whiteboard</feature>
     <feature>cxf</feature>
 
-    <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${org.codehaus.jackson.version}</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${org.codehaus.jackson.version}</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/${org.codehaus.jackson.version}</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-xc/${org.codehaus.jackson.version}</bundle>
 
@@ -285,8 +283,6 @@
     <bundle dependency="true">mvn:org.apache.aries/org.apache.aries.util/1.0.0</bundle>
     <bundle dependency="true">mvn:org.apache.activemq/activeio-core/3.1.4</bundle>
     <bundle dependency="true">mvn:org.codehaus.jettison/jettison/1.3.5</bundle>
-    <bundle dependency="true">mvn:org.codehaus.jackson/jackson-core-asl/1.9.12</bundle>
-    <bundle dependency="true">mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.12</bundle>
     <bundle dependency="true">mvn:org.scala-lang/scala-library/2.11.0</bundle>
   </feature>
 
