@@ -179,7 +179,7 @@
   <feature name="pentaho-metaverse-web" version="${project.version}">
     <feature>http</feature>
     <feature>http-whiteboard</feature>
-    <feature>cxf</feature>
+    <feature version="${cxf.karaf.patched.version}">cxf</feature>
 
     <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${org.codehaus.jackson.version}</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${org.codehaus.jackson.version}</bundle>
@@ -220,7 +220,7 @@
   <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds"/>
 
    <!-- Overriding CXF to ensure that Jetty isn't started -->
-    <feature name="cxf" version="3.7.5" resolver='(obr)'>
+    <feature name="cxf" version="${cxf.karaf.patched.version}" resolver='(obr)'>
         <feature version="[3,4)">spring</feature>
         <feature version="[1.2,2)">spring-dm</feature>
         <feature version="${cxf.karaf.version}">cxf-core</feature>
@@ -291,16 +291,16 @@
   </feature>
 
   <!-- Overriding cxf-ws-security and wss4j feature to update jasypt to 1.9.2_1 version  -->
-  <feature name="cxf-ws-security" version="3.0.7-pentaho" resolver="(obr)">
-    <feature version="3.0.7">cxf-ws-policy</feature>
+  <feature name="cxf-ws-security" version="${cxf.karaf.patched.version}" resolver="(obr)">
+    <feature version="${cxf.karaf.version}">cxf-ws-policy</feature>
     <feature version="2.0.6-pentaho">wss4j</feature>
-    <feature version="3.0.7">cxf-ws-addr</feature>
+    <feature version="${cxf.karaf.version}">cxf-ws-addr</feature>
     <bundle start-level="40" dependency="true">mvn:net.sf.ehcache/ehcache/2.8.5</bundle>
-    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-ws-security/3.0.7</bundle>
-    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-security/3.0.7</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-ws-security/${cxf.karaf.version}</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-security/${cxf.karaf.version}</bundle>
   </feature>
   <feature name="wss4j" version="2.0.6-pentaho" resolver="(obr)">
-    <feature version="3.0.7">cxf-specs</feature>
+    <feature version="${cxf.karaf.version}">cxf-specs</feature>
     <bundle start-level="25" dependency="true">mvn:joda-time/joda-time/2.2</bundle>
     <bundle start-level="25" dependency="true">mvn:commons-codec/commons-codec/1.10</bundle>
     <bundle start-level="25" dependency="true">mvn:org.apache.santuario/xmlsec/2.0.5</bundle>
