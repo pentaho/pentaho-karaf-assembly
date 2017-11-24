@@ -30,7 +30,6 @@
     <camel.karaf.version>2.14.3</camel.karaf.version>
     <org.apache.felix.http.version>2.3.2</org.apache.felix.http.version>
     <google.guava.version>17.0</google.guava.version>
-    <cxf.karaf.version>3.0.7</cxf.karaf.version>
     <eigenbase.properties.version>1.1.4</eigenbase.properties.version>
     <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
     <json.simple.version>1.1.1</json.simple.version>
@@ -186,7 +185,7 @@
                 <feature>ssh</feature>
                 <feature>kar</feature>
                 <feature>http</feature>
-                <feature>cxf</feature>
+                <feature>cxf/${cxf.karaf.patched.version}</feature>
                 <feature>war</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
@@ -228,7 +227,7 @@
                 <feature>ssh</feature>
                 <feature>kar</feature>
                 <feature>http</feature>
-                <feature>cxf</feature>
+                <feature>cxf/${cxf.karaf.patched.version}</feature>
                 <feature>war</feature>
                 <feature>pentaho-client-minimal</feature>
                 <feature>pdi-dataservice-client</feature>
@@ -268,7 +267,7 @@
                 <feature>ssh</feature>
                 <feature>management</feature>
                 <feature>kar</feature>
-                <feature>cxf</feature>
+                <feature>cxf/${cxf.karaf.patched.version}</feature>
                 <feature>camel-jms</feature>
                 <feature>camel</feature>
                 <feature>camel-blueprint</feature>
@@ -311,7 +310,7 @@
                 <feature>ssh</feature>
                 <feature>kar</feature>
                 <feature>http</feature>
-                <feature>cxf</feature>
+                <feature>cxf/${cxf.karaf.patched.version}</feature>
                 <feature>war</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
@@ -342,7 +341,7 @@
                 <feature>ssh</feature>
                 <feature>kar</feature>
                 <feature>http</feature>
-                <feature>cxf</feature>
+                <feature>cxf/${cxf.karaf.patched.version}</feature>
                 <feature>war</feature>
                 <feature>pentaho-client-minimal</feature>
                 <feature>pdi-dataservice-client</feature>
