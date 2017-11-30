@@ -44,8 +44,8 @@
     <feature>camel-stream</feature>
     <feature version="2.17.7-pentaho">camel-guava-eventbus</feature>
     <bundle>mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-camel-core/${camel-components.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-camel-snmp/${camel-components.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-camel-core/${pentaho-camel.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-camel-snmp/${pentaho-camel.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 

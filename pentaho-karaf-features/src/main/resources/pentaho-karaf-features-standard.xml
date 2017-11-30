@@ -38,7 +38,7 @@
     <feature>pentaho-cache-system</feature>
     <feature>pentaho-i18n</feature>
 
-    <bundle>wrap:mvn:org.pentaho/json/${json.version}</bundle>
+    <bundle>wrap:mvn:org.pentaho/json/${pentaho-json.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/${osgi.over.slf4j.version}</bundle>
     <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
@@ -93,7 +93,7 @@
     <feature>pentaho-base</feature>
     <bundle>mvn:pentaho/pentaho-mongo-utils/${pentaho-mongo-utils.version}</bundle>
     <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/${pentaho-mongodb-plugin.version}</bundle>
-    <bundle>wrap:mvn:org.pentaho.di.plugins/meta-inject-plugin/${kettle.version}</bundle>
+    <bundle>wrap:mvn:org.pentaho.di.plugins/meta-inject-plugin/${pdi.version}</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/${mongo.java.driver.version}</bundle>
     <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${pdi-osgi-bridge.version}</bundle>
    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
