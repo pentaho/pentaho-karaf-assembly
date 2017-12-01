@@ -51,22 +51,22 @@
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
     <cxf.karaf.version>3.0.7</cxf.karaf.version>
     <cxf.karaf.patched.version>3.0.7-pentaho</cxf.karaf.patched.version>
-    <camel-components.version>8.1-SNAPSHOT</camel-components.version>
+    <pentaho-camel.version>8.1-SNAPSHOT</pentaho-camel.version>
     <pdi-monitoring-plugin.version>8.1-SNAPSHOT</pdi-monitoring-plugin.version>
     <com.fasterxml.jackson.core.version>2.3.3</com.fasterxml.jackson.core.version>
     <pentaho-metaverse.version>8.1-SNAPSHOT</pentaho-metaverse.version>
     <commons.lang.version>2.6</commons.lang.version>
     <pentaho-osgi-bundles.version>8.1-SNAPSHOT</pentaho-osgi-bundles.version>
-    <pentaho-osgi-bundles.osgi.version>8.0.0.SNAPSHOT</pentaho-osgi-bundles.osgi.version>
-    <kettle.version>8.1-SNAPSHOT</kettle.version>
-    <kettle.osgi.version>8.0.0.SNAPSHOT</kettle.osgi.version>
+    <pentaho-osgi-bundles.version>8.0.0.SNAPSHOT</pentaho-osgi-bundles.version>
+    <pdi.version>8.1-SNAPSHOT</pdi.version>
+    <pdi.version>8.0.0.SNAPSHOT</pdi.version>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
     <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
     <springframework-version>3.2.0</springframework-version>
     <karaf.features.version>3.0.3</karaf.features.version>
     <pentaho-modeler.version>8.1-SNAPSHOT</pentaho-modeler.version>
     <commons.logging.version>1.1.3</commons.logging.version>
-    <json.version>8.1-SNAPSHOT</json.version>
+    <pentaho-json.version>8.1-SNAPSHOT</pentaho-json.version>
     <pdi-osgi-bridge.version>8.1-SNAPSHOT</pdi-osgi-bridge.version>
     <pentaho-connections.version>8.1-SNAPSHOT</pentaho-connections.version>
     <analyzer-plugin.version>8.1-SNAPSHOT</analyzer-plugin.version>

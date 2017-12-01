@@ -163,8 +163,8 @@
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pdi-marketplace/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/repositories-plugin/${kettle.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/${kettle.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.di.plugins/repositories-plugin/${pdi.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/${pdi.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.adaptive/adaptive-execution-features/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/file-open-save-plugin/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
