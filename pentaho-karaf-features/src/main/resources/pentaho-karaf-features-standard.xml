@@ -179,7 +179,7 @@
   <feature name="pentaho-metaverse-web" version="${project.version}">
     <feature>http</feature>
     <feature>http-whiteboard</feature>
-    <feature version="${cxf.karaf.patched.version}">cxf</feature>
+    <feature>cxf</feature>
 
     <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${org.codehaus.jackson.version}</bundle>
     <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${org.codehaus.jackson.version}</bundle>
@@ -220,7 +220,7 @@
   <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds"/>
 
    <!-- Overriding CXF to ensure that Jetty isn't started -->
-    <feature name="cxf" version="${cxf.karaf.patched.version}" resolver='(obr)'>
+    <feature name="cxf" version="3.7.5" resolver='(obr)'>
         <feature version="[3,4)">spring</feature>
         <feature version="[1.2,2)">spring-dm</feature>
         <feature version="${cxf.karaf.version}">cxf-core</feature>
