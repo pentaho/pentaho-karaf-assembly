@@ -7,13 +7,12 @@
     <artifactId>pentaho-karaf</artifactId>
     <version>8.1.0.0-SNAPSHOT</version>
   </parent>
+  
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf-features</artifactId>
   <version>8.1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <properties>
-    <mongolap.unobfuscated.designator>-plain</mongolap.unobfuscated.designator>
-  </properties>
+
   <build>
     <plugins>
       <plugin>
