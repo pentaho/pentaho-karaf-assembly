@@ -45,7 +45,16 @@
     <commons.io.version>2.4</commons.io.version>
     <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
   </properties>
+
   <dependencies>
+    <dependency>
+      <groupId>org.pentaho.karaf</groupId>
+      <artifactId>pentaho-karaf-overrides</artifactId>
+      <version>${project.version}</version>
+      <type>xml</type>
+      <classifier>features</classifier>
+    </dependency>
+
     <dependency>
       <groupId>org.apache.karaf</groupId>
       <artifactId>apache-karaf</artifactId>
@@ -156,6 +165,7 @@
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
@@ -169,6 +179,7 @@
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
+                <feature>pentaho-karaf-overrides</feature>
                 <feature>config</feature>
                 <feature>ssh</feature>
                 <feature>kar</feature>
@@ -203,6 +214,7 @@
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
@@ -211,6 +223,7 @@
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
+                <feature>pentaho-karaf-overrides</feature>
                 <feature>config</feature>
                 <feature>ssh</feature>
                 <feature>kar</feature>
@@ -242,6 +255,7 @@
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/server</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
@@ -253,6 +267,7 @@
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
+                <feature>pentaho-karaf-overrides</feature>
                 <feature>config</feature>
                 <feature>ssh</feature>
                 <feature>management</feature>
@@ -287,6 +302,7 @@
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
@@ -295,6 +311,7 @@
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
+                <feature>pentaho-karaf-overrides</feature>
                 <feature>config</feature>
                 <feature>ssh</feature>
                 <feature>kar</feature>
@@ -320,6 +337,7 @@
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
@@ -328,6 +346,7 @@
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
+                <feature>pentaho-karaf-overrides</feature>
                 <feature>config</feature>
                 <feature>ssh</feature>
                 <feature>kar</feature>

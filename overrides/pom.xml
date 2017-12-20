@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>pentaho</groupId>
+    <artifactId>pentaho-karaf</artifactId>
+    <version>8.1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>org.pentaho.karaf</groupId>
+  <!-- We need the artifactId to have the full name (including prefix pentaho-karaf-) because there is no way to override the
+       generated feature's name which is equal to the artifactId using version 3.0.8 of the karaf-maven-plugin. -->
+  <artifactId>pentaho-karaf-overrides</artifactId>
+
+  <packaging>feature</packaging>
+
+  <description>This is a feature that defines overriding bundles in the karaf assembly.</description>
+
+  <properties>
+    <karaf-maven-plugin.version>3.0.8</karaf-maven-plugin.version>
+  </properties>
+
+  <dependencies>
+    <!-- Add the overriding bundles here to be provisioned with the karaf assembly -->
+  </dependencies>
+
+</project>

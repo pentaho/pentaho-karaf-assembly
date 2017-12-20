@@ -113,6 +113,14 @@
     <fileSet>
       <directory>target/pentaho-server-features-repo</directory>
       <outputDirectory>/system</outputDirectory>
+      <excludes>
+        <!-- Excluding the pentaho-karaf-overrides feature as it is only used during build time
+             to copy the overriding bundles to the karaf/system folder. -->
+        <exclude>org/pentaho/karaf/pentaho-karaf-overrides/**</exclude>
+
+        <!-- Add the bundles that are overridden in etc/override.properties here so that they are excluded
+             from the final karaf assembly -->
+      </excludes>
     </fileSet>
 
   </fileSets>
