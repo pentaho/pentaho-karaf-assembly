@@ -24,6 +24,11 @@
 
   <dependencies>
     <!-- Add the overriding bundles here to be provisioned with the karaf assembly -->
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-webmvc</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
   </dependencies>
 
 </project>
