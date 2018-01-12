@@ -120,7 +120,6 @@
 
         <!-- Add the bundles that are overridden in etc/override.properties here so that they are excluded
              from the final karaf assembly -->
-        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-webmvc/3.2.11.RELEASE_1/**</exclude>
       </excludes>
     </fileSet>
 
