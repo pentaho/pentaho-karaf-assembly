@@ -29,6 +29,93 @@
       <artifactId>org.apache.servicemix.bundles.spring-webmvc</artifactId>
       <version>3.2.18.RELEASE_1</version>
     </dependency>
+    <!-- dependencies required to override for spring-webmvc -->
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-beans</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-core</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-context</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-context-support</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-expression</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-aop</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-aspects</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-instrument</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-jdbc</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-jms</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-struts</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-test</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-orm</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-tx</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-oxm</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-web</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.spring-webmvc-portlet</artifactId>
+      <version>3.2.18.RELEASE_1</version>
+    </dependency>
+
   </dependencies>
 
 </project>
