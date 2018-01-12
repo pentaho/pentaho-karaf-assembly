@@ -121,6 +121,23 @@
         <!-- Add the bundles that are overridden in etc/override.properties here so that they are excluded
              from the final karaf assembly -->
         <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-webmvc/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-beans/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-core/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-context/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-context-support/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-expression/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-aop/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-aspects/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-instrument/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-jdbc/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-jms/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-struts/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-test/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-orm/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-tx/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-oxm/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-web/3.2.18.RELEASE_1/**</exclude>
+        <exclude>org/apache/servicemix/bundles/org.apache.servicemix.bundles.spring-webmvc-portlet/3.2.18.RELEASE_1/**</exclude>
       </excludes>
     </fileSet>
 
