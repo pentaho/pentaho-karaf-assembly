@@ -68,6 +68,11 @@
       <fileMode>0644</fileMode>
     </fileSet>
     <fileSet>
+      <directory>src/main/distribution-server</directory>
+      <outputDirectory>/</outputDirectory>
+      <fileMode>0644</fileMode>
+    </fileSet>
+    <fileSet>
       <directory>target/classes/etc</directory>
       <outputDirectory>/etc/</outputDirectory>
       <lineEnding>unix</lineEnding>
