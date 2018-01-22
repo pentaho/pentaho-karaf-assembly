@@ -173,6 +173,7 @@
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pdi-marketplace/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/repositories-plugin/${pdi.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.di.plugins/pentaho-repository-vfs-feature/${pdi.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/${pdi.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.adaptive/adaptive-execution-features/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/file-open-save-plugin/${project.version}/xml/features</descriptor>
@@ -199,6 +200,7 @@
                 <feature>pdi-spark</feature>
                 <feature>file-open-save-plugin</feature>
                 <feature>pentaho-webpackage</feature>
+                <feature>pentaho-repository-vfs-feature</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
