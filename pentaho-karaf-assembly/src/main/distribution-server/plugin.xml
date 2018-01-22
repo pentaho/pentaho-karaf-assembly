@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="Plugin to enable the global configuration for VizAPI 3.0">
+  <!--
+    BACKLOG-20839: the karaf folder is tagged as a platform plugin in order to
+    provide direct access to the VizAPI 3.0 global configuration file;
+      - this was previously done another plugin (BACKLOG-14852), but PPP-3949
+        removed path traversal support;
+      - the direct access itself is needed because of KARAF-4723 together with
+        the a karaf-tomcat bridge bug that forces a server restart when a bundle
+        is updated;
+      - this probably can be removed when upgrading to karaf >=4.1.
+   -->
+
+  <static-paths>
+    <!-- enables the global configuration for VizAPI 3.0 -->
+    <!-- this translates to /pentaho/content/config/deploy/* -->
+    <static-path url="/config/deploy" localFolder="config/web-client" />
+  </static-paths>
+
+  <external-resources>
+    <!-- enables the global configuration for VizAPI 3.0 -->
+    <file context="requirejs">content/config/deploy/client-config-enabler-require-js-cfg.js</file>
+  </external-resources>
+</plugin>
