@@ -58,9 +58,9 @@
     <camel.karaf.version>2.14.3</camel.karaf.version>
     <olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
     <google.guava.version>17.0</google.guava.version>
-    <cxf.karaf.version>3.0.7</cxf.karaf.version>
+    <cxf.karaf.version>3.0.13</cxf.karaf.version>
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
-    <cxf.karaf.patched.version>3.0.7-pentaho</cxf.karaf.patched.version>
+    <cxf.karaf.patched.version>3.0.13-pentaho</cxf.karaf.patched.version>
     <com.fasterxml.jackson.core.version>2.3.3</com.fasterxml.jackson.core.version>
     <commons.lang.version>2.6</commons.lang.version>
     <springframework-version>3.2.0</springframework-version>
