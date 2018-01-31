@@ -180,11 +180,7 @@
     <feature>http</feature>
     <feature>http-whiteboard</feature>
     <feature>cxf</feature>
-
-    <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${org.codehaus.jackson.version}</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${org.codehaus.jackson.version}</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/${org.codehaus.jackson.version}</bundle>
-    <bundle>mvn:org.codehaus.jackson/jackson-xc/${org.codehaus.jackson.version}</bundle>
+    <feature>pentaho-jackson</feature>
 
     <bundle>mvn:pentaho/pentaho-metaverse-web/${pentaho-metaverse.version}</bundle>
   </feature>  
@@ -342,5 +338,13 @@
     <bundle dependency='true'>mvn:commons-pool/commons-pool/1.6</bundle>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1</bundle>
     <bundle>mvn:org.apache.camel/camel-jms/${camel.karaf.version}</bundle>
+  </feature>
+
+  <!-- Separate feature for jackson-* bundles in scope of BACKLOG-20783 -->
+  <feature name="pentaho-jackson" description="Jackson 1.9.x support" version="1.0">
+    <bundle>mvn:org.codehaus.jackson/jackson-core-asl/${org.codehaus.jackson.version}</bundle>
+    <bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/${org.codehaus.jackson.version}</bundle>
+    <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/${org.codehaus.jackson.version}</bundle>
+    <bundle>mvn:org.codehaus.jackson/jackson-xc/${org.codehaus.jackson.version}</bundle>
   </feature>
 </features>
