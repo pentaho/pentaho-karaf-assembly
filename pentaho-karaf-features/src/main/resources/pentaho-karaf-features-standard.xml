@@ -17,6 +17,7 @@
 
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
   <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</repository>
+  <repository>mvn:pentaho/pentaho-dataservice/${project.version}/xml/features</repository>
 
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
@@ -205,7 +206,7 @@
     <configfile finalname="/etc/pentaho.geo.roles.cfg">
       mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-geo-roles
     </configfile>
-    <feature>pdi-dataservice</feature>
+    <feature>pentaho-dataservice</feature>
 
     <bundle>wrap:mvn:pentaho/pentaho-modeler/${pentaho-modeler.version}</bundle>
 

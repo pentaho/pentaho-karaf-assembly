@@ -33,7 +33,6 @@
     <karaf-maven-plugin.aggregateFeatures>false</karaf-maven-plugin.aggregateFeatures>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7
     </plugin.org.apache.maven.plugins.maven-resources-plugin.version>
-    <pdi-dataservice-plugin.version>8.1.0.0-SNAPSHOT</pdi-dataservice-plugin.version>
     <commons.beanutils.version>1.9.3</commons.beanutils.version>
     <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5
     </plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
