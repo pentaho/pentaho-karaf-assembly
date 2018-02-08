@@ -104,20 +104,6 @@
     <bundle>mvn:pentaho/pentaho-pdi-platform/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
-  <feature name="pdi-dataservice-client" version="${project.version}">
-    <feature>pentaho-base</feature>
-    <bundle>mvn:pentaho/pdi-dataservice-client-plugin/${pdi-dataservice-plugin.version}</bundle>
-   <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
-  <feature name="pdi-dataservice" version="${project.version}">
-    <feature>pdi-dataservice-client</feature>
-    <bundle>wrap:mvn:pentaho/pentaho-modeler/${pentaho-modeler.version}</bundle>
-    <bundle>mvn:pentaho/pdi-dataservice-server-plugin/${pdi-dataservice-plugin.version}</bundle>
-    <bundle>mvn:org.mongodb/mongo-java-driver/${mongo.java.driver.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
   <feature name="pentaho-cache-system" version="1.0">
     <feature>transaction</feature>
     <bundle>mvn:pentaho/pentaho-cache-manager-api/${pentaho-osgi-bundles.version}</bundle>
