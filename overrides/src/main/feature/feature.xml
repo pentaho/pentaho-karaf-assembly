@@ -18,5 +18,6 @@
 <features name="${project.artifactId}-repo" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
   <feature name="${project.artifactId}" version="${project.version}">
     <details>${project.description}</details>
+    <bundle>mvn:org.apache.activemq/activemq-osgi/5.10.1</bundle>
   </feature>
 </features>
