@@ -126,6 +126,7 @@
 
         <!-- Add the bundles that are overridden in etc/override.properties here so that they are excluded
              from the final karaf assembly -->
+        <exclude>org/apache/activemq/activemq-osgi/5.10.0/**</exclude>
       </excludes>
     </fileSet>
 
