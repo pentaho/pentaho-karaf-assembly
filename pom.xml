@@ -21,7 +21,7 @@
   </modules>
 
   <properties>
-    <mongo.java.driver.version>3.2.2</mongo.java.driver.version>
+    <mongo.java.driver.version>3.6.3</mongo.java.driver.version>
     <org.ehcache.version>1.0.0</org.ehcache.version>
     <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
     <pdi-data-refinery-plugin.version>8.1.0.0-SNAPSHOT</pdi-data-refinery-plugin.version>
