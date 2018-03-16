@@ -34,8 +34,6 @@
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7
     </plugin.org.apache.maven.plugins.maven-resources-plugin.version>
     <commons.beanutils.version>1.9.3</commons.beanutils.version>
-    <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5
-    </plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
     <package.features>true</package.features>
     <commons.collections.version>3.2.2</commons.collections.version>
     <commons-compress.version>1.14</commons-compress.version>
