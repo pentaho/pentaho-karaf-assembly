@@ -16,6 +16,8 @@
   -->
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+  <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</repository>
+
   <feature name="pentaho-client-ee" version="1.0">
     <feature>pentaho-client</feature>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>

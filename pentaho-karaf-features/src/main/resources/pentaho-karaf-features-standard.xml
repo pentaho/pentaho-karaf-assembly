@@ -17,6 +17,7 @@
 
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
   <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</repository>
+
   <repository>mvn:pentaho/pentaho-dataservice/${project.version}/xml/features</repository>
   <repository>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/${project.version}/xml/features</repository>
 
@@ -59,15 +60,7 @@
     <bundle>mvn:pentaho/pentaho-zookeeper-fragment/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
-  <feature name="pentaho-requirejs-osgi-manager" version="${project.version}">
-    <feature>http</feature>
-    <bundle>mvn:pentaho/pentaho-requirejs-utils/${pentaho-osgi-bundles.version}</bundle>
-    <bundle>wrap:mvn:com.github.zafarkhaja/java-semver/${com.github.zafarkhaja.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}</bundle>
-  </feature>
-
   <feature name="pentaho-webjars-deployer" version="${project.version}">
-    <bundle>mvn:pentaho/pentaho-requirejs-utils/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/pentaho-webjars-deployer/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
