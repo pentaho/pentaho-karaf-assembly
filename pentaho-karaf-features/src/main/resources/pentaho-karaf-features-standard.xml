@@ -12,7 +12,7 @@
  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  ~ See the GNU Lesser General Public License for more details.
  ~
- ~ Copyright 2017 Pentaho Corporation. All rights reserved.
+ ~ Copyright 2017-2018 Hitachi Vantara. All rights reserved.
  -->
 
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
@@ -134,7 +134,7 @@
 
   <feature name="pentaho-camel-jms" version="1.0">
     <feature>camel-jms</feature>
-    <feature>activemq-camel</feature>
+    <feature version="5.10.0-pentaho">activemq-camel</feature>
     <feature>pentaho-jms</feature>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/camel-jms</bundle>
    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
@@ -213,7 +213,7 @@
   </feature>
 
   <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds"/>
-  
+
    <!-- Overriding CXF to ensure that Jetty isn't started -->
     <feature name="cxf" version="3.7.5" resolver='(obr)'>
         <feature version="[3,4)">spring</feature>
@@ -263,7 +263,7 @@
     <!-- Overriding activemq to exclude xtreaam 1.4.7 version  -->
   <feature name="activemq" description="ActiveMQ broker libraries" version="5.12.0" resolver="(obr)" start-level="50">
         <feature>http</feature>
-        <feature version="5.10.0">activemq-client</feature>
+        <feature version="5.10.0-pentaho">activemq-client</feature>
         <bundle>mvn:org.apache.activemq/activemq-karaf/5.10.0</bundle>
         <bundle dependency="true">mvn:org.apache.xbean/xbean-spring/3.16</bundle>
         <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
@@ -283,6 +283,29 @@
         <bundle dependency="true">mvn:org.codehaus.jackson/jackson-core-asl/1.9.12</bundle>
         <bundle dependency="true">mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.12</bundle>
         <bundle dependency="true">mvn:org.scala-lang/scala-library/2.11.0</bundle>
+  </feature>
+
+  <!-- Overriding activemq-client to set activemq-osgi of 5.10.1 version version  -->
+  <feature name="activemq-client" description="ActiveMQ client libraries" version="5.10.0-pentaho" resolver="(obr)" start-level="50">
+    <feature version="[3.1,4)">spring</feature>
+    <bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-annotation_1.0_spec/1.1.1</bundle>
+    <bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
+    <bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1</bundle>
+    <bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-j2ee-management_1.1_spec/1.0.1</bundle>
+    <bundle dependency="true">mvn:org.jvnet.jaxb2_commons/jaxb2-basics-runtime/0.6.4</bundle>
+    <bundle dependency='true'>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jaxb-impl/2.2.1.1_2</bundle>
+    <bundle dependency="false">mvn:commons-pool/commons-pool/1.6</bundle>
+    <bundle dependency="false">mvn:commons-net/commons-net/3.3</bundle>
+    <bundle dependency='true'>mvn:org.apache.zookeeper/zookeeper/3.4.5</bundle>
+    <!-- uber osgi bundle means client is not that lean, todo: introduce client osgi bundle -->
+    <bundle dependency="false">mvn:org.apache.xbean/xbean-spring/3.16</bundle>
+    <bundle>mvn:org.apache.activemq/activemq-osgi/5.10.1</bundle>
+  </feature>
+  <feature name="activemq-camel" version="5.10.0-pentaho" resolver="(obr)" start-level="50">
+    <feature version="5.10.0-pentaho">activemq-client</feature>
+    <bundle>mvn:org.apache.activemq/activemq-camel/5.10.0</bundle>
+    <feature version="[2.12,3)">camel-jms</feature>
+    <feature version="[2.12,3)">camel</feature>
   </feature>
 
   <!-- Overriding cxf-ws-security and wss4j feature to update jasypt to 1.9.2_1 version  -->
