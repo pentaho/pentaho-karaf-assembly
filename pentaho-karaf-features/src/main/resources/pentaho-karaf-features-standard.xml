@@ -18,6 +18,7 @@
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
   <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</repository>
   <repository>mvn:pentaho/pentaho-dataservice/${project.version}/xml/features</repository>
+  <repository>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/${project.version}/xml/features</repository>
 
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
@@ -74,6 +75,7 @@
     <feature>pentaho-client-minimal</feature>
     <feature>pentaho-webpackage</feature>
     <feature>pentaho-big-data-plugin-osgi</feature>
+    <feature>pentaho-streaming-feature</feature>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
@@ -324,7 +326,7 @@
     <feature version='3.2.11.RELEASE_1'>spring-jms</feature>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
     <bundle dependency='true'>mvn:commons-pool/commons-pool/1.6</bundle>
-    <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1</bundle>
+    <bundle dependency='true'>wrap:mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1$overwrite=merge&amp;Import-Package=javax.jms;version="[1.1,1.1]",javax.transaction.xa&amp;Bundle-Version=1.1.2</bundle>
     <bundle>mvn:org.apache.camel/camel-jms/${camel.karaf.version}</bundle>
   </feature>
 
