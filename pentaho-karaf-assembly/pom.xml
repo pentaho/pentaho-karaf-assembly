@@ -176,7 +176,6 @@
                 <descriptor>mvn:org.pentaho.di.plugins/file-open-save-plugin/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-dataservice/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>pentaho-karaf-overrides</feature>
@@ -199,7 +198,6 @@
                 <feature>pdi-spark</feature>
                 <feature>file-open-save-plugin</feature>
                 <feature>pentaho-webpackage</feature>
-                <feature>pentaho-streaming-feature</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
