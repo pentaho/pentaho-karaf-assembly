@@ -339,5 +339,6 @@
     <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${com.fasterxml.jackson.core.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${com.fasterxml.jackson.core.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${com.fasterxml.jackson.core.version}</bundle>
+    <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr339-api-2.0/2.4.0</bundle>
   </feature>
 </features>
