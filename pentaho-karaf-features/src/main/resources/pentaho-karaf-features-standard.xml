@@ -327,6 +327,7 @@
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
     <bundle dependency='true'>mvn:commons-pool/commons-pool/1.6</bundle>
     <bundle dependency='true'>wrap:mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1$overwrite=merge&amp;Import-Package=javax.jms;version="[1.1,1.1]",javax.transaction.xa&amp;Bundle-Version=1.1.2</bundle>
+    <bundle dependency='true'>mvn:javax.jms/jms/${javax.jms.version}</bundle>
     <bundle>mvn:org.apache.camel/camel-jms/${camel.karaf.version}</bundle>
   </feature>
 
