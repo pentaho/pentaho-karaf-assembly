@@ -5,17 +5,18 @@
   <parent>
     <groupId>pentaho</groupId>
     <artifactId>pentaho-karaf</artifactId>
-    <version>7.1-SNAPSHOT</version>
+    <version>7.1.0.11-122</version>
   </parent>
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf-assembly</artifactId>
-  <version>7.1-SNAPSHOT</version>
+  <version>7.1.0.11-122</version>
   <packaging>pom</packaging>
   <properties>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
     <commons.lang.version>2.6</commons.lang.version>
-    <com.github.zafarkhaja.version>0.9.0</com.github.zafarkhaja.version>
+    <configuration-bundles.target>config</configuration-bundles.target>
     <commons.logging.version>1.1.3</commons.logging.version>
+    <com.github.zafarkhaja.version>0.9.0</com.github.zafarkhaja.version>
     <karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
     <commons.collections.version>3.2.2</commons.collections.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
@@ -32,22 +33,20 @@
     <google.guava.version>17.0</google.guava.version>
     <eigenbase.properties.version>1.1.4</eigenbase.properties.version>
     <plugin.org.apache.maven.plugins.maven-assembly-plugin.version>2.4</plugin.org.apache.maven.plugins.maven-assembly-plugin.version>
-    <json.simple.version>1.1.1</json.simple.version>
+    <configuration-bundles.classifier>configuration-bundle</configuration-bundles.classifier>
     <olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
-    <org.ehcache.version>1.0.0</org.ehcache.version>
+    <json.simple.version>1.1.1</json.simple.version>
     <package.features>true</package.features>
+    <org.ehcache.version>1.0.0</org.ehcache.version>
+    <configuration-bundles.unpacked>target/configuration-bundles</configuration-bundles.unpacked>
     <karaf.features.version>3.0.3</karaf.features.version>
-    <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
-    <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
     <camel.guava.eventbus.version>2.14.3</camel.guava.eventbus.version>
+    <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
+    <net.sf.ehcache.version>2.8.3</net.sf.ehcache.version>
     <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5</plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
     <eigenbase.resgen.version>1.3.6</eigenbase.resgen.version>
-    <com.fasterxml.jackson.core.version>2.3.3</com.fasterxml.jackson.core.version>
     <karaf.version>3.0.3</karaf.version>
-
-    <configuration-bundles.classifier>configuration-bundle</configuration-bundles.classifier>
-    <configuration-bundles.unpacked>target/configuration-bundles</configuration-bundles.unpacked>
-    <configuration-bundles.target>config</configuration-bundles.target>
+    <com.fasterxml.jackson.core.version>2.3.3</com.fasterxml.jackson.core.version>
   </properties>
   <dependencies>
     <dependency>
@@ -70,7 +69,6 @@
       <type>xml</type>
       <classifier>features</classifier>
     </dependency>
-
     <dependency>
       <groupId>org.pentaho</groupId>
       <artifactId>common-ui-impl-client-config</artifactId>
@@ -110,20 +108,16 @@
         </executions>
         <inherited>false</inherited>
       </plugin>
-
       <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
         <version>${maven-dependency-plugin.version}</version>
-
         <executions>
-
           <execution>
             <id>unpack</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>unpack</goal>
             </goals>
-
             <configuration>
               <artifactItems>
                 <artifactItem>
@@ -132,8 +126,6 @@
                   <type>tar.gz</type>
                   <outputDirectory>target/dependencies</outputDirectory>
                 </artifactItem>
-
-                <!-- unpack each configuration-bundle dependency -->
                 <artifactItem>
                   <groupId>org.pentaho</groupId>
                   <artifactId>common-ui-impl-client-config</artifactId>
@@ -144,12 +136,9 @@
               </artifactItems>
             </configuration>
           </execution>
-
         </executions>
-
         <inherited>false</inherited>
       </plugin>
-
       <plugin>
         <groupId>org.apache.karaf.tooling</groupId>
         <artifactId>karaf-maven-plugin</artifactId>
