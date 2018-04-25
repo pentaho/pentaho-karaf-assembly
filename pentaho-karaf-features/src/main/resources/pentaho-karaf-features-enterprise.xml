@@ -55,7 +55,7 @@
     </configfile>
     <feature>pentaho-monitoring</feature>
     <feature>pentaho-monitoring-camel-base</feature>
-    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-snmp</bundle>
+    <bundle start-level="90">wrap:blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-snmp$overwrite=merge&amp;Import-Package=com.google.common.eventbus;version="[17.0,17.0]"</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
