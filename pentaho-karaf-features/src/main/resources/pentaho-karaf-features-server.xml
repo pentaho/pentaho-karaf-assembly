@@ -16,6 +16,7 @@
  -->
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+    <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</repository>
 
     <!-- Overriding the default http feature -->
     <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">

@@ -174,6 +174,7 @@
                 <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/${pdi.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.adaptive/adaptive-execution-features/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/file-open-save-plugin/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-dataservice/${project.version}/xml/features</descriptor>
               </descriptors>
@@ -197,6 +198,7 @@
                 <feature>pdi-engine-configuration-ui</feature>
                 <feature>pdi-spark</feature>
                 <feature>file-open-save-plugin</feature>
+                <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
@@ -219,6 +221,7 @@
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-dataservice-client/${project.version}/xml/features</descriptor>
               </descriptors>
@@ -236,6 +239,7 @@
                 <feature>pentaho-big-data-plugin-testless-osgi</feature>
                 <feature>build-helper</feature>
                 <feature>pdi-data-refinery</feature>
+                <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
               </features>
               <repository>target/pentaho-pme-features-repo</repository>
@@ -264,6 +268,7 @@
                 <descriptor>mvn:org.pentaho/pentaho-marketplace/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.adaptive/adaptive-execution-features/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-dataservice-legacy/${project.version}/xml/features</descriptor>
               </descriptors>
@@ -287,6 +292,7 @@
                 <feature>pdi-data-refinery</feature>
                 <feature>pdi-engine-configuration</feature>
                 <feature>pdi-spark</feature>
+                <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
               </features>
               <repository>target/pentaho-server-features-repo</repository>
@@ -309,6 +315,7 @@
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
               </descriptors>
               <features>
@@ -322,6 +329,7 @@
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
                 <feature>build-helper</feature>
+                <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
               </features>
               <repository>target/pentaho-pmr-features-repo</repository>
@@ -344,6 +352,7 @@
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-dataservice-client/${project.version}/xml/features</descriptor>
               </descriptors>
@@ -360,6 +369,7 @@
                 <feature>pentaho-big-data-plugin-testless-osgi</feature>
                 <feature>build-helper</feature>
                 <feature>pdi-data-refinery</feature>
+                <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
               </features>
               <repository>target/pentaho-prd-features-repo</repository>
