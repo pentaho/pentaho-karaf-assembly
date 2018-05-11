@@ -211,6 +211,8 @@
                 <feature>war</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
+                <feature>pentaho-big-data-plugin-testless-osgi</feature>
+                <feature>shims-list</feature>
                 <feature>build-helper</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
