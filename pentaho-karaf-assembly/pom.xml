@@ -28,6 +28,7 @@
     <olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
     <google.guava.version>17.0</google.guava.version>
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
+    <com.fasterxml.jackson.core.version>2.9.4</com.fasterxml.jackson.core.version>
     <configuration-bundles.unpacked>target/configuration-bundles</configuration-bundles.unpacked>
     <commons.lang.version>2.6</commons.lang.version>
     <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
@@ -190,6 +191,8 @@
                 <feature>pentaho-client</feature>
                 <feature>pentaho-dataservice</feature>
                 <feature>pentaho-metaverse</feature>
+                <feature>pentaho-big-data-plugin-osgi</feature>
+                <feature>shims-list</feature>
                 <feature>pdi-marketplace</feature>
                 <feature>build-helper</feature>
                 <feature>pdi-data-refinery</feature>
@@ -288,6 +291,8 @@
                 <feature>http</feature>
                 <feature>pentaho-server</feature>
                 <feature>pentaho-metaverse</feature>
+                <feature>pentaho-big-data-plugin-osgi</feature>
+                <feature>shims-list</feature>
                 <feature>pentaho-dataservice-legacy</feature>
                 <feature>pentaho-marketplace</feature>
                 <feature>build-helper</feature>
@@ -331,6 +336,8 @@
                 <feature>war</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
+                <feature>pentaho-big-data-plugin-osgi</feature>
+                <feature>shims-list</feature>
                 <feature>build-helper</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
