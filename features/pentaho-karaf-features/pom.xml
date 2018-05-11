@@ -12,9 +12,6 @@
   <artifactId>pentaho-karaf-features</artifactId>
   <packaging>pom</packaging>
 
-  <properties>
-    <mongolap.unobfuscated.designator>-plain</mongolap.unobfuscated.designator>
-  </properties>
   <build>
     <plugins>
       <plugin>
