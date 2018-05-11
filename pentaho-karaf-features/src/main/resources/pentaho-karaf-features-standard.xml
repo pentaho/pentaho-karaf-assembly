@@ -274,7 +274,7 @@
     <feature version="${cxf.karaf.version}">cxf-ws-policy</feature>
     <feature version="2.0.6-pentaho">wss4j</feature>
     <feature version="${cxf.karaf.version}">cxf-ws-addr</feature>
-    <bundle start-level="40" dependency="true">mvn:net.sf.ehcache/ehcache/2.8.5</bundle>
+    <bundle start-level="40" dependency="true">mvn:net.sf.ehcache/ehcache/2.10.5</bundle>
     <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-ws-security/${cxf.karaf.version}</bundle>
     <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-security/${cxf.karaf.version}</bundle>
   </feature>
