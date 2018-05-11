@@ -55,14 +55,16 @@
     <pentaho-metaverse.version>8.2.0.0-SNAPSHOT</pentaho-metaverse.version>
     <commons.lang.version>2.6</commons.lang.version>
     <pentaho-osgi-bundles.version>8.2.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
-    <pentaho-osgi-bundles.version>8.2.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
     <pdi.version>8.2.0.0-SNAPSHOT</pdi.version>
-    <pdi.version>8.2.0.0-SNAPSHOT</pdi.version>
+    <ael.version>8.2.0.0-SNAPSHOT</ael.version>
+    <big-data-plugin.version>8.2.0.0-SNAPSHOT</big-data-plugin.version>
+    <pentaho-hadoop-shims-hdp26.version>8.2.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp26.version>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
     <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
     <springframework-version>3.2.0</springframework-version>
     <karaf.features.version>3.0.3</karaf.features.version>
     <pentaho-modeler.version>8.2.0.0-SNAPSHOT</pentaho-modeler.version>
+    <pentaho-marketplace-modules.version>8.2.0.0-SNAPSHOT</pentaho-marketplace-modules.version>
     <commons.logging.version>1.1.3</commons.logging.version>
     <pentaho-json.version>8.2.0.0-SNAPSHOT</pentaho-json.version>
     <pdi-osgi-bridge.version>8.2.0.0-SNAPSHOT</pdi-osgi-bridge.version>
