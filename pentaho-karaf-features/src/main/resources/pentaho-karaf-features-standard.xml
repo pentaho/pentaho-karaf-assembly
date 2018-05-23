@@ -16,6 +16,7 @@
  -->
 
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
+  <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</repository>
   <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</repository>
 
   <repository>mvn:pentaho/pentaho-dataservice/${project.version}/xml/features</repository>
