@@ -18,10 +18,12 @@
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
   <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</repository>
   <repository>mvn:com.pentaho.di.plugins/cpython-script-executor-feature/${project.version}/xml/features</repository>
+  <repository>mvn:com.pentaho.di.plugins/pentaho-ee-streaming-feature/${project.version}/xml/features</repository>
 
   <feature name="pentaho-client-ee" version="1.0">
     <feature>pentaho-client</feature>
     <feature>cpython-script-executor-feature</feature>
+    <feature>pentaho-ee-streaming-feature</feature>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
   <feature name="pentaho-analyzer" version="1.0">
