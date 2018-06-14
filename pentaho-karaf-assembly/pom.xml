@@ -28,7 +28,6 @@
     <olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
     <google.guava.version>17.0</google.guava.version>
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
-    <com.fasterxml.jackson.core.version>2.9.4</com.fasterxml.jackson.core.version>
     <configuration-bundles.unpacked>target/configuration-bundles</configuration-bundles.unpacked>
     <commons.lang.version>2.6</commons.lang.version>
     <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
