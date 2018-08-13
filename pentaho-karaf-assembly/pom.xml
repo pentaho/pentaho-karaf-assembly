@@ -173,7 +173,6 @@
                 <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/${pdi.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.adaptive/adaptive-execution-features/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/file-open-save-plugin/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/json-plugin/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-dataservice/${project.version}/xml/features</descriptor>
@@ -200,7 +199,6 @@
                 <feature>file-open-save-plugin</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
-                <feature>json-plugin</feature>
               </features>
               <repository>target/pentaho-client-features-repo</repository>
             </configuration>
@@ -269,7 +267,6 @@
                 <descriptor>mvn:org.pentaho/pentaho-marketplace/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.adaptive/adaptive-execution-features/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/json-plugin/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-dataservice-legacy/${project.version}/xml/features</descriptor>
@@ -293,7 +290,6 @@
                 <feature>build-helper</feature>
                 <feature>pdi-data-refinery</feature>
                 <feature>pdi-engine-configuration</feature>
-                <feature>json-plugin</feature>
                 <feature>pdi-spark</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
