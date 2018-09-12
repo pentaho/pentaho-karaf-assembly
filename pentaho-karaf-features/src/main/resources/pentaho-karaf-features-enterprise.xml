@@ -85,4 +85,9 @@
     <bundle dependency='true'>mvn:com.google.guava/guava/17.0</bundle>
     <bundle>mvn:pentaho/pentaho-camel-guava-eventbus/${project.version}</bundle>
   </feature>
+
+  <feature name='pentaho-foundry-commons' version="${project.version}">
+    <bundle>wrap:mvn:com.jayway.jsonpath/json-path/${json-path.version}</bundle>
+    <bundle>wrap:mvn:com.hitachivantara/pentaho-foundry-utils/${project.version}</bundle>
+  </feature>
 </features>
