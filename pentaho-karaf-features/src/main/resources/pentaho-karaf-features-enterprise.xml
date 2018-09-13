@@ -86,7 +86,7 @@
     <bundle>mvn:pentaho/pentaho-camel-guava-eventbus/${project.version}</bundle>
   </feature>
 
-  <feature name='pentaho-foundry-commons' version="${project.version}">
+  <feature name='pentaho-commons-ee' version="1.0">
     <bundle>wrap:mvn:com.jayway.jsonpath/json-path/${json-path.version}</bundle>
     <bundle>wrap:mvn:com.hitachivantara/pentaho-foundry-utils/${project.version}</bundle>
   </feature>
