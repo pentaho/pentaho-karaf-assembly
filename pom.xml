@@ -35,7 +35,6 @@
     <commons.beanutils.version>1.9.3</commons.beanutils.version>
     <package.features>true</package.features>
     <commons.collections.version>3.2.2</commons.collections.version>
-    <commons-compress.version>1.14</commons-compress.version>
     <org.apache.mina.version>2.0.7</org.apache.mina.version>
     <com.tinkerpop.version>2.6.0</com.tinkerpop.version>
     <camel.guava.eventbus.version>2.17.7</camel.guava.eventbus.version>
