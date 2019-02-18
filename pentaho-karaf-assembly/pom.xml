@@ -19,7 +19,6 @@
     <karaf.version>3.0.3</karaf.version>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>
     <package.features>true</package.features>
-    <commons.collections.version>3.2.2</commons.collections.version>
     <org.apache.mina.version>2.0.7</org.apache.mina.version>
     <com.tinkerpop.version>2.6.0</com.tinkerpop.version>
     <karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
@@ -164,7 +163,7 @@
                 <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pdi-marketplace/${project.version}/xml/features</descriptor>
@@ -216,7 +215,7 @@
                 <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
@@ -260,7 +259,7 @@
                 <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/server</descriptor>
-                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pentaho-marketplace/${project.version}/xml/features</descriptor>
@@ -310,7 +309,7 @@
                 <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
@@ -347,7 +346,7 @@
                 <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
+                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
