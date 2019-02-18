@@ -41,7 +41,6 @@
     <karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
     <eigenbase.properties.version>1.1.4</eigenbase.properties.version>
     <eigenbase.resgen.version>1.3.6</eigenbase.resgen.version>
-    <activemq.karaf.version>5.10.0</activemq.karaf.version>
     <camel.karaf.version>2.17.7</camel.karaf.version>
     <camel.overriden.karaf.version>2.17.7-pentaho</camel.overriden.karaf.version>
     <olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
@@ -75,6 +74,7 @@
     <net.java.dev.jna.version>4.4.0</net.java.dev.jna.version>
     <icu4j.version>54.1.1</icu4j.version>
     <javax.jms.version>1.1</javax.jms.version>
+    <jasypt.version>1.9.2_1</jasypt.version>
   </properties>
 
 

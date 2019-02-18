@@ -156,7 +156,7 @@
     <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
+    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-metaverse-web" version="${project.version}">
@@ -247,14 +247,14 @@
     <!-- Overriding activemq to exclude xtreaam 1.4.7 version  -->
   <feature name="activemq" description="ActiveMQ broker libraries" version="5.12.0" resolver="(obr)" start-level="50">
     <feature>http</feature>
-    <feature version="5.10.0">activemq-client</feature>
-    <bundle>mvn:org.apache.activemq/activemq-karaf/5.10.0</bundle>
+    <feature version="${activemq.version}">activemq-client</feature>
+    <bundle>mvn:org.apache.activemq/activemq-karaf/${activemq.version}</bundle>
     <bundle dependency="true">mvn:org.apache.xbean/xbean-spring/3.16</bundle>
-    <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle dependency='true'>mvn:commons-lang/commons-lang/2.6</bundle>
     <bundle dependency="true">mvn:commons-codec/commons-codec/1.4</bundle>
     <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.velocity/1.7_6</bundle>
-    <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/1.9.2_1</bundle>
+    <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/${jasypt.version}</bundle>
     <bundle dependency="true">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.stax-api-1.0/1.9.0</bundle>
     <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xpp3/1.1.4c_5</bundle>
     <bundle dependency="true">mvn:joda-time/joda-time/1.6.2</bundle>
@@ -270,7 +270,7 @@
     <bundle dependency="true">mvn:org.scala-lang/scala-library/2.11.0</bundle>
   </feature>
 
-  <!-- Overriding cxf-ws-security and wss4j feature to update jasypt to 1.9.2_1 version  -->
+  <!-- Overriding cxf-ws-security and wss4j feature to update jasypt version  -->
   <feature name="cxf-ws-security" version="${cxf.karaf.patched.version}" resolver="(obr)">
     <feature version="${cxf.karaf.version}">cxf-ws-policy</feature>
     <feature version="2.0.6-pentaho">wss4j</feature>
@@ -292,7 +292,7 @@
     <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.bcel/5.2_4</bundle>
     <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xalan/2.7.2_3</bundle>
     <bundle start-level="30" dependency="true">mvn:org.apache.neethi/neethi/3.0.3</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/1.9.2_1</bundle>
+    <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/${jasypt.version}</bundle>
     <bundle start-level="30">mvn:org.apache.wss4j/wss4j-bindings/2.0.6</bundle>
     <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-common/2.0.6</bundle>
     <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-dom/2.0.6</bundle>
