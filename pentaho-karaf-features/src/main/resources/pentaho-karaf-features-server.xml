@@ -27,13 +27,13 @@
     <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
     <feature name="http-whiteboard" version="3.7.5" description="Provide HTTP Whiteboard pattern support" resolver="(obr)">
         <feature>http</feature>
-        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
+        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${pax-web.version}</bundle>
 		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
     <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
     <feature name="pax-http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="3.1.4" resolver="(obr)">
-        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${org.ops4j.pax.web.version}</bundle>
+        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${pax-web.version}</bundle>
 		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
