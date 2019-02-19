@@ -24,7 +24,6 @@
     <mongo.java.driver.version>3.6.3</mongo.java.driver.version>
     <org.ehcache.version>1.0.0</org.ehcache.version>
     <pdi-data-refinery-plugin.version>8.3.0.0-SNAPSHOT</pdi-data-refinery-plugin.version>
-    <org.apache.felix.http.version>2.3.2</org.apache.felix.http.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5
     </plugin.org.apache.maven.plugins.maven-clean-plugin.version>
     <pentaho-mongo-utils.version>8.3.0.0-SNAPSHOT</pentaho-mongo-utils.version>
