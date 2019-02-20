@@ -14,7 +14,6 @@
   <properties>
     <configuration-bundles.target>config</configuration-bundles.target>
     <org.ehcache.version>1.0.0</org.ehcache.version>
-    <org.apache.felix.http.version>2.3.2</org.apache.felix.http.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5</plugin.org.apache.maven.plugins.maven-clean-plugin.version>
     <karaf.version>3.0.3</karaf.version>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7</plugin.org.apache.maven.plugins.maven-resources-plugin.version>

@@ -51,7 +51,7 @@
     <bundle>mvn:net.java.dev.jna/jna-platform/${net.java.dev.jna.version}</bundle>
     <conditional>
       <condition>http</condition>
-      <bundle>mvn:org.apache.felix/org.apache.felix.http.api/${org.apache.felix.http.version}</bundle>
+      <bundle>mvn:org.apache.felix/org.apache.felix.http.api/${felix.http.version}</bundle>
     </conditional>
     <bundle>mvn:org.apache.mina/mina-core/${org.apache.mina.version}</bundle>
     <bundle>mvn:pentaho/pentaho-osgi-utils-impl/${pentaho-osgi-bundles.version}</bundle>
@@ -178,7 +178,7 @@
 
 
   <feature name="build-helper" description="This is never used in production, exists only to facilitate the build">
-    <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
+    <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.version}</bundle>
     <bundle>mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/3.0.5</bundle>
     <bundle>mvn:org.apache.aries.transaction/org.apache.aries.transaction.manager/1.1.1</bundle>
 	<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>

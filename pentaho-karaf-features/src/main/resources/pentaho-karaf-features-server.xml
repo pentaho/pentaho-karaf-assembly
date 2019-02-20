@@ -20,7 +20,7 @@
 
     <!-- Overriding the default http feature -->
     <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
-        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
+        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.version}</bundle>
 		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
 
@@ -58,7 +58,7 @@
 
         <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
         <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
-        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
+        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.version}</bundle>
         <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
         <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-platform/${pentaho-osgi-bundles.version}</bundle>
     </feature>
