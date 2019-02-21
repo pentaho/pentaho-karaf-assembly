@@ -191,7 +191,7 @@
                 <feature>pentaho-dataservice</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pentaho-big-data-plugin-osgi</feature>
-                <feature>shims-list</feature>
+                <!--feature>shims-list</feature-->
                 <feature>pdi-marketplace</feature>
                 <feature>build-helper</feature>
                 <feature>pdi-data-refinery</feature>
@@ -289,7 +289,7 @@
                 <feature>pentaho-server</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pentaho-big-data-plugin-osgi</feature>
-                <feature>shims-list</feature>
+                <!--feature>shims-list</feature-->
                 <feature>pentaho-dataservice-legacy</feature>
                 <feature>pentaho-marketplace</feature>
                 <feature>build-helper</feature>
@@ -333,7 +333,7 @@
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
                 <feature>pentaho-big-data-plugin-osgi</feature>
-                <feature>shims-list</feature>
+                <!--feature>shims-list</feature-->
                 <feature>build-helper</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
