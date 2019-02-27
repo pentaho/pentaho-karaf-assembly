@@ -27,7 +27,6 @@
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5
     </plugin.org.apache.maven.plugins.maven-clean-plugin.version>
     <pentaho-mongo-utils.version>8.3.0.0-SNAPSHOT</pentaho-mongo-utils.version>
-    <karaf.version>3.0.3</karaf.version>
     <karaf-maven-plugin.aggregateFeatures>false</karaf-maven-plugin.aggregateFeatures>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7
     </plugin.org.apache.maven.plugins.maven-resources-plugin.version>
@@ -56,7 +55,6 @@
     <pdi-dataservice-client-plugin.version>8.3.0.0-SNAPSHOT</pdi-dataservice-client-plugin.version>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
     <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
-    <karaf.features.version>3.0.3</karaf.features.version>
     <pentaho-modeler.version>8.3.0.0-SNAPSHOT</pentaho-modeler.version>
     <commons.logging.version>1.1.3</commons.logging.version>
     <pentaho-json.version>8.3.0.0-SNAPSHOT</pentaho-json.version>
