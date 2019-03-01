@@ -44,7 +44,6 @@
     <olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
     <google.guava.version>17.0</google.guava.version>
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
-    <cxf.karaf.version>3.0.13</cxf.karaf.version>
     <cxf.karaf.patched.version>3.0.13-pentaho</cxf.karaf.patched.version>
     <pentaho-camel.version>8.3.0.0-SNAPSHOT</pentaho-camel.version>
     <pdi-monitoring-plugin.version>8.3.0.0-SNAPSHOT</pdi-monitoring-plugin.version>
