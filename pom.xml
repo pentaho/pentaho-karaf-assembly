@@ -27,7 +27,6 @@
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5
     </plugin.org.apache.maven.plugins.maven-clean-plugin.version>
     <pentaho-mongo-utils.version>8.3.0.0-SNAPSHOT</pentaho-mongo-utils.version>
-    <karaf-maven-plugin.aggregateFeatures>false</karaf-maven-plugin.aggregateFeatures>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7
     </plugin.org.apache.maven.plugins.maven-resources-plugin.version>
     <commons.beanutils.version>1.9.3</commons.beanutils.version>
@@ -36,7 +35,6 @@
     <org.apache.mina.version>2.0.7</org.apache.mina.version>
     <com.tinkerpop.version>2.6.0</com.tinkerpop.version>
     <camel.guava.eventbus.version>2.17.7</camel.guava.eventbus.version>
-    <karaf-maven-plugin.version>3.0.3</karaf-maven-plugin.version>
     <eigenbase.properties.version>1.1.4</eigenbase.properties.version>
     <eigenbase.resgen.version>1.3.6</eigenbase.resgen.version>
     <camel.karaf.version>2.17.7</camel.karaf.version>
@@ -72,8 +70,7 @@
     <javax.jms.version>1.1</javax.jms.version>
     <jasypt.version>1.9.2_1</jasypt.version>
   </properties>
-
-
+  
   <repositories>
     <repository>
       <id>pentaho-public</id>
@@ -89,41 +86,5 @@
       </snapshots>
     </repository>
   </repositories>
-
-  <profiles>
-    <profile>
-      <!-- This profile generates a feature file to deploy in karaf. -->
-      <id>feature-generation</id>
-      <activation>
-        <file>
-          <exists>${basedir}/src/main/feature</exists>
-        </file>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.karaf.tooling</groupId>
-            <artifactId>karaf-maven-plugin</artifactId>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
-
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.karaf.tooling</groupId>
-          <artifactId>karaf-maven-plugin</artifactId>
-          <version>${karaf-maven-plugin.version}</version>
-          <extensions>true</extensions>
-          <configuration>
-            <aggregateFeatures>${karaf-maven-plugin.aggregateFeatures}</aggregateFeatures>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
 
 </project>
