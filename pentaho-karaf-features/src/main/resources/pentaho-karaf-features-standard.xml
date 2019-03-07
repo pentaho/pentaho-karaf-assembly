@@ -97,6 +97,9 @@
   </feature>
 
   <feature name="pdi-platform" version="${project.version}">
+    <!-- spring was "magically available" because of cxf/3.0.13 feature, but now needs
+         to be explicitly declared since only cxf-jaxrs feature is being loaded -->
+    <feature version="3.2.11.RELEASE_1">spring</feature>
     <bundle>mvn:pentaho/pentaho-pdi-platform/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
@@ -162,7 +165,7 @@
   <feature name="pentaho-metaverse-web" version="${project.version}">
     <feature>http</feature>
     <feature>http-whiteboard</feature>
-    <feature>cxf</feature>
+    <feature>cxf-jaxrs</feature>
     <feature>pentaho-jackson</feature>
 
     <bundle>mvn:pentaho/pentaho-metaverse-web/${pentaho-metaverse.version}</bundle>
@@ -198,37 +201,11 @@
 
   <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds"/>
 
-   <!-- Overriding CXF to ensure that Jetty isn't started -->
-    <feature name="cxf" version="3.7.5" resolver='(obr)'>
-        <feature version="[3,4)">spring</feature>
-        <feature version="[1.2,2)">spring-dm</feature>
-        <feature version="${cxf.version}">cxf-core</feature>
-        <feature version="${cxf.version}">cxf-jaxws</feature>
-        <feature version="${cxf.version}">cxf-jaxrs</feature>
-        <feature version="${cxf.version}">cxf-databinding-jaxb</feature>
-        <feature version="${cxf.version}">cxf-databinding-aegis</feature>
-        <feature version="${cxf.version}">cxf-databinding-xmlbeans</feature>
-        <!-- <feature version="${cxf.version}">cxf-bindings-corba</feature> -->
-        <feature version="${cxf.version}">cxf-bindings-coloc</feature>
-        <feature version="${cxf.version}">cxf-bindings-object</feature>
-        <!-- <feature version="${cxf.version}">cxf-http-jetty</feature> -->
-        <feature version="${cxf.version}">cxf-transports-local</feature>
-        <!-- <feature version="${cxf.version}">cxf-transports-jms</feature> -->
-        <!-- <feature version="${cxf.version}">cxf-transports-udp</feature> -->
-        <feature version="${cxf.version}">cxf-xjc-runtime</feature>
-        <!-- Using our patched descriptor with overridden jasypt bundle -->
-        <feature version="${cxf.karaf.patched.version}">cxf-ws-security</feature>
-        <feature version="${cxf.version}">cxf-ws-rm</feature>
-        <!-- <feature version="${cxf.version}">cxf-ws-mex</feature> -->
-        <feature version="${cxf.version}">cxf-javascript</feature>
-        <!-- <feature version="${cxf.version}">cxf-frontend-javascript</feature> -->
-        <!-- <feature version="${cxf.version}">cxf-features-clustering</feature> -->
-        <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    </feature>
+
     <feature name="pentaho-i18n" version="${project.version}">
       <bundle>mvn:pentaho/pentaho-i18n-bundle/${pentaho-osgi-bundles.version}</bundle>
       <conditional>
-        <condition>cxf</condition>
+        <condition>cxf-jaxrs</condition>
         <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${pentaho-osgi-bundles.version}</bundle>
       </conditional>
     </feature>
@@ -271,7 +248,7 @@
   </feature>
 
   <!-- Overriding cxf-ws-security and wss4j feature to update jasypt version  -->
-  <feature name="cxf-ws-security" version="${cxf.karaf.patched.version}" resolver="(obr)">
+  <feature name="cxf-ws-security" version="${cxf.version}-pentaho" resolver="(obr)">
     <feature version="${cxf.version}">cxf-ws-policy</feature>
     <feature version="2.0.6-pentaho">wss4j</feature>
     <feature version="${cxf.version}">cxf-ws-addr</feature>
