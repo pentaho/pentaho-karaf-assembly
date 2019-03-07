@@ -175,7 +175,7 @@
                 <feature>ssh</feature>
                 <feature>kar</feature>
                 <feature>http</feature>
-                <feature>cxf/${cxf.karaf.patched.version}</feature>
+                <feature>cxf-jaxrs</feature>
                 <feature>war</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
@@ -222,7 +222,7 @@
                 <feature>ssh</feature>
                 <feature>kar</feature>
                 <feature>http</feature>
-                <feature>cxf/${cxf.karaf.patched.version}</feature>
+                <feature>cxf-jaxrs</feature>
                 <feature>war</feature>
                 <feature>pentaho-client-minimal</feature>
                 <feature>pentaho-fasterxml</feature>
@@ -269,7 +269,7 @@
                 <feature>ssh</feature>
                 <feature>management</feature>
                 <feature>kar</feature>
-                <feature>cxf/${cxf.karaf.patched.version}</feature>
+                <feature>cxf-jaxrs</feature>
                 <feature>camel-jms/${camel.overriden.karaf.version}</feature>
                 <feature>camel</feature>
                 <feature>camel-blueprint</feature>
@@ -315,7 +315,7 @@
                 <feature>ssh</feature>
                 <feature>kar</feature>
                 <feature>http</feature>
-                <feature>cxf/${cxf.karaf.patched.version}</feature>
+                <feature>cxf-jaxrs</feature>
                 <feature>war</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
@@ -353,7 +353,7 @@
                 <feature>ssh</feature>
                 <feature>kar</feature>
                 <feature>http</feature>
-                <feature>cxf/${cxf.karaf.patched.version}</feature>
+                <feature>cxf-jaxrs</feature>
                 <feature>war</feature>
                 <feature>pentaho-client-minimal</feature>
                 <feature>pentaho-dataservice-client</feature>
