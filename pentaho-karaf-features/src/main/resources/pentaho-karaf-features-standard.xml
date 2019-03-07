@@ -247,37 +247,6 @@
     <bundle dependency="true">mvn:org.scala-lang/scala-library/2.11.0</bundle>
   </feature>
 
-  <!-- Overriding cxf-ws-security and wss4j feature to update jasypt version  -->
-  <feature name="cxf-ws-security" version="${cxf.version}-pentaho" resolver="(obr)">
-    <feature version="${cxf.version}">cxf-ws-policy</feature>
-    <feature version="2.0.6-pentaho">wss4j</feature>
-    <feature version="${cxf.version}">cxf-ws-addr</feature>
-    <bundle start-level="40" dependency="true">mvn:net.sf.ehcache/ehcache/2.8.5</bundle>
-    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-ws-security/${cxf.version}</bundle>
-    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-security/${cxf.version}</bundle>
-  </feature>
-  <feature name="wss4j" version="2.0.6-pentaho" resolver="(obr)">
-    <feature version="${cxf.version}">cxf-specs</feature>
-    <bundle start-level="25" dependency="true">mvn:joda-time/joda-time/2.2</bundle>
-    <bundle start-level="25" dependency="true">mvn:commons-codec/commons-codec/1.10</bundle>
-    <bundle start-level="25" dependency="true">mvn:org.apache.santuario/xmlsec/2.0.5</bundle>
-    <bundle start-level="25" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.opensaml/2.6.1_1</bundle>
-    <bundle start-level="25">mvn:org.jvnet.staxex/stax-ex/1.7.6</bundle>
-    <bundle start-level="25">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.saaj-impl/1.3.23_2</bundle>
-    <bundle start-level="25">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlresolver/1.2_5</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xerces/2.11.0_1</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.bcel/5.2_4</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xalan/2.7.2_3</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.neethi/neethi/3.0.3</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/${jasypt.version}</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-bindings/2.0.6</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-common/2.0.6</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-dom/2.0.6</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-policy/2.0.6</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-stax/2.0.6</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-policy-stax/2.0.6</bundle>
-  </feature>
-
   <!-- Overriding spring-security feature to update bundles to 3.1.7.RELEASE version  -->
   <feature name="spring-security" version="3.1.7.RELEASE" description="Spring Security 3.1.x support" resolver="(obr)">
     <feature>war</feature>
