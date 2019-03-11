@@ -5,12 +5,12 @@
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-parent-pom</artifactId>
-    <version>7.1-SNAPSHOT</version>
+    <version>7.1.0.22-192</version>
   </parent>
 
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf</artifactId>
-  <version>7.1-SNAPSHOT</version>
+  <version>7.1.0.22-192</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -21,21 +21,21 @@
   </modules>
 
   <properties>
-    <camel-components.version>${project.version}</camel-components.version>
-    <json.version>${project.version}</json.version>
-    <pdi-dataservice-plugin.version>${project.version}</pdi-dataservice-plugin.version>
-    <pdi-monitoring-plugin.version>${project.version}</pdi-monitoring-plugin.version>
-    <pdi-osgi-bridge.version>${project.version}</pdi-osgi-bridge.version>
-    <pentaho-connections.version>${project.version}</pentaho-connections.version>
-    <pentaho-metaverse.version>${project.version}</pentaho-metaverse.version>
-    <pentaho-mongodb-plugin.version>${project.version}</pentaho-mongodb-plugin.version>
-    <pentaho-modeler.version>${project.version}</pentaho-modeler.version>
-    <pdi-data-refinery-plugin.version>${project.version}</pdi-data-refinery-plugin.version>
-    <analyzer-plugin.version>${project.version}</analyzer-plugin.version>
-    <pentaho-mongolap.version>${project.version}</pentaho-mongolap.version>
-    <pentaho-mongo-utils.version>${project.version}</pentaho-mongo-utils.version>
-    <pentaho-osgi-bundles.version>${project.version}</pentaho-osgi-bundles.version>
-    <dependency.mondrian4.revision>4.7-SNAPSHOT</dependency.mondrian4.revision>
+    <camel-components.version>7.1.0.22-192</camel-components.version>
+    <json.version>7.1.0.22-192</json.version>
+    <pdi-dataservice-plugin.version>7.1.0.22-192</pdi-dataservice-plugin.version>
+    <pdi-monitoring-plugin.version>7.1.0.22-192</pdi-monitoring-plugin.version>
+    <pdi-osgi-bridge.version>7.1.0.22-192</pdi-osgi-bridge.version>
+    <pentaho-connections.version>7.1.0.22-192</pentaho-connections.version>
+    <pentaho-metaverse.version>7.1.0.22-192</pentaho-metaverse.version>
+    <pentaho-mongodb-plugin.version>7.1.0.22-192</pentaho-mongodb-plugin.version>
+    <pentaho-modeler.version>7.1.0.22-192</pentaho-modeler.version>
+    <pdi-data-refinery-plugin.version>7.1.0.22-192</pdi-data-refinery-plugin.version>
+    <analyzer-plugin.version>7.1.0.22-192</analyzer-plugin.version>
+    <pentaho-mongolap.version>7.1.0.22-192</pentaho-mongolap.version>
+    <pentaho-mongo-utils.version>7.1.0.22-192</pentaho-mongo-utils.version>
+    <pentaho-osgi-bundles.version>7.1.0.22-192</pentaho-osgi-bundles.version>
+    <dependency.mondrian4.revision>4.7.0.22-192</dependency.mondrian4.revision>
 
     <mongo.java.driver.version>3.2.2</mongo.java.driver.version>
     <org.ehcache.version>1.0.0</org.ehcache.version>
