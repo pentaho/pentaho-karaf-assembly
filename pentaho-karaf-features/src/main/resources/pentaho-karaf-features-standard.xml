@@ -162,7 +162,7 @@
   <feature name="pentaho-metaverse-web" version="${project.version}">
     <feature>http</feature>
     <feature>http-whiteboard</feature>
-    <feature>cxf</feature>
+    <feature version="${cxf.karaf.version}">cxf-jaxrs</feature>
     <feature>pentaho-jackson</feature>
 
     <bundle>mvn:pentaho/pentaho-metaverse-web/${pentaho-metaverse.version}</bundle>
@@ -228,7 +228,7 @@
     <feature name="pentaho-i18n" version="${project.version}">
       <bundle>mvn:pentaho/pentaho-i18n-bundle/${pentaho-osgi-bundles.version}</bundle>
       <conditional>
-        <condition>cxf</condition>
+        <condition>cxf-jaxrs</condition>
         <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${pentaho-osgi-bundles.version}</bundle>
       </conditional>
     </feature>

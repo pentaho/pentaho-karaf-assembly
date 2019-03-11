@@ -25,6 +25,7 @@
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
   <feature name="pentaho-analyzer" version="1.0">
+    <!-- Spring-DM needed in Analyzer OSGI plugin to get Spring Application Context -->
     <feature>spring-dm</feature>
     <feature>pdi-platform</feature>
     <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
