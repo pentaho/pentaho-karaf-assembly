@@ -44,7 +44,7 @@
 
     <bundle>wrap:mvn:org.pentaho/json/${pentaho-json.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
-    <bundle>mvn:org.slf4j/osgi-over-slf4j/${osgi.over.slf4j.version}</bundle>
+    <bundle>mvn:org.slf4j/osgi-over-slf4j/${slf4j.version}</bundle>
     <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle>mvn:net.java.dev.jna/jna/${net.java.dev.jna.version}</bundle>
