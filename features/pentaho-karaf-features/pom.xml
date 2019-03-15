@@ -28,7 +28,7 @@
             </goals>
             <configuration>
               <overwrite>true</overwrite>
-              <outputDirectory>${basedir}/target/processed</outputDirectory>
+              <outputDirectory>target/processed</outputDirectory>
               <resources>
                 <resource>
                   <directory>src/main/resources</directory>

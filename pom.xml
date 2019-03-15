@@ -13,7 +13,7 @@
   <version>8.3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-    <module>pentaho-karaf-features</module>
+    <module>features</module>
     <module>pentaho-blueprint-activators</module>
     <module>pentaho-osgi-config</module>
     <module>pentaho-karaf-assembly</module>
