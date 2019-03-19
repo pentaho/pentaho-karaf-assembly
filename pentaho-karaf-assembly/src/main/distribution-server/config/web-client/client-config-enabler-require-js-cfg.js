@@ -1,5 +1,5 @@
 /*!
- * Copyright 2017 - 2018 Hitachi Vantara.  All rights reserved.
+ * Copyright 2017 - 2019 Hitachi Vantara.  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@
 
   var requireModules = requireCfg.config["pentaho/modules"] || (requireCfg.config["pentaho/modules"] = {});
 
-  requireCfg.paths["pentaho/config/deploy"] = CONTEXT_PATH + "content/config/deploy";
-  requireModules["pentaho/config/deploy/config"] = {type: "pentaho/config/spec/IRuleSet"};
+  requireCfg.paths["@pentaho/config-deploy/pentaho/config/deploy"] = CONTEXT_PATH + "content/config/deploy";
+  requireModules["@pentaho/config-deploy/pentaho/config/deploy/config"] = {type: "pentaho/config/spec/IRuleSet"};
 
 })();
