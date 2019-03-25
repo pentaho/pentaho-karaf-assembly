@@ -44,7 +44,7 @@
 
     <bundle>wrap:mvn:org.pentaho/json/${pentaho-json.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
-    <bundle>mvn:org.slf4j/osgi-over-slf4j/${osgi.over.slf4j.version}</bundle>
+    <bundle>mvn:org.slf4j/osgi-over-slf4j/${slf4j.version}</bundle>
     <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle>mvn:net.java.dev.jna/jna/${net.java.dev.jna.version}</bundle>
@@ -97,6 +97,9 @@
   </feature>
 
   <feature name="pdi-platform" version="${project.version}">
+    <!-- spring was "magically available" because of cxf/3.0.13 feature, but now needs
+         to be explicitly declared since only cxf-jaxrs feature is being loaded -->
+    <feature version="3.2.11.RELEASE_1">spring</feature>
     <bundle>mvn:pentaho/pentaho-pdi-platform/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
@@ -162,7 +165,7 @@
   <feature name="pentaho-metaverse-web" version="${project.version}">
     <feature>http</feature>
     <feature>http-whiteboard</feature>
-    <feature version="${cxf.karaf.version}">cxf-jaxrs</feature>
+    <feature>cxf-jaxrs</feature>
     <feature>pentaho-jackson</feature>
 
     <bundle>mvn:pentaho/pentaho-metaverse-web/${pentaho-metaverse.version}</bundle>
@@ -198,33 +201,7 @@
 
   <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds"/>
 
-   <!-- Overriding CXF to ensure that Jetty isn't started -->
-    <feature name="cxf" version="3.7.5" resolver='(obr)'>
-        <feature version="[3,4)">spring</feature>
-        <feature version="[1.2,2)">spring-dm</feature>
-        <feature version="${cxf.karaf.version}">cxf-core</feature>
-        <feature version="${cxf.karaf.version}">cxf-jaxws</feature>
-        <feature version="${cxf.karaf.version}">cxf-jaxrs</feature>
-        <feature version="${cxf.karaf.version}">cxf-databinding-jaxb</feature>
-        <feature version="${cxf.karaf.version}">cxf-databinding-aegis</feature>
-        <feature version="${cxf.karaf.version}">cxf-databinding-xmlbeans</feature>
-        <!-- <feature version="${cxf.karaf.version}">cxf-bindings-corba</feature> -->
-        <feature version="${cxf.karaf.version}">cxf-bindings-coloc</feature>
-        <feature version="${cxf.karaf.version}">cxf-bindings-object</feature>
-        <!-- <feature version="${cxf.karaf.version}">cxf-http-jetty</feature> -->
-        <feature version="${cxf.karaf.version}">cxf-transports-local</feature>
-        <!-- <feature version="${cxf.karaf.version}">cxf-transports-jms</feature> -->
-        <!-- <feature version="${cxf.karaf.version}">cxf-transports-udp</feature> -->
-        <feature version="${cxf.karaf.version}">cxf-xjc-runtime</feature>
-        <!-- Using our patched descriptor with overridden jasypt bundle -->
-        <feature version="${cxf.karaf.patched.version}">cxf-ws-security</feature>
-        <feature version="${cxf.karaf.version}">cxf-ws-rm</feature>
-        <!-- <feature version="${cxf.karaf.version}">cxf-ws-mex</feature> -->
-        <feature version="${cxf.karaf.version}">cxf-javascript</feature>
-        <!-- <feature version="${cxf.karaf.version}">cxf-frontend-javascript</feature> -->
-        <!-- <feature version="${cxf.karaf.version}">cxf-features-clustering</feature> -->
-        <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    </feature>
+
     <feature name="pentaho-i18n" version="${project.version}">
       <bundle>mvn:pentaho/pentaho-i18n-bundle/${pentaho-osgi-bundles.version}</bundle>
       <conditional>
@@ -268,37 +245,6 @@
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson.version}</bundle>
     <bundle dependency="true">mvn:org.scala-lang/scala-library/2.11.0</bundle>
-  </feature>
-
-  <!-- Overriding cxf-ws-security and wss4j feature to update jasypt version  -->
-  <feature name="cxf-ws-security" version="${cxf.karaf.patched.version}" resolver="(obr)">
-    <feature version="${cxf.karaf.version}">cxf-ws-policy</feature>
-    <feature version="2.0.6-pentaho">wss4j</feature>
-    <feature version="${cxf.karaf.version}">cxf-ws-addr</feature>
-    <bundle start-level="40" dependency="true">mvn:net.sf.ehcache/ehcache/2.8.5</bundle>
-    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-ws-security/${cxf.karaf.version}</bundle>
-    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-security/${cxf.karaf.version}</bundle>
-  </feature>
-  <feature name="wss4j" version="2.0.6-pentaho" resolver="(obr)">
-    <feature version="${cxf.karaf.version}">cxf-specs</feature>
-    <bundle start-level="25" dependency="true">mvn:joda-time/joda-time/2.2</bundle>
-    <bundle start-level="25" dependency="true">mvn:commons-codec/commons-codec/1.10</bundle>
-    <bundle start-level="25" dependency="true">mvn:org.apache.santuario/xmlsec/2.0.5</bundle>
-    <bundle start-level="25" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.opensaml/2.6.1_1</bundle>
-    <bundle start-level="25">mvn:org.jvnet.staxex/stax-ex/1.7.6</bundle>
-    <bundle start-level="25">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.saaj-impl/1.3.23_2</bundle>
-    <bundle start-level="25">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xmlresolver/1.2_5</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xerces/2.11.0_1</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.bcel/5.2_4</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xalan/2.7.2_3</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.neethi/neethi/3.0.3</bundle>
-    <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/${jasypt.version}</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-bindings/2.0.6</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-common/2.0.6</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-dom/2.0.6</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-policy/2.0.6</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-stax/2.0.6</bundle>
-    <bundle start-level="30">mvn:org.apache.wss4j/wss4j-ws-security-policy-stax/2.0.6</bundle>
   </feature>
 
   <!-- Overriding spring-security feature to update bundles to 3.1.7.RELEASE version  -->

@@ -18,10 +18,6 @@
 
   <description>This is a feature that defines overriding bundles in the karaf assembly.</description>
 
-  <properties>
-    <karaf-maven-plugin.version>3.0.8</karaf-maven-plugin.version>
-  </properties>
-
   <dependencies>
     <!-- Add the overriding bundles here to be provisioned with the karaf assembly -->
   </dependencies>
