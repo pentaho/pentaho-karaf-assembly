@@ -206,6 +206,7 @@
       <bundle>mvn:pentaho/pentaho-i18n-bundle/${pentaho-osgi-bundles.version}</bundle>
       <conditional>
         <condition>cxf-jaxrs</condition>
+        <feature>http-whiteboard</feature>
         <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${pentaho-osgi-bundles.version}</bundle>
       </conditional>
     </feature>
