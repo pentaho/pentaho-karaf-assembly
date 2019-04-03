@@ -18,6 +18,8 @@
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
     <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</repository>
 
+    <repository>mvn:org.hitachivantara.karaf.features/spring43/${project.version}/xml/features</repository>
+
     <!-- Overriding the default http feature -->
     <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
         <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.version}</bundle>
@@ -47,7 +49,7 @@
         <feature>pentaho-base</feature>
         <feature>pentaho-client</feature>
         <feature>http-whiteboard</feature>
-        <feature version="[4,4.3.2]">spring</feature>
+        <feature version="[${spring43.bundle.version},4.4)">spring</feature>
         <feature version="3.1.7.RELEASE">spring-security</feature>
 
         <bundle>mvn:pentaho/pentaho-server-bundle/${pentaho-osgi-bundles.version}</bundle>
@@ -62,67 +64,6 @@
         <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
         <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-platform/${pentaho-osgi-bundles.version}</bundle>
     </feature>
-    <!-- Added as a fix for [PPP-3862]-Use of vulnerable component spring-core 4.1.2 SONATYPE 2015-0003.
-    Overriden version which comes with karaf 3.0.3 -->
-    <feature name="spring" version="${karaf-springframework-override.version}" description="Spring 4.1.x support" resolver="(obr)">
-        <details>Spring Support</details>
-        <bundle start-level="30" dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aopalliance/1.0_6</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-core/${karaf-springframework-override.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-expression/${karaf-springframework-override.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-beans/${karaf-springframework-override.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-aop/${karaf-springframework-override.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-context/${karaf-springframework-override.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-context-support/${karaf-springframework-override.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.spring/3.0.3</bundle>
-    </feature>
-    <feature name="spring-aspects" version="${karaf-springframework-override.version}" description="Spring 4.1.x AOP support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-aspects/${karaf-springframework-override.version}</bundle>
-    </feature>
-    <feature name="spring-instrument" version="${karaf-springframework-override.version}" description="Spring 4.1.x Instrument support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-instrument/${karaf-springframework-override.version}</bundle>
-    </feature>
-    <feature name="spring-jdbc" version="${karaf-springframework-override.version}" description="Spring 4.1.x JDBC support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring-tx</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jdbc/${karaf-springframework-override.version}</bundle>
-    </feature>
-    <feature name="spring-jms" version="${karaf-springframework-override.version}" description="Spring 4.1.x JMS support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring-tx</feature>
-        <bundle start-level="10">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
-        <bundle start-level="10">wrap:mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1$overwrite=merge&amp;Import-Package=javax.jms;version="[1.1,1.1]",javax.transaction.xa&amp;Bundle-Version=1.1.2</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-jms/${karaf-springframework-override.version}</bundle>
-    </feature>
-    <feature name="spring-test" version="${karaf-springframework-override.version}" description="Spring 4.1.x Test support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-test/${karaf-springframework-override.version}</bundle>
-    </feature>
-    <feature name="spring-orm" version="${karaf-springframework-override.version}" description="Spring 4.1.x ORM support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring-jdbc</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-orm/${karaf-springframework-override.version}</bundle>
-    </feature>
-    <feature name="spring-oxm" version="${karaf-springframework-override.version}" description="Spring 4.1.x OXM support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-oxm/${karaf-springframework-override.version}</bundle>
-    </feature>
-    <feature name="spring-tx" version="${karaf-springframework-override.version}" description="Spring 4.1.x Transaction (TX) support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-tx/${karaf-springframework-override.version}</bundle>
-    </feature>
-    <feature name="spring-web" version="${karaf-springframework-override.version}" description="Spring 4.1.x Web support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring</feature>
-        <feature>http</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-web/${karaf-springframework-override.version}</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc/${karaf-springframework-override.version}</bundle>
-    </feature>
-    <feature name="spring-web-portlet" version="${karaf-springframework-override.version}" description="Spring 4.1.x Web Portlet support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring-web</feature>
-        <bundle start-level="30" dependency="true">mvn:javax.portlet/portlet-api/2.0</bundle>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-webmvc-portlet/${karaf-springframework-override.version}</bundle>
-    </feature>
-    <feature name="spring-websocket" version="${karaf-springframework-override.version}" description="Spring 4.1.x WebSocket support" resolver="(obr)">
-        <feature version="[${karaf-springframework-override.version},4.2)">spring-web</feature>
-        <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-websocket/${karaf-springframework-override.version}</bundle>
-    </feature>
+
 
 </features>
