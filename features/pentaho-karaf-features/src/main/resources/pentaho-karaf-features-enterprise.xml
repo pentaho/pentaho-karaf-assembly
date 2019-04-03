@@ -19,6 +19,10 @@
   <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</repository>
   <repository>mvn:com.pentaho.di.plugins/pentaho-ee-streaming-feature/${project.version}/xml/features</repository>
 
+  <!-- pentaho-analyzer feature is using spring feature -->
+  <repository>mvn:org.hitachivantara.karaf.features/spring32/${project.version}/xml/features</repository>
+
+
   <feature name="pentaho-client-ee" version="1.0">
     <feature>pentaho-client</feature>
     <feature>pentaho-ee-streaming-feature</feature>
