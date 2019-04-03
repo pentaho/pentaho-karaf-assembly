@@ -12,6 +12,7 @@
   <packaging>pom</packaging>
 
   <modules>
+    <module>spring43</module>
     <module>spring32</module>
   </modules>
 
