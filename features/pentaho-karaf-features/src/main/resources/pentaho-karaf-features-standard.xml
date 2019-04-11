@@ -252,18 +252,6 @@
     <bundle dependency="true">mvn:org.scala-lang/scala-library/2.11.0</bundle>
   </feature>
 
-  <!-- Overriding spring-security feature to update bundles to 3.1.7.RELEASE version  -->
-  <feature name="spring-security" version="3.1.7.RELEASE" description="Spring Security 3.1.x support" resolver="(obr)">
-    <feature>war</feature>
-    <feature>spring-dm-web</feature>
-    <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/1.7.4_1</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-core/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-config/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-web/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-acl/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-taglibs/3.1.7.RELEASE</bundle>
-  </feature>
-
   <!-- Overriding camel-jms feature to force using Spring 3.2.X.RELEASE_1  -->
   <feature name='camel-jms' version='${camel.overriden.karaf.version}' resolver='(obr)' start-level='50'>
     <feature version='${camel.karaf.version}'>camel-core</feature>
