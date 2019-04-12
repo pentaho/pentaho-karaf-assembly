@@ -22,6 +22,9 @@
   <repository>mvn:pentaho/pentaho-dataservice/${project.version}/xml/features</repository>
   <repository>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/${project.version}/xml/features</repository>
 
+  <!-- pdi-platform feature is using spring feature -->
+  <repository>mvn:org.hitachivantara.karaf.features/spring32/${project.version}/xml/features</repository>
+
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
   <feature name="pentaho-deployers" version="1.0">
@@ -99,7 +102,7 @@
   <feature name="pdi-platform" version="${project.version}">
     <!-- spring was "magically available" because of cxf/3.0.13 feature, but now needs
          to be explicitly declared since only cxf-jaxrs feature is being loaded -->
-    <feature version="3.2.11.RELEASE_1">spring</feature>
+    <feature version="[${spring32.bundle.version},3.3)">spring</feature>
     <bundle>mvn:pentaho/pentaho-pdi-platform/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
@@ -196,6 +199,7 @@
     <bundle>wrap:mvn:pentaho/pentaho-modeler/${pentaho-modeler.version}</bundle>
 
     <bundle>wrap:mvn:jfree/jcommon/${jfree.jcommon.version}</bundle>
+    <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}</bundle>
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${pdi-data-refinery-plugin.version}</bundle>
   </feature>
 
@@ -248,23 +252,11 @@
     <bundle dependency="true">mvn:org.scala-lang/scala-library/2.11.0</bundle>
   </feature>
 
-  <!-- Overriding spring-security feature to update bundles to 3.1.7.RELEASE version  -->
-  <feature name="spring-security" version="3.1.7.RELEASE" description="Spring Security 3.1.x support" resolver="(obr)">
-    <feature>war</feature>
-    <feature>spring-dm-web</feature>
-    <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aspectj/1.7.4_1</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-core/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-config/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-web/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-acl/3.1.7.RELEASE</bundle>
-    <bundle start-level="30">mvn:org.springframework.security/spring-security-taglibs/3.1.7.RELEASE</bundle>
-  </feature>
-
-  <!-- Overriding camel-jms feature to force using Spring 3.2.11.RELEASE_1  -->
+  <!-- Overriding camel-jms feature to force using Spring 3.2.X.RELEASE_1  -->
   <feature name='camel-jms' version='${camel.overriden.karaf.version}' resolver='(obr)' start-level='50'>
     <feature version='${camel.karaf.version}'>camel-core</feature>
-    <feature version='3.2.11.RELEASE_1'>spring</feature>
-    <feature version='3.2.11.RELEASE_1'>spring-jms</feature>
+    <feature version="[${spring32.bundle.version},3.3)">spring</feature>
+    <feature version="[${spring32.bundle.version},3.3)">spring-jms</feature>
     <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
     <bundle dependency='true'>mvn:commons-pool/commons-pool/1.6</bundle>
     <bundle dependency='true'>wrap:mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1$overwrite=merge&amp;Import-Package=javax.jms;version="[1.1,1.1]",javax.transaction.xa&amp;Bundle-Version=1.1.2</bundle>
