@@ -209,7 +209,7 @@
 
           <extraProtocols>
             <param>pentaho-webjars</param>
-            <param>pentaho-platform-plugin-mvn</param>
+            <param>pentaho-platform-plugin</param>
           </extraProtocols>
 
           <bootFeatures>
