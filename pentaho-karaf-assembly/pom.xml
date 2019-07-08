@@ -143,61 +143,6 @@
             <id>add-features</id>
           </execution>
           <execution>
-            <id>add-features-to-client-repo</id>
-            <phase>package</phase>
-            <goals>
-              <goal>features-add-to-repository</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>mvn:org.apache.karaf.features/standard/${karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pdi-marketplace/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/repositories-plugin/${pdi.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/${pdi.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/file-open-save-plugin/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/file-open-save-new-plugin/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/connections-plugin/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/get-fields-plugin/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-dataservice/${project.version}/xml/features</descriptor>
-              </descriptors>
-              <features>
-                <feature>pentaho-karaf-overrides</feature>
-                <feature>config</feature>
-                <feature>ssh</feature>
-                <feature>kar</feature>
-                <feature>http</feature>
-                <feature>cxf-jaxrs</feature>
-                <feature>war</feature>
-                <feature>pentaho-base</feature>
-                <feature>pentaho-client</feature>
-                <feature>pentaho-dataservice</feature>
-                <feature>pentaho-metaverse</feature>
-                <feature>pdi-marketplace</feature>
-                <feature>build-helper</feature>
-                <feature>pdi-data-refinery</feature>
-                <feature>pentaho-spoon</feature>
-                <feature>repositories-plugin</feature>
-                <feature>pdi-engine-configuration-ui</feature>
-                <feature>file-open-save-plugin</feature>
-                <feature>file-open-save-new-plugin</feature>
-                <feature>connections-plugin</feature>
-                <feature>pentaho-requirejs-osgi-manager</feature>
-                <feature>pentaho-webpackage</feature>
-                <feature>get-fields-plugin</feature>
-              </features>
-              <repository>target/pentaho-client-features-repo</repository>
-            </configuration>
-          </execution>
-          <execution>
             <id>add-features-to-pme-repo</id>
             <phase>package</phase>
             <goals>
@@ -209,7 +154,7 @@
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
+                <descriptor>mvn:org.hitachivantara.karaf.features/pentaho-karaf-features-standard/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
@@ -252,8 +197,8 @@
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/server</descriptor>
+                <descriptor>mvn:org.hitachivantara.karaf.features/pentaho-karaf-features-standard/${project.version}/xml/features</descriptor>
+                <descriptor>mvn:org.hitachivantara.karaf.features/pentaho-karaf-features-server/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho/pentaho-marketplace/${project.version}/xml/features</descriptor>
@@ -301,7 +246,7 @@
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
+                <descriptor>mvn:org.hitachivantara.karaf.features/pentaho-karaf-features-standard/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
@@ -337,7 +282,7 @@
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/${project.version}/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/${project.version}/xml/standard</descriptor>
+                <descriptor>mvn:org.hitachivantara.karaf.features/pentaho-karaf-features-standard/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/${project.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
@@ -370,20 +315,6 @@
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
-          <execution>
-            <id>client</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>src/main/descriptors/pentaho-client-assembly.xml</descriptor>
-              </descriptors>
-              <finalName>${project.artifactId}</finalName>
-              <appendAssemblyId>true</appendAssemblyId>
-            </configuration>
-          </execution>
           <execution>
             <id>pme</id>
             <phase>package</phase>
