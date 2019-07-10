@@ -245,6 +245,7 @@
             <feature>pentaho-requirejs-osgi-manager</feature>
             <feature>pentaho-webpackage</feature>
             <feature>get-fields-plugin</feature>
+            <feature>pentaho-big-data-impl-connections</feature>
           </installedFeatures>
         </configuration>
       </plugin>
