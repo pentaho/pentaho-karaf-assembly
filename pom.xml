@@ -70,7 +70,6 @@
     <icu4j.version>54.1.1</icu4j.version>
     <javax.jms.version>1.1</javax.jms.version>
     <jasypt.version>1.9.2_1</jasypt.version>
-    <karaf-maven-plugin.version>4.2.6</karaf-maven-plugin.version>
   </properties>
   
   <repositories>

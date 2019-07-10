@@ -17,4 +17,8 @@
     <module>pentaho-karaf-assembly-client</module>
   </modules>
 
+  <properties>
+    <karaf-maven-plugin.version>4.2.6</karaf-maven-plugin.version>
+  </properties>
+
 </project>
