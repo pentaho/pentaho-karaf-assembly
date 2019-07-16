@@ -15,6 +15,7 @@
 
   <modules>
     <module>pentaho-karaf-assembly-client</module>
+    <module>pentaho-karaf-assembly-pme</module>
   </modules>
 
   <properties>

@@ -312,68 +312,6 @@
         </executions>
         <inherited>false</inherited>
       </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>pme</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>src/main/descriptors/pentaho-pme-assembly.xml</descriptor>
-              </descriptors>
-              <finalName>${project.artifactId}</finalName>
-              <appendAssemblyId>true</appendAssemblyId>
-            </configuration>
-          </execution>
-          <execution>
-            <id>server</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>src/main/descriptors/pentaho-server-assembly.xml</descriptor>
-              </descriptors>
-              <finalName>${project.artifactId}</finalName>
-              <appendAssemblyId>true</appendAssemblyId>
-            </configuration>
-          </execution>
-          <execution>
-            <id>pmr</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>src/main/descriptors/pentaho-pmr-assembly.xml</descriptor>
-              </descriptors>
-              <finalName>${project.artifactId}</finalName>
-              <appendAssemblyId>true</appendAssemblyId>
-            </configuration>
-          </execution>
-          <execution>
-            <id>prd</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>src/main/descriptors/pentaho-prd-assembly.xml</descriptor>
-              </descriptors>
-              <finalName>${project.artifactId}</finalName>
-              <appendAssemblyId>true</appendAssemblyId>
-            </configuration>
-          </execution>
-        </executions>
-        <inherited>false</inherited>
-      </plugin>
     </plugins>
   </build>
 </project>
