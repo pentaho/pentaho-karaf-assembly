@@ -25,6 +25,7 @@
   <formats>
     <format>zip</format>
   </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
 
   <fileSets>
     <fileSet>
@@ -35,5 +36,20 @@
       </excludes>
     </fileSet>
   </fileSets>
+
+  <dependencySets>
+    <dependencySet>
+      <includes>
+        <include>org.pentaho:common-ui-impl-client-config:jar</include>
+      </includes>
+      <unpack>true</unpack>
+      <unpackOptions>
+        <excludes>
+          <exclude>/META-INF/**</exclude>
+        </excludes>
+      </unpackOptions>
+      <outputDirectory>config/web-client</outputDirectory>
+    </dependencySet>
+  </dependencySets>
 
 </assembly>
