@@ -22,4 +22,69 @@
     <karaf-maven-plugin.version>4.2.6</karaf-maven-plugin.version>
   </properties>
 
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.hitachivantara.karaf.tooling</groupId>
+          <artifactId>karaf-maven-plugin</artifactId>
+          <version>${karaf-maven-plugin.version}</version>
+          <extensions>true</extensions>
+          <executions>
+            <execution>
+              <id>default-assembly</id>
+              <configuration>
+                <extraProtocols>
+                  <param>pentaho-webjars</param>
+                  <param>pentaho-platform-plugin</param>
+                </extraProtocols>
+                <!-- override expected osgi.ee to match compilation target -->
+                <javase>${source.jdk.version}</javase>
+              </configuration>
+            </execution>
+            <execution>
+              <id>default-archive</id>
+              <configuration>
+                <archiveTarGz>false</archiveTarGz>
+                <archiveZip>true</archiveZip>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <profiles>
+    <profile>
+      <!-- Add ssh feature to SNAPSHOT assemblies -->
+      <id>ssh-feature</id>
+      <activation>
+        <property>
+          <name>!release</name>
+        </property>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+          <plugin>
+            <groupId>org.hitachivantara.karaf.tooling</groupId>
+            <artifactId>karaf-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>default-assembly</id>
+                <configuration>
+                  <bootFeatures>
+                    <bootFeature>ssh</bootFeature>
+                  </bootFeatures>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+  </profiles>
+
 </project>
