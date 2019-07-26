@@ -12,7 +12,7 @@
  * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU Lesser General Public License for more details.
  *
- * Copyright (c) 2019 Pentaho Corporation. All rights reserved.
+ * Copyright (c) 2019 Hitachi Vantara. All rights reserved.
  */
 
 This folder is intended to be used to deploy into the Karaf container exploded
