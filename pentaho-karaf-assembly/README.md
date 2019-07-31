@@ -5,9 +5,8 @@ This project is currently creating assemblies to Community Edition of the follow
 * PME
 * PMR
 * PRD
-* Server
 
-PDI was already migrated to another project, it is available on assemblies\client.
+PDI and Server were already migrated to another project, both available on assemblies.
 
 More info available on Karaf documentation regarding:
 * Assembly configurations for old version - http://karaf.apache.org/manual/latest/#_deprecated_old_style_maven_assembly
