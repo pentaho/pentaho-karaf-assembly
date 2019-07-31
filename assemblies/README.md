@@ -3,6 +3,7 @@ This project is responsible for building custom Karaf assemblies using the new w
 
 This project is currently creating assemblies to Community Edition of the following products:
 * PDI
+* Server
 
 The remaining products using the old version are available on pentaho-karaf-assembly module.
 
