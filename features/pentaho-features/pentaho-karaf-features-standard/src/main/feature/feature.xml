@@ -34,8 +34,8 @@
     <bundle>mvn:commons-io/commons-io/${commons.io.version}</bundle>
     <bundle>mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${pentaho-osgi-bundles.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-bundle-resource-manager/${pentaho-osgi-bundles.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-bundle-resource-manager/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-spring-dm-extender/${project.version}</bundle>
     <feature version="${project.version}">pentaho-webjars-deployer</feature>
   </feature>
