@@ -204,6 +204,7 @@
                 <feature>pentaho-webpackage</feature>
                 <feature>get-fields-plugin</feature>
                 <feature>pentaho-big-data-impl-connections</feature>
+                <feature>shims-list</feature>
               </installedFeatures>
             </configuration>
           </execution>
