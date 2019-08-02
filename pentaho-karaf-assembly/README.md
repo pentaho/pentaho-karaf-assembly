@@ -2,7 +2,6 @@
 This project is responsible for building custom Karaf assemblies using the old way. It have been made an effort to migrated this configurations to the most recent version.
 
 This project is currently creating assemblies to Community Edition of the following products:
-* PME
 * PMR
 * PRD
 
