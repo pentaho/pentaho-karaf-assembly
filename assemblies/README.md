@@ -5,6 +5,7 @@ This project is currently creating assemblies to Community Edition of the follow
 * PDI
 * Server
 * PME
+* PRD
 
 The remaining products using the old version are available on pentaho-karaf-assembly module.
 
