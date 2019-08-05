@@ -3,7 +3,6 @@ This project is responsible for building custom Karaf assemblies using the old w
 
 This project is currently creating assemblies to Community Edition of the following products:
 * PMR
-* PRD
 
 PDI and Server were already migrated to another project, both available on assemblies.
 
