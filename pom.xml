@@ -24,7 +24,7 @@
   </modules>
 
   <properties>
-    <mongo.java.driver.version>3.6.3</mongo.java.driver.version>
+    <mongo.java.driver.version>3.10.2</mongo.java.driver.version>
     <org.ehcache.version>1.0.0</org.ehcache.version>
     <pdi-data-refinery-plugin.version>9.0.0.0-SNAPSHOT</pdi-data-refinery-plugin.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5
