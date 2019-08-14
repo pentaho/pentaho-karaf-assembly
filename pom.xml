@@ -19,7 +19,6 @@
     <module>pentaho-blueprint-activators</module>
     <module>pentaho-osgi-config</module>
     <module>assemblies</module>
-    <module>pentaho-karaf-assembly</module>
     <module>overrides</module>
   </modules>
 
