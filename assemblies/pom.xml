@@ -19,6 +19,7 @@
     <module>pme</module>
     <module>client</module>
     <module>server</module>
+    <module>pmr</module>
   </modules>
 
   <properties>
