@@ -25,21 +25,21 @@
 
          A series of overrides are made to prevent pax-http-service (which brings on Jetty) and pax-http-whiteboard
          from being installed. -->
-    <feature name="http" version="4.2.6" description="Implementation of the OSGI HTTP Service">
+    <feature name="http" description="Implementation of the OSGI HTTP Service" version="${project.version}" >
         <feature dependency="true">felix-bridge</feature>
         <requirement>http-service</requirement>
     </feature>
 
-    <feature name="http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="4.2.6">
+    <feature name="http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="${project.version}">
         <feature>http</feature>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.whiteboard/4.0.0</bundle>
     </feature>
 
-    <feature name="war" description="Turn Karaf as a full WebContainer" version="4.2.6">
+    <feature name="war" description="Turn Karaf as a full WebContainer" version="${project.version}">
         <feature>http</feature>
     </feature>
 
-    <feature name="felix-bridge" description="Felix HTTP Bridge Service">
+    <feature name="felix-bridge" description="Felix HTTP Bridge Service" version="${project.version}">
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.api/${felix.http.api.version}</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.bridge.version}</bundle>
 
