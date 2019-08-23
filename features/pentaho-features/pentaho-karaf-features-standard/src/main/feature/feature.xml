@@ -26,9 +26,6 @@
   <!-- pdi-platform feature is using spring feature -->
   <repository>mvn:org.hitachivantara.karaf.features/spring32/${project.version}/xml/features</repository>
 
-  <!-- TODO: temporary fix because of pax-keycloak condition on pax-web -->
-  <repository>mvn:org.ops4j.pax.keycloak/pax-keycloak-features/RELEASE/xml/features</repository>
-
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
   <feature name="pentaho-deployers" version="1.0">
