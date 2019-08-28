@@ -69,10 +69,6 @@
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle>mvn:net.java.dev.jna/jna/${net.java.dev.jna.version}</bundle>
     <bundle>mvn:net.java.dev.jna/jna-platform/${net.java.dev.jna.version}</bundle>
-    <conditional>
-      <condition>http</condition>
-      <bundle>mvn:org.apache.felix/org.apache.felix.http.api/${felix.http.api.version}</bundle>
-    </conditional>
   </feature>
 
   <feature name="pentaho-webjars-deployer" version="${project.version}">
