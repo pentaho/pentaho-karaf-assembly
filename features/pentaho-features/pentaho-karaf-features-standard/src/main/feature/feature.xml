@@ -49,7 +49,12 @@
   </feature>
 
   <feature name="pentaho-base" version="1.0">
-    <feature prerequisite="true">framework</feature>
+    <!-- This bundle wraps and replaces the org.ops4j.pax.logging/pax-logging-api bundle.
+         It is loaded in the startup.properties, so this reference's goal is to include
+         the artifact into the assembled repository.
+    -->
+    <bundle>mvn:org.hitachivantara/pax-logging-api-wrap/9.0.0.0-SNAPSHOT</bundle>
+
     <feature prerequisite="true">standard</feature>
     <feature prerequisite="true">http-whiteboard</feature>
 
