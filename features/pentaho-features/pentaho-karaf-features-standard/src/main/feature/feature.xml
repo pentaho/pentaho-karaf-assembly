@@ -36,7 +36,6 @@
     <!-- Spring-DM needed by pentaho-spring-dm-extender -->
     <feature prerequisite="true">spring-dm</feature>
 
-    <bundle>mvn:commons-logging/commons-logging/${commons-logging.version}</bundle>
     <bundle>mvn:com.googlecode.json-simple/json-simple/${json.simple.version}</bundle>
     <bundle>mvn:com.google.guava/guava/${google.guava.version}</bundle>
     <bundle>mvn:commons-io/commons-io/${commons.io.version}</bundle>
@@ -49,6 +48,12 @@
   </feature>
 
   <feature name="pentaho-base" version="1.0">
+    <!-- This bundle wraps and replaces the org.ops4j.pax.logging/pax-logging-api bundle.
+         It is loaded in the startup.properties, so this reference's goal is to include
+         the artifact into the assembled repository.
+    -->
+    <bundle>mvn:org.hitachivantara/pax-logging-api-wrap/9.0.0.0-SNAPSHOT</bundle>
+
     <feature prerequisite="true">standard</feature>
     <feature prerequisite="true">http-whiteboard</feature>
 
@@ -62,7 +67,6 @@
     <bundle>wrap:mvn:org.pentaho/json/${pentaho-json.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/${slf4j.version}</bundle>
-    <bundle>mvn:commons-logging/commons-logging/${commons-logging.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle>mvn:net.java.dev.jna/jna/${net.java.dev.jna.version}</bundle>
     <bundle>mvn:net.java.dev.jna/jna-platform/${net.java.dev.jna.version}</bundle>
