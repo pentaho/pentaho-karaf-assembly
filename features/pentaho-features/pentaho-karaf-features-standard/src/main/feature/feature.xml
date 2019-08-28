@@ -72,10 +72,6 @@
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle>mvn:net.java.dev.jna/jna/${net.java.dev.jna.version}</bundle>
     <bundle>mvn:net.java.dev.jna/jna-platform/${net.java.dev.jna.version}</bundle>
-    <conditional>
-      <condition>http</condition>
-      <bundle>mvn:org.apache.felix/org.apache.felix.http.api/${felix.http.api.version}</bundle>
-    </conditional>
     <bundle>mvn:org.apache.mina/mina-core/${org.apache.mina.version}</bundle>
     <bundle>mvn:pentaho/pentaho-osgi-utils-impl/${pentaho-osgi-bundles.version}</bundle>
 
