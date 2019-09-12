@@ -60,7 +60,7 @@
 
         <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
         <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
-        <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
         <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-platform/${pentaho-osgi-bundles.version}</bundle>
     </feature>
 
