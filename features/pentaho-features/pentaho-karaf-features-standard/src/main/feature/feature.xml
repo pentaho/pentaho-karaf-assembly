@@ -36,11 +36,11 @@
     <!-- Spring-DM needed by pentaho-spring-dm-extender -->
     <feature prerequisite="true">spring-dm</feature>
 
-    <bundle>mvn:com.googlecode.json-simple/json-simple/${json.simple.version}</bundle>
-    <bundle>mvn:com.google.guava/guava/${google.guava.version}</bundle>
-    <bundle>mvn:commons-io/commons-io/${commons.io.version}</bundle>
-    <bundle>mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:com.googlecode.json-simple/json-simple/${json.simple.version}</bundle>
+    <bundle dependency="true">mvn:com.google.guava/guava/${google.guava.version}</bundle>
+    <bundle dependency="true">mvn:commons-io/commons-io/${commons.io.version}</bundle>
+    <bundle dependency="true">mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-bundle-resource-manager/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-spring-dm-extender/${project.version}</bundle>
@@ -63,11 +63,11 @@
 
     <bundle>wrap:mvn:org.pentaho/json/${pentaho-json.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
-    <bundle>mvn:org.slf4j/osgi-over-slf4j/${slf4j.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    <bundle>mvn:net.java.dev.jna/jna/${net.java.dev.jna.version}</bundle>
-    <bundle>mvn:net.java.dev.jna/jna-platform/${net.java.dev.jna.version}</bundle>
-    <bundle>mvn:org.apache.mina/mina-core/${org.apache.mina.version}</bundle>
+    <bundle dependency="true">mvn:org.slf4j/osgi-over-slf4j/${slf4j.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:net.java.dev.jna/jna/${net.java.dev.jna.version}</bundle>
+    <bundle dependency="true">mvn:net.java.dev.jna/jna-platform/${net.java.dev.jna.version}</bundle>
+    <bundle dependency="true">mvn:org.apache.mina/mina-core/${org.apache.mina.version}</bundle>
     <bundle>mvn:pentaho/pentaho-osgi-utils-impl/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
@@ -81,7 +81,7 @@
     <feature>pentaho-webpackage</feature>
     <feature>pentaho-big-data-plugin-osgi</feature>
     <feature>pentaho-streaming-feature</feature>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-kerberos-jaas" version="1.0">
@@ -102,9 +102,9 @@
     <bundle>mvn:pentaho/pentaho-mongo-utils/${pentaho-mongo-utils.version}</bundle>
     <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/${pentaho-mongodb-plugin.version}</bundle>
     <bundle>wrap:mvn:org.pentaho.di.plugins/meta-inject-plugin/${pdi.version}</bundle>
-    <bundle>mvn:org.mongodb/mongo-java-driver/${mongo.java.driver.version}</bundle>
+    <bundle dependency="true">mvn:org.mongodb/mongo-java-driver/${mongo.java.driver.version}</bundle>
     <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${pdi-osgi-bridge.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pdi-platform" version="${project.version}">
@@ -122,9 +122,9 @@
     <bundle>mvn:pentaho/pentaho-cache-manager-api/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/guava-cache-provider/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/pentaho-ehcache-provider/${pentaho-osgi-bundles.version}</bundle>
-    <bundle>wrap:mvn:org.ehcache/jcache/${org.ehcache.version}</bundle>
-    <bundle>mvn:net.sf.ehcache/ehcache/${net.sf.ehcache.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.ehcache/jcache/${org.ehcache.version}</bundle>
+    <bundle dependency="true">mvn:net.sf.ehcache/ehcache/${net.sf.ehcache.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <!-- Overriding standard one to exclude log bundle which will not work without pax-logging -->
@@ -134,7 +134,7 @@
     <feature>jms</feature>
     <feature>activemq</feature>
     <bundle start-level="90">wrap:blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/jms$overwrite=merge&amp;Import-Package=javax.jms;version="[1.1,1.1]"</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-camel-jms" version="1.0">
@@ -142,13 +142,13 @@
     <feature>activemq-camel</feature>
     <feature>pentaho-jms</feature>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/camel-jms</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-tinkerpop-gremlin" version="2.6">
     <bundle>wrap:mvn:com.tinkerpop.gremlin/gremlin-java/${com.tinkerpop.version}</bundle>
     <bundle>wrap:mvn:com.tinkerpop/pipes/${com.tinkerpop.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-metaverse" version="${project.version}">
@@ -170,11 +170,11 @@
   </feature>
 
   <feature name="pentaho-fasterxml" version="1.0">
-    <bundle>wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
+    <bundle dependency="true">wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
     <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-metaverse-web" version="${project.version}">
@@ -187,20 +187,20 @@
   </feature>
 
   <feature name="build-helper" description="This is never used in production, exists only to facilitate the build">
-    <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.bridge.version}</bundle>
-    <bundle>mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/${karaf.version}</bundle>
-    <bundle>mvn:org.apache.aries.transaction/org.apache.aries.transaction.manager/1.1.1</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.bridge.version}</bundle>
+    <bundle dependency="true">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/${karaf.version}</bundle>
+    <bundle dependency="true">mvn:org.apache.aries.transaction/org.apache.aries.transaction.manager/1.1.1</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pdi-data-refinery" description="pentaho data refinery">
     <configfile finalname="/etc/pentaho.geo.roles.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-geo-roles</configfile>
     <feature>pentaho-dataservice</feature>
 
-    <bundle>wrap:mvn:pentaho/pentaho-modeler/${pentaho-modeler.version}</bundle>
+    <bundle dependency="true">wrap:mvn:pentaho/pentaho-modeler/${pentaho-modeler.version}</bundle>
 
-    <bundle>wrap:mvn:jfree/jcommon/${jfree.jcommon.version}</bundle>
-    <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}</bundle>
+    <bundle dependency="true">wrap:mvn:jfree/jcommon/${jfree.jcommon.version}</bundle>
+    <bundle dependency="true">mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}</bundle>
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${pdi-data-refinery-plugin.version}</bundle>
   </feature>
 
