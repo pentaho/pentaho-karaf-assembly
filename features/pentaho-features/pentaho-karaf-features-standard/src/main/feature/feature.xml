@@ -28,7 +28,7 @@
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
   <feature name="pentaho-deployers" version="1.0">
-    <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
+    <bundle>mvn:commons-logging/commons-logging/${commons-logging.version}</bundle>
     <bundle>mvn:com.googlecode.json-simple/json-simple/${json.simple.version}</bundle>
     <bundle>mvn:com.google.guava/guava/${google.guava.version}</bundle>
     <bundle>mvn:commons-io/commons-io/${commons.io.version}</bundle>
@@ -48,7 +48,7 @@
     <bundle>wrap:mvn:org.pentaho/json/${pentaho-json.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/${slf4j.version}</bundle>
-    <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
+    <bundle>mvn:commons-logging/commons-logging/${commons-logging.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle>mvn:net.java.dev.jna/jna/${net.java.dev.jna.version}</bundle>
     <bundle>mvn:net.java.dev.jna/jna-platform/${net.java.dev.jna.version}</bundle>
