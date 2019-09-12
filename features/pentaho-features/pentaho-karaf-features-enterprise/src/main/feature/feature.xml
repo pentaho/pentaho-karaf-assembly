@@ -26,10 +26,11 @@
   <feature name="pentaho-client-ee" version="1.0">
     <feature prerequisite="true">pentaho-client</feature>
     <feature prerequisite="true">pentaho-ee-streaming-feature</feature>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-analyzer-prerequisites" version="1.0">
+    <!-- Cannot be marked as dependency because paz-plugin-ce uses it via DynamicImport-Package -->
     <bundle>mvn:com.ibm.icu/icu4j/${icu4j.version}</bundle>
   </feature>
 
@@ -49,9 +50,9 @@
   <feature name="pentaho-monitoring" version="1.0">
     <configfile finalname="/etc/pentaho.pdi.monitoring.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pdi-monitoring</configfile>
     <!-- <bundle>mvn:org.apache.camel/camel-guava-eventbus/${camel.guava.eventbus.version}</bundle> -->
-    <bundle>mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
+    <bundle dependency="true">mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
     <bundle>mvn:pentaho/pentaho-monitoring-plugin/${pdi-monitoring-plugin.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-monitoring-camel-base" version="1.0">
@@ -59,10 +60,10 @@
     <feature prerequisite="true">camel-blueprint</feature>
     <feature prerequisite="true">camel-stream</feature>
     <feature prerequisite="true" version="${camel.guava.eventbus.version}-pentaho">camel-guava-eventbus</feature>
-    <bundle>mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
+    <bundle dependency="true">mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
     <bundle>mvn:pentaho/pentaho-camel-core/${pentaho-camel.version}</bundle>
     <bundle>mvn:pentaho/pentaho-camel-snmp/${pentaho-camel.version}</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-monitoring-to-snmp" version="1.0">
@@ -70,7 +71,7 @@
     <feature prerequisite="true">pentaho-monitoring</feature>
     <feature prerequisite="true">pentaho-monitoring-camel-base</feature>
     <bundle start-level="90">wrap:blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-snmp$overwrite=merge&amp;Import-Package=com.google.common.eventbus;version="[17.0,17.0]"</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-monitoring-to-jms" version="1.0">
@@ -78,7 +79,7 @@
     <feature prerequisite="true">pentaho-monitoring-camel-base</feature>
     <feature prerequisite="true">pentaho-camel-jms</feature>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-jms</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pentaho-monitoring-jms-broker" version="1.0">
@@ -86,7 +87,7 @@
     <feature prerequisite="true">pentaho-monitoring-camel-base</feature>
     <feature prerequisite="true">pentaho-camel-jms</feature>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-jms-broker</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <!-- Overriding camel-guava-eventbus feature to force using guava-17.0 version -->
