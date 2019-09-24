@@ -228,7 +228,6 @@
     <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${fasterxml-jackson.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}</bundle>
 
-    <!-- TODO: Temporary fix, review -->
-    <!--bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr339-api-2.0/2.4.0</bundle-->
+    <bundle dependency="true">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxrs-api-2.1/${servicemix.jaxrs-api.version}</bundle>
   </feature>
 </features>

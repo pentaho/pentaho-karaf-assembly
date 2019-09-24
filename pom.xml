@@ -76,6 +76,8 @@
     <common-ui.version>9.0.0.0-SNAPSHOT</common-ui.version>
     <pax-keycloak.version>0.2.0</pax-keycloak.version>
 
+    <servicemix.jaxrs-api.version>2.9.1</servicemix.jaxrs-api.version>
+
     <!-- Karaf framework startup bundles' versions -->
     <!-- karaf.version is in parent POM -->
     <!-- pax-url-aether.version is in parent POM -->
