@@ -19,6 +19,7 @@
   <repository>mvn:org.hitachivantara.karaf.features/spring43/${project.version}/xml/features</repository>
   <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
   <repository>mvn:com.pentaho.di.plugins/pentaho-ee-streaming-feature/${pdi-plugins-ee.version}/xml/features</repository>
+  <repository>mvn:com.hitachivantara.karaf.features/monitoring-plugin/${pdi-monitoring-plugin.version}/xml/features</repository>
 
   <!-- pentaho-analyzer feature is using spring feature -->
   <repository>mvn:org.hitachivantara.karaf.features/spring32/${project.version}/xml/features</repository>
@@ -47,33 +48,6 @@
     <bundle>pentaho-platform-plugin:mvn:pentaho/paz-plugin-ce/${analyzer-plugin.version}/zip</bundle>
   </feature>
 
-  <feature name="pentaho-monitoring" version="1.0">
-    <configfile finalname="/etc/pentaho.pdi.monitoring.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pdi-monitoring</configfile>
-    <!-- <bundle>mvn:org.apache.camel/camel-guava-eventbus/${camel.guava.eventbus.version}</bundle> -->
-    <bundle dependency="true">mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-monitoring-plugin/${pdi-monitoring-plugin.version}</bundle>
-    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
-  <feature name="pentaho-monitoring-camel-base" version="1.0">
-    <feature prerequisite="true">camel</feature>
-    <feature prerequisite="true">camel-blueprint</feature>
-    <feature prerequisite="true">camel-stream</feature>
-    <feature prerequisite="true" version="${camel.guava.eventbus.version}-pentaho">camel-guava-eventbus</feature>
-    <bundle dependency="true">mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-camel-core/${pentaho-camel.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-camel-snmp/${pentaho-camel.version}</bundle>
-    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
-  <feature name="pentaho-monitoring-to-snmp" version="1.0">
-    <configfile finalname="/etc/pentaho.snmp.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/snmp</configfile>
-    <feature prerequisite="true">pentaho-monitoring</feature>
-    <feature prerequisite="true">pentaho-monitoring-camel-base</feature>
-    <bundle start-level="90">wrap:blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-snmp$overwrite=merge&amp;Import-Package=com.google.common.eventbus;version="[17.0,17.0]"</bundle>
-    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
   <feature name="pentaho-monitoring-to-jms" version="1.0">
     <feature prerequisite="true">pentaho-monitoring</feature>
     <feature prerequisite="true">pentaho-monitoring-camel-base</feature>
@@ -88,13 +62,6 @@
     <feature prerequisite="true">pentaho-camel-jms</feature>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-jms-broker</bundle>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
-  <!-- Overriding camel-guava-eventbus feature to force using guava-17.0 version -->
-  <feature name="camel-guava-eventbus" version="${camel.guava.eventbus.version}-pentaho" start-level="50">
-    <feature prerequisite="true" version="${camel.karaf.version}">camel-core</feature>
-    <bundle dependency="true">mvn:com.google.guava/guava/17.0</bundle>
-    <bundle>mvn:pentaho/pentaho-camel-guava-eventbus/${project.version}</bundle>
   </feature>
 
 </features>
