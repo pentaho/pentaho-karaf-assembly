@@ -36,14 +36,11 @@
     <package.features>true</package.features>
     <commons.collections.version>3.2.2</commons.collections.version>
     <com.tinkerpop.version>2.6.0</com.tinkerpop.version>
-    <camel.guava.eventbus.version>2.17.7</camel.guava.eventbus.version>
     <eigenbase.properties.version>1.1.4</eigenbase.properties.version>
     <eigenbase.resgen.version>1.3.6</eigenbase.resgen.version>
-    <camel.karaf.version>2.17.7</camel.karaf.version>
     <olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
     <google.guava.version>17.0</google.guava.version>
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
-    <pentaho-camel.version>9.0.0.0-SNAPSHOT</pentaho-camel.version>
     <pdi-monitoring-plugin.version>9.0.0.0-SNAPSHOT</pdi-monitoring-plugin.version>
     <pentaho-metaverse.version>9.0.0.0-SNAPSHOT</pentaho-metaverse.version>
     <commons.lang.version>2.6</commons.lang.version>
@@ -171,7 +168,7 @@
         <groupId>org.apache.camel.karaf</groupId>
         <artifactId>apache-camel</artifactId>
         <classifier>features</classifier>
-        <version>${camel.karaf.version}</version>
+        <version>${camel.version}</version>
         <type>xml</type>
         <scope>runtime</scope>
       </dependency>
