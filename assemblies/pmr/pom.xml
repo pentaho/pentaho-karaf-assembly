@@ -126,17 +126,30 @@
             <id>default-assembly</id>
             <configuration>
               <startupFeatures>
+                <!-- list of features to be installed into system repository *and*  listed in `etc/startup.properties`;
+                 the `framework` feature is automatically added. -->
                 <feature>eventadmin</feature>
               </startupFeatures>
               <bootFeatures>
-                <feature>config</feature>
-                <feature>kar</feature>
+                <!-- list of features to be installed into system repository *and* listed in `featuresBoot` property
+                 in `etc/org.apache.karaf.features.cfg`. -->
+                <!-- until we enable the automatic generation of the `etc/org.apache.karaf.features.cfg` file,
+                 these features must mirror the ones in the `featuresBoot` property and its repositories added to the
+                 `featuresRepositories` property in that same file. -->
                 <feature>http</feature>
                 <feature>war</feature>
-                <feature>pentaho-big-data-plugin-osgi</feature>
+                <feature>kar</feature>
+                <feature>config</feature>
                 <feature>community-edition</feature>
+                <feature>pentaho-big-data-plugin-osgi</feature>
+                <feature>shims-list</feature>
               </bootFeatures>
               <installedFeatures>
+                <!-- list of features to be installed into system repository and not mentioned elsewhere. -->
+                <!-- this list *must* include all the features mentioned in `runtimeFeatures` properties of the
+                multiple `etc-*/org.pentaho.features.cfg` files;
+                also, until we enable the automatic generation of the `etc/org.apache.karaf.features.cfg` file,
+                its repositories must be added to the `featuresRepositories` property of that file. -->
                 <feature>pentaho-karaf-overrides</feature>
                 <feature>management</feature>
                 <feature>ssh</feature>
@@ -149,7 +162,6 @@
                 <feature>build-helper</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
-                <feature>shims-list</feature>
               </installedFeatures>
             </configuration>
           </execution>

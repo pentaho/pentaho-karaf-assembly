@@ -132,17 +132,26 @@
             <id>default-assembly</id>
             <configuration>
               <startupFeatures>
+                <!-- list of features to be installed into system repository *and*  listed in `etc/startup.properties`;
+                 the `framework` feature is automatically added. -->
                 <feature>eventadmin</feature>
               </startupFeatures>
               <bootFeatures>
+                <!-- list of features to be installed into system repository *and* listed in `featuresBoot` property
+                 in `etc/org.apache.karaf.features.cfg`. -->
+                <!-- until we enable the automatic generation of the `etc/org.apache.karaf.features.cfg` file,
+                 these features must mirror the ones in the `featuresBoot` property and its repositories added to the
+                 `featuresRepositories` property in that same file. -->
                 <feature>config</feature>
-                <feature>package</feature>
-                <feature>pentaho-client-minimal</feature>
-                <feature>pentaho-fasterxml</feature>
-                <feature>pentaho-dataservice-client</feature>
                 <feature>community-edition</feature>
+                <feature>pentaho-client-minimal</feature>
+                <feature>pentaho-dataservice-client</feature>
+                <feature>pentaho-fasterxml</feature>
               </bootFeatures>
               <installedFeatures>
+                <!-- list of features to be installed into system repository and not mentioned elsewhere. -->
+                <!-- until we enable the automatic generation of the `etc/org.apache.karaf.features.cfg` file,
+                its repositories must be added to the `featuresRepositories` property of that file. -->
                 <feature>kar</feature>
                 <feature>ssh</feature>
                 <feature>http</feature>
