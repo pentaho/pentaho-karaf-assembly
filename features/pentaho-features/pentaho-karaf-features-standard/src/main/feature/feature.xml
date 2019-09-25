@@ -16,7 +16,6 @@
  -->
 
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
-  <repository>mvn:org.apache.camel.karaf/apache-camel/${camel.version}/xml/features</repository>
   <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</repository>
   <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</repository>
 
@@ -124,24 +123,6 @@
     <bundle>mvn:pentaho/pentaho-ehcache-provider/${pentaho-osgi-bundles.version}</bundle>
     <bundle dependency="true">wrap:mvn:org.ehcache/jcache/${org.ehcache.version}</bundle>
     <bundle dependency="true">mvn:net.sf.ehcache/ehcache/${net.sf.ehcache.version}</bundle>
-    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
-  <!-- Overriding standard one to exclude log bundle which will not work without pax-logging -->
-  <feature name="pentaho-jms">
-    <configfile finalname="/etc/pentaho.jms.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-jms
-    </configfile>
-    <feature>jms</feature>
-    <feature>activemq</feature>
-    <bundle start-level="90">wrap:blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/jms$overwrite=merge&amp;Import-Package=javax.jms;version="[1.1,1.1]"</bundle>
-    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
-  <feature name="pentaho-camel-jms" version="1.0">
-    <feature>camel-jms</feature>
-    <feature>activemq-camel</feature>
-    <feature>pentaho-jms</feature>
-    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/camel-jms</bundle>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 

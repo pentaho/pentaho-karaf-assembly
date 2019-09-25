@@ -152,22 +152,6 @@
         <scope>runtime</scope>
       </dependency>
       <dependency>
-        <groupId>org.apache.activemq</groupId>
-        <artifactId>activemq-karaf</artifactId>
-        <classifier>features</classifier>
-        <version>${activemq.version}</version>
-        <type>xml</type>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.camel.karaf</groupId>
-        <artifactId>apache-camel</artifactId>
-        <classifier>features</classifier>
-        <version>${camel.version}</version>
-        <type>xml</type>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
         <groupId>org.pentaho</groupId>
         <artifactId>pdi-marketplace</artifactId>
         <classifier>features</classifier>
