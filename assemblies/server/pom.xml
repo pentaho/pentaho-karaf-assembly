@@ -32,12 +32,6 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.apache.camel.karaf</groupId>
-      <artifactId>apache-camel</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>org.hitachivantara.karaf.features</groupId>
       <artifactId>pentaho-karaf-features-standard</artifactId>
       <classifier>features</classifier>
@@ -46,12 +40,6 @@
     <dependency>
       <groupId>org.hitachivantara.karaf.features</groupId>
       <artifactId>pentaho-karaf-features-server</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.activemq</groupId>
-      <artifactId>activemq-karaf</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
