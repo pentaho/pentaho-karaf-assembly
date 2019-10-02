@@ -75,6 +75,11 @@
     <pentaho-marketplace-modules.version>9.0.0.0-SNAPSHOT</pentaho-marketplace-modules.version>
     <pentaho-repository.version>9.0.0.0-SNAPSHOT</pentaho-repository.version>
     <common-ui.version>9.0.0.0-SNAPSHOT</common-ui.version>
+    <pentaho-hadoop-shims-cdh514.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-cdh514.version>
+    <pentaho-hadoop-shims-cdh61.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-cdh61.version>
+    <pentaho-hadoop-shims-hdp26.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp26.version>
+    <pentaho-hadoop-shims-hdp30.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp30.version>
+    <pentaho-hadoop-shims-emr521.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-emr521.version>
   </properties>
 
   <dependencyManagement>

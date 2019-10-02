@@ -95,6 +95,50 @@
               <excludes>/META-INF/**</excludes>
             </configuration>
           </execution>
+
+          <!-- Add big data driver kar files to karaf's deploy folder -->
+          <execution>
+            <id>copy</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.pentaho</groupId>
+                  <artifactId>pentaho-hadoop-shims-cdh61-kar</artifactId>
+                  <version>${pentaho-hadoop-shims-cdh61.version}</version>
+                  <type>kar</type>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.pentaho</groupId>
+                  <artifactId>pentaho-hadoop-shims-cdh514-kar</artifactId>
+                  <version>${pentaho-hadoop-shims-cdh514.version}</version>
+                  <type>kar</type>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.pentaho</groupId>
+                  <artifactId>pentaho-hadoop-shims-hdp30-kar</artifactId>
+                  <version>${pentaho-hadoop-shims-hdp30.version}</version>
+                  <type>kar</type>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.pentaho</groupId>
+                  <artifactId>pentaho-hadoop-shims-hdp26-kar</artifactId>
+                  <version>${pentaho-hadoop-shims-hdp26.version}</version>
+                  <type>kar</type>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.pentaho</groupId>
+                  <artifactId>pentaho-hadoop-shims-emr521-kar</artifactId>
+                  <version>${pentaho-hadoop-shims-emr521.version}</version>
+                  <type>kar</type>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>target/classes/deploy</outputDirectory>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
 
@@ -126,7 +170,6 @@
                 <feature>pdi-data-refinery</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
-                <feature>shims-list</feature>
               </installedFeatures>
             </configuration>
           </execution>
