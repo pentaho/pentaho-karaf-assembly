@@ -41,26 +41,6 @@
                   <classifier>monitoring-snmp</classifier>
                 </artifact>
                 <artifact>
-                  <file>src/main/resources/monitoring-jms.xml</file>
-                  <type>xml</type>
-                  <classifier>monitoring-jms</classifier>
-                </artifact>
-                <artifact>
-                  <file>src/main/resources/jms.xml</file>
-                  <type>xml</type>
-                  <classifier>jms</classifier>
-                </artifact>
-                <artifact>
-                  <file>src/main/resources/monitoring-jms-broker.xml</file>
-                  <type>xml</type>
-                  <classifier>monitoring-jms-broker</classifier>
-                </artifact>
-                <artifact>
-                  <file>src/main/resources/camel-jms.xml</file>
-                  <type>xml</type>
-                  <classifier>camel-jms</classifier>
-                </artifact>
-                <artifact>
                   <file>src/main/resources/proxy-watcher.xml</file>
                   <type>xml</type>
                   <classifier>proxy-watcher</classifier>

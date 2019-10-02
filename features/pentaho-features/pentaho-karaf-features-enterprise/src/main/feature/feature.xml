@@ -19,7 +19,6 @@
   <repository>mvn:org.hitachivantara.karaf.features/spring43/${project.version}/xml/features</repository>
   <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
   <repository>mvn:com.pentaho.di.plugins/pentaho-ee-streaming-feature/${pdi-plugins-ee.version}/xml/features</repository>
-  <repository>mvn:com.hitachivantara.karaf.features/monitoring-plugin/${pdi-monitoring-plugin.version}/xml/features</repository>
 
   <!-- pentaho-analyzer feature is using spring feature -->
   <repository>mvn:org.hitachivantara.karaf.features/spring32/${project.version}/xml/features</repository>
@@ -46,22 +45,6 @@
     <bundle>mvn:pentaho/pentaho-analyzer-xsd/${analyzer-plugin.version}</bundle>
 
     <bundle>pentaho-platform-plugin:mvn:pentaho/paz-plugin-ce/${analyzer-plugin.version}/zip</bundle>
-  </feature>
-
-  <feature name="pentaho-monitoring-to-jms" version="1.0">
-    <feature prerequisite="true">pentaho-monitoring</feature>
-    <feature prerequisite="true">pentaho-monitoring-camel-base</feature>
-    <feature prerequisite="true">pentaho-camel-jms</feature>
-    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-jms</bundle>
-    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
-  <feature name="pentaho-monitoring-jms-broker" version="1.0">
-    <feature prerequisite="true">pentaho-monitoring</feature>
-    <feature prerequisite="true">pentaho-monitoring-camel-base</feature>
-    <feature prerequisite="true">pentaho-camel-jms</feature>
-    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/monitoring-jms-broker</bundle>
-    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
 </features>

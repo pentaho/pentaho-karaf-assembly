@@ -50,20 +50,8 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.apache.camel.karaf</groupId>
-      <artifactId>apache-camel</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>pentaho</groupId>
       <artifactId>pentaho-dataservice</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.activemq</groupId>
-      <artifactId>activemq-karaf</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
