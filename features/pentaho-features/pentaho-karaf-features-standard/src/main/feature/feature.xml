@@ -15,9 +15,10 @@
  ~ Copyright 2017 - 2019 Hitachi Vantara. All rights reserved.
  -->
 
-<features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
+<features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
   <repository>mvn:org.pentaho/pentaho-osgi-utils/${pentaho-osgi-bundles.version}/xml/features</repository>
 
+  <repository>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</repository>
   <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
   <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${pentaho-osgi-bundles.version}/xml/features</repository>
 
@@ -27,9 +28,19 @@
   <!-- pdi-platform feature is using spring feature -->
   <repository>mvn:org.hitachivantara.karaf.features/spring32/${project.version}/xml/features</repository>
 
+  <!-- TODO: temporary fix because of pax-keycloak condition on pax-web -->
+  <repository>mvn:org.ops4j.pax.keycloak/pax-keycloak-features/RELEASE/xml/features</repository>
+
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
   <feature name="pentaho-deployers" version="1.0">
+    <feature prerequisite="true">aries-blueprint</feature>
+    <feature prerequisite="true">deployer</feature>
+    <feature prerequisite="true">wrap</feature>
+
+    <!-- Spring-DM needed by pentaho-spring-dm-extender -->
+    <feature prerequisite="true">spring-dm</feature>
+
     <bundle>mvn:commons-logging/commons-logging/${commons-logging.version}</bundle>
     <bundle>mvn:com.googlecode.json-simple/json-simple/${json.simple.version}</bundle>
     <bundle>mvn:com.google.guava/guava/${google.guava.version}</bundle>
@@ -43,10 +54,12 @@
   </feature>
 
   <feature name="pentaho-base" version="1.0">
-    <feature>pentaho-osgi-utils</feature>
+    <feature prerequisite="true">standard</feature>
 
-    <feature>pentaho-deployers</feature>
-    <feature>pentaho-cache-system</feature>
+    <feature prerequisite="true">pentaho-osgi-utils</feature>
+    <feature prerequisite="true">pentaho-deployers</feature>
+    <feature prerequisite="true">pentaho-cache-system</feature>
+
     <feature>pentaho-i18n</feature>
 
     <bundle>wrap:mvn:org.pentaho/json/${pentaho-json.version}</bundle>
@@ -61,7 +74,7 @@
     <bundle>mvn:net.java.dev.jna/jna-platform/${net.java.dev.jna.version}</bundle>
     <conditional>
       <condition>http</condition>
-      <bundle>mvn:org.apache.felix/org.apache.felix.http.api/${felix.http.version}</bundle>
+      <bundle>mvn:org.apache.felix/org.apache.felix.http.api/${felix.http.api.version}</bundle>
     </conditional>
   </feature>
 
@@ -70,7 +83,8 @@
   </feature>
 
   <feature name="pentaho-client" version="1.0">
-    <feature>pentaho-client-minimal</feature>
+    <feature prerequisite="true">pentaho-client-minimal</feature>
+
     <feature>pentaho-webpackage</feature>
     <feature>pentaho-big-data-plugin-osgi</feature>
     <feature>pentaho-streaming-feature</feature>
@@ -78,8 +92,7 @@
   </feature>
 
   <feature name="pentaho-kerberos-jaas" version="1.0">
-    <configfile finalname="/etc/pentaho.kerberos.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-kerberos
-    </configfile>
+    <configfile finalname="/etc/pentaho.kerberos.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-kerberos</configfile>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/krb5-jaas</bundle>
   </feature>
 
@@ -91,7 +104,8 @@
   </feature>
 
   <feature name="pentaho-client-minimal" version="1.0">
-    <feature>pentaho-base</feature>
+    <feature prerequisite="true">pentaho-base</feature>
+
     <bundle>mvn:pentaho/pentaho-mongo-utils/${pentaho-mongo-utils.version}</bundle>
     <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/${pentaho-mongodb-plugin.version}</bundle>
     <bundle>wrap:mvn:org.pentaho.di.plugins/meta-inject-plugin/${pdi.version}</bundle>
@@ -107,7 +121,10 @@
   </feature>
 
   <feature name="pentaho-cache-system" version="1.0">
+    <feature prerequisite="true">wrap</feature>
+
     <feature>transaction</feature>
+
     <bundle>mvn:pentaho/pentaho-cache-manager-api/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/guava-cache-provider/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/pentaho-ehcache-provider/${pentaho-osgi-bundles.version}</bundle>
@@ -127,7 +144,7 @@
   </feature>
 
   <feature name="pentaho-camel-jms" version="1.0">
-    <feature version="${camel.overriden.karaf.version}">camel-jms</feature>
+    <feature>camel-jms</feature>
     <feature>activemq-camel</feature>
     <feature>pentaho-jms</feature>
     <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/camel-jms</bundle>
@@ -173,28 +190,17 @@
     <feature>pentaho-jackson</feature>
 
     <bundle>mvn:pentaho/pentaho-metaverse-web/${pentaho-metaverse.version}</bundle>
-  </feature>  
-
-  <!-- Overriding KAR to load 3.0.5 of core, remove once 3.0.5 is released -->
-  <feature name="kar" version="3.7.5" description="Provide KAR (KARaf archive) support" resolver="(obr)">
-    <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/3.0.5</bundle>
-    <bundle start-level="30">mvn:org.apache.karaf.kar/org.apache.karaf.kar.command/3.0.3</bundle>
-    <bundle start-level="30">mvn:org.apache.karaf.deployer/org.apache.karaf.deployer.kar/3.0.3</bundle>
-    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
-
   <feature name="build-helper" description="This is never used in production, exists only to facilitate the build">
-    <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.version}</bundle>
-    <bundle>mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/3.0.5</bundle>
+    <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.bridge.version}</bundle>
+    <bundle>mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/${karaf.version}</bundle>
     <bundle>mvn:org.apache.aries.transaction/org.apache.aries.transaction.manager/1.1.1</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
   <feature name="pdi-data-refinery" description="pentaho data refinery">
-    <configfile finalname="/etc/pentaho.geo.roles.cfg">
-      mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-geo-roles
-    </configfile>
+    <configfile finalname="/etc/pentaho.geo.roles.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-geo-roles</configfile>
     <feature>pentaho-dataservice</feature>
 
     <bundle>wrap:mvn:pentaho/pentaho-modeler/${pentaho-modeler.version}</bundle>
@@ -206,62 +212,17 @@
 
   <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds"/>
 
-
-    <feature name="pentaho-i18n" version="${project.version}">
-      <bundle>mvn:pentaho/pentaho-i18n-bundle/${pentaho-osgi-bundles.version}</bundle>
-      <conditional>
-        <condition>cxf-jaxrs</condition>
-        <feature>http-whiteboard</feature>
-        <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${pentaho-osgi-bundles.version}</bundle>
-      </conditional>
-    </feature>
-
-
-  <feature name="pax-jetty" description="Provide Jetty engine support" version="8.9" resolver="(obr)">
-    <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.activation-api-1.1/2.2.0</bundle>
-
-    <bundle dependency="true" start-level="30">mvn:javax.mail/mail/1.4.4</bundle>
-    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
-    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-annotation_1.1_spec/1.0.1</bundle>
-    <bundle dependency="true" start-level="30">mvn:org.apache.geronimo.specs/geronimo-jaspic_1.0_spec/1.1</bundle>
-    <bundle dependency="true" start-level="30">mvn:org.ow2.asm/asm-all/5.0.2</bundle>
-    <bundle start-level="30">mvn:org.eclipse.jetty.aggregate/jetty-all-server/8.1.15.v20140411</bundle>
-  </feature>
-  <!-- Overriding activemq to exclude xtreaam 1.4.7 version  -->
-  <feature name="activemq" description="ActiveMQ broker libraries" version="5.12.0" resolver="(obr)" start-level="50">
-    <feature>http</feature>
-    <feature version="${activemq.version}">activemq-client</feature>
-    <bundle>mvn:org.apache.activemq/activemq-karaf/${activemq.version}</bundle>
-    <bundle dependency="true">mvn:org.apache.xbean/xbean-spring/3.16</bundle>
-    <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    <bundle dependency='true'>mvn:commons-lang/commons-lang/2.6</bundle>
-    <bundle dependency="true">mvn:commons-codec/commons-codec/1.4</bundle>
-    <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.velocity/1.7_6</bundle>
-    <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/${jasypt.version}</bundle>
-    <bundle dependency="true">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.stax-api-1.0/1.9.0</bundle>
-    <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xpp3/1.1.4c_5</bundle>
-    <bundle dependency="true">mvn:joda-time/joda-time/1.6.2</bundle>
-    <!--<bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xstream/1.4.7_1</bundle>-->
-    <bundle dependency="true">mvn:org.apache.aries.transaction/org.apache.aries.transaction.manager/1.0.0</bundle>
-    <bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-j2ee-connector_1.5_spec/2.0.0</bundle>
-    <bundle dependency="true">mvn:org.apache.aries/org.apache.aries.util/1.0.0</bundle>
-    <bundle dependency="true">mvn:org.apache.activemq/activeio-core/3.1.4</bundle>
-    <bundle dependency="true">mvn:org.codehaus.jettison/jettison/1.3.5</bundle>
-    <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}</bundle>
-    <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</bundle>
-    <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson.version}</bundle>
-    <bundle dependency="true">mvn:org.scala-lang/scala-library/2.11.0</bundle>
+  <feature name="pentaho-i18n" version="${project.version}">
+    <bundle>mvn:pentaho/pentaho-i18n-bundle/${pentaho-osgi-bundles.version}</bundle>
+    <conditional>
+      <condition>cxf-jaxrs</condition>
+      <feature>http-whiteboard</feature>
+      <bundle>mvn:pentaho/pentaho-i18n-webservice-bundle/${pentaho-osgi-bundles.version}</bundle>
+    </conditional>
   </feature>
 
-  <!-- Overriding camel-jms feature to force using Spring 3.2.X.RELEASE_1  -->
-  <feature name='camel-jms' version='${camel.overriden.karaf.version}' resolver='(obr)' start-level='50'>
-    <feature version='${camel.karaf.version}'>camel-core</feature>
-    <feature version="[${spring32.bundle.version},3.3)">spring</feature>
-    <feature version="[${spring32.bundle.version},3.3)">spring-jms</feature>
-    <bundle dependency='true'>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1</bundle>
-    <bundle dependency='true'>mvn:commons-pool/commons-pool/1.6</bundle>
-    <bundle dependency='true'>wrap:mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1$overwrite=merge&amp;Import-Package=javax.jms;version="[1.1,1.1]",javax.transaction.xa&amp;Bundle-Version=1.1.2</bundle>
-    <bundle>mvn:org.apache.camel/camel-jms/${camel.karaf.version}</bundle>
+  <!-- Overriding cxf-http-provider to ensure that Jetty isn't started -->
+  <feature name="cxf-http-provider" version="${cxf.version}">
   </feature>
 
   <!-- Separate feature for jackson-* bundles in scope of BACKLOG-20783 -->
@@ -272,6 +233,8 @@
     <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${fasterxml-jackson.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${fasterxml-jackson.version}</bundle>
     <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}</bundle>
-    <bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr339-api-2.0/2.4.0</bundle>
+
+    <!-- TODO: Temporary fix, review -->
+    <!--bundle>mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jsr339-api-2.0/2.4.0</bundle-->
   </feature>
 </features>

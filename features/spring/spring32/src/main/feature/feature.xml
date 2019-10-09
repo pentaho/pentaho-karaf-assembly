@@ -17,9 +17,6 @@
 
 <features name="hitachivantara-${project.artifactId}-repo" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
 
-  <repository>mvn:org.apache.karaf.features/standard/${karaf.version}/xml/features</repository>
-  <repository>mvn:org.ops4j.pax.web/pax-web-features/${pax-web.version}/xml/features</repository>
-
   <feature name="spring" description="Spring 3.2.x support" version="${spring32.bundle.version}">
     <bundle dependency="true" start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aopalliance/${aopalliance.bundle.version}</bundle>
     <bundle start-level="30">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spring-core/${spring32.bundle.version}</bundle>
