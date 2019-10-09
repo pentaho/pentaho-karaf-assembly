@@ -83,6 +83,17 @@
     <pax-keycloak.version>0.2.0</pax-keycloak.version>
 
     <http-features-override.version>4.2.7</http-features-override.version>
+
+    <!-- Karaf framework startup bundles' versions -->
+    <!-- karaf.version is in parent POM -->
+    <!-- pax-url-aether.version is in parent POM -->
+    <felix.metatype.version>1.2.2</felix.metatype.version>
+    <jansi.version>1.18</jansi.version>
+    <pax-logging.version>1.10.2</pax-logging.version>
+    <felix.coordinator.version>1.0.2</felix.coordinator.version>
+    <felix.configadmin.version>1.9.14</felix.configadmin.version>
+    <felix.fileinstall.version>3.6.4</felix.fileinstall.version>
+    <servicemix-spec.version>2.9.0</servicemix-spec.version>
   </properties>
 
   <dependencyManagement>
