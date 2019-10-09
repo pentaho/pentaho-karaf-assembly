@@ -59,7 +59,7 @@
         <bundle start-level="50">mvn:pentaho/pentaho-proxy-spring4/${pentaho-osgi-bundles.version}</bundle>
 
         <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
-        <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
+        <bundle>mvn:org.pentaho/spring-security-karaf-login-module/${project.version}</bundle>
         <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
         <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-platform/${pentaho-osgi-bundles.version}</bundle>
     </feature>
