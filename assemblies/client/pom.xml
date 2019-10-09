@@ -162,6 +162,7 @@
           </execution>
 
           <!-- Add big data driver kar files to karaf's deploy folder -->
+          <!--
           <execution>
             <id>copy</id>
             <phase>generate-resources</phase>
@@ -204,6 +205,7 @@
               <outputDirectory>target/classes/deploy</outputDirectory>
             </configuration>
           </execution>
+          -->
         </executions>
       </plugin>
 
