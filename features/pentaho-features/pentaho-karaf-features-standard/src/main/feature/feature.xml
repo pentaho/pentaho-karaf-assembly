@@ -16,11 +16,13 @@
  -->
 
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
-  <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</repository>
-  <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${project.version}/xml/features</repository>
+  <repository>mvn:org.pentaho/pentaho-osgi-utils/${pentaho-osgi-bundles.version}/xml/features</repository>
 
-  <repository>mvn:pentaho/pentaho-dataservice/${project.version}/xml/features</repository>
-  <repository>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/${project.version}/xml/features</repository>
+  <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
+  <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${pentaho-osgi-bundles.version}/xml/features</repository>
+
+  <repository>mvn:pentaho/pentaho-dataservice/${pdi-dataservice-plugin.version}/xml/features</repository>
+  <repository>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/${pdi.version}/xml/features</repository>
 
   <!-- pdi-platform feature is using spring feature -->
   <repository>mvn:org.hitachivantara.karaf.features/spring32/${project.version}/xml/features</repository>
@@ -41,12 +43,17 @@
   </feature>
 
   <feature name="pentaho-base" version="1.0">
+    <feature>pentaho-osgi-utils</feature>
+
     <feature>pentaho-deployers</feature>
     <feature>pentaho-cache-system</feature>
     <feature>pentaho-i18n</feature>
 
     <bundle>wrap:mvn:org.pentaho/json/${pentaho-json.version}</bundle>
     <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/standard</bundle>
+
+    <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${pdi-osgi-bridge.version}</bundle>
+
     <bundle>mvn:org.slf4j/osgi-over-slf4j/${slf4j.version}</bundle>
     <bundle>mvn:commons-logging/commons-logging/${commons-logging.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
@@ -56,8 +63,6 @@
       <condition>http</condition>
       <bundle>mvn:org.apache.felix/org.apache.felix.http.api/${felix.http.version}</bundle>
     </conditional>
-    <bundle>mvn:org.apache.mina/mina-core/${org.apache.mina.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-osgi-utils-impl/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
   <feature name="pentaho-webjars-deployer" version="${project.version}">
@@ -91,7 +96,6 @@
     <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/${pentaho-mongodb-plugin.version}</bundle>
     <bundle>wrap:mvn:org.pentaho.di.plugins/meta-inject-plugin/${pdi.version}</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/${mongo.java.driver.version}</bundle>
-    <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${pdi-osgi-bridge.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 

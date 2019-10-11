@@ -11,6 +11,17 @@
   <artifactId>pentaho-karaf-features-standard</artifactId>
   <packaging>feature</packaging>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.pentaho</groupId>
+      <artifactId>pentaho-osgi-utils</artifactId>
+      <version>${pentaho-osgi-bundles.version}</version>
+      <classifier>features</classifier>
+      <type>xml</type>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
