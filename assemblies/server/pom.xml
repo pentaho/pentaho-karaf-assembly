@@ -110,19 +110,19 @@
     </dependency>
     <!-- Shim/drivers dependencies -->
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.pentaho.hadoop.shims</groupId>
       <artifactId>pentaho-hadoop-shims-cdh61-kar</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.pentaho.hadoop.shims</groupId>
       <artifactId>pentaho-hadoop-shims-emr521-kar</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.pentaho.hadoop.shims</groupId>
       <artifactId>pentaho-hadoop-shims-hdp30-kar</artifactId>
       <classifier>features</classifier>
       <type>xml</type>

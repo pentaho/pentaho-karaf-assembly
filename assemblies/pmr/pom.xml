@@ -79,6 +79,25 @@
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
+    <!-- Shim/drivers dependencies -->
+    <dependency>
+      <groupId>org.pentaho.hadoop.shims</groupId>
+      <artifactId>pentaho-hadoop-shims-cdh61-kar</artifactId>
+      <classifier>features</classifier>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.hadoop.shims</groupId>
+      <artifactId>pentaho-hadoop-shims-emr521-kar</artifactId>
+      <classifier>features</classifier>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.hadoop.shims</groupId>
+      <artifactId>pentaho-hadoop-shims-hdp30-kar</artifactId>
+      <classifier>features</classifier>
+      <type>xml</type>
+    </dependency>
   </dependencies>
 
   <build>
@@ -139,6 +158,9 @@
                 <feature>build-helper</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
+                <feature>pentaho-hadoop-shims-cdh61-kar</feature>
+                <feature>pentaho-hadoop-shims-hdp30-kar</feature>
+                <feature>pentaho-hadoop-shims-emr521-kar</feature>
               </installedFeatures>
             </configuration>
           </execution>
