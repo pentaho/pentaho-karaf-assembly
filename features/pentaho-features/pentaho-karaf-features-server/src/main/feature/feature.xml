@@ -16,7 +16,7 @@
  -->
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-    <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</repository>
+    <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
 
     <repository>mvn:org.hitachivantara.karaf.features/spring43/${project.version}/xml/features</repository>
 
