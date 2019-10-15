@@ -153,6 +153,12 @@
                   <version>${pentaho-hadoop-shims-emr521.version}</version>
                   <type>kar</type>
                 </artifactItem>
+                <artifactItem>
+                  <groupId>org.pentaho</groupId>
+                  <artifactId>pentaho-hadoop-shims-mapr60-kar</artifactId>
+                  <version>${pentaho-hadoop-shims-mapr60.version}</version>
+                  <type>kar</type>
+                </artifactItem>
               </artifactItems>
               <outputDirectory>target/classes/deploy</outputDirectory>
             </configuration>

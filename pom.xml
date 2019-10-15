@@ -80,6 +80,7 @@
     <pentaho-hadoop-shims-hdp26.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp26.version>
     <pentaho-hadoop-shims-hdp30.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp30.version>
     <pentaho-hadoop-shims-emr521.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-emr521.version>
+    <pentaho-hadoop-shims-mapr60.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-mapr60.version>
   </properties>
 
   <dependencyManagement>
