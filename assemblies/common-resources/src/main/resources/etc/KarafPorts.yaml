@@ -16,10 +16,3 @@ ServerPort:
   startPort: 9050
   endPort: 9149
   serviceName: karaf
-
-- id: KARAF_FASTBIN_PORT
-  property: org.pentaho.fastbin.provider.port
-  friendlyName: FastBin Provider Port
-  startPort: 52900
-  endPort: 53000
-  serviceName: karaf
