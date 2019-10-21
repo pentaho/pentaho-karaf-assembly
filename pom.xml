@@ -264,6 +264,28 @@
         <version>${common-ui.version}</version>
         <classifier>configuration-bundle</classifier>
       </dependency>
+      <!-- Shim/drivers dependencies -->
+      <dependency>
+        <groupId>org.pentaho.hadoop.shims</groupId>
+        <artifactId>pentaho-hadoop-shims-cdh61-kar</artifactId>
+        <version>${pentaho-hadoop-shims-cdh61.version}</version>
+        <classifier>features</classifier>
+        <type>xml</type>
+      </dependency>
+      <dependency>
+        <groupId>org.pentaho.hadoop.shims</groupId>
+        <artifactId>pentaho-hadoop-shims-emr521-kar</artifactId>
+        <version>${pentaho-hadoop-shims-emr521.version}</version>
+        <classifier>features</classifier>
+        <type>xml</type>
+      </dependency>
+      <dependency>
+        <groupId>org.pentaho.hadoop.shims</groupId>
+        <artifactId>pentaho-hadoop-shims-hdp30-kar</artifactId>
+        <version>${pentaho-hadoop-shims-hdp30.version}</version>
+        <classifier>features</classifier>
+        <type>xml</type>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
