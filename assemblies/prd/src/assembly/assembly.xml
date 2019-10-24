@@ -33,7 +33,10 @@
       <outputDirectory></outputDirectory>
       <excludes>
         <exclude>/bin/</exclude>
-        <exclude>/lib/</exclude>
+        <exclude>/lib/README</exclude>
+        <exclude>/lib/boot/</exclude>
+        <exclude>/lib/ext/</exclude>
+        <exclude>/lib/jdk9plus/</exclude>
       </excludes>
     </fileSet>
   </fileSets>
