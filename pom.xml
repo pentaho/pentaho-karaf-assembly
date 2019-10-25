@@ -80,6 +80,7 @@
     <pentaho-hadoop-shims-hdp26.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp26.version>
     <pentaho-hadoop-shims-hdp30.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp30.version>
     <pentaho-hadoop-shims-emr521.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-emr521.version>
+    <pentaho-hadoop-shims.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims.version>
   </properties>
 
   <dependencyManagement>
@@ -283,6 +284,13 @@
         <groupId>org.pentaho.hadoop.shims</groupId>
         <artifactId>pentaho-hadoop-shims-hdp30-kar</artifactId>
         <version>${pentaho-hadoop-shims-hdp30.version}</version>
+        <classifier>features</classifier>
+        <type>xml</type>
+      </dependency>
+      <dependency>
+        <groupId>org.pentaho.hadoop.shims</groupId>
+        <artifactId>pentaho-hadoop-shims-apache-kar</artifactId>
+        <version>${pentaho-hadoop-shims.version}</version>
         <classifier>features</classifier>
         <type>xml</type>
       </dependency>
