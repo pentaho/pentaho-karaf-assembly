@@ -19,6 +19,13 @@
 
     <!-- A list of bundle URI replacements that allows changing external feature definitions -->
     <bundleReplacements>
+        <!-- [BACKLOG-31355] Replacing the org.apache.karaf.features/org.apache.karaf.features.extension bundle
+            by our own patched version of it that fixes the bug preventing the restore of the wiring of fragment bundles
+            with multiple hosts. See https://jira.apache.org/jira/browse/KARAF-6501. -->
+        <bundle
+                originalUri="mvn:org.apache.karaf.features/org.apache.karaf.features.extension/${karaf.version}"
+                replacement="mvn:org.hitachivantara.karaf.features/org.apache.karaf.features.extension/${hv-patched-karaf-features-extension.version}" mode="maven" />
+
         <!-- [BACKLOG-30800] Prevent cxf to wire to the wrong javax.ws.rs version -->
         <bundle
                 originalUri="mvn:org.apache.cxf/cxf-rt-frontend-jaxrs/${cxf.version}"

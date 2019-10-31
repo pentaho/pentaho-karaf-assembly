@@ -72,11 +72,16 @@
   </feature>
 
   <feature name="pentaho-base" version="1.0">
+    <!-- This bundle patches and replaces the org.apache.karaf.features/org.apache.karaf.features.extension bundle.
+         It is loaded in the startup.properties, so this reference's goal is to include
+         the artifact into the assembled repository.
+    -->
+    <bundle dependency="true">mvn:org.hitachivantara.karaf.features/org.apache.karaf.features.extension/${hv-patched-karaf-features-extension.version}</bundle>
     <!-- This bundle wraps and replaces the org.ops4j.pax.logging/pax-logging-api bundle.
          It is loaded in the startup.properties, so this reference's goal is to include
          the artifact into the assembled repository.
     -->
-    <bundle>mvn:org.hitachivantara/pax-logging-api-wrap/${project.version}</bundle>
+    <bundle dependency="true">mvn:org.hitachivantara/pax-logging-api-wrap/${project.version}</bundle>
 
     <feature prerequisite="true">karaf-base</feature>
 
