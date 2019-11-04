@@ -31,11 +31,6 @@
                   <classifier>snmp</classifier>
                 </artifact>
                 <artifact>
-                  <file>src/main/resources/pentaho.jms.cfg</file>
-                  <type>cfg</type>
-                  <classifier>pentaho-jms</classifier>
-                </artifact>
-                <artifact>
                   <file>src/main/resources/pentaho.pdi.monitoring.cfg</file>
                   <type>cfg</type>
                   <classifier>pdi-monitoring</classifier>

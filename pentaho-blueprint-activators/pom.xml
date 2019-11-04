@@ -26,11 +26,6 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>src/main/resources/server.xml</file>
-                  <type>xml</type>
-                  <classifier>server</classifier>
-                </artifact>
-                <artifact>
                   <file>src/main/resources/standard.xml</file>
                   <type>xml</type>
                   <classifier>standard</classifier>
@@ -39,26 +34,6 @@
                   <file>src/main/resources/monitoring-snmp.xml</file>
                   <type>xml</type>
                   <classifier>monitoring-snmp</classifier>
-                </artifact>
-                <artifact>
-                  <file>src/main/resources/monitoring-jms.xml</file>
-                  <type>xml</type>
-                  <classifier>monitoring-jms</classifier>
-                </artifact>
-                <artifact>
-                  <file>src/main/resources/jms.xml</file>
-                  <type>xml</type>
-                  <classifier>jms</classifier>
-                </artifact>
-                <artifact>
-                  <file>src/main/resources/monitoring-jms-broker.xml</file>
-                  <type>xml</type>
-                  <classifier>monitoring-jms-broker</classifier>
-                </artifact>
-                <artifact>
-                  <file>src/main/resources/camel-jms.xml</file>
-                  <type>xml</type>
-                  <classifier>camel-jms</classifier>
                 </artifact>
                 <artifact>
                   <file>src/main/resources/proxy-watcher.xml</file>

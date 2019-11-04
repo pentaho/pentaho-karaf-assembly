@@ -32,12 +32,6 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.apache.camel.karaf</groupId>
-      <artifactId>apache-camel</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>org.hitachivantara.karaf.features</groupId>
       <artifactId>pentaho-karaf-features-standard</artifactId>
       <classifier>features</classifier>
@@ -46,12 +40,6 @@
     <dependency>
       <groupId>org.hitachivantara.karaf.features</groupId>
       <artifactId>pentaho-karaf-features-server</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.activemq</groupId>
-      <artifactId>activemq-karaf</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
@@ -107,6 +95,13 @@
       <groupId>org.pentaho</groupId>
       <artifactId>common-ui-impl-client-config</artifactId>
       <classifier>configuration-bundle</classifier>
+    </dependency>
+    <!-- Because of pax-keycloak feature condition on pax-web feature, which doesn't define repository url -->
+    <dependency>
+      <groupId>org.ops4j.pax.keycloak</groupId>
+      <artifactId>pax-keycloak-features</artifactId>
+      <classifier>features</classifier>
+      <type>xml</type>
     </dependency>
     <!-- Shim/drivers dependencies -->
     <dependency>
@@ -166,24 +161,38 @@
           <execution>
             <id>default-assembly</id>
             <configuration>
+              <startupFeatures>
+                <!-- list of features to be installed into system repository *and*  listed in `etc/startup.properties`;
+                 the `framework` feature is automatically added. -->
+                <feature>eventadmin</feature>
+              </startupFeatures>
               <bootFeatures>
+                <!-- list of features to be installed into system repository *and* listed in `featuresBoot` property
+                 in `etc/org.apache.karaf.features.cfg`. -->
+                <!-- until we enable the automatic generation of the `etc/org.apache.karaf.features.cfg` file,
+                 these features must mirror the ones in the `featuresBoot` property and its repositories added to the
+                 `featuresRepositories` property in that same file. -->
+                <feature>kar</feature>
                 <feature>config</feature>
                 <feature>management</feature>
-                <feature>kar</feature>
-                <feature>camel-jms</feature>
-                <feature>camel</feature>
-                <feature>camel-blueprint</feature>
-                <feature>camel-stream</feature>
+                <feature>community-edition</feature>
                 <feature>pentaho-server</feature>
                 <feature>pentaho-metaverse</feature>
                 <feature>pentaho-dataservice-legacy</feature>
-                <feature>pentaho-marketplace</feature>
-                <feature>community-edition</feature>
-                <feature>pdi-engine-configuration</feature>
-                <feature>get-fields-plugin</feature>
                 <feature>pdi-data-refinery</feature>
+                <feature>pdi-engine-configuration</feature>
+                <feature>pentaho-marketplace</feature>
+                <feature>get-fields-plugin</feature>
+
+                <!-- Shim/drivers features -->
+                <feature>pentaho-hadoop-shims-cdh61-kar</feature>
+                <feature>pentaho-hadoop-shims-emr521-kar</feature>
+                <feature>pentaho-hadoop-shims-hdp30-kar</feature>
               </bootFeatures>
               <installedFeatures>
+                <!-- list of features to be installed into system repository and not mentioned elsewhere. -->
+                <!-- until we enable the automatic generation of the `etc/org.apache.karaf.features.cfg` file,
+                its repositories must be added to the `featuresRepositories` property of that file. -->
                 <feature>ssh</feature>
                 <feature>cxf-jaxrs</feature>
                 <feature>diagnostic</feature>
@@ -191,10 +200,6 @@
                 <feature>wrapper</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
-                <!-- Shim/drivers features -->
-                <feature>pentaho-hadoop-shims-cdh61-kar</feature>
-                <feature>pentaho-hadoop-shims-emr521-kar</feature>
-                <feature>pentaho-hadoop-shims-hdp30-kar</feature>
               </installedFeatures>
             </configuration>
           </execution>

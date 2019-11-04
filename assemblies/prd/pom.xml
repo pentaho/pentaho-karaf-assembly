@@ -50,20 +50,15 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.apache.camel.karaf</groupId>
-      <artifactId>apache-camel</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>pentaho</groupId>
       <artifactId>pentaho-dataservice</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
+    <!-- Because of pax-keycloak feature condition on pax-web feature, which doesn't define repository url -->
     <dependency>
-      <groupId>org.apache.activemq</groupId>
-      <artifactId>activemq-karaf</artifactId>
+      <groupId>org.ops4j.pax.keycloak</groupId>
+      <artifactId>pax-keycloak-features</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
@@ -125,16 +120,33 @@
           <execution>
             <id>default-assembly</id>
             <configuration>
+              <startupFeatures>
+                <!-- list of features to be installed into system repository *and*  listed in `etc/startup.properties`;
+                 the `framework` feature is automatically added. -->
+                <feature>eventadmin</feature>
+              </startupFeatures>
               <bootFeatures>
-                <feature>config</feature>
-                <feature>package</feature>
+                <!-- list of features to be installed into system repository *and* listed in `featuresBoot` property
+                 in `etc/org.apache.karaf.features.cfg`. -->
+                <!-- until we enable the automatic generation of the `etc/org.apache.karaf.features.cfg` file,
+                 these features must mirror the ones in the `featuresBoot` property and its repositories added to the
+                 `featuresRepositories` property in that same file. -->
                 <feature>kar</feature>
-                <feature>pentaho-client-minimal</feature>
-                <feature>pentaho-big-data-plugin-testless-osgi</feature>
-                <feature>pentaho-dataservice-client</feature>
+                <feature>config</feature>
                 <feature>community-edition</feature>
+                <feature>pentaho-client-minimal</feature>
+                <feature>pentaho-dataservice-client</feature>
+                <feature>pentaho-big-data-plugin-testless-osgi</feature>
+
+                <!-- Shim/drivers features -->
+                <feature>pentaho-hadoop-shims-cdh61-kar</feature>
+                <feature>pentaho-hadoop-shims-emr521-kar</feature>
+                <feature>pentaho-hadoop-shims-hdp30-kar</feature>
               </bootFeatures>
               <installedFeatures>
+                <!-- list of features to be installed into system repository and not mentioned elsewhere. -->
+                <!-- until we enable the automatic generation of the `etc/org.apache.karaf.features.cfg` file,
+                its repositories must be added to the `featuresRepositories` property of that file. -->
                 <feature>pentaho-karaf-overrides</feature>
                 <feature>config</feature>
                 <feature>ssh</feature>
@@ -145,10 +157,6 @@
                 <feature>pdi-data-refinery</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
-                <!-- Shim/drivers features -->
-                <feature>pentaho-hadoop-shims-cdh61-kar</feature>
-                <feature>pentaho-hadoop-shims-emr521-kar</feature>
-                <feature>pentaho-hadoop-shims-hdp30-kar</feature>
               </installedFeatures>
             </configuration>
           </execution>

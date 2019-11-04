@@ -36,15 +36,11 @@
     <package.features>true</package.features>
     <commons.collections.version>3.2.2</commons.collections.version>
     <com.tinkerpop.version>2.6.0</com.tinkerpop.version>
-    <camel.guava.eventbus.version>2.17.7</camel.guava.eventbus.version>
     <eigenbase.properties.version>1.1.4</eigenbase.properties.version>
     <eigenbase.resgen.version>1.3.6</eigenbase.resgen.version>
-    <camel.karaf.version>2.17.7</camel.karaf.version>
-    <camel.overriden.karaf.version>2.17.7-pentaho</camel.overriden.karaf.version>
     <olap4j.xmlaserver.version>1.2.0</olap4j.xmlaserver.version>
     <google.guava.version>17.0</google.guava.version>
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
-    <pentaho-camel.version>9.0.0.0-SNAPSHOT</pentaho-camel.version>
     <pdi-monitoring-plugin.version>9.0.0.0-SNAPSHOT</pdi-monitoring-plugin.version>
     <pentaho-metaverse.version>9.0.0.0-SNAPSHOT</pentaho-metaverse.version>
     <commons.lang.version>2.6</commons.lang.version>
@@ -53,7 +49,7 @@
     <pdi-dataservice-plugin.version>9.0.0.0-SNAPSHOT</pdi-dataservice-plugin.version>
     <pdi-dataservice-client-plugin.version>9.0.0.0-SNAPSHOT</pdi-dataservice-client-plugin.version>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
-    <spring43.bundle.version>4.3.22.RELEASE_2</spring43.bundle.version>
+    <spring43.bundle.version>4.3.23.RELEASE_1</spring43.bundle.version>
     <spring32.bundle.version>3.2.18.RELEASE_1</spring32.bundle.version>
     <spring-security.bundle.version>3.1.7.RELEASE</spring-security.bundle.version>
     <aspectj.bundle.version>1.7.4_1</aspectj.bundle.version>
@@ -81,6 +77,23 @@
     <pentaho-hadoop-shims-hdp30.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp30.version>
     <pentaho-hadoop-shims-emr521.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-emr521.version>
     <pentaho-hadoop-shims.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims.version>
+    <pax-keycloak.version>0.2.0</pax-keycloak.version>
+
+    <servicemix.jaxrs-api.version>2.9.1</servicemix.jaxrs-api.version>
+
+    <http-features-override.version>4.2.7</http-features-override.version>
+
+    <!-- Karaf framework startup bundles' versions -->
+    <!-- karaf.version is in parent POM -->
+    <hv-patched-karaf-features-extension.version>${karaf.version}-R1</hv-patched-karaf-features-extension.version>
+    <!-- pax-url-aether.version is in parent POM -->
+    <felix.metatype.version>1.2.2</felix.metatype.version>
+    <jansi.version>1.18</jansi.version>
+    <pax-logging.version>1.10.2</pax-logging.version>
+    <felix.coordinator.version>1.0.2</felix.coordinator.version>
+    <felix.configadmin.version>1.9.14</felix.configadmin.version>
+    <felix.fileinstall.version>3.6.4</felix.fileinstall.version>
+    <servicemix-spec.version>2.9.0</servicemix-spec.version>
   </properties>
 
   <dependencyManagement>
@@ -144,22 +157,6 @@
         <artifactId>pentaho-big-data-plugin-osgi</artifactId>
         <classifier>features</classifier>
         <version>${big-data-plugin.version}</version>
-        <type>xml</type>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.activemq</groupId>
-        <artifactId>activemq-karaf</artifactId>
-        <classifier>features</classifier>
-        <version>${activemq.version}</version>
-        <type>xml</type>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.camel.karaf</groupId>
-        <artifactId>apache-camel</artifactId>
-        <classifier>features</classifier>
-        <version>${camel.karaf.version}</version>
         <type>xml</type>
         <scope>runtime</scope>
       </dependency>
@@ -260,11 +257,20 @@
         <scope>runtime</scope>
       </dependency>
       <dependency>
+        <groupId>org.ops4j.pax.keycloak</groupId>
+        <artifactId>pax-keycloak-features</artifactId>
+        <classifier>features</classifier>
+        <version>${pax-keycloak.version}</version>
+        <type>xml</type>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
         <groupId>org.pentaho</groupId>
         <artifactId>common-ui-impl-client-config</artifactId>
         <version>${common-ui.version}</version>
         <classifier>configuration-bundle</classifier>
       </dependency>
+
       <!-- Shim/drivers dependencies -->
       <dependency>
         <groupId>org.pentaho.hadoop.shims</groupId>

@@ -15,40 +15,41 @@
  ~ Copyright 2014 - 2019 Hitachi Vantara. All rights reserved.
  -->
 
-<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+<features name="pentaho-karaf-features-server" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+    <repository>mvn:org.hitachivantara.karaf.features/spring43/${project.version}/xml/features</repository>
     <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
 
-    <repository>mvn:org.hitachivantara.karaf.features/spring43/${project.version}/xml/features</repository>
+    <!-- The Pentaho Server has its own web application container, so the Http Service is provided by the
+         Felix HTTP Bridge implementation. For full compatibility we must also use Felix's implementation of the
+         Http Whiteboard Specification.
 
-    <!-- Overriding the default http feature -->
-    <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
-        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.version}</bundle>
-		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+         A series of overrides are made to prevent pax-http-service (which brings on Jetty) and pax-http-whiteboard
+         from being installed. -->
+    <feature name="http" description="Implementation of the OSGI HTTP Service" version="${http-features-override.version}" >
+        <feature dependency="true">felix-bridge</feature>
+        <requirement>http-service</requirement>
     </feature>
 
-    <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
-    <feature name="http-whiteboard" version="3.7.5" description="Provide HTTP Whiteboard pattern support" resolver="(obr)">
+    <feature name="http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="${http-features-override.version}">
         <feature>http</feature>
-        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${pax-web.version}</bundle>
-		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.whiteboard/4.0.0</bundle>
     </feature>
 
-    <!-- Overriding Whiteboard to ensure that Jetty isn't started -->
-    <feature name="pax-http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="3.1.4" resolver="(obr)">
-        <bundle start-level="30">mvn:org.ops4j.pax.web/pax-web-extender-whiteboard/${pax-web.version}</bundle>
-		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    </feature>
-
-    <!-- Overriding WAR to ensure that Jetty isn't started -->
-    <feature name="war" version="3.7.5" description="Turn Karaf as a full WebContainer" resolver="(obr)">
+    <feature name="war" description="Turn Karaf as a full WebContainer" version="${http-features-override.version}">
         <feature>http</feature>
-		<bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+    </feature>
+
+    <feature name="felix-bridge" description="Felix HTTP Bridge Service" version="${http-features-override.version}">
+        <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.api/${felix.http.api.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.bridge.version}</bundle>
+
+        <capability>http-service;provider:=felix-bridge</capability>
     </feature>
 
     <feature name="pentaho-server" version="1.0">
-        <feature>pentaho-base</feature>
-        <feature>pentaho-client</feature>
-        <feature>http-whiteboard</feature>
+        <feature prerequisite="true">pentaho-base</feature>
+        <feature prerequisite="true">pentaho-client</feature>
+        <feature prerequisite="true">http-whiteboard</feature>
         <feature version="[${spring43.bundle.version},4.4)">spring</feature>
         <feature version="${spring-security.bundle.version}">spring-security</feature>
 
@@ -58,11 +59,9 @@
         <bundle start-level="50">mvn:pentaho/pentaho-proxy-spring4/${pentaho-osgi-bundles.version}</bundle>
 
         <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
-        <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
-        <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.version}</bundle>
-        <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+        <bundle>mvn:org.pentaho/spring-security-karaf-login-module/${project.version}</bundle>
+        <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
         <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-platform/${pentaho-osgi-bundles.version}</bundle>
     </feature>
-
 
 </features>
