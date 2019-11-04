@@ -80,6 +80,9 @@
     <pentaho-hadoop-shims-hdp30.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp30.version>
     <pentaho-hadoop-shims-emr521.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims-emr521.version>
     <pentaho-hadoop-shims.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims.version>
+    <pax-keycloak.version>0.2.0</pax-keycloak.version>
+
+    <http-features-override.version>4.2.7</http-features-override.version>
   </properties>
 
   <dependencyManagement>
@@ -259,11 +262,20 @@
         <scope>runtime</scope>
       </dependency>
       <dependency>
+        <groupId>org.ops4j.pax.keycloak</groupId>
+        <artifactId>pax-keycloak-features</artifactId>
+        <classifier>features</classifier>
+        <version>${pax-keycloak.version}</version>
+        <type>xml</type>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
         <groupId>org.pentaho</groupId>
         <artifactId>common-ui-impl-client-config</artifactId>
         <version>${common-ui.version}</version>
         <classifier>configuration-bundle</classifier>
       </dependency>
+
       <!-- Shim/drivers dependencies -->
       <dependency>
         <groupId>org.pentaho.hadoop.shims</groupId>

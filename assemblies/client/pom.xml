@@ -14,6 +14,9 @@
   <name>Assemblies :: Client</name>
 
   <dependencies>
+
+
+
     <dependency>
       <groupId>org.apache.karaf.features</groupId>
       <artifactId>framework</artifactId>
@@ -132,6 +135,13 @@
       <artifactId>common-ui-impl-client-config</artifactId>
       <classifier>configuration-bundle</classifier>
     </dependency>
+    <!-- Because of pax-keycloak feature condition on pax-web feature, which doesn't define repository url -->
+    <dependency>
+      <groupId>org.ops4j.pax.keycloak</groupId>
+      <artifactId>pax-keycloak-features</artifactId>
+      <classifier>features</classifier>
+      <type>xml</type>
+    </dependency>
     <!-- Shim/drivers dependencies -->
     <dependency>
       <groupId>org.pentaho.hadoop.shims</groupId>
@@ -196,6 +206,9 @@
           <execution>
             <id>default-assembly</id>
             <configuration>
+              <startupFeatures>
+                <feature>eventadmin</feature>
+              </startupFeatures>
               <bootFeatures>
                 <feature>config</feature>
                 <feature>pentaho-client-minimal</feature>
