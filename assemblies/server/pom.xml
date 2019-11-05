@@ -122,6 +122,12 @@
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
+    <dependency>
+      <groupId>org.pentaho.hadoop.shims</groupId>
+      <artifactId>pentaho-hadoop-shims-apache-kar</artifactId>
+      <classifier>features</classifier>
+      <type>xml</type>
+    </dependency>
   </dependencies>
 
   <build>
@@ -184,10 +190,11 @@
                 <feature>pentaho-marketplace</feature>
                 <feature>get-fields-plugin</feature>
 
-                <!-- Shim/drivers features -->
+                <!-- Shim/drivers features -->  
                 <feature>pentaho-hadoop-shims-cdh61-kar</feature>
                 <feature>pentaho-hadoop-shims-emr521-kar</feature>
                 <feature>pentaho-hadoop-shims-hdp30-kar</feature>
+                <feature>pentaho-hadoop-shims-apache-kar</feature>
               </bootFeatures>
               <installedFeatures>
                 <!-- list of features to be installed into system repository and not mentioned elsewhere. -->
