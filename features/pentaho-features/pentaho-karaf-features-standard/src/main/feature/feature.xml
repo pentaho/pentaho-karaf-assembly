@@ -72,14 +72,14 @@
   </feature>
 
   <feature name="pentaho-base" version="1.0">
-    <!-- This bundle patches and replaces the org.apache.karaf.features/org.apache.karaf.features.extension bundle.
+    <!-- BACKLOG-27591]  This bundle wraps and replaces the org.ops4j.pax.logging/pax-logging-api bundle,
+         preventing it from exporting packages from the logging APIs the Pentaho products use and inject from
+         the main classloader (org.apache.commons.logging, org.apache.log4j and org.slf4j).
+
          It is loaded in the startup.properties, so this reference's goal is to include
-         the artifact into the assembled repository.
-    -->
-    <bundle dependency="true">mvn:org.hitachivantara.karaf.features/org.apache.karaf.features.extension/${hv-patched-karaf-features-extension.version}</bundle>
-    <!-- This bundle wraps and replaces the org.ops4j.pax.logging/pax-logging-api bundle.
-         It is loaded in the startup.properties, so this reference's goal is to include
-         the artifact into the assembled repository.
+         the artifact into the assembled repository. It can't be overrided using org.apache.karaf.features.xml
+         because the assemblies will fail with a missing requirement from org.ops4j.pax.url.mvn of org.slf4j
+         (there's no way to tell the requirement is satisfied by the system bundle).
     -->
     <bundle dependency="true">mvn:org.hitachivantara/pax-logging-api-wrap/${project.version}</bundle>
 
