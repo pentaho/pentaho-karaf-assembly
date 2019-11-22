@@ -79,6 +79,8 @@
     <pentaho-hadoop-shims.version>9.0.0.0-SNAPSHOT</pentaho-hadoop-shims.version>
     <pax-keycloak.version>0.2.0</pax-keycloak.version>
 
+    <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+
     <servicemix.jaxrs-api.version>2.9.1</servicemix.jaxrs-api.version>
 
     <http-features-override.version>4.2.7</http-features-override.version>
