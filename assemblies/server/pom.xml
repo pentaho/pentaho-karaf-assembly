@@ -171,6 +171,7 @@
                 <feature>pdi-engine-configuration</feature>
                 <feature>pentaho-marketplace</feature>
                 <feature>get-fields-plugin</feature>
+                <feature>pentaho-hadoop-cluster-ui</feature>
 
                 <!-- Shim/drivers features -->
                 <feature>pentaho-hadoop-shims-apache-kar</feature>
