@@ -81,7 +81,7 @@
          because the assemblies will fail with a missing requirement from org.ops4j.pax.url.mvn of org.slf4j
          (there's no way to tell the requirement is satisfied by the system bundle).
     -->
-    <bundle dependency="true">mvn:org.hitachivantara/pax-logging-api-wrap/${project.version}</bundle>
+    <bundle dependency="true">mvn:org.hitachivantara/pax-logging-api-wrap/${pax-logging.version}</bundle>
 
     <feature prerequisite="true">karaf-base</feature>
 
