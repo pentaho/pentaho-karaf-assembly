@@ -1,0 +1,12 @@
+branches:
+  only:
+    - /^webspoon-.*$/
+language: java
+jdk: openjdk8
+install: true
+script:
+  - git config --local user.name "Hiromu Hota"
+  - git config --local user.email "hiromu.hota@hal.hitachi.com"
+  - export TRAVIS_TAG=webspoon/nightly
+  - git tag $TRAVIS_TAG --force
+  - git push -f https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git $TRAVIS_TAG
