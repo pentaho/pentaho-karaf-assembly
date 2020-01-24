@@ -116,7 +116,7 @@
     </Arg>
   </Call>
 
-  <!-- DEUBUG SPIKE INVESTIGATION -->
+  <!-- SECURITY FIX:  Adds a white list loopback URL so that thin dialogs are not accessible externally -->
   <Call name="insertHandler">
     <Arg>
       <New id="IPAccessHandler" class="org.eclipse.jetty.server.handler.IPAccessHandler">
