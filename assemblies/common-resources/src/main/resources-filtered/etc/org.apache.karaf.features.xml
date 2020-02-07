@@ -34,26 +34,34 @@
         <!-- [PPP-4430] CVE-2019-12086 Use of Vulnerable Component: jackson-databind-2.9.8.jar -->
         <!-- Replace all jackson bundles installed by activemq-karaf (first three) and apache-cxf (all) -->
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.core/jackson-core/[2.9.0,${fasterxml-jackson.version})"
+                originalUri="mvn:com.fasterxml.jackson.core/jackson-core/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}" mode="maven" />
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.core/jackson-databind/[2.9.0,${fasterxml-jackson.version})"
+                originalUri="mvn:com.fasterxml.jackson.core/jackson-databind/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson.version}" mode="maven" />
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.core/jackson-annotations/[2.9.0,${fasterxml-jackson.version})"
+                originalUri="mvn:com.fasterxml.jackson.core/jackson-annotations/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}" mode="maven" />
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/[2.9.0,${fasterxml-jackson.version})"
+                originalUri="mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${fasterxml-jackson.version}" mode="maven" />
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/[2.9.0,${fasterxml-jackson.version})"
+                originalUri="mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}" mode="maven" />
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/[2.9.0,${fasterxml-jackson.version})"
+                originalUri="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${fasterxml-jackson.version}" mode="maven" />
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/[2.9.0,${fasterxml-jackson.version})"
+                originalUri="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${fasterxml-jackson.version}" mode="maven" />
+
+        <!-- [PPP-4108] Use of vulnerable component jackson-mapper-asl-1.9.2.jar CVE-2017-7525, CVE-2017-15095, CVE-2017-15095 -->
+        <bundle
+            originalUri="mvn:org.codehaus.jackson/jackson-core-asl/[1.5.0,${codehaus-jackson.version})"
+            replacement="mvn:org.codehaus.jackson/jackson-core-asl/${codehaus-jackson.version}" mode="maven" />
+        <bundle
+            originalUri="mvn:org.codehaus.jackson/jackson-mapper-asl/[1.5.0,${codehaus-jackson.version})"
+            replacement="mvn:org.codehaus.jackson/jackson-mapper-asl/${codehaus-jackson.version}" mode="maven" />
     </bundleReplacements>
 
     <!-- A list of feature replacements that allows changing external feature definitions -->

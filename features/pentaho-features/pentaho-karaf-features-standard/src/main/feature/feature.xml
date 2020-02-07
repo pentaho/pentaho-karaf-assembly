@@ -232,7 +232,7 @@
   </feature>
 
   <!-- Separate feature for jackson-* bundles in scope of BACKLOG-20783 -->
-  <feature name="pentaho-jackson" description="Jackson 2.9.x support" version="1.0">
+  <feature name="pentaho-jackson" description="Jackson 2.10.x support" version="1.0">
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson.version}</bundle>
