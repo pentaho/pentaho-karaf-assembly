@@ -39,8 +39,8 @@
                 originalUri="mvn:com.fasterxml.jackson.core/jackson-core/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}" mode="maven" />
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.core/jackson-databind/[2.7.0,${fasterxml-jackson.version})"
-                replacement="mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson.version}" mode="maven" />
+                originalUri="mvn:com.fasterxml.jackson.core/jackson-databind/[2.7.0,${fasterxml-jackson-databind.version})"
+                replacement="mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind.version}" mode="maven" />
         <bundle
                 originalUri="mvn:com.fasterxml.jackson.core/jackson-annotations/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}" mode="maven" />
@@ -78,7 +78,7 @@
                 <f:bundle start-level="35">mvn:org.yaml/snakeyaml/1.25</f:bundle>
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}</f:bundle>
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</f:bundle>
-                <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson.version}</f:bundle>
+                <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind.version}</f:bundle>
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${fasterxml-jackson.version}</f:bundle>
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}</f:bundle>
                 <!-- <f:bundle start-level="35">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${fasterxml-jackson.version}</f:bundle> -->
