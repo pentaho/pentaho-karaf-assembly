@@ -234,7 +234,7 @@
     <bundle dependency="true">mvn:org.apache.xbean/xbean-spring/3.16</bundle>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle dependency='true'>mvn:commons-lang/commons-lang/2.6</bundle>
-    <bundle dependency="true">mvn:commons-codec/commons-codec/1.4</bundle>
+    <bundle dependency="true">mvn:commons-codec/commons-codec/${commons-codec.version}</bundle>
     <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.velocity/1.7_6</bundle>
     <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jasypt/${jasypt.version}</bundle>
     <bundle dependency="true">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.stax-api-1.0/1.9.0</bundle>
