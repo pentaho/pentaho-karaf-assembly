@@ -16,7 +16,7 @@
  -->
 
 <features name="pentaho-karaf-features-server" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
-    <repository>mvn:org.hitachivantara.karaf.features/spring43/${project.version}/xml/features</repository>
+    <repository>mvn:org.hitachivantara.karaf.features/spring43/${spring43.feature.artifact.version}/xml/features</repository>
     <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
 
     <!-- The Pentaho Server has its own web application container and as such we are not including pax-web.

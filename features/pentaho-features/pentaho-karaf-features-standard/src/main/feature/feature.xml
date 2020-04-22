@@ -25,7 +25,7 @@
   <repository>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/${pdi.version}/xml/features</repository>
 
   <!-- pdi-platform feature is using spring feature -->
-  <repository>mvn:org.hitachivantara.karaf.features/spring32/${project.version}/xml/features</repository>
+  <repository>mvn:org.hitachivantara.karaf.features/spring32/${spring32.feature.artifact.version}/xml/features</repository>
 
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
