@@ -62,6 +62,11 @@
         <bundle
             originalUri="mvn:org.codehaus.jackson/jackson-mapper-asl/[1.5.0,${codehaus-jackson.version})"
             replacement="mvn:org.codehaus.jackson/jackson-mapper-asl/${codehaus-jackson.version}" mode="maven" />
+
+        <!-- PPP-4495 Multiple CVEs in bcprov-jdk15on addressed in version 1.65 -->
+        <bundle
+            originalUri="mvn:org.bouncycastle/bcprov-jdk15on/[1.46,1.65)"
+            replacement="mvn:org.bouncycastle/bcprov-jdk15on/1.65" mode="maven" />
     </bundleReplacements>
 
     <!-- A list of feature replacements that allows changing external feature definitions -->
