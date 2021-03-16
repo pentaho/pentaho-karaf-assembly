@@ -12,11 +12,11 @@
   ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
   ~ See the GNU Lesser General Public License for more details.
   ~
-  ~ Copyright 2014 - 2019 Hitachi Vantara. All rights reserved.
+  ~ Copyright 2014 - 2021 Hitachi Vantara. All rights reserved.
   -->
 
 <features name="pentaho-karaf-features-enterprise" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
-  <repository>mvn:org.hitachivantara.karaf.features/spring43/${spring43.feature.artifact.version}/xml/features</repository>
+  <repository>mvn:org.hitachivantara.karaf.features/spring53/${spring53.feature.artifact.version}/xml/features</repository>
   <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
   <repository>mvn:com.pentaho.di.plugins/pentaho-ee-streaming-feature/${pdi-plugins-ee.version}/xml/features</repository>
 
