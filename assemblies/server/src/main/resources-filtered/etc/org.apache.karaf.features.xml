@@ -67,8 +67,8 @@
 
         <!-- PPP-4495 Multiple CVEs in bcprov-jdk15on addressed in version 1.65 -->
         <bundle
-            originalUri="mvn:org.bouncycastle/bcprov-jdk15on/[1.46,1.65)"
-            replacement="mvn:org.bouncycastle/bcprov-jdk15on/1.65" mode="maven" />
+            originalUri="mvn:org.bouncycastle/bcprov-jdk15on/[1.46,${bcprov-jdk15on.version})"
+            replacement="mvn:org.bouncycastle/bcprov-jdk15on/${bcprov-jdk15on.version}" mode="maven" />
     </bundleReplacements>
 
     <!-- A list of feature replacements that allows changing external feature definitions -->
