@@ -16,7 +16,7 @@
  -->
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-    <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${project.version}/xml/features</repository>
+    <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-625/xml/features</repository>
 
     <!-- Overriding the default http feature -->
     <feature name="http" description="Implementation of the OSGi HTTP service" version="3.7.5" resolver="(obr)">
@@ -52,12 +52,12 @@
 
         <bundle>mvn:pentaho/pentaho-server-bundle/${pentaho-osgi-bundles.version}</bundle>
 
-        <bundle start-level="20">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/proxy-watcher</bundle>
+        <bundle start-level="20">blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-625/xml/proxy-watcher</bundle>
         <bundle start-level="50">mvn:pentaho/pentaho-proxy-spring4/${pentaho-osgi-bundles.version}</bundle>
         <bundle>mvn:pentaho/pentaho-server-bundle/${pentaho-osgi-bundles.version}</bundle>
 
-        <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
-        <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/server</bundle>
+        <feature version="8.2.0.5-625">pentaho-requirejs-osgi-manager</feature>
+        <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-625/xml/server</bundle>
         <bundle>mvn:org.apache.felix/org.apache.felix.http.bridge/${org.apache.felix.http.version}</bundle>
         <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
         <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-platform/${pentaho-osgi-bundles.version}</bundle>

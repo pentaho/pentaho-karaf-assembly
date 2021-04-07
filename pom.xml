@@ -10,7 +10,7 @@
   </parent>
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf</artifactId>
-  <version>8.2.0.5-625</version>
+  <version>8.2.0.5-C249</version>
   <packaging>pom</packaging>
   <modules>
     <module>pentaho-karaf-features</module>
@@ -54,7 +54,7 @@
     <pentaho-metaverse.version>8.2.0.5-625</pentaho-metaverse.version>
     <commons.lang.version>2.6</commons.lang.version>
     <pentaho-osgi-bundles.version>8.2.0.5-625</pentaho-osgi-bundles.version>
-    <pdi.version>8.2.0.5-625</pdi.version>
+    <pdi.version>8.2.0.5-C249</pdi.version>
     <pdi-dataservice-client-plugin.version>8.2.0.5-625</pdi-dataservice-client-plugin.version>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
     <osgi.over.slf4j.version>1.7.7</osgi.over.slf4j.version>
