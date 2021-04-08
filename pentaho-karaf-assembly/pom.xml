@@ -47,7 +47,7 @@
     <dependency>
       <groupId>org.pentaho.karaf</groupId>
       <artifactId>pentaho-karaf-overrides</artifactId>
-      <version>8.2.0.5-625</version>
+      <version>8.2.0.5-C249</version>
       <type>xml</type>
       <classifier>features</classifier>
     </dependency>
@@ -75,7 +75,7 @@
     <dependency>
       <groupId>org.pentaho</groupId>
       <artifactId>common-ui-impl-client-config</artifactId>
-      <version>8.2.0.5-625</version>
+      <version>8.2.0.5-C249</version>
       <classifier>${configuration-bundles.classifier}</classifier>
     </dependency>
   </dependencies>
@@ -132,7 +132,7 @@
                 <artifactItem>
                   <groupId>org.pentaho</groupId>
                   <artifactId>common-ui-impl-client-config</artifactId>
-                  <version>8.2.0.5-625</version>
+                  <version>8.2.0.5-C249</version>
                   <classifier>${configuration-bundles.classifier}</classifier>
                   <outputDirectory>${configuration-bundles.unpacked}/web-client</outputDirectory>
                 </artifactItem>
@@ -162,20 +162,20 @@
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-625/xml/standard</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-C249/xml/standard</descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/8.2.0.5-C249/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pdi-marketplace/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pdi-marketplace/8.2.0.5-C249/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/repositories-plugin/${pdi.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/8.2.0.5-C249/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/file-open-save-plugin/${pdi.version}/xml/features</descriptor>
                 <descriptor>mvn:org.pentaho.di.plugins/get-fields-plugin/${pdi.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-dataservice/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-dataservice/8.2.0.5-C249/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>pentaho-karaf-overrides</feature>
@@ -214,15 +214,15 @@
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-625/xml/standard</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-C249/xml/standard</descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/8.2.0.5-C249/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-dataservice-client/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-dataservice-client/8.2.0.5-C249/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>pentaho-karaf-overrides</feature>
@@ -256,20 +256,20 @@
               <descriptors>
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/8.2.0.5-C249/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-625/xml/standard</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-625/xml/server</descriptor>
+                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-C249/xml/standard</descriptor>
+                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-C249/xml/server</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pentaho-marketplace/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.di.plugins/get-fields-plugin/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-dataservice-legacy/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-marketplace/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.di.plugins/pdi-engine-configuration/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.di.plugins/get-fields-plugin/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-dataservice-legacy/8.2.0.5-C249/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>pentaho-karaf-overrides</feature>
@@ -308,14 +308,14 @@
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-625/xml/standard</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-C249/xml/standard</descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/8.2.0.5-C249/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-C249/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>pentaho-karaf-overrides</feature>
@@ -345,15 +345,15 @@
                 <descriptor>mvn:org.apache.karaf.features/standard/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/enterprise/${karaf.features.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-625/xml/standard</descriptor>
-                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.karaf/pentaho-karaf-overrides/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-karaf-features/8.2.0.5-C249/xml/standard</descriptor>
+                <descriptor>mvn:pentaho-karaf-features/pentaho-big-data-plugin-osgi/8.2.0.5-C249/xml/features</descriptor>
                 <descriptor>mvn:org.apache.activemq/activemq-karaf/${activemq.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.camel.karaf/apache-camel/${camel.karaf.version}/xml/features</descriptor>
                 <descriptor>mvn:org.apache.karaf.features/spring/${karaf.features.version}/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-625/xml/features</descriptor>
-                <descriptor>mvn:pentaho/pentaho-dataservice-client/8.2.0.5-625/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-C249/xml/features</descriptor>
+                <descriptor>mvn:pentaho/pentaho-dataservice-client/8.2.0.5-C249/xml/features</descriptor>
               </descriptors>
               <features>
                 <feature>pentaho-karaf-overrides</feature>

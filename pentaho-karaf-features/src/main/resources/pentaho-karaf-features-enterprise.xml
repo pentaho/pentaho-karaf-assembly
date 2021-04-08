@@ -16,8 +16,8 @@
   -->
 
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-  <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-625/xml/features</repository>
-  <repository>mvn:com.pentaho.di.plugins/pentaho-ee-streaming-feature/8.2.0.5-625/xml/features</repository>
+  <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-C249/xml/features</repository>
+  <repository>mvn:com.pentaho.di.plugins/pentaho-ee-streaming-feature/8.2.0.5-C249/xml/features</repository>
 
   <feature name="pentaho-client-ee" version="1.0">
     <feature>pentaho-client</feature>
@@ -27,7 +27,7 @@
   <feature name="pentaho-analyzer" version="1.0">
     <feature>spring-dm</feature>
     <feature>pdi-platform</feature>
-    <feature version="8.2.0.5-625">pentaho-requirejs-osgi-manager</feature>
+    <feature version="8.2.0.5-C249">pentaho-requirejs-osgi-manager</feature>
     <bundle>wrap:mvn:pentaho/pentaho-connections/${pentaho-connections.version}</bundle>
     <bundle>mvn:pentaho/pentaho-analyzer-xsd/${analyzer-plugin.version}</bundle>
     <bundle>pentaho-platform-plugin-mvn:pentaho/paz-plugin-ce/${analyzer-plugin.version}/zip</bundle>
@@ -35,7 +35,7 @@
   </feature>
 
   <feature name="pentaho-monitoring" version="1.0">
-    <configfile finalname="/etc/pentaho.pdi.monitoring.cfg">mvn:pentaho/pentaho-osgi-config/8.2.0.5-625/cfg/pdi-monitoring
+    <configfile finalname="/etc/pentaho.pdi.monitoring.cfg">mvn:pentaho/pentaho-osgi-config/8.2.0.5-C249/cfg/pdi-monitoring
     </configfile>
     <!-- <bundle>mvn:org.apache.camel/camel-guava-eventbus/2.17.7</bundle> -->
     <bundle>mvn:commons-beanutils/commons-beanutils/${commons.beanutils.version}</bundle>
@@ -55,11 +55,11 @@
   </feature>
 
   <feature name="pentaho-monitoring-to-snmp" version="1.0">
-    <configfile finalname="/etc/pentaho.snmp.cfg">mvn:pentaho/pentaho-osgi-config/8.2.0.5-625/cfg/snmp
+    <configfile finalname="/etc/pentaho.snmp.cfg">mvn:pentaho/pentaho-osgi-config/8.2.0.5-C249/cfg/snmp
     </configfile>
     <feature>pentaho-monitoring</feature>
     <feature>pentaho-monitoring-camel-base</feature>
-    <bundle start-level="90">wrap:blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-625/xml/monitoring-snmp$overwrite=merge&amp;Import-Package=com.google.common.eventbus;version="[17.0,17.0]"</bundle>
+    <bundle start-level="90">wrap:blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-C249/xml/monitoring-snmp$overwrite=merge&amp;Import-Package=com.google.common.eventbus;version="[17.0,17.0]"</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
@@ -67,7 +67,7 @@
     <feature>pentaho-monitoring</feature>
     <feature>pentaho-monitoring-camel-base</feature>
     <feature>pentaho-camel-jms</feature>
-    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-625/xml/monitoring-jms</bundle>
+    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-C249/xml/monitoring-jms</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
@@ -75,7 +75,7 @@
     <feature>pentaho-monitoring</feature>
     <feature>pentaho-monitoring-camel-base</feature>
     <feature>pentaho-camel-jms</feature>
-    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-625/xml/monitoring-jms-broker</bundle>
+    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-C249/xml/monitoring-jms-broker</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
@@ -83,7 +83,7 @@
   <feature name='camel-guava-eventbus' version='2.17.7-pentaho' resolver='(obr)' start-level='50'>
     <feature version='2.17.7'>camel-core</feature>
     <bundle dependency='true'>mvn:com.google.guava/guava/17.0</bundle>
-    <bundle>mvn:pentaho/pentaho-camel-guava-eventbus/8.2.0.5-625</bundle>
+    <bundle>mvn:pentaho/pentaho-camel-guava-eventbus/8.2.0.5-C249</bundle>
   </feature>
 
 </features>
