@@ -16,11 +16,11 @@
  -->
 
 <features name="pentaho-karaf-features-standard" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
-  <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-625/xml/features</repository>
-  <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-625/xml/features</repository>
+  <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/8.2.0.5-C249/xml/features</repository>
+  <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/8.2.0.5-C249/xml/features</repository>
 
-  <repository>mvn:pentaho/pentaho-dataservice/8.2.0.5-625/xml/features</repository>
-  <repository>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/8.2.0.5-625/xml/features</repository>
+  <repository>mvn:pentaho/pentaho-dataservice/8.2.0.5-C249/xml/features</repository>
+  <repository>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/8.2.0.5-C249/xml/features</repository>
 
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
@@ -31,10 +31,10 @@
     <bundle>mvn:commons-io/commons-io/${commons.io.version}</bundle>
     <bundle>mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/8.2.0.5-625</bundle>
-    <bundle>mvn:pentaho/pentaho-bundle-resource-manager/8.2.0.5-625</bundle>
-    <bundle>mvn:pentaho/pentaho-spring-dm-extender/8.2.0.5-625</bundle>
-    <feature version="8.2.0.5-625">pentaho-webjars-deployer</feature>
+    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/8.2.0.5-C249</bundle>
+    <bundle>mvn:pentaho/pentaho-bundle-resource-manager/8.2.0.5-C249</bundle>
+    <bundle>mvn:pentaho/pentaho-spring-dm-extender/8.2.0.5-C249</bundle>
+    <feature version="8.2.0.5-C249">pentaho-webjars-deployer</feature>
   </feature>
 
   <feature name="pentaho-base" version="1.0">
@@ -43,7 +43,7 @@
     <feature>pentaho-i18n</feature>
 
     <bundle>wrap:mvn:org.pentaho/json/${pentaho-json.version}</bundle>
-    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-625/xml/standard</bundle>
+    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-C249/xml/standard</bundle>
     <bundle>mvn:org.slf4j/osgi-over-slf4j/${osgi.over.slf4j.version}</bundle>
     <bundle>mvn:commons-logging/commons-logging/${commons.logging.version}</bundle>
     <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
@@ -61,7 +61,7 @@
     <bundle>mvn:pentaho/pentaho-zookeeper-fragment/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
-  <feature name="pentaho-webjars-deployer" version="8.2.0.5-625">
+  <feature name="pentaho-webjars-deployer" version="8.2.0.5-C249">
     <bundle>mvn:pentaho/pentaho-webjars-deployer/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
@@ -74,14 +74,14 @@
   </feature>
 
   <feature name="pentaho-kerberos-jaas" version="1.0">
-    <configfile finalname="/etc/pentaho.kerberos.cfg">mvn:pentaho/pentaho-osgi-config/8.2.0.5-625/cfg/pentaho-kerberos
+    <configfile finalname="/etc/pentaho.kerberos.cfg">mvn:pentaho/pentaho-osgi-config/8.2.0.5-C249/cfg/pentaho-kerberos
     </configfile>
-    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-625/xml/krb5-jaas</bundle>
+    <bundle>blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-C249/xml/krb5-jaas</bundle>
   </feature>
 
   <feature name="ael-security"  version="1.0" />
 
-  <feature name="pentaho-spoon" version="8.2.0.5-625">
+  <feature name="pentaho-spoon" version="8.2.0.5-C249">
     <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-spoon/${pentaho-osgi-bundles.version}</bundle>
     <feature>pdi-platform</feature>
   </feature>
@@ -90,13 +90,13 @@
     <feature>pentaho-base</feature>
     <bundle>mvn:pentaho/pentaho-mongo-utils/${pentaho-mongo-utils.version}</bundle>
     <bundle>wrap:mvn:pentaho/pentaho-mongodb-plugin/${pentaho-mongodb-plugin.version}</bundle>
-    <bundle>wrap:mvn:org.pentaho.di.plugins/meta-inject-plugin/8.2.0.5-625</bundle>
+    <bundle>wrap:mvn:org.pentaho.di.plugins/meta-inject-plugin/8.2.0.5-C249</bundle>
     <bundle>mvn:org.mongodb/mongo-java-driver/${mongo.java.driver.version}</bundle>
     <bundle>mvn:pentaho/pdi-osgi-bridge-activator/${pdi-osgi-bridge.version}</bundle>
    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
-  <feature name="pdi-platform" version="8.2.0.5-625">
+  <feature name="pdi-platform" version="8.2.0.5-C249">
     <bundle>mvn:pentaho/pentaho-pdi-platform/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
@@ -112,11 +112,11 @@
 
   <!-- Overriding standard one to exclude log bundle which will not work without pax-logging -->
   <feature name="pentaho-jms">
-    <configfile finalname="/etc/pentaho.jms.cfg">mvn:pentaho/pentaho-osgi-config/8.2.0.5-625/cfg/pentaho-jms
+    <configfile finalname="/etc/pentaho.jms.cfg">mvn:pentaho/pentaho-osgi-config/8.2.0.5-C249/cfg/pentaho-jms
     </configfile>
     <feature>jms</feature>
     <feature>activemq</feature>
-    <bundle start-level="90">wrap:blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-625/xml/jms$overwrite=merge&amp;Import-Package=javax.jms;version="[1.1,1.1]"</bundle>
+    <bundle start-level="90">wrap:blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-C249/xml/jms$overwrite=merge&amp;Import-Package=javax.jms;version="[1.1,1.1]"</bundle>
    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
@@ -124,7 +124,7 @@
     <feature version="${camel.overriden.karaf.version}">camel-jms</feature>
     <feature>activemq-camel</feature>
     <feature>pentaho-jms</feature>
-    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-625/xml/camel-jms</bundle>
+    <bundle start-level="90">blueprint:mvn:pentaho/pentaho-blueprint-activators/8.2.0.5-C249/xml/camel-jms</bundle>
    <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
@@ -134,10 +134,10 @@
 	 <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
-  <feature name="pentaho-metaverse" version="8.2.0.5-625">
+  <feature name="pentaho-metaverse" version="8.2.0.5-C249">
     <details>Provides data lineage capabilities</details>
     <configfile finalname="/etc/pentaho.metaverse.cfg">
-      mvn:pentaho/pentaho-osgi-config/8.2.0.5-625/cfg/pentaho-metaverse
+      mvn:pentaho/pentaho-osgi-config/8.2.0.5-C249/cfg/pentaho-metaverse
     </configfile>
 
     <feature>pentaho-client</feature>
@@ -159,7 +159,7 @@
     <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
   </feature>
 
-  <feature name="pentaho-metaverse-web" version="8.2.0.5-625">
+  <feature name="pentaho-metaverse-web" version="8.2.0.5-C249">
     <feature>http</feature>
     <feature>http-whiteboard</feature>
     <feature>cxf</feature>
@@ -186,7 +186,7 @@
 
   <feature name="pdi-data-refinery" description="pentaho data refinery">
     <configfile finalname="/etc/pentaho.geo.roles.cfg">
-      mvn:pentaho/pentaho-osgi-config/8.2.0.5-625/cfg/pentaho-geo-roles
+      mvn:pentaho/pentaho-osgi-config/8.2.0.5-C249/cfg/pentaho-geo-roles
     </configfile>
     <feature>pentaho-dataservice</feature>
 
@@ -225,7 +225,7 @@
         <!-- <feature version="${cxf.karaf.version}">cxf-features-clustering</feature> -->
         <bundle>mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     </feature>
-    <feature name="pentaho-i18n" version="8.2.0.5-625">
+    <feature name="pentaho-i18n" version="8.2.0.5-C249">
       <bundle>mvn:pentaho/pentaho-i18n-bundle/${pentaho-osgi-bundles.version}</bundle>
       <conditional>
         <condition>cxf</condition>
