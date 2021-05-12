@@ -5,11 +5,18 @@
   <parent>
     <groupId>org.hitachivantara.karaf.features</groupId>
     <artifactId>features-modules</artifactId>
-    <version>9.0.0.0-423</version>
+    <version>9.3.0.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>pentaho-features</artifactId>
   <packaging>pom</packaging>
+
+  <properties>
+    <!-- spring features were moved to the pentaho-osgi-bundles repository -->
+    <spring53.feature.artifact.version>${pentaho-osgi-bundles.version}</spring53.feature.artifact.version>
+    <spring43.feature.artifact.version>${pentaho-osgi-bundles.version}</spring43.feature.artifact.version>
+    <spring32.feature.artifact.version>${pentaho-osgi-bundles.version}</spring32.feature.artifact.version>
+  </properties>
 
   <modules>
     <module>pentaho-karaf-features-enterprise</module>

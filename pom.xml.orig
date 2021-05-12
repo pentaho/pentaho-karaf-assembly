@@ -53,6 +53,10 @@
     <spring43.bundle.version>4.3.23.RELEASE_1</spring43.bundle.version>
     <spring32.bundle.version>3.2.18.RELEASE_1</spring32.bundle.version>
     <spring-security.bundle.version>3.1.7.RELEASE</spring-security.bundle.version>
+<<<<<<< HEAD
+=======
+    <aspectj.bundle.version>1.7.4_1</aspectj.bundle.version>
+>>>>>>> 1bf5a8e... [webspoon-9.0] Flatten commits
     <pentaho-modeler.version>9.3.0.0-SNAPSHOT</pentaho-modeler.version>
     <pentaho-json.version>9.3.0.0-SNAPSHOT</pentaho-json.version>
     <pdi-osgi-bridge.version>9.3.0.0-SNAPSHOT</pdi-osgi-bridge.version>
@@ -71,12 +75,21 @@
     <pentaho-marketplace-modules.version>9.3.0.0-SNAPSHOT</pentaho-marketplace-modules.version>
     <pentaho-repository.version>9.3.0.0-SNAPSHOT</pentaho-repository.version>
     <common-ui.version>9.3.0.0-SNAPSHOT</common-ui.version>
+<<<<<<< HEAD
     <pentaho-hadoop-shims-cdh514.version>9.3.0.0-SNAPSHOT</pentaho-hadoop-shims-cdh514.version>
     <pentaho-hadoop-shims-cdh61.version>9.3.0.0-SNAPSHOT</pentaho-hadoop-shims-cdh61.version>
     <pentaho-hadoop-shims-hdp26.version>9.3.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp26.version>
     <pentaho-hadoop-shims-hdp30.version>9.3.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp30.version>
     <pentaho-hadoop-shims-emr521.version>9.3.0.0-SNAPSHOT</pentaho-hadoop-shims-emr521.version>
     <pentaho-hadoop-shims.version>9.3.0.0-SNAPSHOT</pentaho-hadoop-shims.version>
+=======
+    <pentaho-hadoop-shims-cdh514.version>9.0.2020.02.00-423</pentaho-hadoop-shims-cdh514.version>
+    <pentaho-hadoop-shims-cdh61.version>9.0.2020.02.00-423</pentaho-hadoop-shims-cdh61.version>
+    <pentaho-hadoop-shims-hdp26.version>9.0.2020.02.00-423</pentaho-hadoop-shims-hdp26.version>
+    <pentaho-hadoop-shims-hdp30.version>9.0.2020.02.00-423</pentaho-hadoop-shims-hdp30.version>
+    <pentaho-hadoop-shims-emr521.version>9.0.2020.02.00-423</pentaho-hadoop-shims-emr521.version>
+    <pentaho-hadoop-shims.version>9.0.2020.02.00-423</pentaho-hadoop-shims.version>
+>>>>>>> 1bf5a8e... [webspoon-9.0] Flatten commits
     <pax-keycloak.version>0.2.0</pax-keycloak.version>
 
     <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
