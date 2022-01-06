@@ -67,6 +67,14 @@
         <bundle
             originalUri="mvn:org.bouncycastle/bcprov-jdk15on/[1.46,${bcprov-jdk15on.version})"
             replacement="mvn:org.bouncycastle/bcprov-jdk15on/${bcprov-jdk15on.version}" mode="maven" />
+
+        <bundle
+            originalUri="mvn:org.ops4j.pax.logging/pax-logging-api/[1,${pax-logging.version})"
+            replacement="mvn:org.ops4j.pax.logging/pax-logging-api/${pax-logging.version}" mode="maven" />
+        <bundle
+            originalUri="mvn:org.ops4j.pax.logging/pax-logging-log4j2/[1,${pax-logging.version})"
+            replacement="mvn:org.ops4j.pax.logging/pax-logging-log4j2/${pax-logging.version}" mode="maven" />
+
     </bundleReplacements>
 
     <!-- A list of feature replacements that allows changing external feature definitions -->
