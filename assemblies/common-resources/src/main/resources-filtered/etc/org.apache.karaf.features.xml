@@ -67,6 +67,14 @@
         <bundle
             originalUri="mvn:org.bouncycastle/bcprov-jdk15on/[1.46,${bcprov-jdk15on.version})"
             replacement="mvn:org.bouncycastle/bcprov-jdk15on/${bcprov-jdk15on.version}" mode="maven" />
+
+        <bundle
+            originalUri="mvn:org.ops4j.pax.logging/pax-logging-api/[1,${pax-logging.version})"
+            replacement="mvn:org.ops4j.pax.logging/pax-logging-api/${pax-logging.version}" mode="maven" />
+        <bundle
+            originalUri="mvn:org.ops4j.pax.logging/pax-logging-log4j2/[1,${pax-logging.version})"
+            replacement="mvn:org.ops4j.pax.logging/pax-logging-log4j2/${pax-logging.version}" mode="maven" />
+
     </bundleReplacements>
 
     <!-- A list of feature replacements that allows changing external feature definitions -->
@@ -108,7 +116,7 @@
                 </f:details>
                 <f:feature prerequisite="true" version="${camel.version}">camel-core</f:feature>
                 <f:bundle dependency="true">mvn:com.google.guava/guava/${guava.monitoring.version}</f:bundle>
-                <f:bundle>wrap:mvn:org.apache.camel/camel-guava-eventbus/${camel.version}$overwrite=merge&amp;Import-Package=com.google.common.eventbus;version="[${guava.monitoring.version},${guava.monitoring.version}]",org.apache.camel;version="[${camel.version},3)",org.apache.camel.impl;version="[${camel.version},3)",org.apache.camel.spi;version="[${camel.version},3)",org.apache.camel.util;version="[${camel.version},3)",org.osgi.framework;version="[1.5,2)",org.osgi.framework.wiring;version="[1.0,2)",org.slf4j;version="[1.6,2)"</f:bundle>
+                <f:bundle>wrap:mvn:org.apache.camel/camel-guava-eventbus/${camel.version}$overwrite=merge&amp;Import-Package=com.google.common.eventbus;version="[${guava.monitoring.version},${guava.monitoring.version}]",org.apache.camel;version="[${camel.version},3)",org.apache.camel.impl;version="[${camel.version},3)",org.apache.camel.spi;version="[${camel.version},3)",org.apache.camel.util;version="[${camel.version},3)",org.osgi.framework;version="[1.5,2)",org.osgi.framework.wiring;version="[1.0,2)",org.slf4j;version="[${slf4j.version},2)"</f:bundle>
             </feature>
         </replacement>
     </featureReplacements>
