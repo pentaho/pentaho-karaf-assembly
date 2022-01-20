@@ -37,6 +37,8 @@
         <exclude>/lib/boot/</exclude>
         <exclude>/lib/ext/</exclude>
         <exclude>/lib/jdk9plus/</exclude>
+        <exclude>/system/org/ops4j/pax/logging/pax-logging-api/1.10.2/</exclude>
+        <exclude>/system/org/ops4j/pax/logging/pax-logging-log4j2/1.10.2/</exclude>
       </excludes>
     </fileSet>
   </fileSets>
