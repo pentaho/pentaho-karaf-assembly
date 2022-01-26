@@ -72,10 +72,10 @@
 
         <bundle
             originalUri="mvn:org.ops4j.pax.logging/pax-logging-api/[1,${pax-logging.version})"
-            replacement="mvn:org.ops4j.pax.logging/pax-logging-api/${pax-logging.version}" mode="maven" />
+            replacement="mvn:org.hitachivantara/pax-logging-api-wrap/${pax-logging.version}" mode="maven" />
         <bundle
             originalUri="mvn:org.ops4j.pax.logging/pax-logging-log4j2/[1,${pax-logging.version})"
-            replacement="mvn:org.ops4j.pax.logging/pax-logging-log4j2/${pax-logging.version}" mode="maven" />
+            replacement="mvn:org.hitachivantara/pax-logging-log4j2-wrap/${pax-logging.version}" mode="maven" />
 
     </bundleReplacements>
 
