@@ -82,8 +82,6 @@
          (there's no way to tell the requirement is satisfied by the system bundle).
     -->
     <bundle dependency="true">mvn:org.hitachivantara/pax-logging-api-wrap/${pax-logging.version}</bundle>
-    <bundle dependency="true">mvn:org.hitachivantara/pax-logging-log4j2-wrap/${pax-logging.version}</bundle>
-
     <feature prerequisite="true">karaf-base</feature>
 
     <feature prerequisite="true">pentaho-osgi-utils</feature>
