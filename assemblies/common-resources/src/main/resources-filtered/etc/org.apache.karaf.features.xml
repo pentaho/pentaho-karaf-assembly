@@ -13,7 +13,9 @@
     <blacklistedFeatures></blacklistedFeatures>
 
     <!-- A list of blacklisted bundle URIs that are not installed even if they are part of some features -->
-    <blacklistedBundles></blacklistedBundles>
+    <blacklistedBundles>
+        <bundle>mvn:org.slf4j/slf4j-api/[1,9)</bundle>
+    </blacklistedBundles>
 
     <!-- A list of repository URIs, feature identifiers and bundle URIs to override "dependency" flag -->
     <overrideBundleDependency></overrideBundleDependency>
