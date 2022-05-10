@@ -192,14 +192,6 @@
       </dependency>
       <dependency>
         <groupId>org.pentaho.di.plugins</groupId>
-        <artifactId>pdi-engine-configuration</artifactId>
-        <classifier>features</classifier>
-        <version>${pdi.version}</version>
-        <type>xml</type>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.pentaho.di.plugins</groupId>
         <artifactId>file-open-save-plugin</artifactId>
         <classifier>features</classifier>
         <version>${pdi.version}</version>

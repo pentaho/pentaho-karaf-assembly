@@ -69,12 +69,6 @@
     </dependency>
     <dependency>
       <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>pdi-engine-configuration</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
       <artifactId>file-open-save-plugin</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
@@ -214,7 +208,6 @@
                 <feature>pdi-data-refinery</feature>
                 <feature>pentaho-spoon</feature>
                 <feature>repositories-plugin</feature>
-                <feature>pdi-engine-configuration-ui</feature>
                 <feature>file-open-save-plugin</feature>
                 <feature>file-open-save-new-plugin</feature>
                 <feature>connections-plugin</feature>
