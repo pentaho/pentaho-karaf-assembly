@@ -36,11 +36,6 @@
                   <classifier>pdi-monitoring</classifier>
                 </artifact>
                 <artifact>
-                  <file>src/main/resources/pentaho.metaverse.cfg</file>
-                  <type>cfg</type>
-                  <classifier>pentaho-metaverse</classifier>
-                </artifact>
-                <artifact>
                   <file>src/main/resources/pentaho.geo.roles.cfg</file>
                   <type>cfg</type>
                   <classifier>pentaho-geo-roles</classifier>

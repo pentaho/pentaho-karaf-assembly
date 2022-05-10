@@ -22,7 +22,6 @@
   <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${pentaho-osgi-bundles.version}/xml/features</repository>
 
   <repository>mvn:pentaho/pentaho-dataservice/${pdi-dataservice-plugin.version}/xml/features</repository>
-  <repository>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/${pdi.version}/xml/features</repository>
 
   <!-- pdi-platform feature is using spring feature -->
   <repository>mvn:org.hitachivantara.karaf.features/spring32/${spring32.feature.artifact.version}/xml/features</repository>
@@ -110,7 +109,6 @@
 
     <feature>pentaho-webpackage</feature>
     <feature>pentaho-big-data-plugin-osgi</feature>
-    <feature>pentaho-streaming-feature</feature>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
@@ -122,7 +120,6 @@
   <feature name="ael-security"  version="1.0" />
 
   <feature name="pentaho-spoon" version="${project.version}">
-    <bundle>mvn:pentaho/pentaho-kettle-repository-locator-impl-spoon/${pentaho-osgi-bundles.version}</bundle>
     <feature>pdi-platform</feature>
   </feature>
 
@@ -160,9 +157,6 @@
 
   <feature name="pentaho-metaverse" version="${project.version}">
     <details>Provides data lineage capabilities</details>
-    <configfile finalname="/etc/pentaho.metaverse.cfg">
-      mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-metaverse
-    </configfile>
 
     <feature>pentaho-client</feature>
     <feature>pentaho-tinkerpop-gremlin</feature>
@@ -173,7 +167,6 @@
     </conditional>
 
     <feature>pentaho-fasterxml</feature>
-    <bundle>mvn:pentaho/pentaho-metaverse-core/${pentaho-metaverse.version}</bundle>
   </feature>
 
   <feature name="pentaho-fasterxml" version="1.0">

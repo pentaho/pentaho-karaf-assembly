@@ -63,31 +63,7 @@
     </dependency>
     <dependency>
       <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>repositories-plugin</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>pdi-engine-configuration</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
       <artifactId>file-open-save-plugin</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>file-open-save-new-plugin</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>connections-plugin</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
@@ -213,11 +189,7 @@
                 <feature>pdi-marketplace</feature>
                 <feature>pdi-data-refinery</feature>
                 <feature>pentaho-spoon</feature>
-                <feature>repositories-plugin</feature>
-                <feature>pdi-engine-configuration-ui</feature>
                 <feature>file-open-save-plugin</feature>
-                <feature>file-open-save-new-plugin</feature>
-                <feature>connections-plugin</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
                 <feature>get-fields-plugin</feature>

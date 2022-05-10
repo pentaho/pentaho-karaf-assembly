@@ -62,12 +62,6 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>pdi-engine-configuration</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>pentaho</groupId>
       <artifactId>pentaho-dataservice-legacy</artifactId>
       <classifier>features</classifier>
@@ -168,7 +162,6 @@
                 <feature>pentaho-metaverse</feature>
                 <feature>pentaho-dataservice-legacy</feature>
                 <feature>pdi-data-refinery</feature>
-                <feature>pdi-engine-configuration</feature>
                 <feature>pentaho-marketplace</feature>
                 <feature>get-fields-plugin</feature>
                 <feature>pentaho-hadoop-cluster-ui</feature>

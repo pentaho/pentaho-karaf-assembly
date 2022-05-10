@@ -18,14 +18,12 @@
 <features name="pentaho-karaf-features-enterprise" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
   <repository>mvn:org.hitachivantara.karaf.features/spring53/${spring53.feature.artifact.version}/xml/features</repository>
   <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
-  <repository>mvn:com.pentaho.di.plugins/pentaho-ee-streaming-feature/${pdi-plugins-ee.version}/xml/features</repository>
 
   <!-- pentaho-analyzer feature is using spring feature -->
   <repository>mvn:org.hitachivantara.karaf.features/spring32/${spring32.feature.artifact.version}/xml/features</repository>
 
   <feature name="pentaho-client-ee" version="1.0">
     <feature prerequisite="true">pentaho-client</feature>
-    <feature prerequisite="true">pentaho-ee-streaming-feature</feature>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
