@@ -63,12 +63,6 @@
     </dependency>
     <dependency>
       <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>repositories-plugin</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
       <artifactId>file-open-save-plugin</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
@@ -201,7 +195,6 @@
                 <feature>pdi-marketplace</feature>
                 <feature>pdi-data-refinery</feature>
                 <feature>pentaho-spoon</feature>
-                <feature>repositories-plugin</feature>
                 <feature>file-open-save-plugin</feature>
                 <feature>connections-plugin</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
