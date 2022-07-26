@@ -69,12 +69,6 @@
     </dependency>
     <dependency>
       <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>connections-plugin</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
       <artifactId>get-fields-plugin</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
@@ -196,7 +190,6 @@
                 <feature>pdi-data-refinery</feature>
                 <feature>pentaho-spoon</feature>
                 <feature>file-open-save-plugin</feature>
-                <feature>connections-plugin</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
                 <feature>get-fields-plugin</feature>
