@@ -22,7 +22,6 @@
   <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${pentaho-osgi-bundles.version}/xml/features</repository>
 
   <repository>mvn:pentaho/pentaho-dataservice/${pdi-dataservice-plugin.version}/xml/features</repository>
-  <repository>mvn:org.pentaho.di.plugins/pentaho-streaming-feature/${pdi.version}/xml/features</repository>
 
   <!-- pdi-platform feature is using spring feature -->
   <repository>mvn:org.hitachivantara.karaf.features/spring32/${spring32.feature.artifact.version}/xml/features</repository>
@@ -110,7 +109,6 @@
 
     <feature>pentaho-webpackage</feature>
     <feature>pentaho-big-data-plugin-osgi</feature>
-    <feature>pentaho-streaming-feature</feature>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
