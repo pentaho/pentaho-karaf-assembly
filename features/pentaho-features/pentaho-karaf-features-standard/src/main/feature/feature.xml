@@ -157,9 +157,6 @@
 
   <feature name="pentaho-metaverse" version="${project.version}">
     <details>Provides data lineage capabilities</details>
-    <configfile finalname="/etc/pentaho.metaverse.cfg">
-      mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-metaverse
-    </configfile>
 
     <feature>pentaho-client</feature>
     <feature>pentaho-tinkerpop-gremlin</feature>
@@ -170,7 +167,6 @@
     </conditional>
 
     <feature>pentaho-fasterxml</feature>
-    <bundle>mvn:pentaho/pentaho-metaverse-core/${pentaho-metaverse.version}</bundle>
   </feature>
 
   <feature name="pentaho-fasterxml" version="1.0">
