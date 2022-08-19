@@ -75,6 +75,11 @@
             originalUri="mvn:org.ops4j.pax.logging/pax-logging-api/[1,${pax-logging.version})"
             replacement="mvn:org.hitachivantara/pax-logging-api-wrap/${pax-logging.version}" mode="maven" />
 
+        <!-- PPP-4654 issues in commons-io addressed in 2.11.0 -->
+        <bundle
+            originalUri="mvn:commons-io/commons-io/[,2.11.0)"
+            replacement="mvn:commons-io/commons-io/${commons-io.version}" mode="maven" />
+
     </bundleReplacements>
 
     <!-- A list of feature replacements that allows changing external feature definitions -->
