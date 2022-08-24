@@ -125,7 +125,6 @@
 
   <feature name="pentaho-client-minimal" version="1.0">
     <feature prerequisite="true">pentaho-base</feature>
-    <bundle>wrap:mvn:org.pentaho.di.plugins/meta-inject-plugin/${pdi.version}</bundle>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
