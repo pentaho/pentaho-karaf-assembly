@@ -68,12 +68,6 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>get-fields-plugin</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>org.pentaho</groupId>
       <artifactId>pentaho-requirejs-osgi-manager</artifactId>
       <classifier>features</classifier>
@@ -163,7 +157,6 @@
                 <feature>pentaho-dataservice-legacy</feature>
                 <feature>pdi-data-refinery</feature>
                 <feature>pentaho-marketplace</feature>
-                <feature>get-fields-plugin</feature>
                 <feature>pentaho-hadoop-cluster-ui</feature>
 
                 <!-- Shim/drivers features -->
