@@ -62,12 +62,6 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>file-open-save-plugin</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>org.pentaho</groupId>
       <artifactId>pentaho-requirejs-osgi-manager</artifactId>
       <classifier>features</classifier>
@@ -183,7 +177,6 @@
                 <feature>pdi-marketplace</feature>
                 <feature>pdi-data-refinery</feature>
                 <feature>pentaho-spoon</feature>
-                <feature>file-open-save-plugin</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
                 <feature>pentaho-big-data-impl-connections</feature>
