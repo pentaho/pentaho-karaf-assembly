@@ -98,7 +98,6 @@
     <servicemix-spec.version>2.9.0</servicemix-spec.version>
     <org.osgi.util.function>1.1.0</org.osgi.util.function>
     <org.osgi.util.promise>1.1.1</org.osgi.util.promise>
-    <snakeyaml.version>1.33</snakeyaml.version>
 
   </properties>
 
