@@ -62,10 +62,10 @@
         <!-- [PPP-4108] Use of vulnerable component jackson-mapper-asl-1.9.2.jar CVE-2017-7525, CVE-2017-15095, CVE-2017-15095 -->
         <bundle
                 originalUri="mvn:org.codehaus.jackson/jackson-core-asl/[1.5.0,1.9.14)"
-                replacement="mvn:org.fasterxml.jackson/jackson-core/${fasterxml-jackson}" mode="maven" />
+                replacement="mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson}" mode="maven" />
         <bundle
                 originalUri="mvn:org.codehaus.jackson/jackson-mapper-asl/[1.5.0,1.9.14)"
-                replacement="mvn:org.fasterxml.jackson/jackson-databind/${fasterxml-jackson-databind}" mode="maven" />
+                replacement="mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind}" mode="maven" />
 
         <!-- PPP-4495 Multiple CVEs in bcprov-jdk15on addressed in version 1.65 -->
         <bundle
