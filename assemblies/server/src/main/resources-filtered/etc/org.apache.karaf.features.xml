@@ -16,6 +16,10 @@
     <!-- A list of blacklisted bundle URIs that are not installed even if they are part of some features -->
     <blacklistedBundles>
         <bundle>mvn:org.slf4j/slf4j-api/[1,9)</bundle>
+        <bundle>mvn:org.bouncycastle/bcprov-jdk15on/[0,900)</bundle>
+        <bundle>mvn:org.bouncycastle/bcutil-jdk15on/[0,900)</bundle>
+        <bundle>mvn:org.bouncycastle/bcpkix-jdk15on/[0,900)</bundle>
+        <bundle>mvn:org.bouncycastle/bcmail-jdk15on/[0,900)</bundle>
     </blacklistedBundles>
 
     <!-- A list of repository URIs, feature identifiers and bundle URIs to override "dependency" flag -->
@@ -69,8 +73,17 @@
 
         <!-- PPP-4495 Multiple CVEs in bcprov-jdk15on addressed in version 1.65 -->
         <bundle
-            originalUri="mvn:org.bouncycastle/bcprov-jdk15on/[1.46,${bcprov-jdk15on.version})"
-            replacement="mvn:org.bouncycastle/bcprov-jdk15on/${bcprov-jdk15on.version}" mode="maven" />
+            originalUri="mvn:org.bouncycastle/bcprov-jdk15on/[1.46,${bcprov-jdk15to18.version})"
+            replacement="mvn:org.bouncycastle/bcprov-jdk15to18/${bcprov-jdk15to18.version}" mode="maven" />
+        <bundle
+            originalUri="mvn:org.bouncycastle/bcpkix-jdk15on/[1.46,${bcprov-jdk15to18.version})"
+            replacement="mvn:org.bouncycastle/bcpkix-jdk15to18/${bcprov-jdk15to18.version}" mode="maven" />
+        <bundle
+            originalUri="mvn:org.bouncycastle/bcutil-jdk15on/[1.46,${bcprov-jdk15to18.version})"
+            replacement="mvn:org.bouncycastle/bcutil-jdk15to18/${bcprov-jdk15to18.version}" mode="maven" />
+        <bundle
+            originalUri="mvn:org.bouncycastle/bcmail-jdk15on/[1.46,${bcprov-jdk15to18.version})"
+            replacement="mvn:org.bouncycastle/bcmail-jdk15to18/${bcprov-jdk15to18.version}" mode="maven" />
 
         <bundle
             originalUri="mvn:org.ops4j.pax.logging/pax-logging-api/[1,${pax-logging.version})"
