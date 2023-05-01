@@ -6,7 +6,7 @@
   <parent>
     <artifactId>assembly-modules</artifactId>
     <groupId>org.hitachivantara.karaf.assemblies</groupId>
-    <version>9.6.0.0-SNAPSHOT-15</version>
+    <version>9.6.0.0-SNAPSHOT-16</version>
   </parent>
 
   <artifactId>server</artifactId>
