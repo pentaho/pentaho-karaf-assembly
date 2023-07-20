@@ -53,7 +53,6 @@
     <spring53.bundle.version>5.3.3_1</spring53.bundle.version>
     <spring43.bundle.version>4.3.23.RELEASE_1</spring43.bundle.version>
     <spring32.bundle.version>3.2.18.RELEASE_1</spring32.bundle.version>
-    <spring-security.bundle.version>3.1.7.RELEASE</spring-security.bundle.version>
     <pentaho-modeler.version>9.6.0.0-SNAPSHOT</pentaho-modeler.version>
     <pentaho-json.version>9.6.0.0-SNAPSHOT</pentaho-json.version>
     <pdi-osgi-bridge.version>9.6.0.0-SNAPSHOT</pdi-osgi-bridge.version>
