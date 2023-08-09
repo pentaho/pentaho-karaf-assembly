@@ -40,7 +40,6 @@
         <feature prerequisite="true">http-whiteboard</feature>
         <feature version="[${spring53.bundle.version},5.4)">spring</feature>
         <feature version="[${spring53.bundle.version},5.4)">spring-web</feature>
-        <feature version="${spring-security.bundle.version}">spring-security</feature>
 
         <bundle start-level="60">mvn:pentaho/pentaho-server-bundle/${pentaho-osgi-bundles.version}</bundle>
 
