@@ -175,7 +175,7 @@
     <bundle dependency="true">wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</bundle>
-    <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}</bundle>
+    <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson-core.version}</bundle>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
@@ -224,7 +224,7 @@
 
   <!-- Separate feature for jackson-* bundles in scope of BACKLOG-20783 -->
   <feature name="pentaho-jackson" description="Jackson 2.x support" version="1.0">
-    <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}</bundle>
+    <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson-core.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind.version}</bundle>
     <!-- bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${fasterxml-jackson.version}</bundle>

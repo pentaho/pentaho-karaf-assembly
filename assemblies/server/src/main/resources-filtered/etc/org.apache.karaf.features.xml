@@ -42,8 +42,8 @@
         <!-- [PPP-4430] CVE-2019-12086 Use of Vulnerable Component: jackson-databind-2.9.8.jar -->
         <!-- Replace all jackson bundles installed by activemq-karaf (first three) and apache-cxf (all) -->
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.core/jackson-core/[2.7.0,${fasterxml-jackson.version})"
-                replacement="mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}" mode="maven" />
+                originalUri="mvn:com.fasterxml.jackson.core/jackson-core/[2.7.0,${fasterxml-jackson-core.version})"
+                replacement="mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson-core.version}" mode="maven" />
         <bundle
                 originalUri="mvn:com.fasterxml.jackson.core/jackson-databind/[2.7.0,${fasterxml-jackson-databind.version})"
                 replacement="mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind.version}" mode="maven" />

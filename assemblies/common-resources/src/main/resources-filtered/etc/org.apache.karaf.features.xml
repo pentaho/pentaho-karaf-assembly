@@ -41,8 +41,8 @@
         <!-- [PPP-4430] CVE-2019-12086 Use of Vulnerable Component: jackson-databind-2.9.8.jar -->
         <!-- Replace all jackson bundles installed by activemq-karaf (first three) and apache-cxf (all) -->
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.core/jackson-core/[2.7.0,${fasterxml-jackson.version})"
-                replacement="mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}" mode="maven" />
+                originalUri="mvn:com.fasterxml.jackson.core/jackson-core/[2.7.0,${fasterxml-jackson-core.version})"
+                replacement="mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson-core.version}" mode="maven" />
         <bundle
                 originalUri="mvn:com.fasterxml.jackson.core/jackson-databind/[2.7.0,${fasterxml-jackson-databind.version})"
                 replacement="mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind.version}" mode="maven" />
@@ -105,7 +105,7 @@
                 <f:bundle start-level="10" dependency="true">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.jaxrs-api-2.1/${servicemix.jaxrs-api.version}</f:bundle>
                 <f:bundle start-level="10" dependency="true">mvn:javax.annotation/javax.annotation-api/1.3.1</f:bundle>
                 <f:bundle start-level="35">mvn:org.yaml/snakeyaml/${snakeyaml.version}</f:bundle>
-                <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}</f:bundle>
+                <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson-core.version}</f:bundle>
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</f:bundle>
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind.version}</f:bundle>
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${fasterxml-jackson.version}</f:bundle>
