@@ -32,7 +32,6 @@
     <pentaho-mongo-utils.version>10.1.0.0-SNAPSHOT</pentaho-mongo-utils.version>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7
     </plugin.org.apache.maven.plugins.maven-resources-plugin.version>
-    <commons.beanutils.version>1.9.3</commons.beanutils.version>
     <package.features>true</package.features>
     <commons.collections.version>3.2.2</commons.collections.version>
     <com.tinkerpop.version>2.6.0</com.tinkerpop.version>
