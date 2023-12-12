@@ -138,8 +138,8 @@
                     And starting from guava-18.0 version, the EventBus class does have final methods.
                 </f:details>
                 <f:feature prerequisite="true" version="${camel.version}">camel-core</f:feature>
-                <f:bundle dependency="true">mvn:com.google.guava/guava/${guava.monitoring.version}</f:bundle>
-                <f:bundle>wrap:mvn:org.apache.camel/camel-guava-eventbus/${camel.version}$overwrite=merge&amp;Import-Package=com.google.common.eventbus;version="[${guava.monitoring.version},${guava.monitoring.version}]",org.apache.camel;version="[${camel.version},3)",org.apache.camel.impl;version="[${camel.version},3)",org.apache.camel.spi;version="[${camel.version},3)",org.apache.camel.util;version="[${camel.version},3)",org.osgi.framework;version="[1.5,2)",org.osgi.framework.wiring;version="[1.0,2)",org.slf4j;version="[${slf4j.version},2)"</f:bundle>
+                <f:bundle dependency="true">mvn:com.google.guava/guava/${guava.version}</f:bundle>
+                <f:bundle>wrap:mvn:org.apache.camel/camel-guava-eventbus/${camel.version}$overwrite=merge&amp;Import-Package=com.google.common.eventbus;version="[${guava.version},${guava.version}]",org.apache.camel;version="[${camel.version},3)",org.apache.camel.impl;version="[${camel.version},3)",org.apache.camel.spi;version="[${camel.version},3)",org.apache.camel.util;version="[${camel.version},3)",org.osgi.framework;version="[1.5,2)",org.osgi.framework.wiring;version="[1.0,2)",org.slf4j;version="[${slf4j.version},2)"</f:bundle>
             </feature>
         </replacement>
 
