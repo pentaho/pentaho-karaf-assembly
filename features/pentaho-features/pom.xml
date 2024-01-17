@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.hitachivantara.karaf.features</groupId>
     <artifactId>features-modules</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <version>10.1.0.0-211</version>
   </parent>
 
   <artifactId>pentaho-features</artifactId>
