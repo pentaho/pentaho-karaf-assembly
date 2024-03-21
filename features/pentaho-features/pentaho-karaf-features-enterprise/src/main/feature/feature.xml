@@ -39,7 +39,7 @@
     <feature prerequisite="true">spring-dm</feature>
     <feature prerequisite="true">pdi-platform</feature>
     <feature prerequisite="true" version="${project.version}">pentaho-requirejs-osgi-manager</feature>
-    <bundle>wrap:mvn:pentaho/pentaho-connections/${pentaho-connections.version}</bundle>
+    <bundle>wrap:mvn:pentaho/pentaho-connections/${pentaho-connections.version}$Import-Package=!java.*,*</bundle>
     <bundle>mvn:pentaho/pentaho-analyzer-xsd/${analyzer-plugin.version}</bundle>
 
     <bundle>pentaho-platform-plugin:mvn:pentaho/paz-plugin-ce/${analyzer-plugin.version}/zip</bundle>
