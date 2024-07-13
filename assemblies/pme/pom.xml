@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.hitachivantara.karaf.assemblies</groupId>
     <artifactId>assembly-modules</artifactId>
-    <version>10.3.0.0-SNAPSHOT</version>
+    <version>10.3.0.0-8</version>
   </parent>
 
   <artifactId>pme</artifactId>
