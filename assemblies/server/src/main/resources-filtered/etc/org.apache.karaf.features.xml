@@ -63,12 +63,10 @@
                 replacement="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${fasterxml-jackson.version}" mode="maven" />
 
         <!-- [PPP-4108] Use of vulnerable component jackson-mapper-asl-1.9.2.jar CVE-2017-7525, CVE-2017-15095, CVE-2017-15095 -->
+        <!--Removed [PPP-4743] Vulnerable Component: Jackson ASL ( fasterxml-jackson-databind is used instead of vulnerable component jackson-mapper-asl) -->
         <bundle
             originalUri="mvn:org.codehaus.jackson/jackson-core-asl/[1.5.0,${codehaus-jackson.version})"
             replacement="mvn:org.codehaus.jackson/jackson-core-asl/${codehaus-jackson.version}" mode="maven" />
-        <bundle
-            originalUri="mvn:org.codehaus.jackson/jackson-mapper-asl/[1.5.0,${codehaus-jackson.version})"
-            replacement="mvn:org.codehaus.jackson/jackson-mapper-asl/${codehaus-jackson.version}" mode="maven" />
 
         <!-- PPP-4495 Multiple CVEs in bcprov-jdk15on addressed in version 1.65 -->
         <bundle
