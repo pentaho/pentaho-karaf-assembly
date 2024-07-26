@@ -44,5 +44,9 @@
 
     <bundle>pentaho-platform-plugin:mvn:pentaho/paz-plugin-ce/${analyzer-plugin.version}/zip</bundle>
   </feature>
-
+  <feature name="cxf-transports-udp" version="${cxf.version}">
+    <feature version="${cxf.version}">cxf-core</feature>
+    <bundle dependency="true">mvn:org.apache.mina/mina-core/${mina-core.version}</bundle>
+    <bundle start-level="40">mvn:org.apache.cxf/cxf-rt-transports-udp/${cxf.version}</bundle>
+  </feature>
 </features>
