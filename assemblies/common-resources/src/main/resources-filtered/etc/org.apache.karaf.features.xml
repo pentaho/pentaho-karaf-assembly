@@ -34,6 +34,7 @@
                 replacement="mvn:org.hitachivantara.karaf.features/org.apache.karaf.features.extension/${hv-patched-karaf-features-extension.version}" mode="maven" />
 -->
 
+
         <!-- [PPP-4430] CVE-2019-12086 Use of Vulnerable Component: jackson-databind-2.9.8.jar -->
         <!-- Replace all jackson bundles installed by activemq-karaf (first three) and apache-cxf (all) -->
         <bundle
