@@ -55,6 +55,12 @@
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.glassfish</groupId>-->
+<!--      <artifactId>javax.json</artifactId>-->
+<!--      <version>1.1.4</version>-->
+<!--      <type>bundle</type>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.pentaho</groupId>
       <artifactId>pentaho-marketplace</artifactId>

@@ -89,14 +89,14 @@
     <hv-patched-karaf-features-extension.version>${karaf.version}</hv-patched-karaf-features-extension.version>
     <!-- pax-url-aether.version is in parent POM -->
     <felix.metatype.version>1.2.4</felix.metatype.version>
-    <jansi.version>1.18</jansi.version>
+    <jansi.version>2.4.1</jansi.version>
     <pax-logging.version>1.11.13</pax-logging.version>
     <felix.coordinator.version>1.0.2</felix.coordinator.version>
-    <felix.configadmin.version>1.9.22</felix.configadmin.version>
+    <felix.configadmin.version>1.9.26</felix.configadmin.version>
     <felix.fileinstall.version>3.7.4</felix.fileinstall.version>
     <servicemix-spec.version>2.9.0</servicemix-spec.version>
-    <org.osgi.util.function>1.1.0</org.osgi.util.function>
-    <org.osgi.util.promise>1.1.1</org.osgi.util.promise>
+    <org.osgi.util.function>1.2.0</org.osgi.util.function>
+    <org.osgi.util.promise>1.3.0</org.osgi.util.promise>
 
   </properties>
 
