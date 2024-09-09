@@ -67,9 +67,6 @@
         <bundle
             originalUri="mvn:org.codehaus.jackson/jackson-core-asl/[1.5.0,${codehaus-jackson.version})"
             replacement="mvn:org.codehaus.jackson/jackson-core-asl/${codehaus-jackson.version}" mode="maven" />
-        <bundle
-            originalUri="mvn:org.codehaus.jackson/jackson-mapper-asl/[1.5.0,${codehaus-jackson.version})"
-            replacement="mvn:org.codehaus.jackson/jackson-mapper-asl/${codehaus-jackson.version}" mode="maven" />
 
         <!-- PPP-4495 Multiple CVEs in bcprov-jdk15on addressed in version 1.65 -->
         <bundle
