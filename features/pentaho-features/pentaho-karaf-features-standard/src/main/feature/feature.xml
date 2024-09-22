@@ -203,7 +203,7 @@
 
     <bundle dependency="true">wrap:mvn:jfree/jcommon/${jfree.jcommon.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}</bundle>
-    <bundle dependency="true">mvn:com.hitachivantara.security.web/csrf-token-service-client-java-jax-rs-v1/${hv-security-web.version}</bundle>
+    <bundle dependency="true">mvn:com.hitachivantara.security.web/csrf-token-service-client-java-jax-rs-v2/${hv-security-web.version}</bundle>
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${pdi-data-refinery-plugin.version}</bundle>
   </feature>
 
