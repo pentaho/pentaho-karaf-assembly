@@ -60,11 +60,11 @@
                 originalUri="mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}" mode="maven" />
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/[2.7.0,${fasterxml-jackson.version})"
-                replacement="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${fasterxml-jackson.version}" mode="maven" />
+                originalUri="mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/[2.7.0,${fasterxml-jackson.version})"
+                replacement="mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${fasterxml-jackson.version}" mode="maven" />
         <bundle
-                originalUri="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/[2.7.0,${fasterxml-jackson.version})"
-                replacement="mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${fasterxml-jackson.version}" mode="maven" />
+                originalUri="mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/[2.7.0,${fasterxml-jackson.version})"
+                replacement="mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/${fasterxml-jackson.version}" mode="maven" />
 
         <!-- [PPP-4108] Use of vulnerable component jackson-mapper-asl-1.9.2.jar CVE-2017-7525, CVE-2017-15095, CVE-2017-15095 -->
         <bundle
@@ -116,11 +116,11 @@
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind.version}</f:bundle>
                 <f:bundle start-level="35">mvn:org.hitachivantara/jackson-dataformat-yaml/${hv-jackson-dataformat.version}</f:bundle>
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}</f:bundle>
-                <!-- <f:bundle start-level="35">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${fasterxml-jackson.version}</f:bundle> -->
-                <!-- <f:bundle start-level="35">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${fasterxml-jackson.version}</f:bundle> -->
+                <!-- <f:bundle start-level="35">mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${fasterxml-jackson.version}</f:bundle> -->
+                <!-- <f:bundle start-level="35">mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/${fasterxml-jackson.version}</f:bundle> -->
                 <f:feature prerequisite="true">wrap</f:feature>
-                <f:bundle dependency="true">wrap:mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${fasterxml-jackson.version}$overwrite=merge&amp;Import-Package=javax.ws.rs*;version="[2.0,3)",com.fasterxml.jackson*;version="[2.8,3)"</f:bundle>
-                <f:bundle dependency="true">wrap:mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${fasterxml-jackson.version}$overwrite=merge&amp;Import-Package=javax.ws.rs*;version="[2.0,3)",com.fasterxml.jackson.module.jaxb;resolution:=optional;version="[2.8,3)",com.fasterxml.jackson*;version="[2.8,3)"</f:bundle>
+                <f:bundle dependency="true">wrap:mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${fasterxml-jackson.version}$overwrite=merge&amp;Import-Package=jakarta.ws.rs*;version="[3.1.0,3)",com.fasterxml.jackson*;version="[2.8,3)"</f:bundle>
+                <f:bundle dependency="true">wrap:mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/${fasterxml-jackson.version}$overwrite=merge&amp;Import-Package=jakarta.ws.rs*;version="[3.1.0,3)",com.fasterxml.jackson.module.jaxb;resolution:=optional;version="[2.8,3)",com.fasterxml.jackson*;version="[2.8,3)"</f:bundle>
             </feature>
         </replacement>
 
