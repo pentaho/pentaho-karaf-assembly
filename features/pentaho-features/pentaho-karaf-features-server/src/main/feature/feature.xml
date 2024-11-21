@@ -49,6 +49,7 @@
         <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
         <bundle>mvn:org.pentaho/spring-security-karaf-login-module/${project.version}</bundle>
         <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
+        <feature dependency="true">pax-web-karaf</feature>
     </feature>
 
 </features>
