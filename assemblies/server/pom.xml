@@ -124,6 +124,7 @@
                 </artifactItem>
               </artifactItems>
               <excludes>/META-INF/**</excludes>
+              <excludes>/etc/users.properties</excludes>
             </configuration>
           </execution>
         </executions>
