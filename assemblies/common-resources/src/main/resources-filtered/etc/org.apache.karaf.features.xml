@@ -58,7 +58,7 @@
                 replacement="mvn:org.hitachivantara/jackson-dataformat-yaml/${hv-jackson-dataformat.version}" mode="maven" />
         <bundle
                 originalUri="mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/[2.7.0,${fasterxml-jackson.version})"
-                replacement="mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}" mode="maven" />
+                replacement="mvn:com.fasterxml.jackson.module/jackson-module-jakarta-xmlbind-annotations/${fasterxml-jackson.version}" mode="maven" />
         <bundle
                 originalUri="mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/[2.7.0,${fasterxml-jackson.version})"
                 replacement="mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${fasterxml-jackson.version}" mode="maven" />
@@ -115,7 +115,7 @@
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</f:bundle>
                 <f:bundle start-level="35">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind.version}</f:bundle>
                 <f:bundle start-level="35">mvn:org.hitachivantara/jackson-dataformat-yaml/${hv-jackson-dataformat.version}</f:bundle>
-                <f:bundle start-level="35">mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}</f:bundle>
+                <f:bundle start-level="35">mvn:com.fasterxml.jackson.module/jackson-module-jakarta-xmlbind-annotations/${fasterxml-jackson.version}</f:bundle>
                 <!-- <f:bundle start-level="35">mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/${fasterxml-jackson.version}</f:bundle> -->
                 <!-- <f:bundle start-level="35">mvn:com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-json-provider/${fasterxml-jackson.version}</f:bundle> -->
                 <f:feature prerequisite="true">wrap</f:feature>
