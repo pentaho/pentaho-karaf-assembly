@@ -100,6 +100,7 @@
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle dependency="true">mvn:net.java.dev.jna/jna/${net.java.dev.jna.version}</bundle>
     <bundle dependency="true">mvn:net.java.dev.jna/jna-platform/${net.java.dev.jna.version}</bundle>
+    <feature dependency="true">pax-web-karaf</feature>
   </feature>
 
   <feature name="pentaho-webjars-deployer" version="${project.version}">
@@ -206,7 +207,9 @@
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${pdi-data-refinery-plugin.version}</bundle>
   </feature>
 
-  <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds"/>
+  <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds">
+    <feature dependency="true">pax-web-karaf</feature>
+  </feature>
 
   <feature name="pentaho-i18n" version="${project.version}">
     <bundle>mvn:pentaho/pentaho-i18n-bundle/${pentaho-osgi-bundles.version}</bundle>
