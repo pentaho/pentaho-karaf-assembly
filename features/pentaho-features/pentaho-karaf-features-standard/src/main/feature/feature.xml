@@ -146,8 +146,7 @@
     <bundle>mvn:pentaho/pentaho-cache-manager-api/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/guava-cache-provider/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/pentaho-ehcache-provider/${pentaho-osgi-bundles.version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.ehcache/jcache/${org.ehcache.version}</bundle>
-    <bundle dependency="true">mvn:net.sf.ehcache/ehcache/${net.sf.ehcache.version}</bundle>
+    <bundle dependency="true">mvn:org.ehcache/ehcache/${ehcache-core.version}</bundle>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
