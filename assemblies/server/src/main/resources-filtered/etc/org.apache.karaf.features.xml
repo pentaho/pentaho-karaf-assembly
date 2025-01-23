@@ -152,14 +152,14 @@
          A series of overrides are made to prevent pax-http-service (which brings on Jetty) and pax-http-whiteboard
          from being installed. -->
         <replacement>
-            <feature name="http" description="Implementation of the OSGI HTTP Service" version="8.0.27" >
+            <feature name="http" description="Implementation of the OSGI HTTP Service" version="${pax-web.version}" >
                 <f:feature dependency="true">felix-bridge</f:feature>
                 <f:requirement>http-service</f:requirement>
             </feature>
         </replacement>
 
         <replacement>
-            <feature name="http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="8.0.27">
+            <feature name="http-whiteboard" description="Provide HTTP Whiteboard pattern support" version="${pax-web.version}">
                 <f:feature>http</f:feature>
                 <f:bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.whiteboard/4.0.0</f:bundle>
             </feature>
