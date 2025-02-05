@@ -88,7 +88,7 @@
 
     <!-- Karaf framework startup bundles' versions -->
     <!-- karaf.version is in parent POM -->
-    <hv-patched-karaf-features-extension.version>${karaf.version}</hv-patched-karaf-features-extension.version>
+    <hv-patched-karaf-features-extension.version>${pentaho.custom.karaf.version}</hv-patched-karaf-features-extension.version>
     <!-- pax-url-aether.version is in parent POM -->
     <felix.metatype.version>1.2.4</felix.metatype.version>
     <jansi.version>2.4.1</jansi.version>
@@ -108,14 +108,14 @@
       <dependency>
         <groupId>org.hitachivantara.karaf.features</groupId>
         <artifactId>framework</artifactId>
-        <version>${karaf.version}</version>
+        <version>${pentaho.custom.karaf.version}</version>
         <type>kar</type>
       </dependency>
       <dependency>
         <groupId>org.hitachivantara.karaf.features</groupId>
         <artifactId>standard</artifactId>
         <classifier>features</classifier>
-        <version>${karaf.version}</version>
+        <version>${pentaho.custom.karaf.version}</version>
         <type>xml</type>
         <scope>runtime</scope>
       </dependency>
@@ -123,7 +123,7 @@
         <groupId>org.hitachivantara.karaf.features</groupId>
         <artifactId>enterprise</artifactId>
         <classifier>features</classifier>
-        <version>${karaf.version}</version>
+        <version>${pentaho.custom.karaf.version}</version>
         <type>xml</type>
         <scope>runtime</scope>
       </dependency>
