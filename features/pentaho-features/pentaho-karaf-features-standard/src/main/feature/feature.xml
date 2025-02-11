@@ -146,9 +146,7 @@
     <bundle>mvn:pentaho/pentaho-cache-manager-api/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/guava-cache-provider/${pentaho-osgi-bundles.version}</bundle>
     <bundle>mvn:pentaho/pentaho-ehcache-provider/${pentaho-osgi-bundles.version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.ehcache/jcache/${org.ehcache.version}</bundle>
     <bundle dependency="true">wrap:mvn:org.terracotta.internal/statistics/${terracotta.statistics.version}</bundle>
-    <bundle dependency="true">wrap:mvn:net.sf.ehcache.internal/ehcache-core/${net.sf.ehcache-core.version}$overwrite=merge&amp;Export-Package=net.sf.ehcache.*;version="${net.sf.ehcache-core.version}"</bundle>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
@@ -204,8 +202,13 @@
 
     <bundle dependency="true">wrap:mvn:jfree/jcommon/${jfree.jcommon.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/${fasterxml-jackson.version}</bundle>
-    <bundle dependency="true">mvn:com.hitachivantara.security.web/csrf-token-service-client-java-jax-rs-v1/${hv-security-web.version}</bundle>
+    <bundle dependency="true">mvn:com.hitachivantara.security.web/csrf-token-service-client-java-jax-rs-v2/${hv-security-web.version}</bundle>
     <bundle>mvn:pentaho/data-refinery-pdi-plugin/${pdi-data-refinery-plugin.version}</bundle>
+    <bundle dependency="true">mvn:org.glassfish.jersey.core/jersey-client/${jersey-osgi.version}</bundle>
+    <bundle dependency="true">mvn:org.glassfish.jersey.core/jersey-common/${jersey-osgi.version}</bundle>
+    <bundle dependency="true">mvn:org.glassfish.jersey.media/jersey-media-multipart/${jersey-osgi.version}</bundle>
+    <bundle dependency="true">mvn:org.glassfish.hk2/osgi-resource-locator/${jersey-osgi-resource-locator}</bundle>
+    <bundle dependency="true">mvn:org.jvnet.mimepull/mimepull/${mimepull-osgi.version}</bundle>
   </feature>
 
   <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds">
