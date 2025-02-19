@@ -136,6 +136,8 @@
          to be explicitly declared since only cxf-jaxrs feature is being loaded -->
     <feature version="[${spring32.bundle.version},3.3)">spring</feature>
     <bundle>mvn:pentaho/pentaho-pdi-platform/${pentaho-osgi-bundles.version}</bundle>
+    <bundle dependency="true">mvn:org.apache.commons/commons-fileupload2-jakarta-servlet6/2.0.0-M2</bundle>
+    <bundle dependency="true">mvn:org.apache.commons/commons-fileupload2-core/2.0.0-M2</bundle>
   </feature>
 
   <feature name="pentaho-cache-system" version="1.0">
