@@ -138,6 +138,10 @@
     <bundle>mvn:pentaho/pentaho-pdi-platform/${pentaho-osgi-bundles.version}</bundle>
     <bundle dependency="true">mvn:org.apache.commons/commons-fileupload2-jakarta-servlet6/2.0.0-M2</bundle>
     <bundle dependency="true">mvn:org.apache.commons/commons-fileupload2-core/2.0.0-M2</bundle>
+    <bundle dependency="true">mvn:jakarta.websocket/jakarta.websocket-api/2.1.0</bundle>
+    <bundle dependency="true">mvn:jakarta.websocket/jakarta.websocket-client-api/2.1.0</bundle>
+    <bundle dependency="true">mvn:org.glassfish.jersey.ext/jersey-spring6/3.1.7</bundle>
+    <bundle dependency="true">wrap:mvn:org.gwtproject/gwt-servlet-jakarta/2.11.0$overwrite=merge&amp;Export-Package=com.google.gwt.user.server.rpc.jakarta.*;version="2.11.0"</bundle>
   </feature>
 
   <feature name="pentaho-cache-system" version="1.0">
