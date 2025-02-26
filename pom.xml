@@ -6,12 +6,12 @@
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-parent-pom</artifactId>
-    <version>10.3.0.0-SNAPSHOT</version>
+    <version>10.3.0.0-267</version>
   </parent>
 
   <groupId>pentaho</groupId>
   <artifactId>pentaho-karaf</artifactId>
-  <version>10.3.0.0-SNAPSHOT</version>
+  <version>10.3.0.0-267</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -25,11 +25,11 @@
   <properties>
     <mongo.java.driver.version>3.12.10</mongo.java.driver.version>
     <org.ehcache.version>1.0.0</org.ehcache.version>
-    <pdi-data-refinery-plugin.version>10.3.0.0-SNAPSHOT</pdi-data-refinery-plugin.version>
-    <pdi-plugins-ee.version>10.3.0.0-SNAPSHOT</pdi-plugins-ee.version>
+    <pdi-data-refinery-plugin.version>10.3.0.0-267</pdi-data-refinery-plugin.version>
+    <pdi-plugins-ee.version>10.3.0.0-267</pdi-plugins-ee.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5
     </plugin.org.apache.maven.plugins.maven-clean-plugin.version>
-    <pentaho-mongo-utils.version>10.3.0.0-SNAPSHOT</pentaho-mongo-utils.version>
+    <pentaho-mongo-utils.version>10.3.0.0-267</pentaho-mongo-utils.version>
     <plugin.org.apache.maven.plugins.maven-resources-plugin.version>2.7
     </plugin.org.apache.maven.plugins.maven-resources-plugin.version>
     <package.features>true</package.features>
@@ -42,23 +42,23 @@
     <failureaccess.version>1.0.1</failureaccess.version>
     <jsr305.version>3.0.2</jsr305.version>
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
-    <pdi-monitoring-plugin.version>10.3.0.0-SNAPSHOT</pdi-monitoring-plugin.version>
-    <pentaho-metaverse.version>10.3.0.0-SNAPSHOT</pentaho-metaverse.version>
+    <pdi-monitoring-plugin.version>10.3.0.0-267</pdi-monitoring-plugin.version>
+    <pentaho-metaverse.version>10.3.0.0-267</pentaho-metaverse.version>
     <commons.lang.version>2.6</commons.lang.version>
-    <pentaho-osgi-bundles.version>10.3.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
-    <pdi.version>10.3.0.0-SNAPSHOT</pdi.version>
-    <pdi-dataservice-plugin.version>10.3.0.0-SNAPSHOT</pdi-dataservice-plugin.version>
-    <pdi-dataservice-client-plugin.version>10.3.0.0-SNAPSHOT</pdi-dataservice-client-plugin.version>
+    <pentaho-osgi-bundles.version>10.3.0.0-267</pentaho-osgi-bundles.version>
+    <pdi.version>10.3.0.0-267</pdi.version>
+    <pdi-dataservice-plugin.version>10.3.0.0-267</pdi-dataservice-plugin.version>
+    <pdi-dataservice-client-plugin.version>10.3.0.0-267</pdi-dataservice-client-plugin.version>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
     <spring53.bundle.version>5.3.3_1</spring53.bundle.version>
     <spring43.bundle.version>4.3.23.RELEASE_1</spring43.bundle.version>
     <spring32.bundle.version>3.2.18.RELEASE_1</spring32.bundle.version>
-    <pentaho-modeler.version>10.3.0.0-SNAPSHOT</pentaho-modeler.version>
-    <pentaho-json.version>10.3.0.0-SNAPSHOT</pentaho-json.version>
-    <pdi-osgi-bridge.version>10.3.0.0-SNAPSHOT</pdi-osgi-bridge.version>
-    <pentaho-connections.version>10.3.0.0-SNAPSHOT</pentaho-connections.version>
-    <analyzer-plugin.version>10.3.0.0-SNAPSHOT</analyzer-plugin.version>
-    <pentaho-mongodb-plugin.version>10.3.0.0-SNAPSHOT</pentaho-mongodb-plugin.version>
+    <pentaho-modeler.version>10.3.0.0-267</pentaho-modeler.version>
+    <pentaho-json.version>10.3.0.0-267</pentaho-json.version>
+    <pdi-osgi-bridge.version>10.3.0.0-267</pdi-osgi-bridge.version>
+    <pentaho-connections.version>10.3.0.0-267</pentaho-connections.version>
+    <analyzer-plugin.version>10.3.0.0-267</analyzer-plugin.version>
+    <pentaho-mongodb-plugin.version>10.3.0.0-267</pentaho-mongodb-plugin.version>
     <com.github.zafarkhaja.version>0.9.0</com.github.zafarkhaja.version>
     <json.simple.version>1.1.1</json.simple.version>
     <net.sf.ehcache-core.version>2.8.3</net.sf.ehcache-core.version>
@@ -67,16 +67,16 @@
     <icu4j.version>63.1</icu4j.version>
     <javax.jms.version>1.1</javax.jms.version>
     <jasypt.version>1.9.2_1</jasypt.version>
-    <big-data-plugin.version>10.3.0.0-SNAPSHOT</big-data-plugin.version>
-    <pentaho-marketplace-modules.version>10.3.0.0-SNAPSHOT</pentaho-marketplace-modules.version>
-    <pentaho-repository.version>10.3.0.0-SNAPSHOT</pentaho-repository.version>
-    <common-ui.version>10.3.0.0-SNAPSHOT</common-ui.version>
-    <pentaho-hadoop-shims-cdh514.version>10.3.0.0-SNAPSHOT</pentaho-hadoop-shims-cdh514.version>
-    <pentaho-hadoop-shims-cdh61.version>10.3.0.0-SNAPSHOT</pentaho-hadoop-shims-cdh61.version>
-    <pentaho-hadoop-shims-hdp26.version>10.3.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp26.version>
-    <pentaho-hadoop-shims-hdp30.version>10.3.0.0-SNAPSHOT</pentaho-hadoop-shims-hdp30.version>
-    <pentaho-hadoop-shims-emr521.version>10.3.0.0-SNAPSHOT</pentaho-hadoop-shims-emr521.version>
-    <pentaho-hadoop-shims.version>10.3.0.0-SNAPSHOT</pentaho-hadoop-shims.version>
+    <big-data-plugin.version>10.3.0.0-267</big-data-plugin.version>
+    <pentaho-marketplace-modules.version>10.3.0.0-267</pentaho-marketplace-modules.version>
+    <pentaho-repository.version>10.3.0.0-267</pentaho-repository.version>
+    <common-ui.version>10.3.0.0-267</common-ui.version>
+    <pentaho-hadoop-shims-cdh514.version>10.3.0.0-267</pentaho-hadoop-shims-cdh514.version>
+    <pentaho-hadoop-shims-cdh61.version>10.3.0.0-267</pentaho-hadoop-shims-cdh61.version>
+    <pentaho-hadoop-shims-hdp26.version>10.3.0.0-267</pentaho-hadoop-shims-hdp26.version>
+    <pentaho-hadoop-shims-hdp30.version>10.3.0.0-267</pentaho-hadoop-shims-hdp30.version>
+    <pentaho-hadoop-shims-emr521.version>10.3.0.0-267</pentaho-hadoop-shims-emr521.version>
+    <pentaho-hadoop-shims.version>10.3.0.0-267</pentaho-hadoop-shims.version>
     <pax-keycloak.version>0.2.0</pax-keycloak.version>
 
     <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
