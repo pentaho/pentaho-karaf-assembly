@@ -24,7 +24,8 @@
   <repository>mvn:pentaho/pentaho-dataservice/${pdi-dataservice-plugin.version}/xml/features</repository>
 
   <!-- pdi-platform feature is using spring feature -->
-  <repository>mvn:org.hitachivantara.karaf.features/spring32/${spring32.feature.artifact.version}/xml/features</repository>
+<!--  <repository>mvn:org.hitachivantara.karaf.features/spring32/${spring32.feature.artifact.version}/xml/features</repository>-->
+  <repository>mvn:org.hitachivantara.karaf.features/spring53/${spring53.feature.artifact.version}/xml/features</repository>
 
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
@@ -34,7 +35,7 @@
     <feature prerequisite="true">wrap</feature>
 
     <!-- Spring-DM needed by pentaho-spring-dm-extender -->
-    <feature prerequisite="true">spring-dm</feature>
+<!--    <feature prerequisite="true">spring-dm</feature>-->
 
     <bundle dependency="true">mvn:com.googlecode.json-simple/json-simple/${json.simple.version}</bundle>
     <bundle dependency="true">mvn:com.google.guava/guava/${guava.version}</bundle>
@@ -45,7 +46,7 @@
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
     <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
     <bundle>mvn:pentaho/pentaho-bundle-resource-manager/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-spring-dm-extender/${project.version}</bundle>
+<!--    <bundle>mvn:pentaho/pentaho-spring-dm-extender/${project.version}</bundle>-->
     <feature version="${project.version}">pentaho-webjars-deployer</feature>
   </feature>
 
@@ -134,7 +135,7 @@
   <feature name="pdi-platform" version="${project.version}">
     <!-- spring was "magically available" because of cxf/3.0.13 feature, but now needs
          to be explicitly declared since only cxf-jaxrs feature is being loaded -->
-    <feature version="[${spring32.bundle.version},3.3)">spring</feature>
+    <feature version="[${spring53.bundle.version},6.0)">spring</feature>
     <bundle>mvn:pentaho/pentaho-pdi-platform/${pentaho-osgi-bundles.version}</bundle>
   </feature>
 
