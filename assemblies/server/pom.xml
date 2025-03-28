@@ -56,12 +56,6 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-marketplace</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>pentaho</groupId>
       <artifactId>pentaho-dataservice-legacy</artifactId>
       <classifier>features</classifier>
@@ -157,7 +151,6 @@
                 <feature>pentaho-metaverse</feature>
                 <feature>pentaho-dataservice-legacy</feature>
                 <feature>pdi-data-refinery</feature>
-                <feature>pentaho-marketplace</feature>
                 <feature>pentaho-hadoop-cluster-ui</feature>
 
                 <!-- Shim/drivers features -->
