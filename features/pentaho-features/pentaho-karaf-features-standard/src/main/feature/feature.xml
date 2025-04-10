@@ -136,12 +136,12 @@
          to be explicitly declared since only cxf-jaxrs feature is being loaded -->
     <feature version="[${spring32.bundle.version},3.3)">spring</feature>
     <bundle>mvn:pentaho/pentaho-pdi-platform/${pentaho-osgi-bundles.version}</bundle>
-    <bundle dependency="true">mvn:org.apache.commons/commons-fileupload2-jakarta-servlet6/2.0.0-M2</bundle>
-    <bundle dependency="true">mvn:org.apache.commons/commons-fileupload2-core/2.0.0-M2</bundle>
-    <bundle dependency="true">mvn:jakarta.websocket/jakarta.websocket-api/2.1.0</bundle>
-    <bundle dependency="true">mvn:jakarta.websocket/jakarta.websocket-client-api/2.1.0</bundle>
-    <bundle dependency="true">mvn:org.glassfish.jersey.ext/jersey-spring6/3.1.7</bundle>
-    <bundle dependency="true">wrap:mvn:org.gwtproject/gwt-servlet-jakarta/2.11.0$overwrite=merge&amp;Export-Package=com.google.gwt.user.server.rpc.jakarta.*;version="2.11.0"</bundle>
+    <bundle dependency="true">mvn:org.apache.commons/commons-fileupload2-jakarta-servlet6/${commons-fileupload.version}</bundle>
+    <bundle dependency="true">mvn:org.apache.commons/commons-fileupload2-core/${commons-fileupload.version}</bundle>
+    <bundle dependency="true">mvn:jakarta.websocket/jakarta.websocket-api/${jakarta.websocket-api.version}</bundle>
+    <bundle dependency="true">mvn:jakarta.websocket/jakarta.websocket-client-api/${jakarta.websocket-api.version}</bundle>
+    <bundle dependency="true">mvn:org.glassfish.jersey.ext/jersey-spring6/${jersey.version}</bundle>
+    <bundle dependency="true">wrap:mvn:org.gwtproject/gwt-servlet-jakarta/${gwt-servlet-jakarta.version}$overwrite=merge&amp;Export-Package=com.google.gwt.user.server.rpc.jakarta.*;version="${gwt-servlet-jakarta.version}"</bundle>
   </feature>
 
   <feature name="pentaho-cache-system" version="1.0">
