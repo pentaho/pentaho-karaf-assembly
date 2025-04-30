@@ -157,8 +157,6 @@
                 <feature>war</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-karaf-overrides</feature>
-                <feature>pentaho-big-data-plugin-tests</feature>
-                <feature>pentaho-big-data-plugin-testless-osgi</feature>
                 <feature>build-helper</feature>
                 <feature>pdi-data-refinery</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
