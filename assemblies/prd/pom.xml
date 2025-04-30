@@ -124,7 +124,6 @@
                 <feature>community-edition</feature>
                 <feature>pentaho-client-minimal</feature>
                 <feature>pentaho-dataservice-client</feature>
-                <feature>pentaho-big-data-plugin-testless-osgi</feature>
 
                 <!-- Shim/drivers features -->
                 <feature>pentaho-hadoop-shims-apache-kar</feature>
