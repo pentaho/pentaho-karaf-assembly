@@ -136,7 +136,6 @@
                 <feature>kar</feature>
                 <feature>config</feature>
                 <feature>community-edition</feature>
-                <feature>pentaho-big-data-plugin-osgi</feature>
 
                 <!-- Shim/drivers features -->
                 <feature>pentaho-hadoop-shims-apache-kar</feature>
