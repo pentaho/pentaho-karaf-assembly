@@ -111,7 +111,6 @@
     <feature prerequisite="true">pentaho-client-minimal</feature>
 
     <feature>pentaho-webpackage</feature>
-    <feature>pentaho-big-data-plugin-osgi</feature>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
   </feature>
 
