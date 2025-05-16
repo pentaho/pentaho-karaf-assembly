@@ -44,8 +44,8 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>pentaho-karaf-features</groupId>
-      <artifactId>pentaho-big-data-plugin-osgi</artifactId>
+      <groupId>pentaho</groupId>
+      <artifactId>pentaho-dataservice</artifactId>
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
