@@ -50,12 +50,6 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>pentaho-karaf-features</groupId>
-      <artifactId>pentaho-big-data-plugin-osgi</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>org.pentaho</groupId>
       <artifactId>pentaho-requirejs-osgi-manager</artifactId>
       <classifier>features</classifier>
