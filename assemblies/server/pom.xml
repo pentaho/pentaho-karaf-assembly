@@ -44,12 +44,6 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>pentaho-karaf-features</groupId>
-      <artifactId>pentaho-big-data-plugin-osgi</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>org.apache.cxf.karaf</groupId>
       <artifactId>apache-cxf</artifactId>
       <classifier>features</classifier>

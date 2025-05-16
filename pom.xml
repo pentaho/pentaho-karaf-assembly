@@ -159,14 +159,6 @@
         <scope>runtime</scope>
       </dependency>
       <dependency>
-        <groupId>pentaho-karaf-features</groupId>
-        <artifactId>pentaho-big-data-plugin-osgi</artifactId>
-        <classifier>features</classifier>
-        <version>${big-data-plugin.version}</version>
-        <type>xml</type>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
         <groupId>org.pentaho</groupId>
         <artifactId>pentaho-requirejs-osgi-manager</artifactId>
         <classifier>features</classifier>
