@@ -15,12 +15,9 @@
   ~ Copyright 2014 - 2021 Hitachi Vantara. All rights reserved.
   -->
 
-<features name="pentaho-karaf-features-enterprise" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
-  <repository>mvn:org.hitachivantara.karaf.features/spring53/${spring53.feature.artifact.version}/xml/features</repository>
+<features name="pentaho-karaf-features-enterprise"
+  xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
   <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
-
-  <!-- pentaho-analyzer feature is using spring feature -->
-  <repository>mvn:org.hitachivantara.karaf.features/spring32/${spring32.feature.artifact.version}/xml/features</repository>
 
   <feature name="pentaho-client-ee" version="1.0">
     <feature prerequisite="true">pentaho-client</feature>
@@ -35,8 +32,6 @@
   <feature name="pentaho-analyzer" version="1.0">
     <feature prerequisite="true">pentaho-analyzer-prerequisites</feature>
 
-    <!-- Spring-DM needed in Analyzer OSGI plugin to get Spring Application Context -->
-    <feature prerequisite="true">spring-dm</feature>
     <feature prerequisite="true">pdi-platform</feature>
     <feature prerequisite="true" version="${project.version}">pentaho-requirejs-osgi-manager</feature>
     <bundle>wrap:mvn:pentaho/pentaho-connections/${pentaho-connections.version}$Import-Package=!java.*,*</bundle>
