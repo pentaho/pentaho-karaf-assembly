@@ -28,6 +28,7 @@
 
     <feature name="felix-bridge" description="Felix HTTP Bridge Service" version="${http-features-override.version}">
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.api/${felix.http.api.version}</bundle>
+        <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.servlet-api/${felix.http.api.version}</bundle>
         <bundle start-level="30">mvn:org.apache.felix/org.apache.felix.http.bridge/${felix.http.bridge.version}</bundle>
 
         <capability>http-service;provider:=felix-bridge</capability>
