@@ -25,7 +25,6 @@
   <properties>
     <mongo.java.driver.version>3.12.10</mongo.java.driver.version>
     <org.ehcache.version>1.0.0</org.ehcache.version>
-    <pdi-data-refinery-plugin.version>11.0.0.0-SNAPSHOT</pdi-data-refinery-plugin.version>
     <pdi-plugins-ee.version>11.0.0.0-SNAPSHOT</pdi-plugins-ee.version>
     <plugin.org.apache.maven.plugins.maven-clean-plugin.version>2.5
     </plugin.org.apache.maven.plugins.maven-clean-plugin.version>
@@ -47,8 +46,6 @@
     <commons.lang.version>2.6</commons.lang.version>
     <pentaho-osgi-bundles.version>11.0.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
     <pdi.version>11.0.0.0-SNAPSHOT</pdi.version>
-    <pdi-dataservice-plugin.version>11.0.0.0-SNAPSHOT</pdi-dataservice-plugin.version>
-    <pdi-dataservice-client-plugin.version>11.0.0.0-SNAPSHOT</pdi-dataservice-client-plugin.version>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
     <pentaho-modeler.version>11.0.0.0-SNAPSHOT</pentaho-modeler.version>
     <pentaho-json.version>11.0.0.0-SNAPSHOT</pentaho-json.version>
@@ -175,22 +172,6 @@
         <artifactId>pentaho-webpackage</artifactId>
         <classifier>features</classifier>
         <version>${pentaho-osgi-bundles.version}</version>
-        <type>xml</type>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>pentaho</groupId>
-        <artifactId>pentaho-dataservice</artifactId>
-        <classifier>features</classifier>
-        <version>${pdi-dataservice-plugin.version}</version>
-        <type>xml</type>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>pentaho</groupId>
-        <artifactId>pentaho-dataservice-legacy</artifactId>
-        <classifier>features</classifier>
-        <version>${pdi-dataservice-plugin.version}</version>
         <type>xml</type>
         <scope>runtime</scope>
       </dependency>
