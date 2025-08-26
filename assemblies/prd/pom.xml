@@ -47,6 +47,7 @@
       <groupId>pentaho-karaf-features</groupId>
       <artifactId>pentaho-big-data-plugin-osgi</artifactId>
       <classifier>features</classifier>
+      <version>${project.version}</version>
       <type>xml</type>
     </dependency>
     <!-- Because of pax-keycloak feature condition on pax-web feature, which doesn't define repository url -->
