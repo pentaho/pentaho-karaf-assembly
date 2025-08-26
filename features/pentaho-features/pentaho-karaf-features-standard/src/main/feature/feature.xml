@@ -21,8 +21,6 @@
   <repository>mvn:org.pentaho/pentaho-requirejs-osgi-manager/${pentaho-osgi-bundles.version}/xml/features</repository>
   <repository>mvn:org.pentaho.webpackage/pentaho-webpackage/${pentaho-osgi-bundles.version}/xml/features</repository>
 
-  <repository>mvn:pentaho/pentaho-dataservice/${pdi-dataservice-plugin.version}/xml/features</repository>
-
   <!--This feature never works reliably due to the asynchronous loading of blueprint files-->
   <!--Putting the feature back so these dependencies will be in the local maven repo in /system-->
   <feature name="pentaho-deployers" version="1.0">
@@ -130,7 +128,7 @@
     <bundle dependency="true">mvn:jakarta.websocket/jakarta.websocket-api/${jakarta.websocket-api.version}</bundle>
     <bundle dependency="true">mvn:jakarta.websocket/jakarta.websocket-client-api/${jakarta.websocket-api.version}</bundle>
     <bundle dependency="true">mvn:org.glassfish.jersey.ext/jersey-spring6/${jersey.version}</bundle>
-    <bundle dependency="true">wrap:mvn:org.gwtproject/gwt-servlet-jakarta/${gwt-servlet-jakarta.version}$overwrite=merge&amp;Export-Package=com.google.gwt.user.server.rpc.jakarta.*;version="${gwt-servlet-jakarta.version}"</bundle>
+    <bundle dependency="true">wrap:mvn:org.gwtproject/gwt-servlet-jakarta/${gwt.version}$overwrite=merge&amp;Export-Package=com.google.gwt.user.server.rpc.jakarta.*;version="${gwt.version}"</bundle>
   </feature>
 
   <feature name="pentaho-cache-system" version="1.0">
@@ -187,23 +185,6 @@
     <bundle dependency="true">mvn:org.apache.karaf.kar/org.apache.karaf.kar.core/${karaf.version}</bundle>
     <bundle dependency="true">mvn:org.apache.aries.transaction/org.apache.aries.transaction.manager/1.1.1</bundle>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-  </feature>
-
-  <feature name="pdi-data-refinery" description="pentaho data refinery">
-    <configfile finalname="/etc/pentaho.geo.roles.cfg">mvn:pentaho/pentaho-osgi-config/${project.version}/cfg/pentaho-geo-roles</configfile>
-    <feature>pentaho-dataservice</feature>
-
-    <bundle dependency="true">wrap:mvn:pentaho/pentaho-modeler/${pentaho-modeler.version}</bundle>
-
-    <bundle dependency="true">wrap:mvn:jfree/jcommon/${jfree.jcommon.version}</bundle>
-    <bundle dependency="true">mvn:com.fasterxml.jackson.module/jackson-module-jakarta-xmlbind-annotations/${fasterxml-jackson.version}</bundle>
-    <bundle dependency="true">mvn:com.hitachivantara.security.web/csrf-token-service-client-java-jax-rs-v2/${hv-security-web.version}</bundle>
-    <bundle>mvn:pentaho/data-refinery-pdi-plugin/${pdi-data-refinery-plugin.version}</bundle>
-    <bundle dependency="true">mvn:org.glassfish.jersey.core/jersey-client/${jersey-osgi.version}</bundle>
-    <bundle dependency="true">mvn:org.glassfish.jersey.core/jersey-common/${jersey-osgi.version}</bundle>
-    <bundle dependency="true">mvn:org.glassfish.jersey.media/jersey-media-multipart/${jersey-osgi.version}</bundle>
-    <bundle dependency="true">mvn:org.glassfish.hk2/osgi-resource-locator/${jersey-osgi-resource-locator}</bundle>
-    <bundle dependency="true">mvn:org.jvnet.mimepull/mimepull/${mimepull-osgi.version}</bundle>
   </feature>
 
   <feature name="community-edition" version="1.0" description="Marker feature for Community Edition Builds">
