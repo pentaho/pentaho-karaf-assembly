@@ -50,12 +50,6 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-dataservice-legacy</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>org.pentaho</groupId>
       <artifactId>pentaho-requirejs-osgi-manager</artifactId>
       <classifier>features</classifier>
@@ -143,8 +137,6 @@
                 <feature>community-edition</feature>
                 <feature>pentaho-server</feature>
                 <feature>pentaho-metaverse</feature>
-                <feature>pentaho-dataservice-legacy</feature>
-                <feature>pdi-data-refinery</feature>
                 <feature>pentaho-hadoop-cluster-ui</feature>
 
                 <!-- Shim/drivers features -->
