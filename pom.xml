@@ -181,15 +181,6 @@
         <version>${common-ui.version}</version>
         <classifier>configuration-bundle</classifier>
       </dependency>
-
-      <!-- Shim/drivers dependencies -->
-      <dependency>
-        <groupId>org.pentaho.hadoop.shims</groupId>
-        <artifactId>pentaho-hadoop-shims-apache-kar</artifactId>
-        <version>${pentaho-hadoop-shims.version}</version>
-        <classifier>features</classifier>
-        <type>xml</type>
-      </dependency>
     </dependencies>
   </dependencyManagement>
 
