@@ -43,13 +43,6 @@
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
-    <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-dataservice</artifactId>
-      <classifier>features</classifier>
-      <version>${project.version}</version>
-      <type>xml</type>
-    </dependency>
     <!-- Because of pax-keycloak feature condition on pax-web feature, which doesn't define repository url -->
     <dependency>
       <groupId>org.ops4j.pax.keycloak</groupId>
@@ -118,7 +111,6 @@
                 <feature>config</feature>
                 <feature>community-edition</feature>
                 <feature>pentaho-client-minimal</feature>
-                <feature>pentaho-dataservice-client</feature>
 
                 <!-- Shim/drivers features -->
                 <feature>pentaho-hadoop-shims-apache-kar</feature>
