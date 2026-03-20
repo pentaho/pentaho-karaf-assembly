@@ -171,7 +171,6 @@
                 <feature>cxf-jaxrs</feature>
                 <feature>diagnostic</feature>
                 <feature>package</feature>
-                <feature>wrapper</feature>
                 <feature>pentaho-requirejs-osgi-manager</feature>
                 <feature>pentaho-webpackage</feature>
               </installedFeatures>
