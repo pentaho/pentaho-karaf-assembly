@@ -139,7 +139,6 @@
                 <feature>http</feature>
                 <feature>package</feature>
                 <feature>http</feature>
-                <feature>wrapper</feature>
                 <feature>cxf-jaxrs</feature>
                 <feature>war</feature>
                 <feature>package</feature>
