@@ -150,7 +150,6 @@
                 <feature>ssh</feature>
                 <feature>diagnostic</feature>
                 <feature>package</feature>
-                <feature>wrapper</feature>
                 <feature>cxf-jaxrs</feature>
                 <feature>pentaho-base</feature>
                 <feature>pentaho-client</feature>
