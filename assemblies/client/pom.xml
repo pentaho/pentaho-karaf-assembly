@@ -91,13 +91,6 @@
       <classifier>features</classifier>
       <type>xml</type>
     </dependency>
-    <!-- Shim/drivers dependencies -->
-    <dependency>
-      <groupId>org.pentaho.hadoop.shims</groupId>
-      <artifactId>pentaho-hadoop-shims-apache-kar</artifactId>
-      <classifier>features</classifier>
-      <type>xml</type>
-    </dependency>
   </dependencies>
 
   <build>
@@ -183,7 +176,6 @@
                 <feature>pentaho-hadoop-cluster-ui</feature>
 
                 <!-- Shim/drivers features -->
-                <feature>pentaho-hadoop-shims-apache-kar</feature>
               </installedFeatures>
             </configuration>
           </execution>
