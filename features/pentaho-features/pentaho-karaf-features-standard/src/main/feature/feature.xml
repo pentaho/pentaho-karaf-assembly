@@ -37,8 +37,8 @@
     <bundle dependency="true">mvn:commons-io/commons-io/${commons.io.version}</bundle>
     <bundle dependency="true">mvn:commons-lang/commons-lang/${commons.lang.version}</bundle>
     <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/${project.version}</bundle>
-    <bundle>mvn:pentaho/pentaho-bundle-resource-manager/${project.version}</bundle>
+    <bundle>mvn:pentaho/pentaho-platform-plugin-deployer/10.2.0.4-354</bundle>
+    <bundle>mvn:pentaho/pentaho-bundle-resource-manager/10.2.0.4-354</bundle>
     <feature version="${project.version}">pentaho-webjars-deployer</feature>
   </feature>
 

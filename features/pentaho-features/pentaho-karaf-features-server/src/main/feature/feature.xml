@@ -43,8 +43,8 @@
         <bundle start-level="20">blueprint:mvn:pentaho/pentaho-blueprint-activators/${project.version}/xml/proxy-watcher</bundle>
         <bundle start-level="50">mvn:pentaho/pentaho-proxy-spring4/${pentaho-osgi-bundles.version}</bundle>
 
-        <feature version="${project.version}">pentaho-requirejs-osgi-manager</feature>
-        <bundle>mvn:org.pentaho/spring-security-karaf-login-module/${project.version}</bundle>
+        <feature version="10.2.0.4-354">pentaho-requirejs-osgi-manager</feature>
+        <bundle>mvn:org.pentaho/spring-security-karaf-login-module/10.2.0.4-354</bundle>
         <bundle dependency="true">mvn:commons-collections/commons-collections/${commons.collections.version}</bundle>
         <feature dependency="true">pax-web-karaf</feature>
     </feature>
