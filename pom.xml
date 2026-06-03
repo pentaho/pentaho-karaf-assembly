@@ -160,7 +160,7 @@
         <groupId>pentaho-karaf-features</groupId>
         <artifactId>pentaho-big-data-plugin-osgi</artifactId>
         <classifier>features</classifier>
-        <version>${big-data-plugin.version}</version>
+        <version>10.2.0.4-354-CUST-311</version>
         <type>xml</type>
         <scope>runtime</scope>
       </dependency>
