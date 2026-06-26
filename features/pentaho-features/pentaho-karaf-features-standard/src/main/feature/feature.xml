@@ -164,7 +164,6 @@
   </feature>
 
   <feature name="pentaho-fasterxml" version="1.0">
-    <bundle dependency="true">wrap:mvn:net.sf.flexjson/flexjson/2.1</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${fasterxml-jackson-databind.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/${fasterxml-jackson.version}</bundle>
     <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/${fasterxml-jackson.version}</bundle>
