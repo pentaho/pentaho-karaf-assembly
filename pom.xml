@@ -80,6 +80,7 @@
 
     <!-- Karaf framework startup bundles' versions -->
     <!-- karaf.version is in parent POM -->
+    <pentaho.custom.karaf.version>4.4.6-2026.06.30</pentaho.custom.karaf.version>
     <hv-patched-karaf-features-extension.version>${pentaho.custom.karaf.version}</hv-patched-karaf-features-extension.version>
     <!-- pax-url-aether.version is in parent POM -->
     <felix.metatype.version>1.2.4</felix.metatype.version>
