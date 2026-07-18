@@ -1,4 +1,4 @@
-# Hitachi Vantara Karaf Assembly
+# Pentaho Karaf Assembly
 This project is responsible for building custom Karaf assemblies using the new way.
 This project is currently creating assemblies to Community Edition of the following products:
 * PDI
