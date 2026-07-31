@@ -115,8 +115,8 @@
              maven-parent-poms' apache-sshd.version-managed dependencies, so it is fixed
              independently here. Addressed in Apache MINA SSHD 2.19.0. -->
         <bundle
-                originalUri="mvn:org.apache.sshd/sshd-scp/[0,${apache-sshd.version})"
-                replacement="mvn:org.apache.sshd/sshd-scp/${apache-sshd.version}" mode="maven" />
+            originalUri="mvn:org.apache.sshd/sshd-scp/[0,${apache-sshd.version})"
+            replacement="mvn:org.apache.sshd/sshd-scp/${apache-sshd.version}" mode="maven" />
 
     </bundleReplacements>
 
