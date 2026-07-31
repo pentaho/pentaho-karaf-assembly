@@ -107,6 +107,15 @@
                 originalUri="mvn:org.apache.mina/mina-core/[0,${mina-core.version})"
                 replacement="mvn:org.apache.mina/mina-core/${mina-core.version}" mode="maven" />
 
+        <!-- [CVE-2026-56452] Path traversal in the sshd-scp component of Apache MINA SSHD.
+             The ssh feature (installed in assemblies/server) resolves org.apache.sshd bundles
+             from the upstream org.hitachivantara.karaf.features Karaf 4.4.6 feature repo, not
+             from maven-parent-poms' apache-sshd.version-managed dependencies, so it is fixed
+             independently here. Addressed in Apache MINA SSHD 2.19.0. -->
+        <bundle
+                originalUri="mvn:org.apache.sshd/sshd-scp/[0,${apache-sshd.version})"
+                replacement="mvn:org.apache.sshd/sshd-scp/${apache-sshd.version}" mode="maven" />
+
     </bundleReplacements>
 
     <!-- A list of feature replacements that allows changing external feature definitions -->
