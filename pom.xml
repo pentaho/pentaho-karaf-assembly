@@ -54,7 +54,6 @@
     <jfree.jcommon.version>1.0.14</jfree.jcommon.version>
     <pdi-monitoring-plugin.version>11.1.0.0-SNAPSHOT</pdi-monitoring-plugin.version>
     <pentaho-metaverse.version>11.1.0.0-SNAPSHOT</pentaho-metaverse.version>
-    <commons.lang.version>2.6</commons.lang.version>
     <pentaho-osgi-bundles.version>11.1.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
     <pdi.version>11.1.0.0-SNAPSHOT</pdi.version>
     <eigenbase.xom.version>1.3.5</eigenbase.xom.version>
