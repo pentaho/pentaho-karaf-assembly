@@ -44,6 +44,10 @@
                 originalUri="mvn:org.apache.cxf/cxf-rt-transports-http/[3.0,${cxf.version}]"
                 replacement="mvn:org.hitachivantara/cxf-rt-transports-http-wrap/${cxf-rt-transports-http-wrap.version}" mode="maven" />
 
+        <bundle
+                originalUri="mvn:org.apache.ws.xmlschema/xmlschema-core/[,2.3.3)"
+                replacement="mvn:org.apache.ws.xmlschema/xmlschema-core/2.3.3" mode="maven" />
+
         <!-- [PPP-4430] CVE-2019-12086 Use of Vulnerable Component: jackson-databind-2.9.8.jar -->
         <!-- Replace all jackson bundles installed by activemq-karaf (first three) and apache-cxf (all) -->
         <bundle
